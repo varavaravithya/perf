@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ระบบขนาน</TITLE>
+<META NAME="description" CONTENT="ระบบขนาน">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node153.html">
+<LINK REL="previous" HREF="node151.html">
+<LINK REL="up" HREF="node150.html">
+<LINK REL="next" HREF="node153.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2659"
+  HREF="node153.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2653"
+  HREF="node150.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2647"
+  HREF="node151.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2655"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2657"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2660"
+  HREF="node153.html">ระบบ ใน</A>
+<B> Up:</B> <A NAME="tex2html2654"
+  HREF="node150.html">การหาค่าความน่าเชื่อถือโดยการจำลองแบบแจกแจงการทำงาน</A>
+<B> Previous:</B> <A NAME="tex2html2648"
+  HREF="node151.html">ระบบอนุกรม</A>
+ &nbsp <B>  <A NAME="tex2html2656"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2658"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION001392000000000000000"></A>
+<A NAME="4957"></A>
+<A NAME="4958"></A>
+<BR>
+ระบบขนาน
+</H2>
+
+ในระบบขนาน ถ้าเพียงหนึ่งโมดูลในจำนวน <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> ทำงานได้ ระบบจะสามารถทำงานได้ ตัวอย่างเช่นถ้าครอบครัวมีรถยนต์สองคัน ถ้าคันหนึ่งเสีย  ก็ยังสามารถดำเนินกิจกรรมต่อไปได้โดยไม่กระทบมากนัก  ความน่าจะเป็นที่จะมีรถยนต์ทำงานได้สามารถทำโดยการจำลองระบบให้เป็นแบบขนาน
+
+แผนภาพกล่องของระบบขนานพี้นฐานแสดงในรูป <A HREF="node152.html#fig:fev5parallel">10.4</A> จากรูปจะพบว่าตราบใดที่ยังมีหนึ่งโมดูลทำงานได้อยู่ การต่อเชื่อมระหว่างอินพุทและเอาท์พุทยังคงอยู่ หมายความว่าระบบยังคงทำงานได้ปกติ
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fev5parallel"></A><A NAME="4962"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 10.4:</STRONG>
+แผนภาพกล่องของระบบขนาน</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="372" HEIGHT="257" ALIGN="BOTTOM" BORDER="0"
+ SRC="img707.png"
+ ALT="\includegraphics[width=3.25in]{fig/fev5parallel.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ความไม่น่าเชื่อถือของระบบแบบขนาน สามารถคำนวณจากความน่าจะเป็นที่ <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> โมดูลเสียพร้อมกันหมดทั้งสิ้น ให้ <IMG
+ WIDTH="33" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img708.png"
+ ALT="$C_{if}$"> เป็นเหตุการณ์ที่โมดูล <IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img698.png"
+ ALT="$C_{i}$"> สามารถทำงานล้มเหลวที่เวลา  <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> และ <IMG
+ WIDTH="47" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img709.png"
+ ALT="$Q_i(t)$"> เป็นค่าความไม่น่าเชื่อถือของโมดูล <IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img698.png"
+ ALT="$C_{i}$"> ที่เวลา  <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> ค่าความไม่น่าเชื่อถือของระบบ 
+คือค่าความน่าจะเป็นที่ทุกโมดูลเสีย สามารถเขียนได้เป็น
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Q_{parallel}(t) = P(C_{1f}\cap C_{2f} \cap \ldots \cap C_{Nf}(t))
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="448" HEIGHT="39" BORDER="0"
+ SRC="img710.png"
+ ALT="\begin{displaymath}
+Q_{parallel}(t) = P(C_{1f}\cap C_{2f} \cap \ldots \cap C_{Nf}(t))
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.41)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+หรือ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Q_{parallel}(t) = Q_1(t)Q_2(t) \ldots Q_N(t) = 
+\prod_{i=1}^{N} Q_i(t)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="462" HEIGHT="59" BORDER="0"
+ SRC="img711.png"
+ ALT="\begin{displaymath}
+Q_{parallel}(t) = Q_1(t)Q_2(t) \ldots Q_N(t) =
+\prod_{i=1}^{N} Q_i(t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.42)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่าความน่าเชื่อถือของระบบขนานสามารถคำนวณได้  เนื่องจากผลรวมระหว่างค่าความน่าเชื่อถือ  และค่าความไม่น่าเชื่อถือของระบบมีค่าเท่ากับ 1.0 หรือ  <!-- MATH
+ $Q(t) +R(t) = 1.0$
+ -->
+<IMG
+ WIDTH="150" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img712.png"
+ ALT="$Q(t) +R(t) = 1.0$"> เราจะได้ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{parallel}(t) = 1-Q_{parallel}(t)
+= 1-\prod_{i=1}^{N} Q_i(t)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="453" HEIGHT="59" BORDER="0"
+ SRC="img713.png"
+ ALT="\begin{displaymath}
+R_{parallel}(t) = 1-Q_{parallel}(t)
+= 1-\prod_{i=1}^{N} Q_i(t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.43)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{parallel}(t) = 1-\prod_{i=1}^{N} (1-R_i(t))
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="405" HEIGHT="59" BORDER="0"
+ SRC="img714.png"
+ ALT="\begin{displaymath}
+R_{parallel}(t) = 1-\prod_{i=1}^{N} (1-R_i(t))
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.44)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+สำหรับระบบขนานที่ประกอบด้วยโมดูลที่เหมือนกันทุกประการสองโมดูล จะมีค่าความน่าเชื่อถือเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{system}(t) = 1-(1-R(t))^2
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="393" HEIGHT="39" BORDER="0"
+ SRC="img715.png"
+ ALT="\begin{displaymath}
+R_{system}(t) = 1-(1-R(t))^2
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.45)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+โดยค่า <IMG
+ WIDTH="42" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$R(t)$"> เป็นค่าความน่าเชื่อถือของแต่ละโมดูล
+  
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

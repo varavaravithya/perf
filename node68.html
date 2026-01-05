@@ -1,0 +1,480 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ตัวอย่าง: </TITLE>
+<META NAME="description" CONTENT="ตัวอย่าง: ">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node69.html">
+<LINK REL="previous" HREF="node67.html">
+<LINK REL="up" HREF="node58.html">
+<LINK REL="next" HREF="node69.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1409"
+  HREF="node69.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1403"
+  HREF="node58.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1397"
+  HREF="node67.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1405"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1407"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1410"
+  HREF="node69.html">หัวข้อสรุป</A>
+<B> Up:</B> <A NAME="tex2html1404"
+  HREF="node58.html">ระบบคิว และ</A>
+<B> Previous:</B> <A NAME="tex2html1398"
+  HREF="node67.html">ระบบคิว</A>
+ &nbsp <B>  <A NAME="tex2html1406"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1408"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION008100000000000000000">
+ตัวอย่าง: <IMG
+ WIDTH="90" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$M/M/1/2$"></A>
+</H1> ใน Network Gateway ทำหน้าที่ส่งผ่านแพคเกตในระบบเครือข่าย อัตราการขอเข้าใชับริการ Gateway ของแพคเกตมีค่าเท่ากับ 125 แพ็ตเกตต่อวินาที (pps) ค่าดังกล่าวได้จากการวัด Gateway ใช้เวลา 2 ms ในการส่งผ่านข้อมูล ใช้แบบจำลอง <IMG
+ WIDTH="90" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$M/M/1/2$"> โดยที่มีจำนวนบัฟเฟอร์ 2 บัฟเฟอร์ จงวิเคราะห์ Gateway 
+
+<P>
+<IMG
+ WIDTH="71" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img286.png"
+ ALT="$\lambda = 125$">, <IMG
+ WIDTH="70" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img287.png"
+ ALT="$\mu = 500$">, <IMG
+ WIDTH="56" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img227.png"
+ ALT="$m=1$">, <IMG
+ WIDTH="56" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img288.png"
+ ALT="$B =2$">
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Traffic~intensity~\rho = \frac{\lambda}{m\mu} = 
+\frac{125}{1\times 500} = 0.25
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="467" HEIGHT="50" BORDER="0"
+ SRC="img289.png"
+ ALT="\begin{displaymath}
+Traffic~intensity~\rho = \frac{\lambda}{m\mu} =
+\frac{125}{1\times 500} = 0.25
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.50)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+สำหรับ <!-- MATH
+ $n = 1, 2,\ldots, B$
+ -->
+<IMG
+ WIDTH="127" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img290.png"
+ ALT="$n = 1, 2,\ldots, B$"> จะได้ <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$p_n$">
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+p_1 &=& \rho p_0 = 0.25p_0\nonumber\\
+p_2 &=& \rho^2 p_0 = 0.25^2 p_0 = 0.0625p_0
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img291.png"
+ ALT="$\displaystyle p_1$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="108" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img292.png"
+ ALT="$\displaystyle \rho p_0 = 0.25p_0$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img293.png"
+ ALT="$\displaystyle p_2$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="218" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img294.png"
+ ALT="$\displaystyle \rho^2 p_0 = 0.25^2 p_0 = 0.0625p_0$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.51)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+และสามารถหาความน่าจะเป็นที่ระบบว่างจากงาน เท่ากับ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+p_0 + p_1 + p_2 = 1
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="345" HEIGHT="37" BORDER="0"
+ SRC="img295.png"
+ ALT="\begin{displaymath}
+p_0 + p_1 + p_2 = 1
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.52)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+p_0 + 0.25p_0 + 0.0625p_0 = 1
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="388" HEIGHT="37" BORDER="0"
+ SRC="img296.png"
+ ALT="\begin{displaymath}
+p_0 + 0.25p_0 + 0.0625p_0 = 1
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.53)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+p_0 = \frac{1}{1+0.25+0.0625} = 0.76
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="403" HEIGHT="48" BORDER="0"
+ SRC="img297.png"
+ ALT="\begin{displaymath}
+p_0 = \frac{1}{1+0.25+0.0625} = 0.76
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.54)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+แทนค่า <IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.png"
+ ALT="$p_0$"> ลงใน <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$p_n$"> จะได้
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+p_1 & = & 0.25P_0 = 0.19\nonumber\\
+p_2 &=& 0.0625p_0 = 0.0476
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img291.png"
+ ALT="$\displaystyle p_1$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="118" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img298.png"
+ ALT="$\displaystyle 0.25P_0 = 0.19$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img293.png"
+ ALT="$\displaystyle p_2$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="151" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img299.png"
+ ALT="$\displaystyle 0.0625p_0 = 0.0476$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.55)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+ค่าเฉลี่ยของจำนวนงานในระบบเท่ากับ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E[n] = \sum_{n=1}^{B}np_n =
+1\times 0.19 +2 \times 0.0476 = 0.29
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="469" HEIGHT="59" BORDER="0"
+ SRC="img300.png"
+ ALT="\begin{displaymath}
+E[n] = \sum_{n=1}^{B}np_n =
+1\times 0.19 +2 \times 0.0476 = 0.29
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.56)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ค่าเฉลี่ยของจำนวนงานรอในคิวเท่ากับ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E[n_q] = \sum_{n=m}^{B}(n-m)p_n =
+(2-1)\times 0.0476 = 0.0476
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="489" HEIGHT="58" BORDER="0"
+ SRC="img301.png"
+ ALT="\begin{displaymath}
+E[n_q] = \sum_{n=m}^{B}(n-m)p_n =
+(2-1)\times 0.0476 = 0.0476
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.57)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+อัตราการเข้าใช้งานระบบจริงสามารถคำนวณได้จาก
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\lambda' = \lambda(1-p_B) = 125(1-p_2)
+= 125(1-0.0476) = 119 ~~pps
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="522" HEIGHT="39" BORDER="0"
+ SRC="img302.png"
+ ALT="\begin{displaymath}
+\lambda' = \lambda(1-p_B) = 125(1-p_2)
+= 125(1-0.0476) = 119 ~~pps
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.58)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+และ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Packet~loss~rate~~~ \lambda-\lambda' = 125-119 =
+6~~pps
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="474" HEIGHT="37" BORDER="0"
+ SRC="img303.png"
+ ALT="\begin{displaymath}
+Packet~loss~rate~~~ \lambda-\lambda' = 125-119 =
+6~~pps
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.59)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ค่าเฉลี่ยของเวลาตอบสนองเท่ากับ 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E[r] = \frac{E[n]}{\lambda'} = \frac{0.29}{119} =
+2.40 \times 10^{-3} ~second
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="452" HEIGHT="47" BORDER="0"
+ SRC="img304.png"
+ ALT="\begin{displaymath}
+E[r] = \frac{E[n]}{\lambda'} = \frac{0.29}{119} =
+2.40 \times 10^{-3} ~second
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.60)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ค่าเฉลี่ยของเวลารอคอยในคิวเท่ากับ 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E[r] = \frac{E[n_q]}{\lambda'} = \frac{0.0476}{119} =
+4.0 \times 10^{-4} ~second
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="460" HEIGHT="47" BORDER="0"
+ SRC="img305.png"
+ ALT="\begin{displaymath}
+E[r] = \frac{E[n_q]}{\lambda'} = \frac{0.0476}{119} =
+4.0 \times 10^{-4} ~second
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.61)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1409"
+  HREF="node69.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1403"
+  HREF="node58.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1397"
+  HREF="node67.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1405"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1407"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1410"
+  HREF="node69.html">หัวข้อสรุป</A>
+<B> Up:</B> <A NAME="tex2html1404"
+  HREF="node58.html">ระบบคิว และ</A>
+<B> Previous:</B> <A NAME="tex2html1398"
+  HREF="node67.html">ระบบคิว</A>
+ &nbsp <B>  <A NAME="tex2html1406"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1408"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

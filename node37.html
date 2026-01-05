@@ -1,0 +1,315 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>พิสูจน์กฎของ Little อย่างง่าย:</TITLE>
+<META NAME="description" CONTENT="พิสูจน์กฎของ Little อย่างง่าย:">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node38.html">
+<LINK REL="previous" HREF="node36.html">
+<LINK REL="up" HREF="node36.html">
+<LINK REL="next" HREF="node38.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html957"
+  HREF="node38.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html951"
+  HREF="node36.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html945"
+  HREF="node36.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html953"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html955"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html958"
+  HREF="node38.html">ตัวอย่าง:</A>
+<B> Up:</B> <A NAME="tex2html952"
+  HREF="node36.html">กฎของ Little</A>
+<B> Previous:</B> <A NAME="tex2html946"
+  HREF="node36.html">กฎของ Little</A>
+ &nbsp <B>  <A NAME="tex2html954"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html956"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00660010000000000000">
+<FONT SIZE="+1">พิสูจน์กฎของ Little อย่างง่าย:</FONT></A>
+</H4>
+
+<P>
+สมมุติว่าเราเฝ้าสังเกตระบบอยู่ในช่วงเวลา <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.png"
+ ALT="$T$"> และทำการบันทึกการเข้าใช้งาน และการเสร็จสิ้นการบริการ ของแต่ละงาน ถ้าช่วงเวลา <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.png"
+ ALT="$T$"> นานพอ จำนวนงานที่เข้าใช้ระบบ จะใกล้เคียงกับจำนวนงานที่เสร็จสิ้นการบริการจากระบบ (ออกจากระบบ) ให้จำนวนดังกล่าวเท่ากับค่า <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> เราจะได้
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Arrival~rate = total~arrical/total~time = N/T
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="474" HEIGHT="39" BORDER="0"
+ SRC="img73.png"
+ ALT="\begin{displaymath}
+Arrival~rate = total~arrical/total~time = N/T
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ดังแสดงในรูป <A HREF="node37.html#fig:little">3.4</A> สามารถเขียนกราฟแสดงความสัมพันธ์ดังกล่าวได้ 3 ลักษณะ รูป <A HREF="node37.html#fig:little">3.4</A> (a) แสดงงานที่เข้าใช้ระบบทั้งหมดเทียบกับเวลา ถ้าเราพิจารณาจำนวนงานที่อยู่ในระบบเทียบกับเวลาจะได้กราฟในรูป <A HREF="node37.html#fig:little">3.4</A> (b) ในอีกทางหนึ่งถ้าเราพิจารณาว่างานที่เข้ามาในระบบ ใช้เวลาไปเท่าไรในแต่ละงาน จะได้ในรูป <A HREF="node37.html#fig:little">3.4</A> (c) 
+
+<P>
+พิจารณาพื้นที่ที่แลเงาจะพบว่า ทั้งสามกราฟมีพื้นที่เท่ากัน ซึ่งเท่ากับเวลาทั้งหมดที่ใช้ในระบบของทุกงานที่เข้ามา ให้พื้นที่ดังกล่าวเท่ากับ <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img74.png"
+ ALT="$J$">
+
+<P>
+จากรูป <A HREF="node37.html#fig:little">3.4</A> (c)
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Mean~time~spent~in~the~system = J/N
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="446" HEIGHT="39" BORDER="0"
+ SRC="img75.png"
+ ALT="\begin{displaymath}
+Mean~time~spent~in~the~system = J/N
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+จากรูป <A HREF="node37.html#fig:little">3.4</A> (b)
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+Mean~number~in~the~system & = & J/T \nonumber\\
+& = & \frac{N}{T} \times \frac{J}{N} \nonumber\\
+& = & arrival~rate \times mean~time~spend~in~the~system\nonumber\\
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="250" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.png"
+ ALT="$\displaystyle Mean~number~in~the~system$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="40" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.png"
+ ALT="$\displaystyle J/T$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="70" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.png"
+ ALT="$\displaystyle \frac{N}{T} \times \frac{J}{N}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="398" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.png"
+ ALT="$\displaystyle arrival~rate \times mean~time~spend~in~the~system$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:little"></A><A NAME="712"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.4:</STRONG>
+ความสัมพันธ์ 3 ลักษณะ พิสูจน์กฏของ Little</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="569" HEIGHT="253" ALIGN="BOTTOM" BORDER="0"
+ SRC="img81.png"
+ ALT="\includegraphics[width=5in]{fig/little.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+ข้อสำคัญประการหนึ่งของกฎของ Little คือสามารถใช้งานได้กับทุกระบบ และทุกระบบย่อย ตัวอย่างเช่น ถ้าเราใช้กับบัฟเฟอร์ในคิวสำหรับงานที่รอรับบริการ (ในรูป <A HREF="node37.html#fig:anypart">3.5</A>) จะได้
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:anypart"></A><A NAME="718"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.5:</STRONG>
+กฎของ Little สามารถใช้งานได้กับทุกระบบ และทุกระบบย่อย</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="398" HEIGHT="164" ALIGN="BOTTOM" BORDER="0"
+ SRC="img82.png"
+ ALT="\includegraphics[width=3.5in]{fig/anypart.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Mean~number~in~queue = arrival~rate \times
+mean~waiting~time
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="534" HEIGHT="37" BORDER="0"
+ SRC="img83.png"
+ ALT="\begin{displaymath}
+Mean~number~in~queue = arrival~rate \times
+mean~waiting~time
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+เช่นเดียวกัน ถ้าเราใช้กับงานที่กำลังรับบริการอยู่ จะได้สมการ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Mean~number~in~service = arrival~rate \times
+mean~service~time
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="538" HEIGHT="35" BORDER="0"
+ SRC="img84.png"
+ ALT="\begin{displaymath}
+Mean~number~in~service = arrival~rate \times
+mean~service~time
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html957"
+  HREF="node38.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html951"
+  HREF="node36.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html945"
+  HREF="node36.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html953"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html955"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html958"
+  HREF="node38.html">ตัวอย่าง:</A>
+<B> Up:</B> <A NAME="tex2html952"
+  HREF="node36.html">กฎของ Little</A>
+<B> Previous:</B> <A NAME="tex2html946"
+  HREF="node36.html">กฎของ Little</A>
+ &nbsp <B>  <A NAME="tex2html954"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html956"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

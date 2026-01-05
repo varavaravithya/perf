@@ -1,0 +1,585 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ระบบคิว </TITLE>
+<META NAME="description" CONTENT="ระบบคิว ">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node68.html">
+<LINK REL="previous" HREF="node66.html">
+<LINK REL="up" HREF="node58.html">
+<LINK REL="next" HREF="node68.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1395"
+  HREF="node68.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1389"
+  HREF="node58.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1383"
+  HREF="node66.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1391"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1393"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1396"
+  HREF="node68.html">ตัวอย่าง:</A>
+<B> Up:</B> <A NAME="tex2html1390"
+  HREF="node58.html">ระบบคิว และ</A>
+<B> Previous:</B> <A NAME="tex2html1384"
+  HREF="node66.html">ระบบคิว</A>
+ &nbsp <B>  <A NAME="tex2html1392"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1394"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00890000000000000000">
+ระบบคิว <IMG
+ WIDTH="102" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$M/M/m/B$"></A>
+</H1>
+
+<P>
+ระบบคิว <A NAME="2029"></A> <IMG
+ WIDTH="102" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$M/M/m/B$"> มีลักษณะคล้ายกับ ระบบคิว <IMG
+ WIDTH="79" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$M/M/m$"> เว้นแต่มีจำนวนบัฟเฟอร์จำกัดเท่ากับ <IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.png"
+ ALT="$B$"> บัฟเฟอร์ เมื่อบัฟเฟอร์ <IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.png"
+ ALT="$B$"> เต็มทั้งหมดงานที่เข้ามาจะ ``<B>หาย</B>'' ไป ซึ่งไม่ได้รับการบริการจากระบบ
+
+<P>
+สมมุติให้จำนวนบัฟเฟอร์ <IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.png"
+ ALT="$B$"> มากกว่าหรือเท่ากับ <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$m$"> มิฉะนั้นเครื่องบริการบางเครื่องอาจไม่ได้ใช้งานเนื่องจากจำนวนบัฟเฟอร์ไม่พอ และระบบคิวจะทำงานที่ <IMG
+ WIDTH="102" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img262.png"
+ ALT="$M/M/B/B$">
+
+<P>
+แผนภาพแสดงการเปลี่ยนสถานะของ กระบวนการเกิด-ดับ ของ คิว <IMG
+ WIDTH="102" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$M/M/m/B$"> แสดงในรูป <A HREF="node67.html#fig:bcmmmB">5.4</A>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:bcmmmB"></A><A NAME="2034"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.4:</STRONG>
+การเปลี่ยนสถานะของกระบวนการเกิด-ดับ ของ คิว <IMG
+ WIDTH="102" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$M/M/m/B$"></CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="633" HEIGHT="120" ALIGN="BOTTOM" BORDER="0"
+ SRC="img263.png"
+ ALT="\includegraphics[width=5.5in]{fig/bdmmmB.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+คิว <IMG
+ WIDTH="102" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$M/M/m/B$"> มีอัตราการเข้าใช้งานระบบเท่ากับ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\lambda_n = \lambda, ~~~~~~~~n =  0,1,2,\ldots,B-1\\
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="424" HEIGHT="37" BORDER="0"
+ SRC="img264.png"
+ ALT="\begin{displaymath}
+\lambda_n = \lambda, ~~~~~~~~n = 0,1,2,\ldots,B-1\nonumber\\
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+และมีอัตราการบริการเท่ากับ 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\mu_n = \left\{
+\begin{array}{l@{\quad}l} 
+ n\mu, & n =  1,2,\ldots,m-1\\
+ \mu, & n =  m,m+1,\ldots,B
+\\
+\end{array} \right.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="419" HEIGHT="65" BORDER="0"
+ SRC="img265.png"
+ ALT="\begin{displaymath}
+\mu_n = \left\{
+\begin{array}{l@{\quad}l}
+n\mu, &amp; n = 1,2,\ldots,m-1\\
+\mu, &amp; n = m,m+1,\ldots,B
+\\
+\end{array} \right.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.38)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ในรูปของ Traffic Intensity <!-- MATH
+ $\rho=\lambda/m\mu$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img195.png"
+ ALT="$\rho = \lambda/m\mu$"> จะได้
+<A NAME="2044"></A>
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+p_n = \left\{
+\begin{array}{l@{\quad}l} 
+\frac{\lambda^n}{n!\mu^n}p_0, & n =  1,2,\ldots,m-1\\
+\frac{\lambda^n}{m!m^{n-m}\mu^n}p_0, & n =  m,m+1,\ldots,
+B\\
+\end{array} \right.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="453" HEIGHT="65" BORDER="0"
+ SRC="img266.png"
+ ALT="\begin{displaymath}
+p_n = \left\{
+\begin{array}{l@{\quad}l}
+\frac{\lambda^n}{n!...
+...m^{n-m}\mu^n}p_0, &amp; n = m,m+1,\ldots,
+B\\
+\end{array} \right.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.39)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ความน่าจะเป็นที่ไม่มีงานอยู่ในระบบ <IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.png"
+ ALT="$p_0$"> เท่ากับ 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sum_{n=0}^{B} p_n = 1
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="320" HEIGHT="59" BORDER="0"
+ SRC="img267.png"
+ ALT="\begin{displaymath}
+\sum_{n=0}^{B} p_n = 1
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.40)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+จากการขยายสมการจะได้ 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+p_0 +p_o\sum_{n=1}^{m-1}\frac{(m\rho)^n}{n!}
+ +
+p_0\frac{(m\rho)^m}{m!}\sum_{n=m}^{B}\rho^{n-m} = 1
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="457" HEIGHT="59" BORDER="0"
+ SRC="img268.png"
+ ALT="\begin{displaymath}
+p_0 +p_o\sum_{n=1}^{m-1}\frac{(m\rho)^n}{n!}
++
+p_0\frac{(m\rho)^m}{m!}\sum_{n=m}^{B}\rho^{n-m} = 1
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.41)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+หรือเท่ากับ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+p_0 = \left[ 1+
+\frac{(1-\rho^{B-m+1})(m\rho)^m}{m!(1-\rho)} +
+\sum_{n=1}^{m-1}\frac{(m\rho)^n}{n!}\right]^{-1}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="472" HEIGHT="62" BORDER="0"
+ SRC="img269.png"
+ ALT="\begin{displaymath}
+p_0 = \left[ 1+
+\frac{(1-\rho^{B-m+1})(m\rho)^m}{m!(1-\rho)} +
+\sum_{n=1}^{m-1}\frac{(m\rho)^n}{n!}\right]^{-1}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.42)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ใช้สมการแสดง <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$p_n$"> เราสามารถหาค่าเฉลี่ยของจำนวนงานในระบบ  <IMG
+ WIDTH="43" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img270.png"
+ ALT="$E[n]$"> เท่ากับ 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E[n] = \sum_{n=1}^{N}nP_n
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="341" HEIGHT="59" BORDER="0"
+ SRC="img271.png"
+ ALT="\begin{displaymath}
+E[n] = \sum_{n=1}^{N}nP_n
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.43)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+และค่าเฉลี่ยของจำนวนงานที่รออยู่ในคิว  <IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img272.png"
+ ALT="$E[n_q]$"> เท่ากับ 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E[n_q] = \sum^{B}_{n=m+1} (n-m)p_n
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="380" HEIGHT="60" BORDER="0"
+ SRC="img273.png"
+ ALT="\begin{displaymath}
+E[n_q] = \sum^{B}_{n=m+1} (n-m)p_n
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.44)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+จากการขอเข้าใช้งานบริการระบบ หลังจากบัฟเฟอร์เต็ม <IMG
+ WIDTH="58" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img274.png"
+ ALT="$n = B$"> งานที่เข้ามาจะไม่ได้รับบริการ หรือสูญหายไป อัตราการขอเข้าใช้งานจริงในระบบ <IMG
+ WIDTH="21" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img275.png"
+ ALT="$\lambda'$"> จะเท่ากับ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\lambda' = \sum_{n=0}^{B-1}\lambda p_n
+=\lambda\sum_{n=0}^{B-1}p_n = \lambda(1-p_B)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="427" HEIGHT="59" BORDER="0"
+ SRC="img276.png"
+ ALT="\begin{displaymath}
+\lambda' = \sum_{n=0}^{B-1}\lambda p_n
+=\lambda\sum_{n=0}^{B-1}p_n = \lambda(1-p_B)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.45)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ค่า <IMG
+ WIDTH="21" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img275.png"
+ ALT="$\lambda'$"> เรียกว่า อัตราการขอเข้าใช้งานจริง หรือ Effective Arrival Rate  <A NAME="2092"></A> <A NAME="2093"></A>
+
+<P>
+ค่า <!-- MATH
+ $\lambda - \lambda' = \lambda p_B$
+ -->
+<IMG
+ WIDTH="112" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img277.png"
+ ALT="$\lambda - \lambda' = \lambda p_B$"> เรียกว่าอัตราการสูญหายของงาน หรือ Packet Loss Rate 
+<A NAME="2094"></A>
+<A NAME="2095"></A>
+
+<P>
+เวลาตอบสนองสามารถหาได้จากกฎของ Little
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E[r] = \frac{E[n]}{\lambda'} = \frac{E[n]}{\lambda(1-p_B)}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="383" HEIGHT="52" BORDER="0"
+ SRC="img278.png"
+ ALT="\begin{displaymath}
+E[r] = \frac{E[n]}{\lambda'} = \frac{E[n]}{\lambda(1-p_B)}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.46)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+เช่นเดียวกันเวลาเฉลี่ยในการรอรับบริการเท่ากับ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E[w] = \frac{E[n_q]}{\lambda'} = \frac{E[n_q]}{\lambda(1-p_B)}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="388" HEIGHT="52" BORDER="0"
+ SRC="img279.png"
+ ALT="\begin{displaymath}
+E[w] = \frac{E[n_q]}{\lambda'} = \frac{E[n_q]}{\lambda(1-p_B)}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.47)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+จากการเฝ้าสังเกตการทำงานของระบบเป็นเวลานานมาก <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.png"
+ ALT="$T$"> วินาที  จำนวนงานที่เข้ามาในระบบ และได้รับการบริการจะเท่ากับ <IMG
+ WIDTH="35" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img280.png"
+ ALT="$\lambda' T$">
+
+<P>
+Busytime ของเครื่องบริการ <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$m$"> เครื่อง ที่บริการงานกลุ่มดังกล่าวเท่ากับ <!-- MATH
+ $\lambda' T/\mu$
+ -->
+<IMG
+ WIDTH="55" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img281.png"
+ ALT="$\lambda' T/\mu$"> เพราะฉะนั้น ค่าภาระงาน (Utilization) ของเครื่องบริการแต่ละเครื่องจะเท่ากับ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+U = \frac{busy~time~per~server}{total~time} =
+\frac{(\lambda' T/\mu)/m}{T} =
+\frac{\lambda'}{m\mu} = \rho(1-p_B)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="528" HEIGHT="50" BORDER="0"
+ SRC="img282.png"
+ ALT="\begin{displaymath}
+U = \frac{busy~time~per~server}{total~time} =
+\frac{(\lambda' T/\mu)/m}{T} =
+\frac{\lambda'}{m\mu} = \rho(1-p_B)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.48)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ความน่าจะเป็นที่ระบบเต็มใช้ตัวย่อว่า <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img283.png"
+ ALT="$p_B$"> ในระบบคิว <IMG
+ WIDTH="104" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img284.png"
+ ALT="$M/M/m/m$"> ที่มีจำนวนบัฟเฟอร์เท่ากับจำนวนเครื่องบริการ จะได้ความน่าจะเป็นที่ระบบเต็ม หรือความน่าจะเป็นที่งานสูญหายเท่ากับ 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+p_m = \frac{(m\rho)^m}{m!}p_0 = \frac{(m\rho)^m/m!}
+{\sum^{m}_{j=0}[(m\rho)^j/j!]}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="416" HEIGHT="54" BORDER="0"
+ SRC="img285.png"
+ ALT="\begin{displaymath}
+p_m = \frac{(m\rho)^m}{m!}p_0 = \frac{(m\rho)^m/m!}
+{\sum^{m}_{j=0}[(m\rho)^j/j!]}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.49)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+สมการดังกล่าวเรียกว่า Erlang's Loss Formula <A NAME="2123"></A>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1395"
+  HREF="node68.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1389"
+  HREF="node58.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1383"
+  HREF="node66.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1391"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1393"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1396"
+  HREF="node68.html">ตัวอย่าง:</A>
+<B> Up:</B> <A NAME="tex2html1390"
+  HREF="node58.html">ระบบคิว และ</A>
+<B> Previous:</B> <A NAME="tex2html1384"
+  HREF="node66.html">ระบบคิว</A>
+ &nbsp <B>  <A NAME="tex2html1392"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1394"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

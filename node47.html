@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>กระบวนการเกิด-ดับ</TITLE>
+<META NAME="description" CONTENT="กระบวนการเกิด-ดับ">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node48.html">
+<LINK REL="previous" HREF="node46.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node48.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1107"
+  HREF="node48.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1101"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1095"
+  HREF="node46.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1103"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1105"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1108"
+  HREF="node48.html">ทฤษฎีความน่าจะเป็นคงตัวของสถานะ</A>
+<B> Up:</B> <A NAME="tex2html1102"
+  HREF="node43.html">กระบวนการเกิด-ดับ และระบบคิว</A>
+<B> Previous:</B> <A NAME="tex2html1096"
+  HREF="node46.html">กล่าวนำ</A>
+ &nbsp <B>  <A NAME="tex2html1104"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1106"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00740000000000000000"></A>
+<A NAME="1321"></A>
+<BR>
+กระบวนการเกิด-ดับ
+</H1>
+
+จากที่กล่าวมาในบทที่แล้ว กระบวนการเกิด-ดับเป็นประโยชน์มากในการจำลองระบบ ที่มีงานเข้าใช้ระบบครั้งละหนึ่งงาน สถานะของกระบวนงานแสดงโดยจำนวนงาน <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="$n$"> 
+ที่อยู่ในระบบ งานใหม่ที่เข้ามาในระบบจะเปลี่ยนสถานะเป็นสถานะ <IMG
+ WIDTH="50" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.png"
+ ALT="$n+1$"> ซึ่งเรียกว่า ``เกิด'' (Birth) 
+
+เช่นเดียวกัน ถ้างานเสร็จจากระบบและออกจากระบบ จะทำให้กระบวนงานเปลี่ยนมาอยู่ที่สถานะ  <IMG
+ WIDTH="49" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img95.png"
+ ALT="$n-1$"> ซึ่งเรียกว่า ``ดับ'' (Death) ดังนั้นจำนวนงานในระบบของคิวลักษณะดังกล่าวสามารถจำลองได้ โดยกระบวนการเกิด-ดับ 
+
+ในบทนี้จะแสดงการพิสูจน์ความน่าจะเป็นประจำสถานะของกระบวนการเกิด-ดับ ที่สามารถใช้ได้ในกรณีทั่วไป และผลที่ได้จะสามารถนำไปวิเคราะห์ระบบคิว <IMG
+ WIDTH="130" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$M/M/m/B/K$"> ได้
+
+แผนภาพแสดงการเปลี่ยนสถานะของกระบวนการเกิด-ดับเมื่อระบบอยู่ในสถานะ <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="$n$"> มีงานอยู่ในระบบเท่ากับ <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="$n$"> งาน  แสดงในรูป <A HREF="node47.html#fig:bd">4.1</A>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:bd"></A><A NAME="1325"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.1:</STRONG>
+แผนภาพแสดงการเปลี่ยนสถานะของกระบวนการเกิด-ดับ</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="656" HEIGHT="154" ALIGN="BOTTOM" BORDER="0"
+ SRC="img107.png"
+ ALT="\includegraphics[width=5.7in]{fig/bd.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+งานเข้ามาในระบบด้วยอัตรา <IMG
+ WIDTH="26" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img108.png"
+ ALT="$\lambda_n$"> โดยที่มีอัตราการบริการเท่ากับ <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.png"
+ ALT="$\mu_n$"> สมมุติให้ทั้งอัตราการเข้าใช้บริการ และอัตราการบริการมีการกระจายแบบ Exponential ความน่าจะเป็นคงตัวของสถานะ (Steady-State Probability) 
+ในกระบวนการเกิด-ดับ ในสถานะ <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="$n$"> สามารถหาได้จากทฤษฎี
+<A HREF="node49.html#eq:31.1">4.1</A>
+
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

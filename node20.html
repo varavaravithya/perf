@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ตัวอย่าง:</TITLE>
+<META NAME="description" CONTENT="ตัวอย่าง:">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="previous" HREF="node19.html">
+<LINK REL="up" HREF="node19.html">
+<LINK REL="next" HREF="node21.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html707"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html701"
+  HREF="node19.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html697"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html703"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html705"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html708"
+  HREF="node21.html">กิจกรรม</A>
+<B> Up:</B> <A NAME="tex2html702"
+  HREF="node19.html">การเลือกตัววัดประสิทธิภาพ</A>
+<B> Previous:</B> <A NAME="tex2html698"
+  HREF="node19.html">การเลือกตัววัดประสิทธิภาพ</A>
+ &nbsp <B>  <A NAME="tex2html704"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html706"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00550010000000000000">
+<FONT SIZE="+1">ตัวอย่าง:</FONT></A>
+</H4> การตอบสนองของคอมพิวเตอร์ Gateway มักแสดงโดยเวลาการตอบสนอง-คือ
+
+<OL>
+<LI>Response Time: เวลาระหว่างเพ็คเกตเข้ามาถึง Gateway  และส่งผ่านออกไป 
+</LI>
+<LI>Throughput: อัตราความสำเร็จของ Gateway วัดเป็นจำนวนเพ็คเกตที่สามารถส่งได้ในหน่วยเวลาเรียกว่าอัตราการส่งผ่าน 
+</LI>
+<LI>Utilization: ภาระงานเป็นการวัดเปอร์เซ็นต์ของเวลาที่ Gateway ทำงานอยู่เทียบกับเวลาเฝ้าสังเกตทั้งหมด 
+</LI>
+</OL>
+
+อุปกรณ์ที่มีภาระงานมากที่สุด (Highest Utilization) ถือว่าเป็นอุปกรณ์ที่เป็นคอขวด <A NAME="451"></A> (Bottleneck) <A NAME="452"></A> การปรับปรุงประสิทธิภาพของระบบจะได้ประสิทธิภาพเพิ่มขึ้นสูงสุด ถ้าเราปรับปรุงอุปกรณ์ที่เป็นคอขวด  ดังนั้นการหาภาระงานของอุปกรณ์ใดๆ ในระบบ จึงเป็นการประเมินประสิทธิภาพที่สำคัญ 
+
+ในกรณีที่ระบบตอบสนองผิดพลาด ผลการตอบสนองที่ผิดจะส่งผลต่อการทำงานโดยตรง จึงจำเป็นต้องแจกแจงความผิดพลาดที่อาจเกิดขึ้น การแสดงตัววัดประสิทธิภาพในกรณีที่แสดงผลตอบสนองผิดพลาดจะแสดงเป็นความน่าจะเป็นของความผิดพลาดนั้นๆ ตัวอย่างเช่น ในคอมพิวเตอร์ Gateway เราต้องการทราบความน่าจะเป็นที่จะเกิดความผิดพลาด หนึ่งบิต สองบิต ... ในขณะที่ทำการส่งผ่านเพ็คเกต หรือเราอยากทราบความน่าจะเป็นที่เพ็คเกตไม่สมบูรณ์ 
+
+ในกรณีที่ระบบไม่ตอบสนอง อาจเกิดจากระบบไม่ทำงานเสียหาย หรือไม่ได้บริการ จึงมีความจำเป็นต้องแสดงตัววัดประสิทธิภาพในกรณีนี้ ตัวอย่างเช่น คอมพิวเตอร์ Gateway อาจสามารถใช้งานได้ 99.99 เปอร์เซ็นต์ของเวลาทั้งหมด 
+
+ตัววัดประสิทธิภาพที่อิงกับผลการตอบสนองของระบบ 3 ชนิด ได้แก่ สำเร็จ, ผิดพลาด, และไม่บริการนั้น เรียกว่า ความเร็ว (Speed), ความน่าเชื่อถือ (Reliability), และความสามารถในการให้บริการ (Availability) จะเห็นได้อย่างชัดเจนว่าในแต่ละบริการที่อยู่ในระบบจะมีตัววัดทั้ง 3 ตัว เข้าเกี่ยวข้องด้วยเสมอ ในส่วนของจำนวนตัววัดในการประเมินประสิทธิภาพ ระบบที่มีบริการมากกว่าบริการหนึ่งตัววัดประสิทธิภาพจะเพิ่มขึ้นเป็นอัตราส่วน 
+
+สำหรับตัววัดประสิทธิภาพหลายตัวการหาค่าเฉลี่ยเพื่อแสดงผลมีความสำคัญ อย่างไรก็ตามต้องพิจารณาความแปรปรวนประกอบด้วย ตัวอย่างเช่น ถ้าเวลาเฉลี่ยในการตอบสนองของระบบ มีค่าสูง และความแปรปรวนมีค่าสูง ซึ่งทั้ง 2 ตัววัด จะส่งผลทำให้ระบบไม่สามารถทำงานได้อย่างมีประสิทธิภาพ ในกรณีนี้เราจำเป็นต้องศึกษาตัววัดทั้ง 2 ตัว  
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

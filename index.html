@@ -1,0 +1,533 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>perf</TITLE>
+<META NAME="description" CONTENT="perf">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html94"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev_g.png"> 
+<A NAME="tex2html90"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html92"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html95"
+  HREF="node1.html">.</A>
+ &nbsp <B>  <A NAME="tex2html91"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html93"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<DIV ALIGN="LEFT">
+<FONT SIZE="+2"><B>ชุดเอกสารประกอบการสอน
+<BR>วิศวกรรมคอมพิวเตอร์
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</B></FONT></DIV>
+
+<BR>
+<DIV ALIGN="RIGHT">
+<TABLE CELLPADDING=3>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><FONT SIZE="+4">
+เอกสารประกอบการสอน</FONT></TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><FONT SIZE="+4"> 
+การประเมินประสิทธิภาพ</FONT></TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><FONT SIZE="+4"> 
+ของระบบคอมพิวเตอร์</FONT></TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><FONT SIZE="+2">Version 1.1</FONT></TD>
+</TR>
+</TABLE></DIV>
+
+<DIV ALIGN="LEFT">
+<TABLE CELLPADDING=3>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><I><FONT SIZE="+2"></I></FONT><FONT SIZE="+1"><B>ดร. วรา วราวิทย์<I></B></FONT></I></TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><FONT SIZE="+1"><I>
+ภาควิชาวิศวกรรมไฟฟ้า
+คณะวิศวกรรมศาสตร์</I></FONT></TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><FONT SIZE="+1"><I>
+สถาบันเทคโนโลยีพระจอมเกล้าพระนครเหนือ
+</I></FONT></TD>
+</TR>
+</TABLE></DIV>
+
+<P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><UL>
+<LI><A NAME="tex2html96"
+  HREF="node1.html">.</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html97"
+  HREF="node2.html">Contents</A>
+<LI><A NAME="tex2html98"
+  HREF="node3.html">List of Figures</A>
+<LI><A NAME="tex2html99"
+  HREF="node4.html">List of Tables</A>
+<LI><A NAME="tex2html100"
+  HREF="node5.html">การประเมินประสิทธิภาพระบบคอมพิวเตอร์</A>
+<UL>
+<LI><A NAME="tex2html101"
+  HREF="node6.html">เป้าประสงค์</A>
+<LI><A NAME="tex2html102"
+  HREF="node7.html">กล่าวนำ</A>
+<LI><A NAME="tex2html103"
+  HREF="node8.html">จุดประสงค์ของวิชานี้</A>
+<LI><A NAME="tex2html104"
+  HREF="node9.html">ข้อผิดพลาดในการประเมินประสิทธิภาพ</A>
+<LI><A NAME="tex2html105"
+  HREF="node10.html">วิธีการการประเมินประสิทธิภาพอย่างเป็นระบบ</A>
+<LI><A NAME="tex2html106"
+  HREF="node11.html">กิจกรรม</A>
+<LI><A NAME="tex2html107"
+  HREF="node12.html">หัวข้อสรุป</A>
+<LI><A NAME="tex2html108"
+  HREF="node13.html">งานมอบหมาย</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html109"
+  HREF="node14.html">การเลือกเทคนิคการประเมิน และตัววัดประสิทธิภาพ</A>
+<UL>
+<LI><A NAME="tex2html110"
+  HREF="node15.html">เป้าประสงค์</A>
+<LI><A NAME="tex2html111"
+  HREF="node16.html">หัวข้อสำคัญในครั้งก่อน</A>
+<LI><A NAME="tex2html112"
+  HREF="node17.html">กล่าวนำ</A>
+<LI><A NAME="tex2html113"
+  HREF="node18.html">การเลือกเทคนิคการประเมินประสิทธิภาพ</A>
+<LI><A NAME="tex2html114"
+  HREF="node19.html">การเลือกตัววัดประสิทธิภาพ</A>
+<LI><A NAME="tex2html115"
+  HREF="node21.html">กิจกรรม</A>
+<LI><A NAME="tex2html116"
+  HREF="node22.html">กรณีศึกษา: การควบคุมความคับคั่งในเครือข่ายคอมพิวเตอร์</A>
+<LI><A NAME="tex2html117"
+  HREF="node23.html">ตัววัดประสิทธิภาพพื้นฐาน</A>
+<UL>
+<LI><A NAME="tex2html118"
+  HREF="node24.html">เวลาตอบสนอง</A>
+<LI><A NAME="tex2html119"
+  HREF="node25.html">อัตราความสำเร็จ</A>
+</UL>
+<LI><A NAME="tex2html120"
+  HREF="node26.html">ความสามารถในการบริการของระบบ</A>
+<LI><A NAME="tex2html121"
+  HREF="node27.html">การพิจารณาตัววัดประสิทธิภาพ</A>
+<LI><A NAME="tex2html122"
+  HREF="node28.html">หัวข้อสรุป</A>
+<LI><A NAME="tex2html123"
+  HREF="node29.html">งานมอบหมาย</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html124"
+  HREF="node30.html">ทฤษฎีคิว</A>
+<UL>
+<LI><A NAME="tex2html125"
+  HREF="node31.html">เป้าประสงค์</A>
+<LI><A NAME="tex2html126"
+  HREF="node32.html">หัวข้อสำคัญในครั้งก่อน</A>
+<LI><A NAME="tex2html127"
+  HREF="node33.html">กล่าวนำ</A>
+<LI><A NAME="tex2html128"
+  HREF="node34.html">สัญลักษณ์ของคิว</A>
+<LI><A NAME="tex2html129"
+  HREF="node35.html">กฎของคิว</A>
+<LI><A NAME="tex2html130"
+  HREF="node36.html">กฎของ Little</A>
+<LI><A NAME="tex2html131"
+  HREF="node39.html">ชนิดของกระบวนการสโตคาสติก</A>
+<LI><A NAME="tex2html132"
+  HREF="node40.html">กิจกรรม</A>
+<LI><A NAME="tex2html133"
+  HREF="node41.html">หัวข้อสรุป</A>
+<LI><A NAME="tex2html134"
+  HREF="node42.html">งานมอบหมาย</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html135"
+  HREF="node43.html">กระบวนการเกิด-ดับ และระบบคิว <IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$M/M/1$"></A>
+<UL>
+<LI><A NAME="tex2html136"
+  HREF="node44.html">เป้าประสงค์</A>
+<LI><A NAME="tex2html137"
+  HREF="node45.html">หัวข้อสำคัญในครั้งก่อน</A>
+<LI><A NAME="tex2html138"
+  HREF="node46.html">กล่าวนำ</A>
+<LI><A NAME="tex2html139"
+  HREF="node47.html">กระบวนการเกิด-ดับ</A>
+<LI><A NAME="tex2html140"
+  HREF="node48.html">ทฤษฎีความน่าจะเป็นคงตัวของสถานะ</A>
+<LI><A NAME="tex2html141"
+  HREF="node51.html">แถวคอย  <IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$M/M/1$"></A>
+<LI><A NAME="tex2html142"
+  HREF="node52.html">การวิเคราะห์ระบบคิว <IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$M/M/1$"> </A>
+<LI><A NAME="tex2html143"
+  HREF="node54.html">ตัวอย่าง คิว <IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$M/M/1$"> </A>
+<LI><A NAME="tex2html144"
+  HREF="node56.html">หัวข้อสรุป</A>
+<LI><A NAME="tex2html145"
+  HREF="node57.html">งานมอบหมาย</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html146"
+  HREF="node58.html">ระบบคิว <IMG
+ WIDTH="79" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$M/M/m$"> และ <IMG
+ WIDTH="102" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$M/M/m/B$"></A>
+<UL>
+<LI><A NAME="tex2html147"
+  HREF="node59.html">เป้าประสงค์</A>
+<LI><A NAME="tex2html148"
+  HREF="node60.html">หัวข้อสำคัญในครั้งก่อน</A>
+<LI><A NAME="tex2html149"
+  HREF="node61.html">กล่าวนำ</A>
+<LI><A NAME="tex2html150"
+  HREF="node62.html">ระบบคิว <IMG
+ WIDTH="79" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$M/M/m$"></A>
+<LI><A NAME="tex2html151"
+  HREF="node63.html">ตัวอย่าง: การประยุกต์ <IMG
+ WIDTH="79" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$M/M/m$"></A>
+<LI><A NAME="tex2html152"
+  HREF="node64.html">ตัวอย่าง: การประยุกต์ <IMG
+ WIDTH="79" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$M/M/m$"> จากการเปลี่ยนแปลงระบบ</A>
+<LI><A NAME="tex2html153"
+  HREF="node65.html">ตัวอย่าง: เปรียบเทียบ <IMG
+ WIDTH="79" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$M/M/m$"> กับ <!-- MATH
+ $M/M/1 \times m$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$M/M/1 \times m$"></A>
+<LI><A NAME="tex2html154"
+  HREF="node66.html">ระบบคิว <IMG
+ WIDTH="80" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$M/M/\infty $"></A>
+<LI><A NAME="tex2html155"
+  HREF="node67.html">ระบบคิว <IMG
+ WIDTH="102" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$M/M/m/B$"></A>
+<LI><A NAME="tex2html156"
+  HREF="node68.html">ตัวอย่าง: <IMG
+ WIDTH="90" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$M/M/1/2$"></A>
+<LI><A NAME="tex2html157"
+  HREF="node69.html">หัวข้อสรุป</A>
+<LI><A NAME="tex2html158"
+  HREF="node70.html">งานมอบหมาย</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html159"
+  HREF="node71.html">เครือข่ายคิว</A>
+<UL>
+<LI><A NAME="tex2html160"
+  HREF="node72.html">เป้าประสงค์</A>
+<LI><A NAME="tex2html161"
+  HREF="node73.html">หัวข้อสำคัญในครั้งก่อน</A>
+<LI><A NAME="tex2html162"
+  HREF="node74.html">กล่าวนำ</A>
+<LI><A NAME="tex2html163"
+  HREF="node75.html">ระบบเครือข่ายคิวเปิด และระบบเครือข่ายคิวปิด</A>
+<LI><A NAME="tex2html164"
+  HREF="node79.html">เครือข่ายคิวแบบ Product Form</A>
+<LI><A NAME="tex2html165"
+  HREF="node81.html">ระบบเครือข่ายคิวสำหรับจำลองระบบคอมพิวเตอร์</A>
+<LI><A NAME="tex2html166"
+  HREF="node82.html">หัวข้อสรุป</A>
+<LI><A NAME="tex2html167"
+  HREF="node83.html">งานมอบหมาย</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html168"
+  HREF="node84.html">กฎของการใชังาน</A>
+<UL>
+<LI><A NAME="tex2html169"
+  HREF="node85.html">เป้าประสงค์</A>
+<LI><A NAME="tex2html170"
+  HREF="node86.html">หัวข้อสำคัญในครั้งก่อน</A>
+<LI><A NAME="tex2html171"
+  HREF="node87.html">กล่าวนำ</A>
+<LI><A NAME="tex2html172"
+  HREF="node88.html">กฎภาระงาน (Utilization Law)</A>
+<LI><A NAME="tex2html173"
+  HREF="node90.html">กฎการไหลต่อเนื่องของงาน (Forced Flow Law)</A>
+<LI><A NAME="tex2html174"
+  HREF="node93.html">กฎของ Little</A>
+<LI><A NAME="tex2html175"
+  HREF="node95.html">กฎเวลาตอบสนองทั่วไป (General Response Time Law)</A>
+<LI><A NAME="tex2html176"
+  HREF="node97.html">กฎเวลาตอบสนองที่มีการปฏิสัมพันธ์กับผู้ใช้งาน (Interactive Response Time Law)</A>
+<LI><A NAME="tex2html177"
+  HREF="node99.html">การวิเคราะห์คอขวด (Bottleneck Analysis)</A>
+<LI><A NAME="tex2html178"
+  HREF="node103.html">หัวข้อสรุป</A>
+<LI><A NAME="tex2html179"
+  HREF="node104.html">งานมอบหมาย</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html180"
+  HREF="node105.html">การวิเคราะห์ค่าเฉลี่ย (Mean Value Analysis)</A>
+<UL>
+<LI><A NAME="tex2html181"
+  HREF="node106.html">เป้าประสงค์</A>
+<LI><A NAME="tex2html182"
+  HREF="node107.html">หัวข้อสำคัญในครั้งก่อน</A>
+<LI><A NAME="tex2html183"
+  HREF="node108.html">กล่าวนำ</A>
+<LI><A NAME="tex2html184"
+  HREF="node109.html">การวิเคราะห์ระบบคิวแบบเปิด</A>
+<LI><A NAME="tex2html185"
+  HREF="node110.html">ตัวอย่าง</A>
+<LI><A NAME="tex2html186"
+  HREF="node111.html">การวิเคราะห์ค่าเฉลี่ย</A>
+<LI><A NAME="tex2html187"
+  HREF="node113.html">หัวข้อสรุป</A>
+<LI><A NAME="tex2html188"
+  HREF="node114.html">งานมอบหมาย</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html189"
+  HREF="node115.html">พื้นฐานระบบที่คงทนต่อความเสียหาย</A>
+<UL>
+<LI><A NAME="tex2html190"
+  HREF="node116.html">เป้าประสงค์</A>
+<LI><A NAME="tex2html191"
+  HREF="node117.html">หัวข้อสำคัญในครั้งก่อน</A>
+<LI><A NAME="tex2html192"
+  HREF="node118.html">กล่าวนำ</A>
+<LI><A NAME="tex2html193"
+  HREF="node119.html">ตัววัดประสิทธิภาพของระบบที่คงทนต่อความเสียหาย</A>
+<LI><A NAME="tex2html194"
+  HREF="node120.html">งานประยุกต์ของระบบที่คงทนต่อความเสียหาย</A>
+<UL>
+<LI><A NAME="tex2html195"
+  HREF="node121.html">การประยุกต์ใช้ในระบบที่มีอายุการใช้งานยาว (Long-Life Applications)</A>
+<LI><A NAME="tex2html196"
+  HREF="node122.html">การประยุกต์ใชัในระบบคำนวณที่มีความสำคัญ (Critical-Computation Applications)</A>
+<LI><A NAME="tex2html197"
+  HREF="node123.html">การประยุกต์ใช้ในระบบที่ต้องการยืดเวลาการซ่อมบำรุง (Maintenance Postponement Applications)</A>
+<LI><A NAME="tex2html198"
+  HREF="node124.html">การประยุกต์ใช้ในระบบที่มีความสามารถในการคงการบริการสูง 
+(High Availability Applications)</A>
+</UL>
+<LI><A NAME="tex2html199"
+  HREF="node125.html">ความเสียหาย, ความผิดพลาด, และความล้มเหลวของระบบ</A>
+<LI><A NAME="tex2html200"
+  HREF="node126.html">สาเหตุของความเสียหาย</A>
+<LI><A NAME="tex2html201"
+  HREF="node127.html">แนวทางการออกแบบระบบที่ทนทานต่อการเสียหาย</A>
+<LI><A NAME="tex2html202"
+  HREF="node131.html">ระบบที่คงทนต่อความเสียหาย</A>
+<UL>
+<LI><A NAME="tex2html203"
+  HREF="node132.html">ระบบ Triple Modular Redundancy</A>
+<LI><A NAME="tex2html204"
+  HREF="node133.html">ระบบ N Modular Redundancy</A>
+<LI><A NAME="tex2html205"
+  HREF="node134.html">ระบบตรวจสอบความเสียหาย</A>
+<LI><A NAME="tex2html206"
+  HREF="node135.html">ระบบสำรองพร้อมทำงาน</A>
+<LI><A NAME="tex2html207"
+  HREF="node136.html">ระบบคงทนต่อความเสียหายแบบอื่นๆ</A>
+</UL>
+<LI><A NAME="tex2html208"
+  HREF="node137.html">กิจกรรม</A>
+<LI><A NAME="tex2html209"
+  HREF="node138.html">หัวข้อสรุป</A>
+<LI><A NAME="tex2html210"
+  HREF="node139.html">งานมอบหมาย</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html211"
+  HREF="node140.html">การประเมินค่าความน่าเชื่อถือเชิงปริมาณ</A>
+<UL>
+<LI><A NAME="tex2html212"
+  HREF="node141.html">เป้าประสงค์</A>
+<LI><A NAME="tex2html213"
+  HREF="node142.html">หัวข้อสำคัญในครั้งก่อน</A>
+<LI><A NAME="tex2html214"
+  HREF="node143.html">กล่าวนำ</A>
+<LI><A NAME="tex2html215"
+  HREF="node144.html">การประเมินเชิงปริมาณ</A>
+<UL>
+<LI><A NAME="tex2html216"
+  HREF="node145.html">อัตราการเสียหาย และฟังก์ชั่นความน่าเชื่อถือ</A>
+</UL>
+<LI><A NAME="tex2html217"
+  HREF="node146.html">เวลาเฉลี่ยก่อนการเสียหาย (MTTF)</A>
+<LI><A NAME="tex2html218"
+  HREF="node147.html">เวลาเฉลี่ยในการซ่อมแซม (MTTR)</A>
+<LI><A NAME="tex2html219"
+  HREF="node148.html">เวลาเฉลี่ยระหว่างการเสียหาย (MTBF)</A>
+<LI><A NAME="tex2html220"
+  HREF="node149.html">การคุ้มครองจากการเสียหาย (Fault Coverage)</A>
+<LI><A NAME="tex2html221"
+  HREF="node150.html">การหาค่าความน่าเชื่อถือโดยการจำลองแบบแจกแจงการทำงาน</A>
+<UL>
+<LI><A NAME="tex2html222"
+  HREF="node151.html">ระบบอนุกรม</A>
+<LI><A NAME="tex2html223"
+  HREF="node152.html">ระบบขนาน</A>
+<LI><A NAME="tex2html224"
+  HREF="node153.html">ระบบ <IMG
+ WIDTH="26" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$M$"> ใน <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"></A>
+</UL>
+<LI><A NAME="tex2html225"
+  HREF="node154.html">หัวข้อสรุป</A>
+<LI><A NAME="tex2html226"
+  HREF="node155.html">งานมอบหมาย</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html227"
+  HREF="node156.html">ตัวอย่างการวิเคราะห์ความน่าเชื่อถือ และการคุ้มครองจากความเสียหาย</A>
+<UL>
+<LI><A NAME="tex2html228"
+  HREF="node157.html">เป้าประสงค์</A>
+<LI><A NAME="tex2html229"
+  HREF="node158.html">หัวข้อสำคัญในครั้งก่อน</A>
+<LI><A NAME="tex2html230"
+  HREF="node159.html">สรุปสูตรการคำนวณความน่าเชื่อถือของระบบ โดยวิธีการแจกแจง</A>
+<LI><A NAME="tex2html231"
+  HREF="node163.html">ตัวอย่าง: การคำนวณค่าความน่าเชื่อถือของระบบอนุกรม</A>
+<LI><A NAME="tex2html232"
+  HREF="node164.html">ตัวอย่าง: การคำนวณค่าความน่าเชื่อถือของระบบขนาน</A>
+<LI><A NAME="tex2html233"
+  HREF="node165.html">การคุ้มครองจากการเสียหาย</A>
+<LI><A NAME="tex2html234"
+  HREF="node166.html">หัวข้อสรุป</A>
+<LI><A NAME="tex2html235"
+  HREF="node167.html">งานมอบหมาย</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html236"
+  HREF="node168.html">แบบจำลองมาร์คอฟ</A>
+<UL>
+<LI><A NAME="tex2html237"
+  HREF="node169.html">เป้าประสงค์</A>
+<LI><A NAME="tex2html238"
+  HREF="node170.html">หัวข้อสำคัญในครั้งก่อน</A>
+<LI><A NAME="tex2html239"
+  HREF="node171.html">กล่าวนำ</A>
+<LI><A NAME="tex2html240"
+  HREF="node172.html">แบบจำลองมาร์คอฟของระบบ TMR</A>
+<LI><A NAME="tex2html241"
+  HREF="node173.html">แบบจำลองมาร์คอฟที่คำนึงถึงผลกระทบจากความคุ้มครองจากความเสียหาย</A>
+<LI><A NAME="tex2html242"
+  HREF="node174.html">แบบจำลองความปลอดภัย</A>
+<LI><A NAME="tex2html243"
+  HREF="node175.html">หัวข้อสรุป</A>
+<LI><A NAME="tex2html244"
+  HREF="node176.html">งานมอบหมาย</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html245"
+  HREF="node177.html">แบบจำลองมาร์คอฟ (ต่อ)</A>
+<UL>
+<LI><A NAME="tex2html246"
+  HREF="node178.html">เป้าประสงค์</A>
+<LI><A NAME="tex2html247"
+  HREF="node179.html">หัวข้อสำคัญในครั้งก่อน</A>
+<LI><A NAME="tex2html248"
+  HREF="node180.html">การเปรียบเทียบค่าความน่าเชื่อถือระหว่างระบบเดี่ยว กับระบบ TMR</A>
+<LI><A NAME="tex2html249"
+  HREF="node181.html">แบบจำลองความสามารถในการคงการบริการ</A>
+<LI><A NAME="tex2html250"
+  HREF="node183.html">แบบจำลองความสามารถในการบำรุงรักษา</A>
+<LI><A NAME="tex2html251"
+  HREF="node185.html">หัวข้อสรุป</A>
+<LI><A NAME="tex2html252"
+  HREF="node186.html">งานมอบหมาย</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html253"
+  HREF="node187.html">Index</A>
+<LI><A NAME="tex2html254"
+  HREF="node188.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

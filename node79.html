@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>เครือข่ายคิวแบบ Product Form</TITLE>
+<META NAME="description" CONTENT="เครือข่ายคิวแบบ Product Form">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node81.html">
+<LINK REL="previous" HREF="node75.html">
+<LINK REL="up" HREF="node71.html">
+<LINK REL="next" HREF="node80.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1574"
+  HREF="node80.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1568"
+  HREF="node71.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1562"
+  HREF="node78.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1570"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1572"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1575"
+  HREF="node80.html">ตัวอย่าง:</A>
+<B> Up:</B> <A NAME="tex2html1569"
+  HREF="node71.html">เครือข่ายคิว</A>
+<B> Previous:</B> <A NAME="tex2html1563"
+  HREF="node78.html">ระบบเครือข่ายคิวแบบผสม:</A>
+ &nbsp <B>  <A NAME="tex2html1571"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1573"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00950000000000000000">
+เครือข่ายคิวแบบ Product Form</A>
+</H1>
+
+ระบบเครือข่ายคิวอย่างง่ายที่สุดประกอบด้วย คิวที่มีเครื่องบริการเดี่ยวจำนวน <IMG
+ WIDTH="26" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$M$"> เครื่องต่ออนุกรมกัน โดยมีอัตราการเข้าใช้บริการ และอัตราความสำเร็จ กระจายแบบ  Exponential ดังแสดงในรูป <A HREF="node79.html#fig:simpleqt">6.4</A> งานที่ออกจากคิวหนึ่งจะต่อคิวต่อไปทันที  เราสามารถแสดงได้ว่า แต่ละคิวที่ต่ออนุกรมกันอยู่สามารถทำการวิเคราะห์แยกจากกันได้  แต่ละคิวจะมีอัตราการเข้าใช้บริการ และอัตราความสำเร็จเท่ากับ  <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> และมีค่า <IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img309.png"
+ ALT="$\mu_i$"> เป็นอัตราการบริการของแแต่ละคิว
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Utilization~of~the~i^{th}~server~~~\rho_i = \lambda/\mu_i
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="448" HEIGHT="39" BORDER="0"
+ SRC="img310.png"
+ ALT="\begin{displaymath}
+Utilization~of~the~i^{th}~server~~~\rho_i = \lambda/\mu_i
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Probability~of~n_i~jobs~in~the~i^{th}~queue = (1-\rho_i)\rho_i^{n_i}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="496" HEIGHT="39" BORDER="0"
+ SRC="img311.png"
+ ALT="\begin{displaymath}
+Probability~of~n_i~jobs~in~the~i^{th}~queue = (1-\rho_i)\rho_i^{n_i}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+
+ค่าความน่าจะเป็นของความยาวคิวที่คิวต่างๆ  สามารถคำนวณได้จากการคูณค่าความน่าจะเป็นของแต่ละคิว 
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+P(n_1,n_2, n_3, \ldots, n_M) = (1-\rho_1)\rho_1^{n_1}
+(1-\rho_2)\rho^{n_2}_2 (1-\rho_3)\rho^{n_3}_3
+\ldots (1-\rho_M)\rho^{n_M}_M
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="599" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img312.png"
+ ALT="$\displaystyle P(n_1,n_2, n_3, \ldots, n_M) = (1-\rho_1)\rho_1^{n_1}
+(1-\rho_2)\rho^{n_2}_2 (1-\rho_3)\rho^{n_3}_3
+\ldots (1-\rho_M)\rho^{n_M}_M$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.3)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+เครือข่ายคิวดังกล่าวเรียกว่าเป็นเครือข่าย Product Form ซึ่งสามารถเขียนอยู่ในรูปทั่วไปได้ ดังต่อไปนี้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+P(n_1,n_2, n_3, \ldots, n_M) = 
+\frac{1}{G(n)}\prod_{i=1}^M f_i(n_i)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="436" HEIGHT="59" BORDER="0"
+ SRC="img313.png"
+ ALT="\begin{displaymath}
+P(n_1,n_2, n_3, \ldots, n_M) =
+\frac{1}{G(n)}\prod_{i=1}^M f_i(n_i)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เมื่อ <IMG
+ WIDTH="52" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img314.png"
+ ALT="$f_i(n_i)$"> เป็นฟังก์ชั่นของจำนวนงานที่คิว <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.png"
+ ALT="$i$">, <IMG
+ WIDTH="52" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img315.png"
+ ALT="$G(N)$"> เป็นค่าคงที่ซึ่งเป็นฟังก์ชั่นของจำนวนงานทั้งหมดในระบบ
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:simpleqt"></A><A NAME="2808"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.4:</STRONG>
+ระบบเครือข่ายคิวที่มีเครื่องบริการเดี่ยวจำนวน <IMG
+ WIDTH="26" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$M$">-<IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$M/M/1$">
+เครื่องต่ออนุกรมกัน</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="571" HEIGHT="35" ALIGN="BOTTOM" BORDER="0"
+ SRC="img316.png"
+ ALT="\includegraphics[width=5.in]{fig/simpleqt.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><UL>
+<LI><UL>
+<LI><A NAME="tex2html1576"
+  HREF="node80.html"><FONT SIZE="+1">ตัวอย่าง:</FONT></A>
+</UL></UL></UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

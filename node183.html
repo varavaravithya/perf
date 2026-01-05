@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>แบบจำลองความสามารถในการบำรุงรักษา</TITLE>
+<META NAME="description" CONTENT="แบบจำลองความสามารถในการบำรุงรักษา">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node185.html">
+<LINK REL="previous" HREF="node181.html">
+<LINK REL="up" HREF="node177.html">
+<LINK REL="next" HREF="node184.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html3113"
+  HREF="node184.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html3107"
+  HREF="node177.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html3101"
+  HREF="node182.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html3109"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html3111"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html3114"
+  HREF="node184.html">ตัวอย่าง:</A>
+<B> Up:</B> <A NAME="tex2html3108"
+  HREF="node177.html">แบบจำลองมาร์คอฟ (ต่อ)</A>
+<B> Previous:</B> <A NAME="tex2html3102"
+  HREF="node182.html">ตัวอย่าง:</A>
+ &nbsp <B>  <A NAME="tex2html3110"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html3112"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001650000000000000000"></A>
+<A NAME="6196"></A>
+<A NAME="6197"></A>
+<BR>
+แบบจำลองความสามารถในการบำรุงรักษา
+</H1>
+
+ความสามารถในการบำรุงรักษา (Maintainability)  นิยามเป็นความน่าจะเป็นที่ระบบที่ล้มเหลวสามารถกลับมาทำงานได้ตามปกติในเวลาที่กำหนด ความสามารถในการบำรุงรักษา <IMG
+ WIDTH="48" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img998.png"
+ ALT="$M(t)$"> เป็นค่าความน่าจะเป็นดังกล่าวที่เวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> หรืออีกนัยหนึ่ง  <IMG
+ WIDTH="48" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img998.png"
+ ALT="$M(t)$"> เป็นความน่าจะเป็นที่ระบบจะสามารถกลับมาทำงานได้ปกติ ภายในเวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> หรือน้อยกว่า
+
+พารามิเตอร์ที่สำคัญในการคำนวณค่าความสามารถในการบำรุงรักษา คือค่าอัตราการซ่อมบำรุง โดยที่ค่าอัตราการซ่อมบำรุง  คือจำนวนที่สามารถซ่อมได้ต่อหนึ่งหน่วยเวลา  หรือเวลาที่ใช้ในการซ่อมโมดูลหนึ่งชิ้น โดยที่ <IMG
+ WIDTH="68" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$MTTR$"> มีค่าเท่ากับ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MTTR = \frac{1}{\mu}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="330" HEIGHT="50" BORDER="0"
+ SRC="img687.png"
+ ALT="\begin{displaymath}
+MTTR = \frac{1}{\mu}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.16)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ในอุตสาหกรรมค่า  <IMG
+ WIDTH="68" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$MTTR$"> หาได้จากประสบการณ์ในการทำงาน โดยหาจากค่าเฉลี่ยของเวลาที่ใช้ในการซ่อมระบบที่เสียหายจากการใช้งาน และบันทึกเป็นค่า  <IMG
+ WIDTH="68" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$MTTR$"> ค่า  <IMG
+ WIDTH="68" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$MTTR$"> ที่มีค่าที่ถูกต้อง  ควรจะต้องถูกบันทึกจากการเสียหายที่มีจำนวนมากพอ และเกิดจากการเสียหายที่แตกต่างกัน และได้รับการซ่อมจากพนักงานที่มีความสามารถแตกต่างกัน
+
+การพิสูจน์หาความสามารถในการบำรุงรักษา มีแนวทางเดียวกับการพิสูจน์หาค่ากฎความน่าเชื่อถือแบบ Exponential ที่ได้แสดงมาแล้ว โดยสมมุติมีจำนวน N ระบบ และสร้างความเสียหายหนึ่งความเสียหายเข้าไป จากนั้นให้พนักงานซ่อมบำรุงเริ่มดำเนินการตามหน้าที่ เราเริ่มสร้างความเสียหายจำนวนหนึ่งที่เวลา <IMG
+ WIDTH="47" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img671.png"
+ ALT="$t = 0$"> หลังจากเวลาผ่านไป ทำการบันทึกค่า <IMG
+ WIDTH="49" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img999.png"
+ ALT="$N_r(t)$"> สำหรับระบบที่ได้รับการซ่อมเรียบร้อย และ  <IMG
+ WIDTH="58" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1000.png"
+ ALT="$N_{nr}(t)$"> สำหรับระบบที่ยังไม่ได้รับการซ่อม เนื่องจากค่าความสามารถในการบำรุงรักษาที่เวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> เป็นความน่าจะเป็นที่ระบบจะสามารถซ่อมภายในเวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> ค่าโดยประมาณของความสามารถในการบำรุงรักษา สามารถคำนวณได้จาก
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+M(t) = \frac{N_r(t)}{N} = \frac{N_r(t)}{N_r(t) + N_{nt}t}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="402" HEIGHT="52" BORDER="0"
+ SRC="img1001.png"
+ ALT="\begin{displaymath}
+M(t) = \frac{N_r(t)}{N} = \frac{N_r(t)}{N_r(t) + N_{nt}t}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.17)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ทำการดิฟเฟอร์เรนเชียลสมการ <IMG
+ WIDTH="55" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1002.png"
+ ALT="$M(T)$"> เราจะได้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{dM(t)}{dt} = \frac{1}{N} \frac{dN_r(t)}{dt}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="358" HEIGHT="47" BORDER="0"
+ SRC="img1003.png"
+ ALT="\begin{displaymath}
+\frac{dM(t)}{dt} = \frac{1}{N} \frac{dN_r(t)}{dt}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.18)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ซึ่งสามารถเขียนได้เท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{dN_r(t)}{dt} = N \frac{dM(t)}{dt}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="356" HEIGHT="47" BORDER="0"
+ SRC="img1004.png"
+ ALT="\begin{displaymath}
+\frac{dN_r(t)}{dt} = N \frac{dM(t)}{dt}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.19)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ซึ่งค่าดิฟเฟอร์เรนเชียลของ <IMG
+ WIDTH="49" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img999.png"
+ ALT="$N_r(t)$"> คืออัตราที่ระบบถูกซ่อมที่เวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> 
+
+ที่เวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> มีระบบจำนวน <IMG
+ WIDTH="58" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1000.png"
+ ALT="$N_{nr}(t)$"> ที่ยังไม่ได้รับการซ่อม ถ้าเราหาร <!-- MATH
+ $\frac{dN_r(t)}{dt}$
+ -->
+<IMG
+ WIDTH="49" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1005.png"
+ ALT="$\frac{dN_r(t)}{dt}$"> ด้วย <IMG
+ WIDTH="58" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1000.png"
+ ALT="$N_{nr}(t)$"> เราจะได้ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{1}{N_{nr}(t)}\frac{dN_r(t)}{dt}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="336" HEIGHT="52" BORDER="0"
+ SRC="img1006.png"
+ ALT="\begin{displaymath}
+\frac{1}{N_{nr}(t)}\frac{dN_r(t)}{dt}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.20)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ซึ่งก็คือค่าฟังก์ชั่นการซ่อม ที่สมมุติให้เป็นค่าคงที่ <IMG
+ WIDTH="17" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\mu$"> มีหน่วยเป็นจำนวนการซ่อมต่อหน่วยเวลา 
+
+จากความสัมพันธ์ขั้นต้นของอัตราการซ่อม และ <IMG
+ WIDTH="49" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img999.png"
+ ALT="$N_r(t)$"> เราสามารถเขียนเป็น
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\mu = \frac{1}{N_{nr}(t)}\frac{dN_r(t)}{dt} = \frac{N}{N_{nr}(t)}\frac{dM(t)}{dt}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="421" HEIGHT="52" BORDER="0"
+ SRC="img1007.png"
+ ALT="\begin{displaymath}
+\mu = \frac{1}{N_{nr}(t)}\frac{dN_r(t)}{dt} = \frac{N}{N_{nr}(t)}\frac{dM(t)}{dt}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.21)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ซึ่งสามารถเขียนอยูในรูปของ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{dM(t)}{dt} = \mu\frac{N_{nr}(t)}{N}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="353" HEIGHT="47" BORDER="0"
+ SRC="img1008.png"
+ ALT="\begin{displaymath}
+\frac{dM(t)}{dt} = \mu\frac{N_{nr}(t)}{N}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.22)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+จากความสัมพันธ์ <IMG
+ WIDTH="83" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1009.png"
+ ALT="$N_{nr}(t)/N$"> เท่ากับ <IMG
+ WIDTH="81" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1010.png"
+ ALT="$1-M(t)$"> เราสามารถเขียนสมการต่อไปนี้ได้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{dM(t)}{dt} = \mu(1-M(t)))
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="373" HEIGHT="47" BORDER="0"
+ SRC="img1011.png"
+ ALT="\begin{displaymath}
+\frac{dM(t)}{dt} = \mu(1-M(t)))
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.23)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ทำการแก้สมการดิฟเฟอร์เรนเชียลจะได้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+M(t) = 1 - e^{-\mu t}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="346" HEIGHT="39" BORDER="0"
+ SRC="img1012.png"
+ ALT="\begin{displaymath}
+M(t) = 1 - e^{-\mu t}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.24)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+จากสมการขั้นต้น ถ้าอัตราการซ่อมเท่ากับศูนย์  ระบบก็จะไม่มีความสามารถในการบำรุงรักษา (<IMG
+ WIDTH="96" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1013.png"
+ ALT="$M(t) = 0.0$">)  เนื่องจากไม่สามารถซ่อมระบบได้ และถ้าอัตราการซ่อมเป็นอนันต์ การซ่อมจะไม่ใช้เวลา ความสามารถในการบำรุงรักษาจะเท่ากับ 1.0  (<IMG
+ WIDTH="97" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1014.png"
+ ALT="$M(t) = 1.0$">) ที่เวลา <IMG
+ WIDTH="99" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1015.png"
+ ALT="$t = MTTR$"> ความสามารถในการบำรุงรักษา จะมีค่าเท่ากับ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+M(t=MTTR) = 1-e^{-\mu 1/\mu} = 1 - e^{-1} = 0.632
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="475" HEIGHT="39" BORDER="0"
+ SRC="img1016.png"
+ ALT="\begin{displaymath}
+M(t=MTTR) = 1-e^{-\mu 1/\mu} = 1 - e^{-1} = 0.632
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.25)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+นั้นหมายถึงมีความน่าจะเป็นเท่ากับ 0.632  ที่ระบบจะสามารถซ่อมเสร็จสมบูรณ์ที่เวลา MTTR หรือน้อยกว่า
+
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><UL>
+<LI><UL>
+<LI><A NAME="tex2html3115"
+  HREF="node184.html"><FONT SIZE="+1">ตัวอย่าง:</FONT></A>
+</UL></UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html3113"
+  HREF="node184.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html3107"
+  HREF="node177.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html3101"
+  HREF="node182.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html3109"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html3111"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html3114"
+  HREF="node184.html">ตัวอย่าง:</A>
+<B> Up:</B> <A NAME="tex2html3108"
+  HREF="node177.html">แบบจำลองมาร์คอฟ (ต่อ)</A>
+<B> Previous:</B> <A NAME="tex2html3102"
+  HREF="node182.html">ตัวอย่าง:</A>
+ &nbsp <B>  <A NAME="tex2html3110"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html3112"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

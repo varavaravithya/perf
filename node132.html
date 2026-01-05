@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ระบบ Triple Modular Redundancy</TITLE>
+<META NAME="description" CONTENT="ระบบ Triple Modular Redundancy">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node133.html">
+<LINK REL="previous" HREF="node131.html">
+<LINK REL="up" HREF="node131.html">
+<LINK REL="next" HREF="node133.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2366"
+  HREF="node133.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2360"
+  HREF="node131.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2354"
+  HREF="node131.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2362"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2364"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2367"
+  HREF="node133.html">ระบบ N Modular Redundancy</A>
+<B> Up:</B> <A NAME="tex2html2361"
+  HREF="node131.html">ระบบที่คงทนต่อความเสียหาย</A>
+<B> Previous:</B> <A NAME="tex2html2355"
+  HREF="node131.html">ระบบที่คงทนต่อความเสียหาย</A>
+ &nbsp <B>  <A NAME="tex2html2363"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2365"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION001291000000000000000"></A>
+<A NAME="4412"></A>
+<A NAME="4413"></A>
+<BR>
+ระบบ Triple Modular Redundancy
+</H2>
+
+ระบบ Triple Modular Redundancy (TMR) แสดงในรูป <A HREF="node132.html#fig:ft6tmr">9.8</A> แนวคิดพื้นฐานระบบ TMR คือมีอุปกรณ์ที่ทำงานพร้อมกันสามชุด และตัดสินการทำงานโดยใช้เสียงส่วนใหญ่ที่จะเป็นเอาท์พุทของระบบ ถ้าเกิดมีหนึ่งโมดูลเสีย โมดูลที่ทำงานได้สองตัวจะ ``ซ่อน''  การเสียหายของหนึ่งโมดูลจากเอาท์พุทโดยการโหวต  ในการใช้งานจริงโมดูลทั้งสามชุดอาจเป็นตัวประมวลผล หน่วยความจำ หรือ อุปกรณ์ฮาร์ดแวร์ใดๆ รวมถึงอาจเป็นโปรแกรมสามชุดก็ได้
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:ft6tmr"></A><A NAME="4417"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.8:</STRONG>
+ระบบ Triple Modular Redundancy</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="315" HEIGHT="180" ALIGN="BOTTOM" BORDER="0"
+ SRC="img618.png"
+ ALT="\includegraphics[width=2.8in]{fig/ft6tmr.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<A NAME="4420"></A>
+ปัญหาอย่างหนึ่งของระบบ TMR คือ ระบบจะทำงานล้มเหลวถ้าตัวที่ทำหน้าที่โหวตเสีย (Voter) นั่นคือความน่าเชื่อถือของระบบจะไม่สูงกว่าค่าความน่าเชื่อถือของตัวโหวต  ถ้าเกิดการเสียหายของอุปกรณ์ใดๆ ในระบบแล้ว ส่งผลให้ระบบล้มเหลว ระบบดังกล่าว เรียกว่าจุดเดียวที่ทำให้เกิดการล้มเหลว (Single Point of Failure) <A NAME="4421"></A> มีหลายเทคนิคที่สามารถแก้ปัญหาของการเสียของตัวโหวตได้  วิธีหนึ่งคือการใช้ตัวโหวตหลายตัวดังแสดงในรูป <A HREF="node132.html#fig:ft6tmrvv">9.9</A> ซึ่งจะสร้างค่าเอาท์พุตสามค่า ตราบใดที่มีสองโมดูลทำงานได้ การต่อในลักษณะดังกล่าวสามารถทำต่อเนื่องโดยใช้การต่อหลายระดับ แสดงในรูป 
+<A HREF="node132.html#fig:ft7tmrms">9.10</A>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:ft6tmrvv"></A><A NAME="4426"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.9:</STRONG>
+ระบบ Triple Modular Redundancy ที่ใช้อุปกรณ์โหวตสามชุด</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="315" HEIGHT="178" ALIGN="BOTTOM" BORDER="0"
+ SRC="img619.png"
+ ALT="\includegraphics[width=2.8in]{fig/ft6tmrvv.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ถ้าตัวโหวตเสียในระหว่างระดับ ระดับต่อๆ มาจะเห็นความผิดพลาดนั้น เป็นความผิดพลาดของอินพุททางหนึ่งเท่านั้น และจะโหวตออกไปจากระบบ ทำให้ใช้งานได้ต่อเนื่อง
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:ft7tmrms"></A><A NAME="4431"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.10:</STRONG>
+ระบบ Triple Modular Redundancy ที่มีหลายลำดับชั้น 
+ที่ใช้อุปกรณ์โหวตสามชุดในทุกระดับ เพื่อไม่ให้ค่าผิดพลาดสามารถส่งผ่านระหว่างระดับ</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="511" HEIGHT="163" ALIGN="BOTTOM" BORDER="0"
+ SRC="img620.png"
+ ALT="\includegraphics[width=4.5in]{fig/ft7tmrms.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

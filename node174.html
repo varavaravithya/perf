@@ -1,0 +1,598 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>แบบจำลองความปลอดภัย</TITLE>
+<META NAME="description" CONTENT="แบบจำลองความปลอดภัย">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node175.html">
+<LINK REL="previous" HREF="node173.html">
+<LINK REL="up" HREF="node168.html">
+<LINK REL="next" HREF="node175.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2981"
+  HREF="node175.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2975"
+  HREF="node168.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2969"
+  HREF="node173.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2977"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2979"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2982"
+  HREF="node175.html">หัวข้อสรุป</A>
+<B> Up:</B> <A NAME="tex2html2976"
+  HREF="node168.html">แบบจำลองมาร์คอฟ</A>
+<B> Previous:</B> <A NAME="tex2html2970"
+  HREF="node173.html">แบบจำลองมาร์คอฟที่คำนึงถึงผลกระทบจากความคุ้มครองจากความเสียหาย</A>
+ &nbsp <B>  <A NAME="tex2html2978"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2980"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001560000000000000000">
+แบบจำลองความปลอดภัย</A>
+</H1>
+
+ความปลอดภัยของระบบนิยาม เป็นความน่าจะเป็นที่ระบบจะทำงานได้อย่างถูกต้อง หรือ หยุดการทำงานอย่างปลอดภัย  คำว่าปลอดภัย หรือไม่ปลอดภัยนั้นขึ้นอยู่กับการประยุกต์ใช้งาน ในหลายๆ การประยุกต์ใช้งานการทำงานหยุดทำงานอย่างปลอดภัย เพียงแค่ปิดเครื่อง แต่ในบางงาน  การปิดเครื่องอาจส่งผลเสียหายใหญ่หลวงได้  ดังนั้นการนิยามแบบจำลองมาร์คอฟสำหรับความปลอดภัย  สามารถนิยามสถานะของการล้มเหลวได้สองลักษณะ คือการล้มเหลวที่มีการหยุด การทำงานอย่างปลอดภัย (FS: Failed Safe) และการล้มเหลวที่มีการหยุดการทำงานอย่างไม่ปลอดภัย  (FU: Failed Unsafe)
+ <A NAME="5947"></A>
+ <A NAME="5948"></A>
+ <A NAME="5949"></A>
+
+แผนภาพแสดงแบบจำลองมาร์คอฟของความปลอดภัยที่ประกอบด้วยสามสถานะ, ใช้งานได้ (Operational),  การล้มเหลวที่มีการหยุด การทำงานอย่างปลอดภัย (FS: Failed Safe) และการล้มเหลวที่มีการหยุดการทำงานอย่างไม่ปลอดภัย 
+ (FU: Failed Unsafe) แสดงในรูป <A HREF="node174.html#fig:safty">12.9</A>  ระบบประกอบด้วยหนึ่งโมดูลและอัตราการเสียหาย <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> และระบบตรวจสอบความเสียหายด้วยตนเองที่มีค่าความคุ้มครองจากความเสียหาย <IMG
+ WIDTH="21" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img694.png"
+ ALT="$C$"> ความเสียหายที่ปลอดภัยคือความเสียหาย  ที่ระบบตรวจสอบความเสียหายด้วยตนเองสามารถตรวจจับได้ เช่นเดียวกัน ความเสียหายที่ไม่ปลอดภัยคือความเสียหาย ที่ระบบตรวจสอบไม่สามารถตรวจจับได้  เพราะฉะนั้นการเสียหายของโมดูล จะส่งผลให้ระบบเข้าสู่สถานะ <IMG
+ WIDTH="34" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img924.png"
+ ALT="$FS$"> หรือ <IMG
+ WIDTH="35" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img925.png"
+ ALT="$FU$"> ขึ้นอยู่กับว่าสามารถตรวจจับความเสียหายได้หรือไม่
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:safty"></A><A NAME="5953"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 12.9:</STRONG>
+แบบจำลองมาร์คอฟของความปลอดภัยที่ประกอบด้วยสามสถานะ, ใช้งานได้ (Operational, การล้มเหลวที่มีการหยุด การทำงานอย่างปลอดภัย (FS: Failed Safe) และการล้มเหลวที่มีการหยุดการทำงานอย่างไม่ปลอดภัย 
+(FU: Failed Unsafe)</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="435" HEIGHT="197" ALIGN="BOTTOM" BORDER="0"
+ SRC="img926.png"
+ ALT="\includegraphics[width=3.8in]{fig/safty.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ควมปลอดภัยของระบบในรูป <A HREF="node174.html#fig:safty">12.9</A> สามารถเขียนได้เป็น
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+S(t) = p_O(t) + p_{FS}(t)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="367" HEIGHT="39" BORDER="0"
+ SRC="img927.png"
+ ALT="\begin{displaymath}
+S(t) = p_O(t) + p_{FS}(t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.47)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เมื่อ S(t) คือค่าความปลอดภัยของระบบ, <IMG
+ WIDTH="49" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img928.png"
+ ALT="$p_O(t)$"> คือความน่าจะเป็นที่ระบบสามารถทำงานได้ที่เวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> และ <IMG
+ WIDTH="56" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img929.png"
+ ALT="$p_{FS}(t)$"> 
+คือความน่าจะเป็นที่ระบบจะเสียหายอย่างปลอดภัยที่เวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$">
+เราสามารถเขียนสมการได้เป็น
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+p_O(t+\triangle t) &=& (1-\lambda \triangle t)p_O(t)
+\nonumber\\
+p_{FS}(t+\triangle t) &=& \lambda\triangle tCp_O(t) 
++ p_{FS}(t)\nonumber\\
+p_{FU}(t+\triangle t) &=& \lambda \triangle t(1-C)p_O(t)
++p_{FU}(t)\\
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="95" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img930.png"
+ ALT="$\displaystyle p_O(t+\triangle t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="130" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img931.png"
+ ALT="$\displaystyle (1-\lambda \triangle t)p_O(t)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="104" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img932.png"
+ ALT="$\displaystyle p_{FS}(t+\triangle t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="171" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img933.png"
+ ALT="$\displaystyle \lambda\triangle tCp_O(t)
++ p_{FS}(t)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img934.png"
+ ALT="$\displaystyle p_{FU}(t+\triangle t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="220" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img935.png"
+ ALT="$\displaystyle \lambda \triangle t(1-C)p_O(t)
++p_{FU}(t)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.48)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+เช่นกับวิธีการก่อนหน้า สามารถเขียนสมการดิฟเฟอร์เรนเชียลได้ดังต่อไปนี้
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+\frac{dp_O(t)}{dt}&=&-\lambda p_O(t) \nonumber\\
+\frac{dp_{FS}(t)}{dt}&=& \lambda Cp_O(t)  \nonumber\\
+\frac{dp_{FU}(t)}{dt}&=& \lambda(1-C)p_O(t)
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="61" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img905.png"
+ ALT="$\displaystyle \frac{dp_O(t)}{dt}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="74" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img936.png"
+ ALT="$\displaystyle -\lambda p_O(t)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="70" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img937.png"
+ ALT="$\displaystyle \frac{dp_{FS}(t)}{dt}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="74" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img938.png"
+ ALT="$\displaystyle \lambda Cp_O(t)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="71" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img939.png"
+ ALT="$\displaystyle \frac{dp_{FU}(t)}{dt}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="122" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img940.png"
+ ALT="$\displaystyle \lambda(1-C)p_O(t)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.49)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+ทำการแปลง Laplace
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+P_O(s)&=& \frac{p_o(0)}{s+\lambda}\nonumber\\
+P_{FS}(s)&=& \frac{\lambda Cp_O(0)}{s(s+\lambda)} + 
+\frac{p_{FS}(0)}{s}\nonumber\\
+P_{FU}(s)&=& \frac{\lambda (1-C)p_O(0)}{s(s+\lambda)} + \frac{p_{FU}(0)}{s}
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="52" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img911.png"
+ ALT="$\displaystyle P_O(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="52" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img941.png"
+ ALT="$\displaystyle \frac{p_o(0)}{s+\lambda}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="62" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img942.png"
+ ALT="$\displaystyle P_{FS}(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="160" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img943.png"
+ ALT="$\displaystyle \frac{\lambda Cp_O(0)}{s(s+\lambda)} +
+\frac{p_{FS}(0)}{s}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="64" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img944.png"
+ ALT="$\displaystyle P_{FU}(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="209" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img945.png"
+ ALT="$\displaystyle \frac{\lambda (1-C)p_O(0)}{s(s+\lambda)} + \frac{p_{FU}(0)}{s}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.50)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+เมื่อ <IMG
+ WIDTH="51" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img946.png"
+ ALT="$p_O(0)$">, <IMG
+ WIDTH="59" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img947.png"
+ ALT="$p_{FS}(0)$">, และ <IMG
+ WIDTH="62" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img948.png"
+ ALT="$p_{FU}(0)$"> เป็นค่าเริ่มต้นของสภานะนั้นๆ ถ้าเราสมมุติให้ระบบทำงานอย่างถูกต้องที่เวลา  <IMG
+ WIDTH="47" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img671.png"
+ ALT="$t = 0$"> ค่า <IMG
+ WIDTH="99" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img949.png"
+ ALT="$p_O(0) = 1.0$">, <!-- MATH
+ $p_{FS}(0) = 0.0$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img950.png"
+ ALT="$p_{FS}(0) = 0.0$">,  และ <!-- MATH
+ $p_{FU}(0) = 0.0$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img951.png"
+ ALT="$p_{FU}(0) = 0.0$"> ตามลำดับ เราจะได้
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+P_O(s)&=& \frac{1}{s+\lambda}\nonumber\\
+P_{FS}(s)&=& \frac{\lambda C}{s(s+\lambda)} = \frac{C}{s} - \frac{C}{s+\lambda}\nonumber\\
+P_{FU}(s)&=&\frac{\lambda (1-C)}{s(s+\lambda)} = \frac{(1-C)}{s} - \frac{(1-C)}{s+\lambda}
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="52" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img911.png"
+ ALT="$\displaystyle P_O(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="53" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img952.png"
+ ALT="$\displaystyle \frac{1}{s+\lambda}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="62" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img942.png"
+ ALT="$\displaystyle P_{FS}(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="189" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img953.png"
+ ALT="$\displaystyle \frac{\lambda C}{s(s+\lambda)} = \frac{C}{s} - \frac{C}{s+\lambda}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="64" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img944.png"
+ ALT="$\displaystyle P_{FU}(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="263" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img954.png"
+ ALT="$\displaystyle \frac{\lambda (1-C)}{s(s+\lambda)} = \frac{(1-C)}{s} - \frac{(1-C)}{s+\lambda}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.51)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+และสามารถแปลงกลับ Laplace ได้เท่ากับ 
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+p_O(t) &=& e^{-\lambda t}\nonumber\\
+p_{FS}(t)&=& C-Ce^{-\lambda t}\nonumber\\
+p_{FU}&=& (1-C) -(1-C)e^{-\lambda t}
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="49" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img916.png"
+ ALT="$\displaystyle p_O(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img955.png"
+ ALT="$\displaystyle e^{-\lambda t}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="57" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img956.png"
+ ALT="$\displaystyle p_{FS}(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="91" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img957.png"
+ ALT="$\displaystyle C-Ce^{-\lambda t}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="38" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img958.png"
+ ALT="$\displaystyle p_{FU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="186" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img959.png"
+ ALT="$\displaystyle (1-C) -(1-C)e^{-\lambda t}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.52)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+ค่าความน่าเชื่อถือของระบบสามารถคำนวณได้จาก
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(t) = p_O(t) = e^{-\lambda t}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="360" HEIGHT="39" BORDER="0"
+ SRC="img960.png"
+ ALT="\begin{displaymath}
+R(t) = p_O(t) = e^{-\lambda t}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.53)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+และความน่าจะเป็นที่ระบบจะตกอยู่ในหนึ่งของสองสถานะที่ล้มเหลวเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+p_{FS}(t) + p_{FU}(t) = 1-e^{-\lambda t} = 1-R(t)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="434" HEIGHT="39" BORDER="0"
+ SRC="img961.png"
+ ALT="\begin{displaymath}
+p_{FS}(t) + p_{FU}(t) = 1-e^{-\lambda t} = 1-R(t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.54)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ความปลอดภัยของระบบสามารถเขียนได้เป็น
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+S(t) = p_O(t) + p_{FS}(t) = C + (1-C)e^{-\lambda t}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="447" HEIGHT="39" BORDER="0"
+ SRC="img962.png"
+ ALT="\begin{displaymath}
+S(t) = p_O(t) + p_{FS}(t) = C + (1-C)e^{-\lambda t}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.55)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ที่เวลา <IMG
+ WIDTH="47" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img671.png"
+ ALT="$t = 0$"> ความปลอดภัยของระบบมีค่าเท่ากับ 1.0 เมื่อเวลาเข้าสู่อนันต์ ค่าความปลอดภัยของระบบจะมีค่าเท่ากับ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+S(\infty) =C
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="323" HEIGHT="39" BORDER="0"
+ SRC="img963.png"
+ ALT="\begin{displaymath}
+S(\infty) =C
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.56)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+หรืออีกนัยหนึ่งค่าความปลอดภัย มีค่าเท่ากับความคุ้มครองจากความเสียหาย
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2981"
+  HREF="node175.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2975"
+  HREF="node168.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2969"
+  HREF="node173.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2977"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2979"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2982"
+  HREF="node175.html">หัวข้อสรุป</A>
+<B> Up:</B> <A NAME="tex2html2976"
+  HREF="node168.html">แบบจำลองมาร์คอฟ</A>
+<B> Previous:</B> <A NAME="tex2html2970"
+  HREF="node173.html">แบบจำลองมาร์คอฟที่คำนึงถึงผลกระทบจากความคุ้มครองจากความเสียหาย</A>
+ &nbsp <B>  <A NAME="tex2html2978"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2980"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

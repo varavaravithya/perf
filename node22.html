@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>กรณีศึกษา: การควบคุมความคับคั่งในเครือข่ายคอมพิวเตอร์</TITLE>
+<META NAME="description" CONTENT="กรณีศึกษา: การควบคุมความคับคั่งในเครือข่ายคอมพิวเตอร์">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node23.html">
+<LINK REL="previous" HREF="node21.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node23.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html735"
+  HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html729"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html723"
+  HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html731"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html733"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html736"
+  HREF="node23.html">ตัววัดประสิทธิภาพพื้นฐาน</A>
+<B> Up:</B> <A NAME="tex2html730"
+  HREF="node14.html">การเลือกเทคนิคการประเมิน และตัววัดประสิทธิภาพ</A>
+<B> Previous:</B> <A NAME="tex2html724"
+  HREF="node21.html">กิจกรรม</A>
+ &nbsp <B>  <A NAME="tex2html732"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html734"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00570000000000000000">
+กรณีศึกษา: การควบคุมความคับคั่งในเครือข่ายคอมพิวเตอร์</A>
+</H1>
+
+พิจารณาปัญหาในการเปรียบเทียบวิธีการควบคุมความคับคั่งในเครือข่ายคอมพิวเตอร์, เครือข่ายคอมพิวเตอร์ประกอบด้วย อุปกรณ์คอมพิวเตอร์ ที่ทำหน้าที่สื่อสารระหว่างผู้ใช้ต่อเชื่อมกับอุปกรณ์คอมพิวเตอร์ ที่ทำหน้าที่ส่งผ่านข้อมูลระหว่างกลาง 
+
+อุปกรณ์คอมพิวเตอร์จะส่งเพ็คเกตจากด้านหนึ่งของเครือข่ายไปยังอีกด้านหนึ่ง อุปกรณ์คอมพิวเตอร์ที่อยู่ระหว่างกลางจะส่งเพ็คเกตให้ถูกต้องตามเส้นทางที่ควร
+
+ปัญหาของความคับคั่งเกิดขึ้น เมื่อจำนวนเพ็คเกตที่รอรับบริการอยู่ในอุปกรณ์ที่อยู่ระหว่างกลางของเครือข่ายมากเกินกว่าพื้นที่ที่จะสามารถจะรับได้ ส่งผลให้เพ็คเกตสูญหายไป 
+
+ระบบในที่นี้ประกอบด้วยเครือข่าย โดยมีบริการคือ การส่งผ่านข้อมูล เมื่อเครือข่ายทำการส่งผ่านข้อมูลไปยังปลายทาง มีผลที่เป็นไปได้ดังต่อไปนี้
+
+<OL>
+<LI>เพ็คเกตส่งตามลำดับไปยังปลายทางที่ถูกต้อง 
+</LI>
+<LI>เพ็คเกตส่งผิดลำดับไปยังปลายทางที่ถูกต้อง
+</LI>
+<LI>เพ็คเกตส่งไปถึงปลายทางมากกว่าหนึ่งชุด (มีเพ็คเกตซ้ำกันที่ปลายทาง)
+</LI>
+<LI>เพ็คเกตสูญหายระหว่างทาง 
+</LI>
+</OL>
+
+สำหรับเพ็คเกตที่มีการส่งถูกต้อง สามารถเลือกตัววัดโดยใช้พื้นฐานของ ความเร็ว-อัตรา-ทรัพยากร ดังต่อไปนี้
+
+<OL>
+<LI>เวลาตอบสนอง คือ ช่วงเวลาที่ใช้ในการส่งเพ็คเกตในแต่ละชุด 
+</LI>
+<LI>อัตราความสำเร็จ คือ จำนวนเพ็คเกตที่ส่งสำเร็จต่อช่วงเวลา 
+</LI>
+<LI>เวลาที่ใช้ในการประมวลผล-บนอุปกรณ์ที่ส่งเพ็คเกต 
+</LI>
+<LI>เวลาที่ใช้ในการประมวลผล-บนอุปกรณ์ตัวรับ
+</LI>
+<LI>เวลาที่ใช้ในการประมวลผล-บนอุปกรณ์ที่ทำหน้าที่ส่งผ่านข้อมูล
+</LI>
+</OL>
+
+ช่วงเวลาที่อุปกรณ์ส่งข้อมูลต้องเก็บสำเนาของเพ็คเกตไว้ สามารถประมาณได้จากเวลาตอบสนอง ซึ่งเวลาตอบสนอง (Response Time) จะเป็นตัววัดที่สำคัญที่แสดงถึงคุณภาพการบริการของระบบ 
+
+อัตราความสำเร็จ (Throughput) เป็นตัววัดประสิทธิภาพที่สำคัญอีกอันหนึ่ง ที่ผู้ใช้จะระบุมาในข้อกำหนด โดยทั่วไปแล้วยิ่งอัตราความสำเร็จสูงถือว่ามีประสิทธิภาพดี 
+
+ความแปรปรวนของเวลาตอบสนองเป็นตัววัดที่สำคัญอีกอันหนึ่ง เนื่องจากค่าเวลาตอบสนองมีความแปรปรวนสูงจะทำให้เกิดการส่งซ้ำโดยไม่จำเป็น เพราะฉะนั้นความแปรปรวนของเวลาตอบสนองจึงถือได้ว่าเป็นตัววัดอีกตัวหนึ่ง
+
+ในกรณีที่เพ็คเกตมีการส่งผิดลำดับ ข้อมูลจะไม่สามารถส่งให้ผู้ใช้ที่ปลายทางได้ทันที ในหลายระบบเพ็คเกตที่มีการส่งผิดลำดับจะถูกกำจัดไปจากระบบที่ปลายทาง ซึ่งต้องรอส่งซ้ำใหม่ทั้งหมด 
+ในบางระบบจะสำรองพื้นที่ไว้สำหรับเก็บเพ็คเกตที่เข้ามาผิดลำดับ และรอจนกระทั่งครบ ซึ่งจะต้องมีงานเสริมเพิ่มขึ้น การที่จะหาตัววัดสำหรับกรณีนี้ได้แก่ ความน่าจะเป็นที่มีการส่งเพ็คเกตผิดลำดับเกิดขึ้น 
+
+การส่งเพ็คเกตซ้ำเป็นการใช้ทรัพยากรเครือข่ายที่ไม่คุ้มค่า ความน่าจะเป็นที่เกิดเหตุการณ์ส่งเพ็คเกตซ้ำ จึงสามารถพิจารณาได้ว่าเป็นตัววัดอีกตัวหนึ่งได้
+
+การที่เพ็คเกตสูญหายระหว่างทาง ทำให้ระบบไม่สามารถทำงานถูกต้อง ดังนั้น ความน่าจะเป็นที่เพ็คเกตสูญหายก็เป็นตัววัดประสิทธิภาพอีกตัวหนึ่ง 
+
+การพิจารณาตัววัดบางครั้งสามารถรวมตัววัดประสิทธิภาพหลายตัวเข้าด้วยกัน เช่น เราสามารถพิจารณาอัตราส่วนของอัตราความสำเร็จในการส่งกับเวลาตอบสนอง เรียกว่า กำลัง (Power) 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Power = \frac{Throughput}{Response~Time}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="387" HEIGHT="50" BORDER="0"
+ SRC="img24.png"
+ ALT="\begin{displaymath}
+Power = \frac{Throughput}{Response~Time}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+โดยที่ถ้ากำลังสูงหมายถึง ระบบมีอัตราการส่งผ่านข้อมูลสูง หรือมีเวลาตอบสนองต่ำ ซึ่งทั้งสองกรณีถือว่ากำลังงานสูงดีกว่า กำลังงานต่ำ 
+
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

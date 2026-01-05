@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>เวลาเฉลี่ยระหว่างการเสียหาย (MTBF)</TITLE>
+<META NAME="description" CONTENT="เวลาเฉลี่ยระหว่างการเสียหาย (MTBF)">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node149.html">
+<LINK REL="previous" HREF="node147.html">
+<LINK REL="up" HREF="node140.html">
+<LINK REL="next" HREF="node149.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2600"
+  HREF="node149.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2594"
+  HREF="node140.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2588"
+  HREF="node147.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2596"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2598"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2601"
+  HREF="node149.html">การคุ้มครองจากการเสียหาย (Fault Coverage)</A>
+<B> Up:</B> <A NAME="tex2html2595"
+  HREF="node140.html">การประเมินค่าความน่าเชื่อถือเชิงปริมาณ</A>
+<B> Previous:</B> <A NAME="tex2html2589"
+  HREF="node147.html">เวลาเฉลี่ยในการซ่อมแซม (MTTR)</A>
+ &nbsp <B>  <A NAME="tex2html2597"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2599"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001370000000000000000">
+เวลาเฉลี่ยระหว่างการเสียหาย (MTBF)</A>
+</H1>
+
+การศึกษาการวัดประสิทธิภาพของระบบจำเป็นต้องเข้าใจความแตกต่างระหว่าง MTTF  และ ``<B>เวลาเฉลี่ยระหว่างการเสียหาย</B>'' Mean Time between Failure (MTBF) <A NAME="4880"></A> <A NAME="4881"></A> บางครั้งนิยามทั้งสองถูกใช้แทนกัน เนื่องจากมีค่าต่างกันน้อยมาก  แต่ความหมายทางด้านแนวคิดของทั้งสองวิธีมีความแตกต่างกัน.  MTTF คือค่าเฉลี่ยของเวลาก่อนการเกิดการเสียหายครั้งแรก ซึ่งเราประมาณจากการใช้ประชากรของระบบที่เหมือนกัน <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> ตัว เรื่มทำงานพร้อมกันที่เวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> และทำการวัดค่าเวลาที่ระบบเสียครั้งแรก เพื่อทำการหาค่าเฉลี่ยโดยการหารด้วย <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> ค่า MTBF เป็นการคำนวณค่าเฉลี่ยของเวลาระหว่างการเสียหาย  ซึ่งรวมเวลาที่จะซ่อมระบบในกรณีที่เกิดการเสียหาย  และเวลาที่นำระบบกลับมาใช้อีก หรืออีกนัยหนึ่ง ในแต่ละระบบของ <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> ระบบ ที่ทำงานมาเป็นเวลา <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.png"
+ ALT="$T$"> และจำนวนที่เกิดการเสียหายกับระบบ <IMG
+ WIDTH="26" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img342.png"
+ ALT="$i^{th}$"> บันทึกมาเป็นค่า <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img688.png"
+ ALT="$n_i$"> ค่าเฉลี่ยของจำนวนเสียหายสามารถคำนวณจาก
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+n_{avg} = \sum^N_{i=1} \frac{n_i}{N}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="331" HEIGHT="59" BORDER="0"
+ SRC="img689.png"
+ ALT="\begin{displaymath}
+n_{avg} = \sum^N_{i=1} \frac{n_i}{N}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.31)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+และจะได้ค่า MTBF เท่ากับ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MTBF = \frac{T}{n_{avg}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="342" HEIGHT="52" BORDER="0"
+ SRC="img690.png"
+ ALT="\begin{displaymath}
+MTBF = \frac{T}{n_{avg}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.32)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่า MTBF คือค่าเวลาทั้งหมด หารด้วยจำนวนครั้งที่เกิดความเสียหาย ในระบบที่พบในช่วงเวลา <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.png"
+ ALT="$T$">
+
+สมมุติว่าระบบมีคุณภาพการทำงานเหมือนใหม่หลังการซ่อมแซม ความสัมพันธ์ระหว่าง
+MTTF และ MTTR สามารถแสดงโดยรูป <A HREF="node148.html#fig:fev2mttf">10.2</A> หลังจากเริ่มทำงาน, โดยเฉลี่ยระบบจะทำงานเป็นระยะเวลา MTTF ก่อนการเสียครั้งแรก จากนั้นก็ทำการซ่อมโดยใช้เวลา MTTR เพื่อที่จะซ่อมความเสียหาย และ นำระบบกลับมาใช้ใหม่อีกครั้งหนึ่ง หลังจากการซ่อมระบบสมบูรณ์เหมือนใหม่อีกครั้งหนึ่ง และจะสามารถทำงานได้เฉลี่ยเท่ากับ MTTF ก่อนการเสียหายครั้งต่อไป เพราะฉะนั้น ค่า MTBF คือผลรวมของ  MTTF และ MTTR ดังสมการดังต่อไปนี้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MTBF = MTTF + MTTR
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="398" HEIGHT="35" BORDER="0"
+ SRC="img691.png"
+ ALT="\begin{displaymath}
+MTBF = MTTF + MTTR
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.33)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fev2mttf"></A><A NAME="4898"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 10.2:</STRONG>
+ความสัมพันธ์ระหว่าง
+MTTF และ MTTR โดยสมมุติว่าระบบมีคุณภาพการทำงานเสมือนใหม่หลังการซ่อมแซม</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="457" HEIGHT="158" ALIGN="BOTTOM" BORDER="0"
+ SRC="img692.png"
+ ALT="\includegraphics[width=4.in]{fig/fev2mttf.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

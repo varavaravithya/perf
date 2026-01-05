@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ตัวอย่าง:</TITLE>
+<META NAME="description" CONTENT="ตัวอย่าง:">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="previous" HREF="node93.html">
+<LINK REL="up" HREF="node93.html">
+<LINK REL="next" HREF="node95.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1799"
+  HREF="node95.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1793"
+  HREF="node93.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1789"
+  HREF="node93.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1795"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1797"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1800"
+  HREF="node95.html">กฎเวลาตอบสนองทั่วไป (General Response Time</A>
+<B> Up:</B> <A NAME="tex2html1794"
+  HREF="node93.html">กฎของ Little</A>
+<B> Previous:</B> <A NAME="tex2html1790"
+  HREF="node93.html">กฎของ Little</A>
+ &nbsp <B>  <A NAME="tex2html1796"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1798"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION001060010000000000000">
+<FONT SIZE="+1">ตัวอย่าง:</FONT></A>
+</H4> ถ้าค่าเฉลี่ยความยาวคิว  ในตัวอย่างที่ผ่านมา มีค่าเท่ากับ 8.88, 3.19, และ 1.40 ที่ตัวประมวลผลกลาง CPU, ดิสก์ A, และ ดิสก์ B, ตามลำดับ จงหาเวลาตอบสนองของอุปกรณ์ต่างๆ
+<BR>
+<P>
+จากตัวอย่างที่ผ่านมาค่าอัตราความสำเร็จของแต่ละอุปกรณ์จะเท่ากับ
+
+<P>
+<!-- MATH
+ $X_{CPU} = 35.28, X_{A} = 15.70, X_{B} = 19.6$
+ -->
+<IMG
+ WIDTH="319" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img414.png"
+ ALT="$X_{CPU} = 35.28, X_{A} = 15.70, X_{B} = 19.6$">
+
+<P>
+และข้อกำหนดความยาวคิวจากโจทย์เท่ากับ
+
+<P>
+<!-- MATH
+ $Q_{CPU} = 8.88, Q_{A} = 3.19, Q_{B} = 1.40$
+ -->
+<IMG
+ WIDTH="297" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img415.png"
+ ALT="$Q_{CPU} = 8.88, Q_{A} = 3.19, Q_{B} = 1.40$">
+
+<P>
+โดยใช้กฎของ Little, เวลาตอบสนองของอุปกรณ์จะเท่ากับ 
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+R_{CPU} &=& Q_{CPU}/X_{CPU} = 8.88/35.48 
+= 0.250~~~~second\\
+R_A &=& Q_A/X_A = 3.19/15.70 = 0.203~~~~second\\
+R_B &=& Q_B/X_B = 1.40/19.6 = 0.071~~~~second
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img416.png"
+ ALT="$\displaystyle R_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="370" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img417.png"
+ ALT="$\displaystyle Q_{CPU}/X_{CPU} = 8.88/35.48
+= 0.250~~~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.44)</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img418.png"
+ ALT="$\displaystyle R_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="327" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img419.png"
+ ALT="$\displaystyle Q_A/X_A = 3.19/15.70 = 0.203~~~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.45)</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img420.png"
+ ALT="$\displaystyle R_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="319" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img421.png"
+ ALT="$\displaystyle Q_B/X_B = 1.40/19.6 = 0.071~~~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.46)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ระบบสำรองพร้อมทำงาน</TITLE>
+<META NAME="description" CONTENT="ระบบสำรองพร้อมทำงาน">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node136.html">
+<LINK REL="previous" HREF="node134.html">
+<LINK REL="up" HREF="node131.html">
+<LINK REL="next" HREF="node136.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2408"
+  HREF="node136.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2402"
+  HREF="node131.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2396"
+  HREF="node134.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2404"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2406"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2409"
+  HREF="node136.html">ระบบคงทนต่อความเสียหายแบบอื่นๆ</A>
+<B> Up:</B> <A NAME="tex2html2403"
+  HREF="node131.html">ระบบที่คงทนต่อความเสียหาย</A>
+<B> Previous:</B> <A NAME="tex2html2397"
+  HREF="node134.html">ระบบตรวจสอบความเสียหาย</A>
+ &nbsp <B>  <A NAME="tex2html2405"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2407"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION001294000000000000000"></A>
+<A NAME="4456"></A>
+<A NAME="4457"></A>
+<BR>
+ระบบสำรองพร้อมทำงาน
+</H2>
+
+ระบบสำรองพร้อม (Standby Sparing)  เป็นลักษณะการออกแบบระบบที่คงทนต่อความเสียหายอีกวิธีหนึ่ง โดยที่ขณะทำงานจะมีหนึ่งโมดูลทำงานอยู่  และมีอีกหนึ่งโมดูลหรือมากกว่าเป็นโมดูลสำรองที่พร้อมทำงาน  ระบบจะต้องมีวิธีการตรวจจับความผิดพลาด  และหาตำแหน่งจุดผิดพลาดด้วยวิธีใดวิธีหนึ่ง ถ้ามีการเสียหายของโมดูล ระบบจะตรวจจับ และระบุตำแหน่งที่เสียหาย จากนั้นจะทำการตัดโมดูลที่เสียหายออกไปโดยใช้สวิทช์  ซึ่งขั้นตอนดังกล่าวเป็นขั้นตอนของการจัดการรูปแบบการทำงานใหม่ของระบบ สวิทช์จะทำการตรวจสอบค่าเอาท์พุทจากโมดูล  และเอาท์พุทจากตัวตรวจจับความเสียหายเพื่อตัดสินใจ แสดงใน <A HREF="node135.html#fig:ft11stsp">9.14</A>
+
+การสำรองทำได้สองรูปแบบคือการสำรองแบบพร้อมทำงาน (Hot Spare)  และการสำรองแบบเย็น (Cold Spare)  ถ้าต้องการให้การทำงานมีการขัดจังหวะน้อยที่สุด การจัดการรูปแบบการทำงานใหม่ของระบบ ต้องใช้การสำรองแบบพร้อมทำงาน เนื่องจากอุปกรณ์พร้อมที่จะทำงานเช่น มีไฟฟ้าเข้าเลี้ยงระบบตลอดเวลา  ไม่จำเป็นต้องผ่านช่วงเริ่มทำงานอีก ส่วนการสำรองแบบเย็น การใช้งานอุปกรณ์สำรองต้องการระยะเวลาช่วงหนึ่งในการป้อนพลังงานไฟฟ้าเข้าระบบ  และเริ่มการใช้งาน จะเห็นได้ว่าระบบสำรองแบบพร้อมทำงาน  ต้องใช้พลังงานไฟฟ้าในการสำรองตลอดเวลา ซึ่งอาจเป็นปัญหาสำหรับระบบที่พลังงานเป็นทรัพยากรราคาสูง ซึ่งระบบสำรองแบบเย็นมีข้อดีเหนือกว่าในข้อนี้
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:ft11stsp"></A><A NAME="4461"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.14:</STRONG>
+ระบบสำรองพร้อมทำงาน</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="454" HEIGHT="370" ALIGN="BOTTOM" BORDER="0"
+ SRC="img627.png"
+ ALT="\includegraphics[width=4.in]{fig/ft11stsp.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

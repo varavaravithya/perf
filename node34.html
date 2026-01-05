@@ -1,0 +1,403 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>สัญลักษณ์ของคิว</TITLE>
+<META NAME="description" CONTENT="สัญลักษณ์ของคิว">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node35.html">
+<LINK REL="previous" HREF="node33.html">
+<LINK REL="up" HREF="node30.html">
+<LINK REL="next" HREF="node35.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html913"
+  HREF="node35.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html907"
+  HREF="node30.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html901"
+  HREF="node33.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html909"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html911"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html914"
+  HREF="node35.html">กฎของคิว</A>
+<B> Up:</B> <A NAME="tex2html908"
+  HREF="node30.html">ทฤษฎีคิว</A>
+<B> Previous:</B> <A NAME="tex2html902"
+  HREF="node33.html">กล่าวนำ</A>
+ &nbsp <B>  <A NAME="tex2html910"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html912"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00640000000000000000">
+สัญลักษณ์ของคิว</A>
+</H1>
+
+<P>
+ในการบริการห้องปฏิบัติการคอมพิวเตอร์ นักศึกษาทั้งมหาวิทยาลัยที่มีสิทธิในการใช้ห้องคอมพิวเตอร์เป็นผู้ใช้งาน หรือ ``งาน'' (Jobs) ในระบบ
+<A NAME="588"></A>
+<A NAME="589"></A>
+
+<P>
+ในรูป <A HREF="node34.html#fig:computerroom">3.1</A> แสดงภาพความสัมพันธ์ของการใช้งานห้องปฏิบัติการคอมพิวเตอร์ ที่มีจำนวนเครื่องบริการ (Facility) จำนวนหนึ่ง ที่นักศึกษาสามารถใช้งานได้ ถ้าเครื่องคอมพิวเตอร์ถูกใช้งานทุกเครื่อง นักศึกษาที่เข้ามาใช้งานต้องรออยู่ในคิว ในคำจำกัดความของทฤษฎีคิว นักศึกษามักถูกเรียกว่า  ``Customer'' หรือผู้ใช้งานระบบ
+<A NAME="591"></A>
+
+<P>
+เพื่อจะสามารถวิเคาระห์ระบบได้  เราจำเป็นต้องกำหนดคุณลักษณะของระบบดังต่อไปนี้
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:computerroom"></A><A NAME="594"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.1:</STRONG>
+ตัวอย่างทฤษฎีคิว: การบริการห้องปฏิบัติการคอมพิวเตอร์</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="565" HEIGHT="382" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.png"
+ ALT="\includegraphics[width=5in]{fig/computerroom.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<OL>
+<LI>กระบวนการเข้าใช้ระบบ (Arrival Process): 
+
+<P>
+<A NAME="598"></A>
+
+<P>
+ถ้านักศึกษาเข้ามาใช้ห้องปฏิบัติการ ณ. เวลา  <!-- MATH
+ $t_1, t_2, \ldots, t_j$
+ -->
+<IMG
+ WIDTH="99" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$t_1, t_2, \ldots, t_j$">, ตัวแปรสุ่ม <!-- MATH
+ $\tau_j = t_j - t_{j-1}$
+ -->
+<IMG
+ WIDTH="114" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$\tau_j = t_j - t_{j-1}$"> เรียกว่า ``เวลาระหว่างการเข้าใช้งาน'' (Interarrival Time) โดยทั่วไป การวิเคราะห์ของทฤษฎีการเข้าคิวจะสมมุติว่า <IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$\tau_j$"> เป็นลำดับของตัวแปรสุ่มที่ไม่ขึ้นอยู่ด้วยกัน ที่มีการกระจายเหมือนกัน (Independent and Identically Distributed (IID)) 
+
+<P>
+กระบวนการเข้าใช้งาน (Arrival Process) ที่ใช้มากที่สุดเรียกว่า การเข้าใช้งานแบบพัวซอง (Poisson arrivals) ที่เป็น IID และมีการกระจายแบบ exponential 
+
+<P>
+<A NAME="600"></A>
+<A NAME="601"></A>
+
+<P>
+การกระจายแบบอื่นเช่น Erlang และ Hyperexponential มีการใช้บ้าง 
+
+<P>
+</LI>
+<LI>การกระจายของเวลาบริการ (Service Time Distribution):
+<A NAME="602"></A>
+<A NAME="603"></A>
+
+<P>
+ปริมาณที่สำคัญอีกประการหนึ่งคือ เวลาที่นักศึกษาเข้าใช้งานคอมพิวเตอร์ในห้องปฏิบัติการ  ช่วงเวลาดังกล่าวเรียกว่าเวลาบริการ (Service Time) 
+
+<P>
+โดยทั่วไปเวลาบริการจะสมมุติให้เป็นตัวแปรสุ่ม ที่เป็น IID และมักใช้การกระจายแบบ Exponential การกระจายแบบอื่นเช่น Erlang และ Hyperexponential มีการใช้บ้าง 
+
+<P>
+</LI>
+<LI>จำนวนเครื่องบริการ (Number of Servers):
+<A NAME="604"></A>
+<A NAME="605"></A>
+
+<P>
+ในห้องปฏิบัติการคอมพิวเตอร์ อาจมีจำนวนเครื่องคอมพิวเตอร์ที่ให้บริการมากกว่าหนึ่งเครื่อง ซึ่งทุกเครื่องถือเป็นส่วนประกอบของระบบคิว เครื่องคอมพิวเตอร์ในคิวเดียวกันจะเป็นเครื่องที่เหมือนกัน และเครื่องคอมพิวเตอร์จะถูกใช้โดยนักศึกษาใดๆ ก็ได้ ถ้าเครื่องไม่เหมือนกันจำเป็นต้องแบ่งออกเป็นคิวต่างหาก และพิจารณาเครื่องที่เหมือนกันเป็นคิวเดียวกัน 
+
+<P>
+</LI>
+<LI>ขนาดของระบบ (System Capacity): 
+<A NAME="606"></A>
+<A NAME="607"></A>
+
+<P>
+จำนวนที่มากที่สุดของนักศึกษาที่สามารถเข้ามาอยู่ในห้องปฏิบัติการคอมพิวเตอร์ในพื้นที่ทั้งหมด คือ ``ขนาดของระบบ'' ทั้งนี้รวมถึงนักศึกษาที่กำลังใช้คอมพิวเตอร์อยู่ และนักศึกษาที่รอการใช้งานอยู่ โดยทั่วระบบจะมีขนาดที่จำกัด อย่างไรก็ตามถ้าระบบมีขนาดใหญ่ประมาณค่าหนึ่ง เรามักจะสมมุติว่ามีขนาดเป็นอนันต์ เพื่อให้สามารถคำนวณได้ง่ายขึ้น 
+
+<P>
+<BLOCKQUOTE>
+<EM>ขนาดของระบบรวม-งานที่กำลังรับบริการ และ งานที่รอรับบริการอยู่</EM>
+
+</BLOCKQUOTE>
+
+<P>
+</LI>
+<LI>ขนาดประชากร (Population Size): 
+<A NAME="611"></A>
+<A NAME="612"></A>
+
+<P>
+ขนาดประชากรของตัวอย่างห้องปฏิบัติการคอมพิวเตอร์ คือ จำนวนนักศึกษาที่มีสิทธิในการใช้งานห้องปฏิบัติคอมพิวเตอร์ดังกล่าว  ในทางเป็นจริงจำนวนของประชากรมีขนาดจำกัด แต่ถ้ามีประชากรจำนวนมาก เรามักจะสมมุติให้มีขนาดของประชากรเป็นอนันต์ เพื่อให้สามารถคำนวณได้ง่าย
+
+<P>
+</LI>
+<LI>รูปแบบการบริการ (Service Discipline):
+<A NAME="613"></A>
+<A NAME="614"></A>
+
+<P>
+การเลือกลำดับของนักศึกษาในการเข้ารับบริการในห้องปฏิบัติการเรียกว่า ``รูปแบบการบริการ''
+
+<P>
+รูปแบบการบริการที่มีการใช้งานอย่างแพร่หลายมากที่สุดเป็นแบบ ``มาก่อนรับบริการก่อน'' หรือ First Come First Served (FCFS) ตัวอย่างรูปแบบบริการอื่นได้แก่
+
+<P>
+
+<OL>
+<LI>Last Come, First Served (LCFS)
+</LI>
+<LI>Last Come, First Served with Preempt and Resume (LCFS-PR)
+</LI>
+<LI>Round-Robin (RR)
+</LI>
+<LI>Processor Sharing (PS)
+</LI>
+<LI>Infinite Server (IS) หรือ Delay Center
+</LI>
+<LI>Shortest Processing Time first (SPT)
+</LI>
+<LI>Shortest Remaining Processing Time first (SRPT)
+</LI>
+<LI>Shortest Expected Processing Time first (SERPT)
+</LI>
+<LI>Biggest In, First Serve (BIFS)
+</LI>
+<LI>Loudest Voice, First Served (LVFS)
+</LI>
+</OL>
+</LI>
+</OL>
+
+<P>
+ในการระบบชนิดของคิว เรามักจะใช้สัญกรณ์ของ Kendall ในรูปของ
+ <IMG
+ WIDTH="154" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$A/S/m/B/K/SD$"> โดยแต่ละตัวอักษรแสดงถึงพารามิเตอร์ที่ได้กล่าวมา โดยที่
+<A NAME="618"></A>
+<A NAME="619"></A>
+
+<P>
+
+<UL>
+<LI><IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$A$">: ได้แก่ กระบวนการเข้าใช้ระบบ (Arrival Process): 
+
+<P>
+</LI>
+<LI><IMG
+ WIDTH="18" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.png"
+ ALT="$S$">: ได้แก่ การกระจายของเวลาบริการ (Service Time Distribution):
+
+<P>
+</LI>
+<LI><IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$m$">: ได้แก่ จำนวนเครื่องบริการ (Number of Servers):
+
+<P>
+</LI>
+<LI><IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.png"
+ ALT="$B$">: ได้แก่ ขนาดของระบบ (System Capacity): 
+
+<P>
+</LI>
+<LI><IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img39.png"
+ ALT="$K$">: ได้แก่ ขนาดประชากร (Population Size): 
+
+<P>
+</LI>
+<LI><IMG
+ WIDTH="35" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$SD$">: ได้แก่ รูปแบบการบริการ (Service Discipline):
+
+<P>
+</LI>
+</UL>
+
+<P>
+การกระจายของกระบวนการเข้าใช้ระบบ และเวลาบริการมักจะแสดงโดยตัวอักษรดังต่อไปนี้
+
+<P>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT"><IMG
+ WIDTH="26" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$M$"></TD>
+<TD ALIGN="LEFT">Exponential</TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT"><IMG
+ WIDTH="28" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$E_k$"></TD>
+<TD ALIGN="LEFT">Erlang with parameter <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$k$"></TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT"><IMG
+ WIDTH="30" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$H_k$"></TD>
+<TD ALIGN="LEFT">Hyperexponential with parameter <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$k$"></TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT"><IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img43.png"
+ ALT="$D$"></TD>
+<TD ALIGN="LEFT">Deterministic</TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT"><IMG
+ WIDTH="21" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$G$"></TD>
+<TD ALIGN="LEFT">General</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+สังเกตว่าการกระจายแบบ  Exponential แสดงโดยตัวอักษรย่อ <IMG
+ WIDTH="26" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$M$"> ที่ย่อมาจาก Memoryless หรือไม่มีความจำ ถ้าระยะเวลาระหว่างการเข้าใช้ระบบ <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img45.png"
+ ALT="$\tau$"> มีการกระจายแบบ Exponential ด้วยค่าเฉลี่ย <IMG
+ WIDTH="36" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$1/\lambda$"> ค่าคาดหวัง (ค่าเฉลี่ย) ของการเข้าใช้ระบบครั้งต่อไปจะเป็น  <IMG
+ WIDTH="36" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$1/\lambda$"> เสมอ ไม่ขึ้นอยู่กับเวลาการเข้าใช้ระบบในครั้งก่อนหน้า คุณสมบัติดังกล่าวเรียกว่า Memoryless ข้อมูลการเข้าใช้ระบบในอดีตไม่สามารถช่วยในการคาดหวังการเข้าใช้ระบบในอนาคตได้
+
+<P>
+<B>ตัวอย่าง:</B> <!-- MATH
+ $M/M/3/20/1500/FCFS$
+ -->
+<IMG
+ WIDTH="212" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$M/M/3/20/1500/FCFS$"> แสดงถึงระบบคิวที่มีพารามิเตอร์ดังต่อไปนี้
+
+<P>
+
+<OL>
+<LI>เวลาระหว่างการเข้าใช้ระบบของงาน มีการกระจายแบบ Exponential
+</LI>
+<LI>เวลาในการบริการ มีการกระจายแบบ Exponential
+</LI>
+<LI>มีเครื่อง (หรือตัวบริการ) ในการบริการ 3 ชุด
+</LI>
+<LI>ระบบคิวมีบัฟเฟอร์สำหรับงาน 20 งาน ประกอบด้วย 3 ที่สำหรับเก็บงานที่กำลังรับบริการอยู่ และอีก 17 ที่สำหรับงานที่กำลังรอรับบริการ 
+
+<P>
+เมื่อจำนวนงานที่อยู่ในระบบมีจำนวนเท่ากับ 20 งาน งานที่เข้ามาใหม่จะไม่ได้รับบริการเนื่องจากบัฟเฟอร์เต็ม เรียกว่างานหายไป
+</LI>
+<LI>มีจำนวนงานทั้งหมด 1500 งานที่จะสามารถเข้าใช้บริการได้
+</LI>
+<LI>การบริการเป็นแบบ First Come, First Served.
+</LI>
+</OL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html913"
+  HREF="node35.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html907"
+  HREF="node30.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html901"
+  HREF="node33.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html909"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html911"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html914"
+  HREF="node35.html">กฎของคิว</A>
+<B> Up:</B> <A NAME="tex2html908"
+  HREF="node30.html">ทฤษฎีคิว</A>
+<B> Previous:</B> <A NAME="tex2html902"
+  HREF="node33.html">กล่าวนำ</A>
+ &nbsp <B>  <A NAME="tex2html910"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html912"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

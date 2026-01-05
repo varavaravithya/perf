@@ -1,0 +1,899 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>แบบจำลองมาร์คอฟที่คำนึงถึงผลกระทบจากความคุ้มครองจากความเสียหาย</TITLE>
+<META NAME="description" CONTENT="แบบจำลองมาร์คอฟที่คำนึงถึงผลกระทบจากความคุ้มครองจากความเสียหาย">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node174.html">
+<LINK REL="previous" HREF="node172.html">
+<LINK REL="up" HREF="node168.html">
+<LINK REL="next" HREF="node174.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2967"
+  HREF="node174.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2961"
+  HREF="node168.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2955"
+  HREF="node172.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2963"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2965"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2968"
+  HREF="node174.html">แบบจำลองความปลอดภัย</A>
+<B> Up:</B> <A NAME="tex2html2962"
+  HREF="node168.html">แบบจำลองมาร์คอฟ</A>
+<B> Previous:</B> <A NAME="tex2html2956"
+  HREF="node172.html">แบบจำลองมาร์คอฟของระบบ TMR</A>
+ &nbsp <B>  <A NAME="tex2html2964"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2966"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001550000000000000000"></A>
+<A NAME="5820"></A>
+<A NAME="5821"></A>
+<BR>
+แบบจำลองมาร์คอฟที่คำนึงถึงผลกระทบจากความคุ้มครองจากความเสียหาย
+</H1>
+
+จากการใช้แบบจำลองมาร์คอฟในการค่าความน่าเชื่อถือของระบบ TMR ที่ผ่านมาเราไม่ได้คำนึงถึง ความคุ้มครองจากความเสียหาย และความสามารถในการซ่อมอุปกรณ์ ในบทนี้เราจะกล่าวถึงวิธีการจำลองระบบที่คำนึงถึงผลกระทบจากเฟคเตอร์ความคุ้มครองจากความเสียหาย โดยใช้แบบจำลองมาร์คอฟ และแบบจำลองมาร์คอฟของระบบที่มีการซ่อมบำรุง
+
+ระบบที่จะพิจารณาต่อไปเป็นระบบที่คงทนต่อความเสียหาย ประกอบด้วยโมดูลสามโมดูลทำงานพร้อมกัน ระบบสามารถตรวจสอบสภาพการทำงานได้ว่า โมดูลทำงานปกติหรือมีความเสียหาย เอาท์พุทจากโมดูลเข้าไปยังอุปกรณ์รวมผลฟลักซ์ (Flux Summer) ซึ่งเป็นอุปกรณ์รวมค่าเอาท์พุทของโมดูลทั้งสามในรูปของฟลักซ์แม่เหล็ก จากอุปกรณ์รวมผลฟลักซ์ ระบบจึงต้องการเพียงหนึ่งโมดูลในการทำงานปกติ เพราะฉะนั้นระบบสามารถทนทานค่อการเสียหายของสองโมดูลได้  ถ้าได้รับการจัดการอย่างถูกต้อง เมื่อสวิทช์ปิดอยู่ค่าเอาท์พุทจากโมดูลยังส่งกระแสเข้าไปสู่ อุปกรณ์รวมผลฟลักซ์ ซึ่งส่งผลต่อการทำงานของระบบ
+
+การจัดการกับการเสียหายของโมดูลมีขั้นตอนดังต่อไปนี้
+
+<OL>
+<LI>ตรวจสอบพบว่าโมดูลมีความเสียหาย
+</LI>
+<LI>ตัดโมดูลที่เสียหายออกจากระบบโดยการเปิดสวิทช์
+</LI>
+</OL>
+
+ความน่าจะเป็นที่ความเสียหายได้รับการจัดการอย่างถูกต้องคือความคุ้มครองจากความเสียหายของระบบ <IMG
+ WIDTH="21" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img694.png"
+ ALT="$C$"> ระบบแสดงในรูป <A HREF="node173.html#fig:tmrC">12.5</A>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:tmrC"></A><A NAME="5827"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 12.5:</STRONG>
+ระบบที่คงทนต่อความเสียหาย ประกอบด้วยโมดูลสามโมดูลทำงานพร้อมกัน ระบบสามารถตรวจสอบสภาพการทำงานได้ว่า โมดูลทำงานปกติหรือมีความเสียหาย</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="601" HEIGHT="259" ALIGN="BOTTOM" BORDER="0"
+ SRC="img888.png"
+ ALT="\includegraphics[width=5.25in]{fig/tmrC.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+แบบจำลองมาร์คอฟมีลักษณะคล้ายกับ แบบจำลองมาร์คอฟของระบบ TMR ซึ่งถ้าค่าความคุ้มครองจากความเสียหายของระบบ <IMG
+ WIDTH="21" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img694.png"
+ ALT="$C$"> มีค่าเท่ากับ <IMG
+ WIDTH="29" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img889.png"
+ ALT="$1.0$"> แบบจำลองมาร์คอฟมีลักษณะเหมือนกับ TMR  แบบจำลองมาร์คอฟแสดงในรูป 
+<A HREF="node173.html#fig:mvtmrC">12.6</A>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:mvtmrC"></A><A NAME="5833"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 12.6:</STRONG>
+การเปลี่ยนแปลงสถานะของระบบที่คำนึงถึงผลกระทบจากเฟคเตอร์ความคุ้มครองจากความเสียหาย สถานะประกอบด้วย-ระบบสมบูรณ์, ระบบเสียหนึ่งโมดูล หรือ สองโมดูล, ระบบไม่สามารถตรวจจับความเสียหาย,และระบบล้มเหลว</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="486" HEIGHT="376" ALIGN="BOTTOM" BORDER="0"
+ SRC="img890.png"
+ ALT="\includegraphics[width=4.25in]{fig/mvtmrC.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+สมมุติให้ระบบเริ่มทำงานที่สภาพสมบูรณ์ไม่มีการเสียหายในสถานะ 3 ถ้าเกิดการเสียหายของโมดูลใดโมดูลหนึ่งในสามโมดูล และการเสียหายนั้นได้รับการจัดการอย่างถูกต้อง ระบบจะเปลี่ยนมาอยู่ที่สถานะ 2 
+
+ จากสถานะ 3 สามารถเปลี่ยนแปลงสถานะเป็นสถานะ UD นั้นคือเกิดความเสียหายในระบบ  แต่ไม่สามารถตรวจจับความเสียหาย และจัดการได้อย่างถูกต้อง  การเปลี่ยนสถานะในลักษณะเดียวกันเกิดขึ้นในสถานะ 2 และสถานะ 1  จากสถานะ 2 ถ้าเกิดการเสียหายของโมดูลใดโมดูลหนึ่งในสองโมดูล และการเสียหายนั้นได้รับการจัดการอย่างถูกต้องระบบจะเปลี่ยนมาอยู่ที่สถานะ 1 และยังคงทำงานได้ แต่ถ้าไม่สามารถตรวจจับความเสียหาย และจัดการได้อย่างถูกต้อง ระบบจะเปลี่ยนมาอยู่ที่สถานะการทำงานล้มเหลว  สถานะ <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img831.png"
+ ALT="$F$"> เช่นเดียวกันการเสียหายใดๆ ที่เกิดขึ้นกับระบบในสถานะ 1 ระบบจะเปลี่ยนมาอยู่ที่สถานะ <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img831.png"
+ ALT="$F$"> 
+
+ณ. สถานะใดๆ จะมีความน่าจะเป็นที่ระบบจะคงสถานะเดิม เช่น เมื่อระบบอยู่ที่สถานะ 3 ระบบจะยังคงอยู่ในสถานะ 3 ถ้าไม่มีการเสียหายของโมดูลเกิดขึ้น ในลักษณะเดียวกัน ระบบจะยังคงอยู่ในสถานะ 2, 1, UD, และ <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img831.png"
+ ALT="$F$"> ตามลำดับ ถ้าระะบบอยู่ในสถานะนั้นและไม่มีการเสียหายของโมดูลเกิดขึ้น ความน่าจะเป็นที่ระบบจะคงสถานะเมื่อเวลาผ่านไป <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\triangle t$"> สามารถคำนวณได้จาก <!-- MATH
+ $1 - p_{exit} (\triangle t)$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img891.png"
+ ALT="$1 - p_{exit} (\triangle t)$"> เมื่อ <!-- MATH
+ $p_{exit} (\triangle t)$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img892.png"
+ ALT="$p_{exit} (\triangle t)$"> เป็นค่าความน่าจะเป็นที่ระบบจะออกจากสถานะนั้นในช่วง <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\triangle t$"> ตัวอย่างเช่น ความน่าจะเป็นที่ระบบจะออกจากสถานะ 3 ในช่วงเวลา <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\triangle t$"> คือความน่าจะเป็นที่จะมีจะมีหนึ่งในสามโมดูลเสียหาย ในที่นี้ความน่าจะเป็นที่ระบบจะออกจากสถานะ 3 เท่ากับ <!-- MATH
+ $3\lambda \triangle t$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img816.png"
+ ALT="$3\lambda\triangle t$"> ดังนั้นความน่าจะเป็นที่จะคงสถานะ 3 เท่ากับ <!-- MATH
+ $1- 3\lambda \triangle t$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img893.png"
+ ALT="$1- 3\lambda \triangle t$"> 
+
+สมการของแบบจำลองมาร์คอฟในรูป  <A HREF="node173.html#fig:tmrC">12.5</A> สามารถหาโดยวิธีการเดียวกับวิธีการ TMR ความน่าจะเป็นที่จะอยู่ที่สถานะ  ที่เวลา <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\triangle t$"> ขึ้นอยู่กับ (1) ความน่าจะเป็นที่ระบบจะอยู่ที่สถานะ <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.png"
+ ALT="$i$"> ที่เวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> และ (2) การเปลี่ยนสถานะของระบบ ตัวอย่างเช่น ระบบจะเปลี่ยนสถานะไปอยู่ในสถานะ 2 ช่วงเวลา <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\triangle t$"> ก็ต่อเมื่อระบบอยู่ในสถานะ 2 หรือ 3 ที่เวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> ดังนั้นความน่าจะเป็นที่ระบบอยู่ในสถานะ 2 ที่เวลา <!-- MATH
+ $t + \triangle t$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img806.png"
+ ALT="$t+\triangle t$"> จะเท่ากับ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+p_2(t + \triangle t) = 3\lambda \triangle t C p_3(t) +
+(1-2\lambda\triangle t)p_2(t)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="459" HEIGHT="39" BORDER="0"
+ SRC="img894.png"
+ ALT="\begin{displaymath}
+p_2(t + \triangle t) = 3\lambda \triangle t C p_3(t) +
+(1-2\lambda\triangle t)p_2(t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.35)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ซึ่งจากรูป <A HREF="node173.html#fig:tmrC">12.5</A> จะสามารถเขียนสมการทั้งหมดได้ดังต่อไปนี้
+ 
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+\left[
+\begin{array}{l}
+p_3(t+\triangle t)\\
+p_2(t+\triangle t)\\
+p_1(t+\triangle t)\\
+p_{UD}(t+\triangle t)\\
+p_F(t+\triangle t)
+\end{array}
+\right] &=&
+\left[
+\begin{array}{ccccc}
+(1-3\lambda\triangle t) & 0 & 0 & 0 & 0\\
+3\lambda\triangle tC & (1-2\lambda\triangle t) & 0 & 0 & 0\\
+0 & 2\lambda\triangle t C & 1- \lambda\triangle t  & 0 & 0\\
+3\lambda\triangle t(1-C) & 0& 0 & (1-2\lambda\triangle t) & 0\\
+0 & 2\lambda\triangle t (1-C) & \lambda\triangle t  & 2\lambda\triangle t & 1
+\end{array}
+\right]\nonumber\\
+& &
+\left[
+\begin{array}{l}
+p_3(t)\\
+p_2(t)\\
+p_1(t)\\
+p_{UD}(t)\\
+p_F(t)
+\end{array}
+\right]
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="143" HEIGHT="157" ALIGN="MIDDLE" BORDER="0"
+ SRC="img895.png"
+ ALT="$\displaystyle \left[
+\begin{array}{l}
+p_3(t+\triangle t)\\
+p_2(t+\triangle t)\...
+...+\triangle t)\\
+p_{UD}(t+\triangle t)\\
+p_F(t+\triangle t)
+\end{array}\right]$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="487" HEIGHT="157" ALIGN="MIDDLE" BORDER="0"
+ SRC="img896.png"
+ ALT="$\displaystyle \left[
+\begin{array}{ccccc}
+(1-3\lambda\triangle t) &amp; 0 &amp; 0 &amp; 0 &amp;...
+...angle t (1-C) &amp; \lambda\triangle t &amp; 2\lambda\triangle t &amp; 1
+\end{array}\right]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="96" HEIGHT="157" ALIGN="MIDDLE" BORDER="0"
+ SRC="img897.png"
+ ALT="$\displaystyle \left[
+\begin{array}{l}
+p_3(t)\\
+p_2(t)\\
+p_1(t)\\
+p_{UD}(t)\\
+p_F(t)
+\end{array}\right]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.36)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+ความน่าเชื่อถือของระบบที่อธิบายโดยแบบจำลองมาร์คอฟในรูป <A HREF="node173.html#fig:tmrC">12.5</A> คือความน่าจะเป็นของระบบที่จะอยู่ในสถานะ 3, 2, 1, และ UD ซึ่งสามารถเขียนเป็นสมการได้ดังต่อไปนี้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(t) = p_3(t) + p_2(t) + p_1(t) + p_{UD}(t)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="429" HEIGHT="39" BORDER="0"
+ SRC="img898.png"
+ ALT="\begin{displaymath}
+R(t) = p_3(t) + p_2(t) + p_1(t) + p_{UD}(t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.37)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ถ้าเฟคเตอร์ความคุ้มครองความเสียหายของระบบเท่ากับ 1.0 ระบบที่พิจารณาจะมีค่าความน่าเชื่อถือเท่ากับระบบแบบขนานสามโมดูล และถ้าเฟคเตอร์ค่าความคุ้มครองความเสียหายของระบบเท่ากับ 1.0 ระบบที่พิจารณาจะมีค่าความน่าเชื่อถือเท่ากับระบบ TMR 
+
+ระบบต่อมาที่จะพิจารณาคือระบบที่มีการซ่อมบำรุงในการฟื้นคืนสภาพการทำงาน  ตัวอย่างเช่น บางระบบต้องคำนึงถืง อัตราการซ่อมในการจำลองการทำงาน  ระบบที่ใช้เวลาการซ่อมนาน จำเป็นต้องออกแบบให้มีการคงทนต่อการเสียหาย เพื่อให้สามารถทำงานได้ในขณะที่ทำการซ่อมโมดูล
+
+เมื่อพิจารณาแบบจำลองมาร์คอฟที่ประกอบด้วยระบบคอมพิวเตอร์ที่ไม่มีโมดูลสำรอง  โดยที่เราต้องการจำลองระบบดังกล่าวเมื่อเกิดการเสียหาย  และกระบวนการฟื้นคืนจากสภาพล้มเหลวของระบบคอมพิวเตอร์  โดยให้ระบบมีอัตราการเสียหายคงที่ <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> และอัตราการซ่อมบำรุง <IMG
+ WIDTH="17" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\mu$"> ในช่วงเวลา <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\triangle t$"> ระบบจะมีความน่าจะเป็นที่จะเสียเท่ากับ  <!-- MATH
+ $\lambda \triangle t$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img813.png"
+ ALT="$\lambda\triangle t$"> และความน่าจะเป็นที่ระบบจะสามารถซ่อมในช่วงเวลา  <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\triangle t$"> มีค่าเท่ากับ <!-- MATH
+ $\mu \triangle t$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img899.png"
+ ALT="$\mu \triangle t$"> จากข้อมูลดังกล่าวเราสามารถเขียนแผนภาพมาร์คอฟได้ดังรูป <A HREF="node173.html#fig:repair">12.7</A>
+
+ระบบคอมพิวเตอร์ในสถานะ <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$O$"> แสดงสถานะของระบบที่ทำงานปกติ และสถานะ  <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img831.png"
+ ALT="$F$"> เป็นสถานะของระบบที่อยู่ในสภาวะล้มเหลว ถ้าที่เวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> ระบบคอมพิวเตอร์ทำงานอยู่ที่สถานะ <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$O$"> ความน่าจะเป็นที่ระบบจะเปลี่ยนเป็นสถานะ <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img831.png"
+ ALT="$F$"> ในช่วงเวลา <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\triangle t$"> มีค่าเท่ากับ <!-- MATH
+ $\lambda \triangle t$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img813.png"
+ ALT="$\lambda\triangle t$"> เช่นเดียวกัน ระบบคอมพิวเตอร์ทำงานอยู่ที่สถานะ <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img831.png"
+ ALT="$F$"> ที่เวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> ความน่าจะเป็นที่ระบบจะเปลี่ยนเป็นสถานะ <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img831.png"
+ ALT="$F$"> ในช่วงเวลา <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\triangle t$"> มีค่าเท่ากับ <!-- MATH
+ $\mu \triangle t$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img899.png"
+ ALT="$\mu \triangle t$"> และความน่าจะเป็นที่ระบบจะคงสถานะ  <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$O$"> ในช่วงเวลา  <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\triangle t$"> มีค่าเท่ากับ <!-- MATH
+ $\lambda \triangle t$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img813.png"
+ ALT="$\lambda\triangle t$"> และถ้าระบบอยู่ในสถานะ  <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img831.png"
+ ALT="$F$"> ที่เวลา  <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> ความน่าจะเป็นที่ระบบจะคงสถานะ  <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$O$"> ในช่วงเวลา <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\triangle t$"> มีค่าเท่ากับ <!-- MATH
+ $\mu \triangle t$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img899.png"
+ ALT="$\mu \triangle t$">
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:repair"></A><A NAME="5862"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 12.7:</STRONG>
+แบบจำลองมาร์คอฟของระบบที่มีการซ่อม</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="455" HEIGHT="221" ALIGN="BOTTOM" BORDER="0"
+ SRC="img900.png"
+ ALT="\includegraphics[width=4.in]{fig/repair.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ชุดของสมการจากแบบจำลองมาร์คอฟในรูป <A HREF="node173.html#fig:repair">12.7</A> 
+จะสามารถเขียนได้เท่ากับ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left[
+\begin{array}{l}
+p_O(t+\triangle t)\\
+p_F(t+\triangle t)\\
+\end{array}
+\right] =
+\left[
+\begin{array}{cc}
+1-\lambda\triangle t & \mu\triangle t\\
+\lambda\triangle tC & 1-\mu\triangle t
+\end{array}
+\right]
+\left[
+\begin{array}{l}
+p_O(t)\\
+p_F(t)
+\end{array}
+\right]
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="487" HEIGHT="65" BORDER="0"
+ SRC="img901.png"
+ ALT="\begin{displaymath}
+\left[
+\begin{array}{l}
+p_O(t+\triangle t)\\
+p_F(t+\tri...
+...t[
+\begin{array}{l}
+p_O(t)\\
+p_F(t)
+\end{array}
+\right]
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.38)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+จากสมการขั้นต้นเราสามารถเขียนอยู่ในสมการ
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+\frac{p_O(t+\triangle t) - p_O(t)}{\triangle t} & = & 
+-\lambda p_O(t) + \mu p_F(t)\nonumber\\
+\frac{p_F(t+\triangle t) -p_F(t)}{\triangle t} & = & 
+\lambda p_O(t) - \mu p_F(t)
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="165" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img902.png"
+ ALT="$\displaystyle \frac{p_O(t+\triangle t) - p_O(t)}{\triangle t}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="149" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img903.png"
+ ALT="$\displaystyle -\lambda p_O(t) + \mu p_F(t)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="164" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img852.png"
+ ALT="$\displaystyle \frac{p_F(t+\triangle t)-p_F(t) }{\triangle t}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="136" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img904.png"
+ ALT="$\displaystyle \lambda p_O(t) - \mu p_F(t)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.39)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+ให้ค่า <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\triangle t$"> เข้าใกล้ศูนย์ และจัดรูปสมการเราจะได้
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+\frac{dp_O(t)}{dt} &=& -\lambda p_O(t) + \mu p_F(t)\nonumber\\
+\frac{dp_F(t)}{dt} &=& \lambda p_O(t) - \mu p_F(t)
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="61" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img905.png"
+ ALT="$\displaystyle \frac{dp_O(t)}{dt}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="149" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img903.png"
+ ALT="$\displaystyle -\lambda p_O(t) + \mu p_F(t)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="62" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img856.png"
+ ALT="$\displaystyle \frac{dp_F(t)}{dt}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="136" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img904.png"
+ ALT="$\displaystyle \lambda p_O(t) - \mu p_F(t)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.40)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+โดยสมมุติให้ระบบเริ่มทำงานที่สภาพสมบูรณ์ นั้นคือ <IMG
+ WIDTH="86" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img906.png"
+ ALT="$p_O(0) = 1$"> และ <IMG
+ WIDTH="84" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img871.png"
+ ALT="$p_F(0) =0 $"> และหาคำตอบโดยการใช้การแปลง Laplace 
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+sP_O(s) &=& 1 - \lambda P_O(s) + \mu P_F(s)\nonumber\\
+sP_F(s) &=& \lambda P_O(s) - \mu P_F(s)
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="61" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img907.png"
+ ALT="$\displaystyle sP_O(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="178" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img908.png"
+ ALT="$\displaystyle 1 - \lambda P_O(s) + \mu P_F(s)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="61" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img909.png"
+ ALT="$\displaystyle sP_F(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="145" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img910.png"
+ ALT="$\displaystyle \lambda P_O(s) - \mu P_F(s)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.41)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+ 
+จัดรูปสมการให้เหมาะสมเป็น
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+P_O(s) &=& \frac{1}{s+(\lambda+\mu)} + 
+\frac{\mu}{s(s+(\lambda+\mu))}\nonumber\\
+P_F(s) &=& \frac{\lambda}{s(s+(\lambda+\mu))}
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="52" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img911.png"
+ ALT="$\displaystyle P_O(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="244" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img912.png"
+ ALT="$\displaystyle \frac{1}{s+(\lambda+\mu)} +
+\frac{\mu}{s(s+(\lambda+\mu))}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img876.png"
+ ALT="$\displaystyle P_F(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="124" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img913.png"
+ ALT="$\displaystyle \frac{\lambda}{s(s+(\lambda+\mu))}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.42)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+ซึ่งสามารถเขียนได้เป็น
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+P_O(s) &=& \frac{\frac{\mu}{\lambda+\mu}}{s} + 
+\frac{\frac{\lambda}{\lambda+\mu}}{s+(\lambda+\mu)}\nonumber\\
+P_F(s) &=& \frac{\frac{\lambda}{\lambda+\mu}}{s} -
+\frac{\frac{\lambda}{\lambda+\mu}}{s+(\lambda+\mu)}
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="52" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img911.png"
+ ALT="$\displaystyle P_O(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="159" HEIGHT="74" ALIGN="MIDDLE" BORDER="0"
+ SRC="img914.png"
+ ALT="$\displaystyle \frac{\frac{\mu}{\lambda+\mu}}{s} +
+\frac{\frac{\lambda}{\lambda+\mu}}{s+(\lambda+\mu)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img876.png"
+ ALT="$\displaystyle P_F(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="158" HEIGHT="74" ALIGN="MIDDLE" BORDER="0"
+ SRC="img915.png"
+ ALT="$\displaystyle \frac{\frac{\lambda}{\lambda+\mu}}{s} -
+\frac{\frac{\lambda}{\lambda+\mu}}{s+(\lambda+\mu)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.43)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+ทำการแปลงกลับ Laplace จะได้ 
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+p_O(t) &=& \frac{\mu}{\lambda+\mu} +
+\frac{\lambda}{\lambda+\mu}e^{-(\lambda+\mu)t}\nonumber\\
+p_F (t) &=& \frac{\lambda}{\lambda+\mu} -
+\frac{\lambda}{\lambda+\mu}e^{-(\lambda+\mu)t}
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="49" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img916.png"
+ ALT="$\displaystyle p_O(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="188" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img917.png"
+ ALT="$\displaystyle \frac{\mu}{\lambda+\mu} +
+\frac{\lambda}{\lambda+\mu}e^{-(\lambda+\mu)t}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="48" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img884.png"
+ ALT="$\displaystyle p_F(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="190" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img918.png"
+ ALT="$\displaystyle \frac{\lambda}{\lambda+\mu} -
+\frac{\lambda}{\lambda+\mu}e^{-(\lambda+\mu)t}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.44)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+ที่เวลาเป็นอนันต์ เราจะได้ค่าความน่าจะเป็นที่ระบบจะอยู่ในสภาพทำงานได้เท่ากับ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+p_O(\infty) =  \frac{\mu}{\lambda+\mu} = \frac{1}{\frac{\lambda}{\mu}+1}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="380" HEIGHT="57" BORDER="0"
+ SRC="img919.png"
+ ALT="\begin{displaymath}
+p_O(\infty) = \frac{\mu}{\lambda+\mu} = \frac{1}{\frac{\lambda}{\mu}+1}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.45)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+และความน่าจะเป็นที่ระบบจะอยู่ในสถานะ <IMG
+ WIDTH="61" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img920.png"
+ ALT="$p_F(\infty)$"> ที่เวลาเป็นอนันต์เท่ากับ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+p_F(\infty) =  \frac{\lambda}{\lambda+\mu} = \frac{1}{\frac{\mu}{\lambda}+1}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="380" HEIGHT="53" BORDER="0"
+ SRC="img921.png"
+ ALT="\begin{displaymath}
+p_F(\infty) = \frac{\lambda}{\lambda+\mu} = \frac{1}{\frac{\mu}{\lambda}+1}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12.46)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<A NAME="5939"></A>
+
+รูป <A HREF="node173.html#fig:repairtrend">12.8</A> แสดงความสัมพันธ์ระหว่างความน่าจะเป็นที่ระบบอยู่ในสถานะ  <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$O$"> (ทำงานปกติ) เทียบกับอัตราการซ่อม (Repair Rate) โดยที่อัตราการเสียหาย <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> มีค่าเท่ากับ <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img922.png"
+ ALT="$0.1$"> โมดูลต่อชั่วโมง และ ค่า <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\triangle t$"> มีค่าเท่ากับ <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img922.png"
+ ALT="$0.1$"> วินาที โดยสมมุติว่าระบบเริ่มทำงานที่สภาพสมบูรณ์
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:repairtrend"></A><A NAME="5943"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 12.8:</STRONG>
+ความสัมพันธ์ระหว่างความน่าจะเป็นที่ระบบอยู่ในสถานะ 
+ <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$O$"> (ทำงานปกติ) เทียบกับอัตราการซ่อม (Repair Rate)</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="454" HEIGHT="301" ALIGN="BOTTOM" BORDER="0"
+ SRC="img923.png"
+ ALT="\includegraphics[width=4.in]{fig/repairtrend.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2967"
+  HREF="node174.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2961"
+  HREF="node168.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2955"
+  HREF="node172.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2963"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2965"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2968"
+  HREF="node174.html">แบบจำลองความปลอดภัย</A>
+<B> Up:</B> <A NAME="tex2html2962"
+  HREF="node168.html">แบบจำลองมาร์คอฟ</A>
+<B> Previous:</B> <A NAME="tex2html2956"
+  HREF="node172.html">แบบจำลองมาร์คอฟของระบบ TMR</A>
+ &nbsp <B>  <A NAME="tex2html2964"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2966"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

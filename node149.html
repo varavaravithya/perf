@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>การคุ้มครองจากการเสียหาย (Fault Coverage)</TITLE>
+<META NAME="description" CONTENT="การคุ้มครองจากการเสียหาย (Fault Coverage)">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node150.html">
+<LINK REL="previous" HREF="node148.html">
+<LINK REL="up" HREF="node140.html">
+<LINK REL="next" HREF="node150.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2614"
+  HREF="node150.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2608"
+  HREF="node140.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2602"
+  HREF="node148.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2610"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2612"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2615"
+  HREF="node150.html">การหาค่าความน่าเชื่อถือโดยการจำลองแบบแจกแจงการทำงาน</A>
+<B> Up:</B> <A NAME="tex2html2609"
+  HREF="node140.html">การประเมินค่าความน่าเชื่อถือเชิงปริมาณ</A>
+<B> Previous:</B> <A NAME="tex2html2603"
+  HREF="node148.html">เวลาเฉลี่ยระหว่างการเสียหาย (MTBF)</A>
+ &nbsp <B>  <A NAME="tex2html2611"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2613"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001380000000000000000"></A>
+<A NAME="4902"></A>
+<A NAME="4903"></A>
+<BR>
+การคุ้มครองจากการเสียหาย (Fault Coverage)
+</H1>
+
+พารามิเตอร์ที่สำคัญอีกประการหนึ่งในการออกแบบ และวิเคราะห์ระบบที่คงทนต่อความเสียหาย คือ <B>``การคุ้มครองจากการเสียหาย''</B> Fault Coverage
+
+การคุ้มครองจากการเสียหายมีผลเป็นอย่างมากต่อค่าความน่าเชื่อถือของระบบ, ค่าความปลอดภัย, และค่าว้ดอื่นๆ  การคุ้มครองจากการเสียหายมีหลายชนิด ขึ้นอยู่กับว่าการพิจารณาอยู่ในขั้นตอนของการตรวจจับความเสียหาย,  การระบุตำแหน่งความเสียหาย, การจำกัดเขตความเสียหาย หรือ การกู้คืนจากความเสียหาย
+
+ความหมายของการคุ้มครอง หมายถึงความสามารถของระบบที่จะทำการตรวจจับความเสียหาย, ระบุตำแหน่งความเสียหาย, จำกัดเขตความเสียหาย หรือกู้คืนจากความเสียหาย
+
+<UL>
+<LI>การคุ้มครองการตรวจจับความเสียหาย:  (Fault Detection Coverage) คือการวัดความสามารถของระบบที่จะตรวจจับความเสียหาย ตัวอย่างเช่น ระบบอาจถูกออกแบบมาให้สามารถตรวจจับความเสียหายได้บางลักษณะเท่านั้น  ไม่สามารถตรวจจับความเสียหายที่อาจเกิดขึ้นทั้งหมดได้ การคุ้มครองการตรวจจับความเสียหายเป็นการวัดความสามารถของระบบที่จะทำตรวจจับความเสียหาย เทียบกับความเสียหายที่อาจเกิดขึ้นทั้งหมด
+</LI>
+<LI>การคุ้มครองการระบุตำแหน่งความเสียหาย: (Fault Location Coverage) คือความสามารถของระบบที่จะระบุตำแหน่งความเสียหาย ในส่วนที่สามารถเปลี่ยนอุปกรณ์ได้ง่าย การคุ้มครองการระบุตำแหน่งความเสียหายเป็นการวัดความสามารถของระบบที่จะระบุตำแหน่งความเสียหายนั้น
+</LI>
+<LI>การคุ้มครองการจำกัดเขตความเสียหาย:  (Fault Containment Coverage) คือความสามารถของระบบที่จะจำกัดเขตความเสียหาย เป็นคุณลักษณะของระบบที่จะจำกัดให้ความเสียหายเป็นเฉพาะจุด และไม่ขยายเป็นความเสียหายของทั้งระบบ
+</LI>
+<LI>การคุ้มครองการกู้คืนจากความเสียหาย: (Fault Recovery Coverage) คือความสามารถของระบบที่จะกู้คืนจากความเสียหาย และกลับมาทำงานตามปกติ การที่ระบบจะสามารถกู้คืนจากความเสียหาย ต้องการการคุ้มครองการตรวจจับความเสียหาย, การคุ้มครองการระบุตำแหน่งความเสียหาย และการคุ้มครองการจำกัดเขตความเสียหายที่ดีและครอบคลุม
+</LI>
+</UL>
+
+ในการพิจารณาระบบที่คงทนต่อความเสียหาย การคุ้มครองการกู้คืนจากความเสียหายจะถูกใช้มาก เนื่องจากครอบคลุมการคุ้มครองแบบอื่นๆ ด้วย ซึ่งสามารถแปลความหมายว่า เป็นความสามารถของระบบที่จะคืนสภาพหลังจากการล้มเหลวของอุปกรณ์  และกลับมาทำงานตามปกติอีกครั้งหนึ่ง ดังนั้น <EM>การคุ้มครองความเสียหาย</EM> (Fault Coverage) จึงนิยามเป็นการคุ้มครองการกู้คืนจากความเสียหาย ที่สามารถเขียนเป็นสมการคณิตศาสตร์ได้ดังต่อไปนี้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+C = P(Fault~Recovery | Fault~Existence)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="451" HEIGHT="39" BORDER="0"
+ SRC="img693.png"
+ ALT="\begin{displaymath}
+C = P(Fault~Recovery \vert Fault~Existence)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.34)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+โดย <IMG
+ WIDTH="21" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img694.png"
+ ALT="$C$"> เป็นค่าการคุ้มครองความเสียหาย และ  <!-- MATH
+ $P(Fault~Recovery | Fault~Existence)$
+ -->
+<IMG
+ WIDTH="310" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img695.png"
+ ALT="$P(Fault~Recovery \vert Fault~Existence)$"> เป็นความน่าจะเป็นแบบมีเงื่อนไขที่ระบบจะสามารถกู้คืนจากการทำงานที่ล้มเหลวได้ เมื่อเกิดความเสียหายขึ้นในระบบ การกู้คืนจากการเสียหาย คือกระบวนการที่ระบบจะรักษาสภาพการทำงานปกติขณะเกิดความเสียหาย
+
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

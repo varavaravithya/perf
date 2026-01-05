@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>การประยุกต์ใช้ในระบบที่ต้องการยืดเวลาการซ่อมบำรุง (Maintenance Postponement Applications)</TITLE>
+<META NAME="description" CONTENT="การประยุกต์ใช้ในระบบที่ต้องการยืดเวลาการซ่อมบำรุง (Maintenance Postponement Applications)">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node124.html">
+<LINK REL="previous" HREF="node122.html">
+<LINK REL="up" HREF="node120.html">
+<LINK REL="next" HREF="node124.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2236"
+  HREF="node124.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2230"
+  HREF="node120.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2224"
+  HREF="node122.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2232"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2234"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2237"
+  HREF="node124.html">การประยุกต์ใช้ในระบบที่มีความสามารถในการคงการบริการสูง (High Availability Applications)</A>
+<B> Up:</B> <A NAME="tex2html2231"
+  HREF="node120.html">งานประยุกต์ของระบบที่คงทนต่อความเสียหาย</A>
+<B> Previous:</B> <A NAME="tex2html2225"
+  HREF="node122.html">การประยุกต์ใชัในระบบคำนวณที่มีความสำคัญ (Critical-Computation Applications)</A>
+ &nbsp <B>  <A NAME="tex2html2233"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2235"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION001253000000000000000">
+การประยุกต์ใช้ในระบบที่ต้องการยืดเวลาการซ่อมบำรุง (Maintenance Postponement Applications)</A>
+</H2>
+
+ระบบที่ต้องการยืดเวลาการซ่อมบำรุง จะถูกนำมาใช้ในกรณีที่การซ่อมบำรุงมีค่าใช้จ่ายสูงมาก, ไม่สะดวกในการซ่อมบำรุง, หรือทำการซ่อมบำรุงได้ยาก เช่น การซ่อมบำรุงดาวเทียม  หรือการซ่อมบำรุงสถานีวิทยุที่อยู่ห่างไกล ความต้องการของผู้ออกแบบคือ  ใช้เทคนิคของความคงทนต่อความเสียหายในการยืดเวลาการบำรุงรักษา
+
+ระบบสวิทช์โทรศัพท์เป็นตัวอย่างของระบบที่ต้องการการยืดเวลาการซ่อมบำรุง  ซึ่งจุดติดตั้งระบบสวิทช์อาจอยู่ในจุดที่ห่างไกล ที่มีค่าใช้จ่ายสูงในการบำรุงรักษา ถ้าสามารถออกแบบระบบให้ทนทานต่อการเสียหาย  อาจสามารถขยายระยะเวลาในการบำรุงรักษาออกไปได้ รูป <A HREF="node123.html#fig:ft3tel">9.4</A> เป็นตัวประมวลผลรุ่น 3B20D  ที่ใช้ในระบบสวิทช์อิเล็กทรอนิกส์  ทุกโมดูลในระบบมีตัวสำรอง อีกทั้งโมดูลสำรองยังทำให้สามารถใช้งานระบบได้ขณะที่มีการซ่อม
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:ft3tel"></A><A NAME="4360"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.4:</STRONG>
+ตัวประมวลผลรุ่น 3B20D  ที่ใช้ในระบบสวิทช์อิเล็กทรอนิกส์ 
+เป็นตัวอย่างการประยุกต์ของระบบที่ต้องการยืดเวลาการซ่อมบำรุง</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="517" HEIGHT="208" ALIGN="BOTTOM" BORDER="0"
+ SRC="img614.png"
+ ALT="\includegraphics[width=4.5in]{fig/ft3tel.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,349 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ตัวอย่าง: การคำนวณค่าความน่าเชื่อถือของระบบอนุกรม</TITLE>
+<META NAME="description" CONTENT="ตัวอย่าง: การคำนวณค่าความน่าเชื่อถือของระบบอนุกรม">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node164.html">
+<LINK REL="previous" HREF="node159.html">
+<LINK REL="up" HREF="node156.html">
+<LINK REL="next" HREF="node164.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2821"
+  HREF="node164.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2815"
+  HREF="node156.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2809"
+  HREF="node162.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2817"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2819"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2822"
+  HREF="node164.html">ตัวอย่าง: การคำนวณค่าความน่าเชื่อถือของระบบขนาน</A>
+<B> Up:</B> <A NAME="tex2html2816"
+  HREF="node156.html">ตัวอย่างการวิเคราะห์ความน่าเชื่อถือ และการคุ้มครองจากความเสียหาย</A>
+<B> Previous:</B> <A NAME="tex2html2810"
+  HREF="node162.html">ความน่าเชื่อถือของ ระบบ M ใน</A>
+ &nbsp <B>  <A NAME="tex2html2818"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2820"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001440000000000000000">
+ตัวอย่าง: การคำนวณค่าความน่าเชื่อถือของระบบอนุกรม</A>
+</H1>
+
+พิจารณาระบบควบคุมการบินแสดงในรูป <A HREF="node163.html#fig:fev4airplane">11.1</A>  ระบบประกอบด้วยตัววัดต่างๆ สำหรับวัดการเอียง, pitch และ  ตำแหน่งของ Yaw อีกทั้งประกอบด้วยตัวควบคุมต่างๆ  สำหรับควบคุมการเอียง, pitch และ  ตำแหน่งของ Yaw ที่ได้รับคำสั่งมากจากนักบิน  ระบบคอมพิวเตอร์จะรับข้อมูลจากตัววัดต่างๆ  และทำการคำนวณค่าที่เหมาะสมในการกำหนดค่าของตัวควบคุม  ผ่านทางบัสอนุกรม โดยใช้บัสความเร็วสูงสำหรับการติดต่อระหว่างคอมพิวเตอร์
+
+ ในระบบที่พิจารณา ทุกโมดูลต้องทำงานถูกต้อง ระบบจึงจะสามารถทำงานได้  เนื่องจากไม่มีระบบที่ทำงานซ้อน หรือโมดูลสำรอง เช่นถ้าตัววัดตัวใดตัวหนึ่งเสีย  จะส่งผลให้ระบบไม่สามารถทำงานตามปกติได้
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fev4airplane"></A><A NAME="5380"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 11.1:</STRONG>
+สถาปัตยกรรมของระบบควบคุมการบิน</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="562" HEIGHT="639" ALIGN="BOTTOM" BORDER="0"
+ SRC="img734.png"
+ ALT="\includegraphics[width=5.in]{fig/fev4airplane.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+แผนภาพกล่องความน่าเชื่อถือของระบบควบคุมการบินแสดงในรูป <A HREF="node163.html#fig:fev4airrb">11.2</A> เป็นแผนภาพกล่องของระบบอนุกรม เพื่อลดความซับซ้อน  กำหนดให้ตัววัดทั้งหกตัวมีค่าความน่าเชื่อถือเท่ากันคือ <IMG
+ WIDTH="48" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img735.png"
+ ALT="$R_s(t)$"> สำหรับตัวควบคุมสามตัว แต่ละตัวมีค่าความน่าเชื่อถือเท่ากับ <IMG
+ WIDTH="61" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img736.png"
+ ALT="$R_{act}(t)$"> และคอมพิวเตอร์มีค่าความน่าเชื่อถือเท่ากับ <IMG
+ WIDTH="48" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img737.png"
+ ALT="$R_{c}(t)$"> เช่นเดียวกัน เราให้ค่า <IMG
+ WIDTH="69" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img738.png"
+ ALT="$R_{bus1}(t)$"> และ <IMG
+ WIDTH="68" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img739.png"
+ ALT="$R_{bus2}(t)$"> เป็นค่าความน่าเชื่อถือของบัสคอมพิวเตอร์ และบัสอนุกรม, ตามลำดับ
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fev4airrb"></A><A NAME="5390"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 11.2:</STRONG>
+แผนภาพกล่องความน่าเชื่อถือของระบบควบคุมการบิน</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="572" HEIGHT="71" ALIGN="BOTTOM" BORDER="0"
+ SRC="img740.png"
+ ALT="\includegraphics[width=5.in]{fig/fev4airrb.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ค่าความน่าเชื่อถือของระบบสามารถแสดงได้โดยสมการ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{system} = R_s^6(t) R_{act}^3(t) R_c^3(t) R_{bus1}(t)
+R_{bus2}(t)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="454" HEIGHT="39" BORDER="0"
+ SRC="img741.png"
+ ALT="\begin{displaymath}
+R_{system} = R_s^6(t) R_{act}^3(t) R_c^3(t) R_{bus1}(t)
+R_{bus2}(t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+จากอัตราความเสียหายของอุปกรณ์ เราสามารถเขียนอัตราความเสียหายของระบบได้ดังต่อไปนี้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\lambda_{system} = 6\lambda_s + 3\lambda_{act} + 3\lambda_c
++ \lambda_{bus1} + \lambda_{bus2}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="450" HEIGHT="39" BORDER="0"
+ SRC="img742.png"
+ ALT="\begin{displaymath}
+\lambda_{system} = 6\lambda_s + 3\lambda_{act} + 3\lambda_c
++ \lambda_{bus1} + \lambda_{bus2}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+โดยที่  <IMG
+ WIDTH="45" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img743.png"
+ ALT="$\lambda_s(t)$"> เป็นอัตราความเสียหายของตัววัด, <!-- MATH
+ $\lambda_{act}(t)$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img744.png"
+ ALT="$\lambda_{act}(t)$"> เป็นอัตราความเสียหายของตัวควบคุม, <!-- MATH
+ $\lambda_{c}(t)$
+ -->
+<IMG
+ WIDTH="44" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img745.png"
+ ALT="$\lambda_{c}(t)$"> เป็นอัตราความเสียหายของคอมพิวเตอร์, <!-- MATH
+ $\lambda_{bus1}(t)$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img746.png"
+ ALT="$\lambda_{bus1}(t)$"> และ <!-- MATH
+ $\lambda_{bus2}(t)$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img747.png"
+ ALT="$\lambda_{bus2}(t)$"> เป็นค่าอัตราความเสียหายของบัสคอมพิวเตอร์ และบัสอนุกรม, ตามลำดับ
+
+ถ้าค่าอัตราความเสียหายมีค่าเท่ากับ 
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+\lambda_s &=& 1\times 10^{-6}failures~per~hour\nonumber\\
+\lambda_{act}  &=& 1\times 10^{-5} failures~per~hour\nonumber\\
+\lambda_c &=& 4\times 10^{-4} failures~per~hour\nonumber\\
+\lambda_{bus1} &=& 1\times 10^{-6} failures~per~hour\nonumber\\
+\lambda_{bus2} &=& 2\times 10^{-6} failures~per~hour
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img748.png"
+ ALT="$\displaystyle \lambda_s$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="225" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img749.png"
+ ALT="$\displaystyle 1\times 10^{-6}failures~per~hour$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="36" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img750.png"
+ ALT="$\displaystyle \lambda_{act}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="225" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img751.png"
+ ALT="$\displaystyle 1\times 10^{-5} failures~per~hour$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="24" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img752.png"
+ ALT="$\displaystyle \lambda_c$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="225" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img753.png"
+ ALT="$\displaystyle 4\times 10^{-4} failures~per~hour$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img754.png"
+ ALT="$\displaystyle \lambda_{bus1}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="225" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img749.png"
+ ALT="$\displaystyle 1\times 10^{-6}failures~per~hour$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img755.png"
+ ALT="$\displaystyle \lambda_{bus2}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="226" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img756.png"
+ ALT="$\displaystyle 2\times 10^{-6} failures~per~hour$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11.6)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+เราสามารถคำนวณค่าอัตราความเสียหายของระบบเท่ากับ
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\lambda_{system} =1.239\times 10^{-3} failures~per~hour
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="446" HEIGHT="39" BORDER="0"
+ SRC="img757.png"
+ ALT="\begin{displaymath}
+\lambda_{system} =1.239\times 10^{-3} failures~per~hour
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ซึ่งมีค่าความน่าเชื่อถือของระบบประมาณ 0.995
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2821"
+  HREF="node164.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2815"
+  HREF="node156.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2809"
+  HREF="node162.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2817"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2819"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2822"
+  HREF="node164.html">ตัวอย่าง: การคำนวณค่าความน่าเชื่อถือของระบบขนาน</A>
+<B> Up:</B> <A NAME="tex2html2816"
+  HREF="node156.html">ตัวอย่างการวิเคราะห์ความน่าเชื่อถือ และการคุ้มครองจากความเสียหาย</A>
+<B> Previous:</B> <A NAME="tex2html2810"
+  HREF="node162.html">ความน่าเชื่อถือของ ระบบ M ใน</A>
+ &nbsp <B>  <A NAME="tex2html2818"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2820"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

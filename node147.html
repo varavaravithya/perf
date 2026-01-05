@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>เวลาเฉลี่ยในการซ่อมแซม (MTTR)</TITLE>
+<META NAME="description" CONTENT="เวลาเฉลี่ยในการซ่อมแซม (MTTR)">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node148.html">
+<LINK REL="previous" HREF="node146.html">
+<LINK REL="up" HREF="node140.html">
+<LINK REL="next" HREF="node148.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2586"
+  HREF="node148.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2580"
+  HREF="node140.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2574"
+  HREF="node146.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2582"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2584"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2587"
+  HREF="node148.html">เวลาเฉลี่ยระหว่างการเสียหาย (MTBF)</A>
+<B> Up:</B> <A NAME="tex2html2581"
+  HREF="node140.html">การประเมินค่าความน่าเชื่อถือเชิงปริมาณ</A>
+<B> Previous:</B> <A NAME="tex2html2575"
+  HREF="node146.html">เวลาเฉลี่ยก่อนการเสียหาย (MTTF)</A>
+ &nbsp <B>  <A NAME="tex2html2583"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2585"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001360000000000000000"></A>
+<A NAME="4862"></A>
+<A NAME="4863"></A>
+<BR>
+เวลาเฉลี่ยในการซ่อมแซม (MTTR)
+</H1>
+
+ค่าเวลาเฉลี่ยในการซ่อมแซม Mean Time to Repair (MTTR)  คือค่าเฉลี่ยของเวลาที่ต้องใช้ในการซ่อมแซมระบบ การประมาณค่า MTTR  ทำได้ค่อนข้างยาก เนื่องจากการเสียหายมีลักษณะแตกต่างกัน  ดังนั้นการหาค่า  MTTR มักจะทำการประมาณค่า  โดยการทดลองสร้างกลุ่มของความเสียหายเข้าไปในระบบ  จากนั้นทำการวัดเวลาที่ต้องการในการซ่อมแซมอุปกรณ์ ให้ <IMG
+ WIDTH="26" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img342.png"
+ ALT="$i^{th}$"> ของความเสียหายของอุปกรณ์ <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> ชุด ต้องการเวลาในการซ่อมแซมเท่ากับ <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img664.png"
+ ALT="$t_i$"> ค่า สามารถประมาณเวลาเฉลี่ยในการซ่อมแซม โดย
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MTTR = \frac{\sum^N_{i=1} t_i}{N}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="352" HEIGHT="50" BORDER="0"
+ SRC="img684.png"
+ ALT="\begin{displaymath}
+MTTR = \frac{\sum^N_{i=1} t_i}{N}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.28)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ความถูกต้องของการประมาณค่าเวลาเฉลี่ยในการซ่อมแซม สามารถเพิ่มให้ถูกต้องยิ่งขึ้นได้ โดยเฉลี่ยค่าเวลาที่ใช้ในการซ่อม จากผู้บริการซ่อมแซมหลายคน ตัวอย่างเช่นจากความเสียหายของอุปกรณ์ <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> ชุด มีผู้บริการซ่อมแซม <IMG
+ WIDTH="26" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$M$"> คน แต่ละคนมีค่าเฉลี่ยในการซ่อมแซมเท่ากับ  <IMG
+ WIDTH="72" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img685.png"
+ ALT="$MTTR_i$"> ซึ่งเป็นเวลา <IMG
+ WIDTH="68" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$MTTR$"> ที่พนักงานคนที่ <IMG
+ WIDTH="26" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img342.png"
+ ALT="$i^{th}$"> ใช้ในการซ่อมแซม ค่าเฉลี่ยของ  <IMG
+ WIDTH="68" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$MTTR$"> สามารถแสดงได้โดย 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MTTR = \frac{\sum^M_{i=1} MTTR_i}{M}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="379" HEIGHT="50" BORDER="0"
+ SRC="img686.png"
+ ALT="\begin{displaymath}
+MTTR = \frac{\sum^M_{i=1} MTTR_i}{M}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.29)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ <IMG
+ WIDTH="68" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$MTTR$"> มักจะถูกระบุอยู่ในรูปของอัตราการซ่อม <IMG
+ WIDTH="17" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\mu$"> ที่เป็นค่าเฉลี่ยของการซ่อมต่อหน่วยเวลา ค่า <IMG
+ WIDTH="68" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$MTTR$"> และ <IMG
+ WIDTH="17" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\mu$"> มีความสัมพันธ์ดังต่อไปนี้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MTTR = \frac{1}{\mu}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="330" HEIGHT="50" BORDER="0"
+ SRC="img687.png"
+ ALT="\begin{displaymath}
+MTTR = \frac{1}{\mu}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.30)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

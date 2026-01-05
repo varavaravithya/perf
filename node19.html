@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>การเลือกตัววัดประสิทธิภาพ</TITLE>
+<META NAME="description" CONTENT="การเลือกตัววัดประสิทธิภาพ">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node21.html">
+<LINK REL="previous" HREF="node18.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node20.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html694"
+  HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html688"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html682"
+  HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html690"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html692"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html695"
+  HREF="node20.html">ตัวอย่าง:</A>
+<B> Up:</B> <A NAME="tex2html689"
+  HREF="node14.html">การเลือกเทคนิคการประเมิน และตัววัดประสิทธิภาพ</A>
+<B> Previous:</B> <A NAME="tex2html683"
+  HREF="node18.html">การเลือกเทคนิคการประเมินประสิทธิภาพ</A>
+ &nbsp <B>  <A NAME="tex2html691"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html693"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00550000000000000000"></A><A NAME="428"></A>
+<BR>
+การเลือกตัววัดประสิทธิภาพ
+</H1> 
+
+ในการประสิทธิภาพใดๆ จำเป็นต้องเลือกตัววัดประสิทธิภาพ (Performance Metrics) ให้เหมาะสม วิธีการในการเลือกตัววัดประสิทธิภาพสามารถทำได้โดยการแจกแจงบริการของระบบ 
+
+ในแต่ละบริการที่ร้องขอต่อระบบ จะนำมาซึ่งผลพวงที่แตกต่างกัน โดยทั่วไปผลพวงสามารถแบ่งได้ 3 ประเภท แสดงในรูป <A HREF="node19.html#fig:outcome">2.1</A>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:outcome"></A><A NAME="432"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.1:</STRONG>
+การแจกแจงบริการของระบบ</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="630" HEIGHT="524" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.png"
+ ALT="\includegraphics[width=5.5in]{fig/outcome.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<A NAME="435"></A>ผลตอบสนองของระบบสามารถแจกแจงได้ต่อไปนี้
+
+<UL>
+<LI>ระบบสามารถบริการได้อย่างถูกต้อง 
+</LI>
+<LI>ระบบสามารถบริการได้อย่างไม่ถูกต้อง หรือ
+</LI>
+<LI>ระบบไม่สามารถบริการได้ 
+</LI>
+</UL>
+
+ตัวอย่าง: คอมพิวเตอร์ Gateway ที่มีหน้าที่ในการส่งผ่านเพ็คเกต (Packet) ไปยังตัวรับที่เหมาะสม เมื่อเพ็คเกตเดินทางมาถึงอินพุต  คอมพิวเตอร์ Gateway สามารถส่งผ่านเพ็คเกตได้อย่างถูกต้อง, ส่งไปผิดที่, หรืออาจปิดเครื่องอยู่ ซึ่งในกรณีหลังไม่มีการส่งผ่านข้อมูลเลย 
+
+ตัวอย่างต่อมา: ระบบฐานข้อมูลที่ตอบสนองการร้องขอบริการข้อมูล เมื่อได้รับการร้องขอบริการข้อมูล ระบบฐานข้อมูลอาจตอบสนอง- อย่างถูกต้อง, ไม่ถูกต้อง, หรือไม่ตอบสนองใดๆ  
+
+ในกรณีที่ระบบตอบสนองอย่างถูกต้อง เรามักใช้เวลาที่ใช้ในการบริการ<A NAME="438"></A> (Response Time<A NAME="439"></A>), อัตราของบริการที่ทำต่อหน่วยเวลา<A NAME="440"></A> (Throughput<A NAME="441"></A>) และทรัพยากรที่ใช้ระหว่างการให้บริการ<A NAME="442"></A> (Utilization<A NAME="443"></A>) เป็นตัววัดประสิทธิภาพ 
+
+ตัววัดประสิทธิภาพวัดทั้ง 3 ที่กล่าวมา คือ เวลา-อัตรา-ทรัพยากร <A NAME="444"></A> (Time-Rate-Resource<A NAME="445"></A>)  สำหรับการบริการที่สำเร็จ ซึ่งมักจะเรียกว่าการตอบสนอง <A NAME="446"></A> (Responsiveness<A NAME="447"></A>) อัตราความสำเร็จ (Throughput) และภาระงาน (Utilization), ตามลำดับ 
+
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><UL>
+<LI><UL>
+<LI><A NAME="tex2html696"
+  HREF="node20.html"><FONT SIZE="+1">ตัวอย่าง:</FONT></A>
+</UL></UL></UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

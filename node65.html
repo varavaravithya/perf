@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ตัวอย่าง: เปรียบเทียบ กับ </TITLE>
+<META NAME="description" CONTENT="ตัวอย่าง: เปรียบเทียบ กับ ">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node66.html">
+<LINK REL="previous" HREF="node64.html">
+<LINK REL="up" HREF="node58.html">
+<LINK REL="next" HREF="node66.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1367"
+  HREF="node66.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1361"
+  HREF="node58.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1355"
+  HREF="node64.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1363"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1365"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1368"
+  HREF="node66.html">ระบบคิว</A>
+<B> Up:</B> <A NAME="tex2html1362"
+  HREF="node58.html">ระบบคิว และ</A>
+<B> Previous:</B> <A NAME="tex2html1356"
+  HREF="node64.html">ตัวอย่าง: การประยุกต์ จากการเปลี่ยนแปลงระบบ</A>
+ &nbsp <B>  <A NAME="tex2html1364"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1366"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00870000000000000000">
+ตัวอย่าง: เปรียบเทียบ <IMG
+ WIDTH="79" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$M/M/m$"> กับ <!-- MATH
+ $M/M/1 \times m$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$M/M/1 \times m$"></A>
+</H1>
+
+<P>
+เรื่องที่สำคัญในการตัดสินใจเมื่อมีจำนวนเครื่องบริการที่เหมือนกันมากกว่าหนึ่งเครื่อง  คือการจัดการระบบคิวว่าจะใช้คิวแยกจากกันในแต่ละเครื่องบริการ  หรือใช้คิวรวมกันทั้งหมด <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$m$"> เครื่องบริการ
+
+<P>
+ถ้าการเข้าใช้บริการ และการบริการเป็นแบบพัวซอง ในกรณีแรกสามารถจำลองโดยใช้ <IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$M/M/1$"> คิวจำนวน <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$m$"> แต่ละคิวมีอัตราการเข้าใช้งานเท่ากับ <IMG
+ WIDTH="43" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img256.png"
+ ALT="$\lambda/m$"> 
+ในกรณีที่สองเราจำลองคิวโดยใช้ <IMG
+ WIDTH="79" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$M/M/m$"> คิวด้วย อัตราการเข้าใช้งาน <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> 
+
+<P>
+จากตัวอย่างที่แล้ว ถ้าแยกคอมพิวเตอร์ออกเป็นห้องปฏิบัติการคอมพิวเตอร์ กระจายออกไป 5 แห่งในมหาวิทยาลัย  ดังนั้นจึงต้องจำลองโดย <!-- MATH
+ $M/M/1 \times 5$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$M/M/1 \times 5$"> ดังแสดงในรูป <A HREF="node65.html#fig:mm1-mmm">5.3</A>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:mm1-mmm"></A><A NAME="2005"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.3:</STRONG>
+ระบบคิว <!-- MATH
+ $M/M/1 \times 5$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$M/M/1 \times 5$"> กับ <IMG
+ WIDTH="72" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$M/M/5$"> </CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="513" HEIGHT="309" ALIGN="BOTTOM" BORDER="0"
+ SRC="img257.png"
+ ALT="\includegraphics[width=4.5in]{fig/mm1-mmm.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+ในกรณีนี้อัตราการเข้าใช้งานระบบลดลง 5 เท่าจากอัตราการเข้าใช้เดิม <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> 
+
+<P>
+ใช้ค่า <!-- MATH
+ $m=1,\lambda = 0.167/5 = 0.03333$
+ -->
+<IMG
+ WIDTH="250" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img258.png"
+ ALT="$m=1,\lambda = 0.167/5 = 0.03333$">, และ
+<IMG
+ WIDTH="75" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img249.png"
+ ALT="$\mu = 0.05$"> เราจะได้
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Traffic~intensity~\rho = \frac{0.0333}{0.05} = 0.67
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="434" HEIGHT="47" BORDER="0"
+ SRC="img259.png"
+ ALT="\begin{displaymath}
+Traffic~intensity~\rho = \frac{0.0333}{0.05} = 0.67
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.35)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+เวลาเฉลี่ยที่อยู่ในห้องปฏิบัติการคอมพิวเตอร์เท่ากับ 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E[r] = \frac{1/\mu}{1-\rho} = \frac{1/0.05}{1-0.67}  = 60
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="403" HEIGHT="50" BORDER="0"
+ SRC="img260.png"
+ ALT="\begin{displaymath}
+E[r] = \frac{1/\mu}{1-\rho} = \frac{1/0.05}{1-0.67} = 60
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.36)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ค่าความแปรปรวนของเวลาที่อยู่ในห้องปฏิบัติการคอมพิวเตอร์คือ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Var[r] = \frac{1/\mu^2}{(1-\rho)^2} = \frac{1/0.05^2}{(1-0.67)^2} = 3600
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="443" HEIGHT="54" BORDER="0"
+ SRC="img261.png"
+ ALT="\begin{displaymath}
+Var[r] = \frac{1/\mu^2}{(1-\rho)^2} = \frac{1/0.05^2}{(1-0.67)^2} = 3600
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.37)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+เปรียบเทียบกับเวลาเฉลี่ย 24 นาที และ ค่าความแปรปรวน 479 จะเห็นได้ว่าการใช้คิวเดี่ยวจะมีประสิทธิภาพดีกว่าคิวที่แยกจากกัน
+
+<P>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

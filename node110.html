@@ -1,0 +1,1129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ตัวอย่าง</TITLE>
+<META NAME="description" CONTENT="ตัวอย่าง">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node111.html">
+<LINK REL="previous" HREF="node109.html">
+<LINK REL="up" HREF="node105.html">
+<LINK REL="next" HREF="node111.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2029"
+  HREF="node111.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2023"
+  HREF="node105.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2017"
+  HREF="node109.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2025"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2027"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2030"
+  HREF="node111.html">การวิเคราะห์ค่าเฉลี่ย</A>
+<B> Up:</B> <A NAME="tex2html2024"
+  HREF="node105.html">การวิเคราะห์ค่าเฉลี่ย (Mean Value Analysis)</A>
+<B> Previous:</B> <A NAME="tex2html2018"
+  HREF="node109.html">การวิเคราะห์ระบบคิวแบบเปิด</A>
+ &nbsp <B>  <A NAME="tex2html2026"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2028"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001150000000000000000">
+ตัวอย่าง</A>
+</H1>
+
+ระบบบริการแฟ้มข้อมูลแสดงในรูป <A HREF="node110.html#fig:timeqt2">8.1</A>  ประกอบด้วยตัวประมวลผลกลาง, ดิสก์ A, และดิสก์ B  การวัดจากระบบเมื่อมีผู้ใช้งานอยู่ 6 คนที่ขอใช้บริการข้อมูล  ได้ข้อมูลดังต่อไปนี้
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:timeqt2"></A><A NAME="3930"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.1:</STRONG>
+ระบบบริการแฟ้มข้อมูล</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="343" HEIGHT="290" ALIGN="BOTTOM" BORDER="0"
+ SRC="img323.png"
+ ALT="\includegraphics[width=3in]{fig/timeqt.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Observation~interval = 3600~~~seconds
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="441" HEIGHT="34" BORDER="0"
+ SRC="img496.png"
+ ALT="\begin{displaymath}
+Observation~interval = 3600~~~seconds
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Number~of~client~requests = 10,800
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="434" HEIGHT="37" BORDER="0"
+ SRC="img497.png"
+ ALT="\begin{displaymath}
+Number~of~client~requests = 10,800
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.10)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+CPU~busy~time = 1728~~~seconds
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="420" HEIGHT="37" BORDER="0"
+ SRC="img498.png"
+ ALT="\begin{displaymath}
+CPU~busy~time = 1728~~~seconds
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.11)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Disk~A~busy~time = 1512~~~seconds
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="428" HEIGHT="37" BORDER="0"
+ SRC="img499.png"
+ ALT="\begin{displaymath}
+Disk~A~busy~time = 1512~~~seconds
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.12)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Disk~B~busy~time = 2592~~~seconds
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="429" HEIGHT="37" BORDER="0"
+ SRC="img500.png"
+ ALT="\begin{displaymath}
+Disk~B~busy~time = 2592~~~seconds
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.13)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Number~of~visits~(I/O~requests)~to~disk~A = 75,600
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="504" HEIGHT="39" BORDER="0"
+ SRC="img501.png"
+ ALT="\begin{displaymath}
+Number~of~visits~(I/O~requests)~to~disk~A = 75,600
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.14)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Number~of~visits~(I/O~requests)~to~disk~B = 86,400
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="505" HEIGHT="39" BORDER="0"
+ SRC="img502.png"
+ ALT="\begin{displaymath}
+Number~of~visits~(I/O~requests)~to~disk~B = 86,400
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.15)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+จากการเฝ้าสังเกตดังกล่าวเราสามารถคำนวณความต้องการการบริการ 
+ และอัตราการแวะเวียน ได้ดังต่อไปนี้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+X = throughput = 10,800/3600 = 3~~~client~requests~per~second
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="549" HEIGHT="39" BORDER="0"
+ SRC="img503.png"
+ ALT="\begin{displaymath}
+X = throughput = 10,800/3600 = 3~~~client~requests~per~second
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.16)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+V_A = 75,600/10,800 = 7~~~visits~per~client~request~to~disk~A
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="535" HEIGHT="39" BORDER="0"
+ SRC="img504.png"
+ ALT="\begin{displaymath}
+V_A = 75,600/10,800 = 7~~~visits~per~client~request~to~disk~A
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.17)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+V_B = 86,400/10,800 = 8~~~visits~per~client~request~to~disk~B
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="535" HEIGHT="39" BORDER="0"
+ SRC="img505.png"
+ ALT="\begin{displaymath}
+V_B = 86,400/10,800 = 8~~~visits~per~client~request~to~disk~B
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.18)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+V_{CPU} = 1+7+8 = 16~~~visits~per~client~request~to~CPU
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="521" HEIGHT="37" BORDER="0"
+ SRC="img506.png"
+ ALT="\begin{displaymath}
+V_{CPU} = 1+7+8 = 16~~~visits~per~client~request~to~CPU
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.19)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+D_{CPU} = 1728/10,800 = 0.16~~~second~of~CPU~time~per~client~request
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="566" HEIGHT="39" BORDER="0"
+ SRC="img507.png"
+ ALT="\begin{displaymath}
+D_{CPU} = 1728/10,800 = 0.16~~~second~of~CPU~time~per~client~request
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.20)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+D_{A} = 1512/10,800 = 0.14~~~second~of~disk~A~time~per~client~request
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="559" HEIGHT="39" BORDER="0"
+ SRC="img508.png"
+ ALT="\begin{displaymath}
+D_{A} = 1512/10,800 = 0.14~~~second~of~disk~A~time~per~client~request
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.21)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+D_{CPU} = 2592/10,800 = 0.16~~~second~of~disk~B~time~per~client~request
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="576" HEIGHT="39" BORDER="0"
+ SRC="img509.png"
+ ALT="\begin{displaymath}
+D_{CPU} = 2592/10,800 = 0.16~~~second~of~disk~B~time~per~client~request
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.22)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+S_{CPU} = 0.16/16 = 0.01~~~second~per~visit~to~CPU
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="488" HEIGHT="39" BORDER="0"
+ SRC="img510.png"
+ ALT="\begin{displaymath}
+S_{CPU} = 0.16/16 = 0.01~~~second~per~visit~to~CPU
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.23)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+S_{A} = 0.14/7 = 0.02 ~~~second~per~visit~to~disk~A
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="479" HEIGHT="39" BORDER="0"
+ SRC="img511.png"
+ ALT="\begin{displaymath}
+S_{A} = 0.14/7 = 0.02 ~~~second~per~visit~to~disk~A
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.24)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+S_{B} = 0.14/7 = 0.02 ~~~second~per~visit~to~disk~B
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="479" HEIGHT="39" BORDER="0"
+ SRC="img512.png"
+ ALT="\begin{displaymath}
+S_{B} = 0.14/7 = 0.02 ~~~second~per~visit~to~disk~B
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.25)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+จากพารามิเตอร์ขั้นต้นเราสามารถวิเคราะห์ระบบได้ดังต่อไปนี้ ค่าภาระงานสามารถหาได้จากกฎภาระงาน
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+U_{CPU}&=& XD_{CPU}  = 2\times 0.16 = 0.48\nonumber\\
+U_A &=& XD_A = 3\times 0.14 = 0.42\nonumber\\
+U_B &=& XD_B = 3\times 0.24 = 0.72
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img375.png"
+ ALT="$\displaystyle U_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="220" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img513.png"
+ ALT="$\displaystyle XD_{CPU} = 2\times 0.16 = 0.48$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img377.png"
+ ALT="$\displaystyle U_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="199" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img514.png"
+ ALT="$\displaystyle XD_A = 3\times 0.14 = 0.42$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="30" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img379.png"
+ ALT="$\displaystyle U_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="199" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img515.png"
+ ALT="$\displaystyle XD_B = 3\times 0.24 = 0.72$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.26)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+ค่าเวลาตอบสนองมีค่าเท่ากับ
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+R_{CPU} &=& S_{CPU}/(1-U_{CPU}) = 0.01/(1-0.48) 
+= 0.0192~~~second\nonumber\\
+R_A &=& S_A/(1-U_A) = 0.02/(1-0.42) = 0.345~~~second\nonumber\\
+R_B &=& S_B/(1-U_B) = 0.03/(1-0.72) = 0.107~~~second
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img416.png"
+ ALT="$\displaystyle R_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="453" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img516.png"
+ ALT="$\displaystyle S_{CPU}/(1-U_{CPU}) = 0.01/(1-0.48)
+= 0.0192~~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img418.png"
+ ALT="$\displaystyle R_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="400" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img517.png"
+ ALT="$\displaystyle S_A/(1-U_A) = 0.02/(1-0.42) = 0.345~~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img420.png"
+ ALT="$\displaystyle R_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="402" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img518.png"
+ ALT="$\displaystyle S_B/(1-U_B) = 0.03/(1-0.72) = 0.107~~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.27)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+Server~Response~Time~R~&=& \sum V_iR_i = 
+16\times 0.0192 + 7\times 0.0345 + 8\times 0.107 \nonumber\\
+&=& 1.406~~~second
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="228" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img519.png"
+ ALT="$\displaystyle Server~Response~Time~R~$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="394" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img520.png"
+ ALT="$\displaystyle \sum V_iR_i =
+16\times 0.0192 + 7\times 0.0345 + 8\times 0.107$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="124" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img521.png"
+ ALT="$\displaystyle 1.406~~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.28)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+จากแบบจำลองดังกล่าว เราสามารถหาคำตอบบางประการที่เกิดจากการเปลี่ยนแปลงระบบ ตัวอย่างเช่น
+
+<OL>
+<LI>การเพิ่มจำนวนการใช้งานเป็น 8 คน
+</LI>
+<LI>เพิ่มหน่วยความจำแคชสำหรับดิสก์ B ที่มี Hit Rate เท่ากับ 50% ซึ่งการเพิ่มดังกล่าวจะเพิ่มการทำงานของตัวประมวลผลการขึ้นอีก 30% และเวลาบริการของดิสก์ B 10% 
+</LI>
+<LI>ลดจำนวนดิสก์ลงหนึ่งตัว โดยใช้เพียงดิสก์ A ตัวเดียว 
+ และส่งการขอบริการทั้งหมดไปที่ดิสก์ A
+</LI>
+</OL>
+
+จากคำถามแรก เราสมมุติให้ผู้ใช้งานที่เข้ามาใหม่ มีอัตราการขอบริการเท่ากับผู้ใช้งานชุดเก่า  ค่าอัตราการบริการจึงเพิ่มขึ้นเท่ากับ <IMG
+ WIDTH="17" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img522.png"
+ ALT="$\frac{8}{6}$"> เนื่องจากอัตราเข้าใช้บริการของเดิม มีค่าเท่ากับ 3 บริการต่อวินาที  จำนวนผู้ใช้บริการที่เพิ่มขึ้นจะเพิ่มจาก 3 เป็น 4  บริการต่อวินาที เราสามารถวิเคราะห์ได้ดังต่อไปนี้
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+X &=& 4~~~requests/second\nonumber\\
+U_{CPU}&=& XD_{CPU} = 4\times 0.16 = 0.64 \nonumber\\
+U_A&=&XD_A =  4\times 0.14 = 0.56\nonumber\\
+U_B&=& XD_B =  4\times 0.24 = 0.96\nonumber\\
+R_{CPU} &=& S_{CPU}/(1-U_{CPU}) = 0.01/(1-0.64) = 0.278~~~second \nonumber\\
+R_A&=& S_A/(1-U_A) = 0.02/(1-0.56) = 0.0455~~~second\nonumber\\
+R_B &=&  S_B/(1-U_B) = 0.03/(1-0.96) = 0.75~~~second\nonumber\\
+R &=& 16\times 0.0278 + 7\times 0.0455 + 8\times 0.75 =6.76~~seconds
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="23" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img369.png"
+ ALT="$\displaystyle X$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="170" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img523.png"
+ ALT="$\displaystyle 4~~~requests/second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img375.png"
+ ALT="$\displaystyle U_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="221" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img524.png"
+ ALT="$\displaystyle XD_{CPU} = 4\times 0.16 = 0.64$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img377.png"
+ ALT="$\displaystyle U_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="198" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img525.png"
+ ALT="$\displaystyle XD_A = 4\times 0.14 = 0.56$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="30" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img379.png"
+ ALT="$\displaystyle U_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="200" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img526.png"
+ ALT="$\displaystyle XD_B = 4\times 0.24 = 0.96$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img416.png"
+ ALT="$\displaystyle R_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="442" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img527.png"
+ ALT="$\displaystyle S_{CPU}/(1-U_{CPU}) = 0.01/(1-0.64) = 0.278~~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img418.png"
+ ALT="$\displaystyle R_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="410" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img528.png"
+ ALT="$\displaystyle S_A/(1-U_A) = 0.02/(1-0.56) = 0.0455~~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img420.png"
+ ALT="$\displaystyle R_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="392" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img529.png"
+ ALT="$\displaystyle S_B/(1-U_B) = 0.03/(1-0.96) = 0.75~~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="20" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img433.png"
+ ALT="$\displaystyle R$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="433" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img530.png"
+ ALT="$\displaystyle 16\times 0.0278 + 7\times 0.0455 + 8\times 0.75 =6.76~~seconds$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.29)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+ดังนั้นถ้าจำนวนผู้ใช้บริการเพิ่มขึ้นจาก 6 เป็น 8 คน  เวลาตอบสนองของเครื่องบริการแฟ้มข้อมูลลดลงในอัตรา <!-- MATH
+ $6.76/1.406 = 4.8$
+ -->
+<IMG
+ WIDTH="140" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img531.png"
+ ALT="$6.76/1.406 = 4.8$">
+
+จากคำถามที่สอง จำเป็นต้องเปลี่ยนค่า <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img532.png"
+ ALT="$V_B$">, <IMG
+ WIDTH="49" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img533.png"
+ ALT="$S_{CPU}$">, และ <IMG
+ WIDTH="30" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img534.png"
+ ALT="$S_B$">
+ เป็น
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+V_B&=& 0.5\times 8 = 4 \nonumber\\
+S_{CPU}&=&1.4\times 0.01 = 0.013 \Rightarrow D_{CPU} = 0.208~~second \nonumber\\
+S_B&=& 1.1\times 0.03 = 0.033 \Rightarrow D_B = 4\times 
+0.033 = 0.132~~second\nonumber\\
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="28" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img403.png"
+ ALT="$\displaystyle V_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="97" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img535.png"
+ ALT="$\displaystyle 0.5\times 8 = 4$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="50" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img536.png"
+ ALT="$\displaystyle S_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="368" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img537.png"
+ ALT="$\displaystyle 1.4\times 0.01 = 0.013 \Rightarrow D_{CPU} = 0.208~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="30" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img538.png"
+ ALT="$\displaystyle S_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="448" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img539.png"
+ ALT="$\displaystyle 1.1\times 0.03 = 0.033 \Rightarrow D_B = 4\times
+0.033 = 0.132~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+การวิเคราะห์โดยใช้ค่าพารามิเตอร์ใหม่จะได้
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+U_{CPU}&=& XD_{CPU} = 3 \times 0.208 = 0.624\nonumber\\
+U_A &=& XD_A = 3\times 0.14 = 0.42\nonumber\\
+U_B &=& XD_B = 3\times 0.132 = 0.396\nonumber\\
+R_{CPU} &=& S_{CPU}/(1-U_{CPU}) =  0.013/(1-0.024) = 0.0346~~second\nonumber\\
+R_A &=& S_A/(1-U_A) = 0.02/(1-0.42) = 0.0345~~second \nonumber\\
+R_B&=&S_B/(1-U_B) = 0.033/(1-0.396) = 0.0546~~second\nonumber\\
+R &=& 16\times 0.0345 + 7 \times 0.0345 + 4 \times 0.0546 = 1.013~~seconds
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img375.png"
+ ALT="$\displaystyle U_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="239" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img540.png"
+ ALT="$\displaystyle XD_{CPU} = 3 \times 0.208 = 0.624$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img377.png"
+ ALT="$\displaystyle U_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="199" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img514.png"
+ ALT="$\displaystyle XD_A = 3\times 0.14 = 0.42$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="30" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img379.png"
+ ALT="$\displaystyle U_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="218" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img541.png"
+ ALT="$\displaystyle XD_B = 3\times 0.132 = 0.396$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img416.png"
+ ALT="$\displaystyle R_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="465" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img542.png"
+ ALT="$\displaystyle S_{CPU}/(1-U_{CPU}) = 0.013/(1-0.024) = 0.0346~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img418.png"
+ ALT="$\displaystyle R_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="402" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img543.png"
+ ALT="$\displaystyle S_A/(1-U_A) = 0.02/(1-0.42) = 0.0345~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img420.png"
+ ALT="$\displaystyle R_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="423" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$\displaystyle S_B/(1-U_B) = 0.033/(1-0.396) = 0.0546~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="20" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img433.png"
+ ALT="$\displaystyle R$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="460" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img545.png"
+ ALT="$\displaystyle 16\times 0.0345 + 7 \times 0.0345 + 4 \times 0.0546 = 1.013~~seconds$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.30)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+จากการเพิ่มแคชที่ดิสก์ B พบว่าเวลาตอบสนองของระบบจะลดลงเท่ากับ
+ <!-- MATH
+ $(1.406-1.013)/1.406$
+ -->
+<IMG
+ WIDTH="182" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img546.png"
+ ALT="$(1.406-1.013)/1.406$"> = <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img547.png"
+ ALT="$28$">%
+
+ในคำถามที่สาม เราต้องปรับค่า <IMG
+ WIDTH="28" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img548.png"
+ ALT="$V_A$"> และ <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img532.png"
+ ALT="$V_B$"> ให้เหมาะสม โดยสมมุติให้ดิสก์ A มีพื้นที่เพียงพอที่จะเก็บข้อมูลทั้งหมดที่มี  การวิเคราะห์มีดังต่อไปนี้
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+V_B&=&0 \nonumber\\
+V_A&=&7+8 = 15 \nonumber\\
+D_{CPU}&=& 0.16~~second\nonumber\\
+D_A&=& 15\times 0.02 = 0.3~~second \nonumber\\
+U_{CPU} &=& XD_{CPU} 3\times 0.16 = 0.48\nonumber\\
+U_A &=& XD_A = 3\times 0.3 = 0.90\nonumber\\
+R_{CPU}&=& S_{CPU}/(1-U_{CPU}) = 0.01/(1-0.48) = 0.0192~~second\nonumber\\
+R_A &=& S_A/(1-U_A) = 0.02/(1-0.90) = 0.2~~second \nonumber\\
+R &=& 16\times 0.192 + 15\times 0.2 = 3.31~~seconds
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="28" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img403.png"
+ ALT="$\displaystyle V_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img549.png"
+ ALT="$\displaystyle 0$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="27" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img401.png"
+ ALT="$\displaystyle V_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="92" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img550.png"
+ ALT="$\displaystyle 7+8 = 15$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img363.png"
+ ALT="$\displaystyle D_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="107" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img551.png"
+ ALT="$\displaystyle 0.16~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img365.png"
+ ALT="$\displaystyle D_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="200" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img552.png"
+ ALT="$\displaystyle 15\times 0.02 = 0.3~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img375.png"
+ ALT="$\displaystyle U_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="195" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img553.png"
+ ALT="$\displaystyle XD_{CPU} 3\times 0.16 = 0.48$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img377.png"
+ ALT="$\displaystyle U_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="190" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img554.png"
+ ALT="$\displaystyle XD_A = 3\times 0.3 = 0.90$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img416.png"
+ ALT="$\displaystyle R_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="445" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img555.png"
+ ALT="$\displaystyle S_{CPU}/(1-U_{CPU}) = 0.01/(1-0.48) = 0.0192~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img418.png"
+ ALT="$\displaystyle R_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="375" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img556.png"
+ ALT="$\displaystyle S_A/(1-U_A) = 0.02/(1-0.90) = 0.2~~second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="20" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img433.png"
+ ALT="$\displaystyle R$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="315" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img557.png"
+ ALT="$\displaystyle 16\times 0.192 + 15\times 0.2 = 3.31~~seconds$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.31)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+ดังนั้นถ้าเราแทนที่ดิสก์สองชุด ด้วยดิสก์หนึ่งชุด ค่าเวลาตอบสนองจะเพิ่มขึ้นด้วยอัตรา 
+<!-- MATH
+ $3.31/1.406 = 2.35$
+ -->
+<IMG
+ WIDTH="150" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img558.png"
+ ALT="$3.31/1.406 = 2.35$"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2029"
+  HREF="node111.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2023"
+  HREF="node105.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2017"
+  HREF="node109.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2025"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2027"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2030"
+  HREF="node111.html">การวิเคราะห์ค่าเฉลี่ย</A>
+<B> Up:</B> <A NAME="tex2html2024"
+  HREF="node105.html">การวิเคราะห์ค่าเฉลี่ย (Mean Value Analysis)</A>
+<B> Previous:</B> <A NAME="tex2html2018"
+  HREF="node109.html">การวิเคราะห์ระบบคิวแบบเปิด</A>
+ &nbsp <B>  <A NAME="tex2html2026"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2028"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

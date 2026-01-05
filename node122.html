@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>การประยุกต์ใชัในระบบคำนวณที่มีความสำคัญ (Critical-Computation Applications)</TITLE>
+<META NAME="description" CONTENT="การประยุกต์ใชัในระบบคำนวณที่มีความสำคัญ (Critical-Computation Applications)">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node123.html">
+<LINK REL="previous" HREF="node121.html">
+<LINK REL="up" HREF="node120.html">
+<LINK REL="next" HREF="node123.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2222"
+  HREF="node123.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2216"
+  HREF="node120.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2210"
+  HREF="node121.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2218"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2220"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2223"
+  HREF="node123.html">การประยุกต์ใช้ในระบบที่ต้องการยืดเวลาการซ่อมบำรุง (Maintenance Postponement Applications)</A>
+<B> Up:</B> <A NAME="tex2html2217"
+  HREF="node120.html">งานประยุกต์ของระบบที่คงทนต่อความเสียหาย</A>
+<B> Previous:</B> <A NAME="tex2html2211"
+  HREF="node121.html">การประยุกต์ใช้ในระบบที่มีอายุการใช้งานยาว (Long-Life Applications)</A>
+ &nbsp <B>  <A NAME="tex2html2219"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2221"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION001252000000000000000"></A>
+<A NAME="4346"></A> 
+<A NAME="4347"></A>
+<BR>
+การประยุกต์ใชัในระบบคำนวณที่มีความสำคัญ (Critical-Computation Applications)
+</H2>
+
+การใช้งานคอมพิวเตอร์ที่มีผลโดยตรงต่อชีวิตและทรัพย์สิน เป็นระบบที่มีความสำคัญ  และใช้ระบบที่สามารถคงทนต่อความเสียหายในการทำงาน ตัวอย่างการใช้งานเช่น  ระบบควบคุมการบิน, ระบบที่ใช้ในการทหาร, ระบบควบคุมอุตสาหกรรมที่มีความสำคัญ
+
+ใน <B>ระบบคำนวณที่มีความสำคัญ</B> ความผิดพลาดของประสิทธิภาพของระบบ  จะสามารถสร้างความเสียหายอย่างใหญ่หลวงได้ โดยทั่วไประบบคำนวณที่มีความสำคัญ มีความต้องการความน่าจะเป็นที่ระบบสามารถทำงานได้ที่ระดับ <IMG
+ WIDTH="47" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img612.png"
+ ALT="$0.95_7$"> ณ. เวลาการทำงาน 3 ชั่วโมง อย่างไรก็ตาม ความต้องการดังกล่าวสามารถเปลี่ยนแปลงได้ ตามการประยุกต์ใช้งาน
+
+ตัวอย่างระบบคำนวณที่มีความสำคัญ ที่เห็นกันแพร่หลายได้แก่ การควบคุมกระสวยอวกาศ  ซึ่งถ้าระบบควบคุมไม่สามารถทำงานได้ในขณะที่กระสวยขึ้นหรือลง  จะส่งผลให้เสียกระสวยนั้นไป การออกแบบระบบคอมพิวเตอร์ที่ใช้ในกระสวยอวกาศ เป็นการออกแบบระบบที่สามารถทนทานต่อการเสียหายของคอมพิวเตอร์ถึงสามเครื่องพร้อมกัน
+
+ ตัวอย่างการใช้งานระบบคำนวณที่มีความสำคัญ ได้แก่ ระบบควบคุมการบินของเครื่องบิน X-29  แสดงในรูป <A HREF="node122.html#fig:ft2X29.eps">9.3</A> เนื่องจากเครื่องบิน X-29 ออกแบบมาให้สามารถใช้ประโยชน์จากอากาศพลศาสตร์ไห้มากที่สุด การควบคุมด้วยมือไม่สามารถทำได้ทัน  จำเป็นต้องใช้คอมพิวเตอร์ควบคุมในการรักษาเสถียรภาพของเครื่องบิน  ถ้าระบบควบคุมไม่สามารถทำงานได้ เครื่องบินจะไม่สามารถบินได้  ซึ่งการควบคุมการบินทั้งหมดอาศัยสัญญาณอิเล็กทรอนิกส์
+
+รูป <A HREF="node122.html#fig:ft2X29.eps">9.3</A> แสดงส่วนควบคุมของระบบที่ประกอบด้วย  คอมพิวเตอร์ที่เหมือนกันทุกประการสามชุด เครื่องคอมพิวเตอร์ทั้งสามเครื่องทำงานเดียวกัน ในคอมพิวเตอร์แต่ละเครื่อง ประกอบด้วยดิจิตอลคอมพิวเตอร์  และอนาล็อกคอมพิวเตอร์ในเครื่องเดียวกัน  ส่วนของอนาล็อกคอมพิวเตอร์จะถูกใช้งาน ถ้าดิจิตอลคอมพิวเตอร์ไม่สามารถใช้งานได้  ผลการคำนวณจากทั้งสามเครื่องจะถูกนำมาหาเสียงส่วนใหญ่ในการควบคุม เพราะฉะนั้น  การควบคุมจะนำผลมาจาก สองในสามคอมพิวเตอร์ที่ทำงานปกติ
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:ft2X29.eps"></A><A NAME="4353"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.3:</STRONG>
+ระบบควบคุมการบินของเครื่อบิน X-29 เป็นตัวอย่างการประยุกต์ของระบบคำนวณที่มีความสำคัญ</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="459" HEIGHT="259" ALIGN="BOTTOM" BORDER="0"
+ SRC="img613.png"
+ ALT="\includegraphics[width=4in]{fig/ft2X29.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

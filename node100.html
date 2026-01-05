@@ -1,0 +1,396 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>พิสูจน์ Asymptotic Bounds</TITLE>
+<META NAME="description" CONTENT="พิสูจน์ Asymptotic Bounds">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node101.html">
+<LINK REL="previous" HREF="node99.html">
+<LINK REL="up" HREF="node99.html">
+<LINK REL="next" HREF="node101.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1884"
+  HREF="node101.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1878"
+  HREF="node99.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1872"
+  HREF="node99.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1880"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1882"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1885"
+  HREF="node101.html">ตัวอย่าง</A>
+<B> Up:</B> <A NAME="tex2html1879"
+  HREF="node99.html">การวิเคราะห์คอขวด (Bottleneck Analysis)</A>
+<B> Previous:</B> <A NAME="tex2html1873"
+  HREF="node99.html">การวิเคราะห์คอขวด (Bottleneck Analysis)</A>
+ &nbsp <B>  <A NAME="tex2html1881"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1883"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION001090010000000000000">
+<FONT SIZE="+1">พิสูจน์ Asymptotic Bounds</FONT></A>
+</H4> การพิสูจน์ Asymptotic Bounds มีที่มาจากการสังเกตดังนี้
+
+<P>
+
+<OL>
+<LI>ค่าภาระงานของอุปกรณ์ใดๆ จะมีค่าไม่เกินหนึ่ง จาก <IMG
+ WIDTH="87" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img453.png"
+ ALT="$U_i = XD_i$"> ทำให้ค่าอัตราความสำเร็จสูงสุดที่เป็นไปได้ของระบบถูกจำกัด
+</LI>
+<LI>ค่าเวลาตอบสนองของระบบที่มีจำนวนผู้ใช้ <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> คน ไม่สามารถมีค่าต่ำกว่าเวลาตอบสนองของระบบที่มีผู้ใช้เพียงคนเดียวได้ ซึ่งเป็นกรอบของเวลาตอบสนอง
+</LI>
+<LI>กฎเวลาตอบสนองที่มีการตอบสนองกับผู้ใช้งาน  สามารถนำมาหากรอบการทำงานของอัตราความสำเร็จ และเวลาตอบสนองได้
+</LI>
+</OL>
+
+<P>
+เราสามารถพิสูจน์กรอบการทำงานโดยใช้ข้อสังเกตขั้นต้น สำหรับอุปกรณ์คอขวด  <IMG
+ WIDTH="13" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img447.png"
+ ALT="$b$"> เราจะได้
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+U_b = XD_{max}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="332" HEIGHT="37" BORDER="0"
+ SRC="img454.png"
+ ALT="\begin{displaymath}
+U_b = XD_{max}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.61)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+เนื่องจากค่า <IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img455.png"
+ ALT="$U_b$"> ไม่สามารถมีค่าเกินหนึ่ง
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+XD_{max} \leq 1
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="327" HEIGHT="37" BORDER="0"
+ SRC="img456.png"
+ ALT="\begin{displaymath}
+XD_{max} \leq 1
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.62)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+หรือ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+X \leq \frac{1}{D_{max}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="323" HEIGHT="50" BORDER="0"
+ SRC="img457.png"
+ ALT="\begin{displaymath}
+X \leq \frac{1}{D_{max}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.63)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ถ้าระบบมีเพียงหนึ่งงานในระบบ จะไม่มีการเข้าคิวเลย เพราะฉะนั้น  เวลาตอบสนองของระบบจะเท่ากับผลรวมของความต้องการการบริการ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(1) = D_1 + D_2 +\ldots +D_M =D
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="417" HEIGHT="39" BORDER="0"
+ SRC="img458.png"
+ ALT="\begin{displaymath}
+R(1) = D_1 + D_2 +\ldots +D_M =D
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.64)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ในที่นี้ <IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img43.png"
+ ALT="$D$"> นิยามเป็นผลรวมของความต้องการการบริการในทุกอุปกรณ์  ถ้ามีผู้ใช้งานในระบบมากกว่าหนึ่งคน ความน่าจะเป็นที่ต้องรออยู่ในคิวจะเพิ่มขึ้น เพราะฉะนั้น ค่าเวลาตอบสนองจะสูงขึ้น 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(N) \geq D
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="324" HEIGHT="39" BORDER="0"
+ SRC="img459.png"
+ ALT="\begin{displaymath}
+R(N) \geq D
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.65)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ถ้าใช้กฎเวลาตอบสนองที่มีการปฏิสัมพันธ์กับผู้ใช้งานจากสมการ <A HREF="node97.html#eq:inter1">7.59</A> และ <A HREF="node97.html#eq:inter">7.60</A> เราจะได้
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(N) = \frac{N}{X(N)} -Z \geq ND_{max}-Z
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="423" HEIGHT="52" BORDER="0"
+ SRC="img460.png"
+ ALT="\begin{displaymath}
+R(N) = \frac{N}{X(N)} -Z \geq ND_{max}-Z
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.66)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+และ 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+X(N) = \frac{N}{R(N)+Z} \leq \frac{N}{D+Z}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="401" HEIGHT="52" BORDER="0"
+ SRC="img461.png"
+ ALT="\begin{displaymath}
+X(N) = \frac{N}{R(N)+Z} \leq \frac{N}{D+Z}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.67)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+รูป <A HREF="node100.html#fig:asympbound">7.4</A> แสดง Asymptotic Bounds สำหรับกรณีทั่วไป ดังแสดงในรูป กรอบของอัตราความสำเร็จ และเวลาตอบสนอง ถูกกำหนดด้วยเส้นตรงสองเส้น กรอบของเวลาตอบสนองประกอบด้วยเส้นในแนวนอนที่  <IMG
+ WIDTH="62" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img462.png"
+ ALT="$R=D$"> และเส้นที่ผ่านจุด <IMG
+ WIDTH="66" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img463.png"
+ ALT="$(-Z,0)$"> โดยมีความชันเท่ากับ <IMG
+ WIDTH="50" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img464.png"
+ ALT="$D_{max}$"> ส่วนกรอบของอัตราความสำเร็จประกอบด้วยเส้นในแนวนอนที่  <IMG
+ WIDTH="109" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img465.png"
+ ALT="$X=1/D_{max}$"> และเส้นที่ผ่านจุดกำเนิด <IMG
+ WIDTH="48" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img466.png"
+ ALT="$(0,0)$"> โดยมีความชันเท่ากับ <IMG
+ WIDTH="41" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img467.png"
+ ALT="$\frac{1}{D+Z}$"> จุดตัดของเส้นเรียกว่า ``จุดการเปลี่ยนแปลง''  หรือ <IMG
+ WIDTH="100" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img468.png"
+ ALT="$Knee Point$"> สำหรับทั้งเวลาตอบสนอง และอัตราความสำเร็จ จุดการเปลี่ยนแปลงเป็นจุดที่เกิดขึ้นที่จำนวนผู้ใช้งานจำนวนเท่ากัน  จำนวนผู้ใช้งาน <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img469.png"
+ ALT="$N^*$"> มีค่าเท่ากับ
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:asympbound"></A><A NAME="3252"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7.4:</STRONG>
+Asymptotic Bounds สำหรับกรณีทั่วไป</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="415" HEIGHT="475" ALIGN="BOTTOM" BORDER="0"
+ SRC="img470.png"
+ ALT="\includegraphics[width=3.8in]{fig/asympbound.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+D = N^*D_{max} -Z
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="353" HEIGHT="37" BORDER="0"
+ SRC="img471.png"
+ ALT="\begin{displaymath}
+D = N^*D_{max} -Z
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.68)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ถ้าจำนวนผู้ใช้งานมีค่ามากกว่า <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img469.png"
+ ALT="$N^*$"> เราสามารถพูดได้ว่ามีการรอคิวในระบบ
+
+<P>
+การใช้ Asymptotic Bounds ในการอธิบายจะช่วยได้มากสำหรับการอธิบายผลการประเมินให้ผู้ที่ไม่มีพื้นฐานทางด้านทฤษฎีคิว หรือการประเมินประสิทธิภาพ
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+N^* = \frac{D+Z}{D_max}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="333" HEIGHT="50" BORDER="0"
+ SRC="img472.png"
+ ALT="\begin{displaymath}
+N^* = \frac{D+Z}{D_max}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.69)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1884"
+  HREF="node101.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1878"
+  HREF="node99.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1872"
+  HREF="node99.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1880"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1882"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1885"
+  HREF="node101.html">ตัวอย่าง</A>
+<B> Up:</B> <A NAME="tex2html1879"
+  HREF="node99.html">การวิเคราะห์คอขวด (Bottleneck Analysis)</A>
+<B> Previous:</B> <A NAME="tex2html1873"
+  HREF="node99.html">การวิเคราะห์คอขวด (Bottleneck Analysis)</A>
+ &nbsp <B>  <A NAME="tex2html1881"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1883"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>การวิเคราะห์คอขวด (Bottleneck Analysis)</TITLE>
+<META NAME="description" CONTENT="การวิเคราะห์คอขวด (Bottleneck Analysis)">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node103.html">
+<LINK REL="previous" HREF="node97.html">
+<LINK REL="up" HREF="node84.html">
+<LINK REL="next" HREF="node100.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1867"
+  HREF="node100.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1861"
+  HREF="node84.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1855"
+  HREF="node98.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1863"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1865"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1868"
+  HREF="node100.html">พิสูจน์ Asymptotic Bounds</A>
+<B> Up:</B> <A NAME="tex2html1862"
+  HREF="node84.html">กฎของการใชังาน</A>
+<B> Previous:</B> <A NAME="tex2html1856"
+  HREF="node98.html">ตัวอย่าง</A>
+ &nbsp <B>  <A NAME="tex2html1864"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1866"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001090000000000000000">
+การวิเคราะห์คอขวด (Bottleneck Analysis)</A>
+</H1>
+
+<P>
+<A NAME="3193"></A>
+<A NAME="3194"></A>
+
+<P>
+<IMG
+ WIDTH="85" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img353.png"
+ ALT="$D_i = V_iS_i$"> คือค่าความต้องการการบริการจากอุปกรณ์ <IMG
+ WIDTH="26" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img342.png"
+ ALT="$i^{th}$"> ในแต่ละครั้งของการเข้าใช้ระบบ ซึ่งรวมเวลาการเข้าใช้บริการทุกครั้งเข้าด้วยกัน 
+
+<P>
+จากกฎการไหลของงาน ค่าภาระงานของอุปกรณ์แปนผันตรง กับค่าความต้องการการบริการ  <IMG
+ WIDTH="27" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img354.png"
+ ALT="$D_i$"> ของงานบนอุปกรณ์นั้น 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+U_i \propto D_i
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="312" HEIGHT="37" BORDER="0"
+ SRC="img446.png"
+ ALT="\begin{displaymath}
+U_i \propto D_i
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.58)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+อุปกรณ์ใดที่มีค่าความต้องการการบริการ <IMG
+ WIDTH="27" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img354.png"
+ ALT="$D_i$"> สูงสุดในระบบ จะเป็นเรียกว่าเป็น  <B>อุปกรณ์คอขวด</B> หรือ  Bottleneck Device  อุปกรณ์ตัวที่เป็นคอขวดจะเป็นตัวจำกัดอัตราความสำเร็จโดยรวมของระบบ  การปรับปรุงอุปกรณ์คอขวดจะส่งผลให้เห็นต่อประสิทธิภาพสูงสุดในรูปของอัตราความสำเร็จ การปรับปรุงอุปกรณ์ตัวอื่นจะไม่กระทบต่อประสิทธิภาพมากนัก ดังนั้น <EM>การหาอุปกรณ์ที่เป็นคอขวดในระบบเป็นขั้นแรกของการทำการวิเคราะห์ประสิทธิภาพใดๆ</EM>
+
+<P>
+สมมุติให้เราพบว่าอุปกรณ์ <IMG
+ WIDTH="13" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img447.png"
+ ALT="$b$"> เป็นคอขวด นั้นหมายถึง <IMG
+ WIDTH="97" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img448.png"
+ ALT="$D_b = D_{max}$"> ซึ่งมีค่าสูงสุดในบรรดา <!-- MATH
+ $D_1, D_2, \ldots, D_M$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img449.png"
+ ALT="$D_1, D_2, \ldots, D_M$"> ค่าอัตราความสำเร็จ และเวลาตอบสนองของระบบจะถูกจำกัดโดยกรอบดังนี้
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+X(N) \leq \min \left\{ \frac{1}{D_{max}}, \frac{N}{D+Z} \right\}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:asymto"></A><IMG
+ WIDTH="401" HEIGHT="50" BORDER="0"
+ SRC="img450.png"
+ ALT="\begin{displaymath}
+X(N) \leq \min \left\{ \frac{1}{D_{max}}, \frac{N}{D+Z} \right\}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.59)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+และ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(N) \geq \max \{D, ND_{max}-Z\}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:asymto1"></A><IMG
+ WIDTH="404" HEIGHT="39" BORDER="0"
+ SRC="img451.png"
+ ALT="\begin{displaymath}
+R(N) \geq \max \{D, ND_{max}-Z\}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.60)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ในที่นี้ <IMG
+ WIDTH="89" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img452.png"
+ ALT="$D = \sum D_i$"> คือค่าความต้องการบริการโดยรวมของทุกอุปกรณ์ ยกเว้นเทอร์มินอล สมการ <A HREF="node99.html#eq:asymto">7.63</A> และ <A HREF="node99.html#eq:asymto1">7.64</A> คือสมการ Asymptotic Bounds <A NAME="3214"></A> ซึ่งสามารถพิสูจน์ได้ดังนี้
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><UL>
+<LI><UL>
+<LI><A NAME="tex2html1869"
+  HREF="node100.html"><FONT SIZE="+1">พิสูจน์ Asymptotic Bounds</FONT></A>
+<LI><A NAME="tex2html1870"
+  HREF="node101.html"><FONT SIZE="+1">ตัวอย่าง</FONT></A>
+<LI><A NAME="tex2html1871"
+  HREF="node102.html"><FONT SIZE="+1">ตัวอย่าง:</FONT></A>
+</UL></UL></UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

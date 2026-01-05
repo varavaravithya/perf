@@ -1,0 +1,385 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ชนิดของกระบวนการสโตคาสติก</TITLE>
+<META NAME="description" CONTENT="ชนิดของกระบวนการสโตคาสติก">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node40.html">
+<LINK REL="previous" HREF="node36.html">
+<LINK REL="up" HREF="node30.html">
+<LINK REL="next" HREF="node40.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html983"
+  HREF="node40.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html977"
+  HREF="node30.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html971"
+  HREF="node38.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html979"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html981"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html984"
+  HREF="node40.html">กิจกรรม</A>
+<B> Up:</B> <A NAME="tex2html978"
+  HREF="node30.html">ทฤษฎีคิว</A>
+<B> Previous:</B> <A NAME="tex2html972"
+  HREF="node38.html">ตัวอย่าง:</A>
+ &nbsp <B>  <A NAME="tex2html980"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html982"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00670000000000000000">
+ชนิดของกระบวนการสโตคาสติก</A>
+</H1>
+
+<P>
+ในการสร้างแบบจำลองในการวิเคราะห์ประสิทธิภาพ นอกจากตัวแปรสุ่มต่างๆ ที่เราใช้ในการคำนวณแล้ว เรายังใช้ลำดับต่างๆ มากมาย และกลุ่มของตัวแปรสุ่มที่เป็นฟังก์ชั่นของเวลา 
+
+<P>
+ตัวอย่างเช่นให้ <IMG
+ WIDTH="39" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.png"
+ ALT="$n(t)$"> เป็นจำนวนของงานที่อยู่ในตัวประมวลผลกลางในระบบคอมพิวเตอร์ ถ้าเรานำระบบคอมพิวเตอร์ที่เหมือนกันมาจำนวนหลายระบบ และเฝ้าสังเกตจำนวนงานที่ตัวประมวลผลกลางตามฟังก์ชั่นของเวลา เราจะพบว่า  <IMG
+ WIDTH="39" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.png"
+ ALT="$n(t)$"> เป็นตัวแปรสุ่ม 
+
+<P>
+เพื่อที่จะระบุพฤติกรรมดังกล่าว เราจำเป็นต้องระบบการกระจายของ  <IMG
+ WIDTH="39" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.png"
+ ALT="$n(t)$"> ทุกค่าเวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> เช่นเดียวกัน ค่าเวลาการรอรับบริการ <IMG
+ WIDTH="42" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.png"
+ ALT="$w(t)$"> เป็นฟังก์ชั่นสุ่มที่แปรผันตามเวลา ฟังก์ชั่นสุ่มลักษณะดังกล่าวเรียกว่า กระบวนการสโตคาสติก (Stochastic Process) กระบวนการดังกล่าวช่วยในการแสดงสถานะของระบบคิวได้ 
+
+<P>
+กระบวนการสโตคาสติกที่ใช้กันมากในทฤษฎีคิวมีดังต่อไปนี้
+
+<P>
+<A NAME="729"></A>
+<A NAME="730"></A>
+
+<P>
+
+<OL>
+<LI><B>กระบวนการสถานะต่อเนื่อง และกระบวนการสถานะไม่ต่อเนื่อง (Discrete-State and Continuous-State Processes):</B> ``กระบวนการ'' (Process) จะเป็นแบบต่อเนื่องหรือแบบไม่ต่อเนื่องขึ้นอยู่กับค่าของสถานะของกระบวนการนั้นๆ  
+ถ้าจำนวนของสถานะที่เป็นไปได้ของกระบวนการมีจำนวนจำกัด หรือนับได้ กระบวนการนั้นเป็นแบบสถานะไม่ต่อเนื่อง ตัวอย่างเช่น ถ้าจำนวนงานในระบบ <IMG
+ WIDTH="39" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.png"
+ ALT="$n(t)$"> มีค่าเป็นแบบไม่ต่อเนื่องเช่น <!-- MATH
+ $0, 1, 2, \ldots$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.png"
+ ALT="$0, 1, 2, \ldots$"> <IMG
+ WIDTH="39" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.png"
+ ALT="$n(t)$"> เป็นกระบวนการแบบสถานะไม่ต่อเนื่อง 
+
+<P>
+เวลาที่รอรับบริการ (Waiting Time) w(t) สามารถเป็นค่าเวลาใดๆ ก็ได้ในจำนวนจริง ดังนั้นจึงเป็นกระบวนการสถานะต่อเนื่อง 
+
+<P>
+กระบวนการสโตคาสติกแบบสถานะไม่ต่อเนื่อง เรียกว่าห่วงโซ่สโตคาสติก (Stochastic Chain) 
+
+<P>
+<A NAME="733"></A>
+<A NAME="734"></A>
+
+<P>
+</LI>
+<LI><B>กระบวนการมาร์คอฟ (Markov Processes):</B> ถ้าสถานะในอนาคตของกระบวนการไม่ขึ้นอยู่กับอดีต และขึ้นอยู่กับสถานะปัจจุบันเพียงอย่างเดียว กระบวนการดังกล่าวเรียกว่า ``กระบวนการมาร์คอฟ'' 
+<A NAME="736"></A>
+<A NAME="737"></A>
+
+<P>
+คุณสมบัติดังกล่าวเรียกว่าคุณสมบัติมาร์คอฟ ซึ่งทำให้การวิเคราะห์ทำได้ง่ายขึ้น เนื่องจากไม่จำเป็นต้องทราบการเปลี่ยนแปลงทั้งวัฏสงสาร เพียงแค่รู้ถึงสถานะปัจจุบันก็เพียงพอ 
+
+<P>
+กระบวนการมาร์คอฟแบบสถานะไม่ต่อเนื่องเรียกว่า ห่วงโซ่มาร์คอฟ (Markov Chain)
+<A NAME="738"></A>
+<A NAME="739"></A>
+
+<P>
+</LI>
+<LI><B>กระบวนการเกิด-ดับ  (Birth-Death Processes):</B> กระบวนการมาร์คอฟแบบสถานะไม่ต่อเนื่องที่มีการเป็นแปลงสถานะจำกัดเพียง สถานะข้างเคียง เรียกว่า ``กระบวนการเกิด-ดับ''  
+<A NAME="741"></A>
+<A NAME="742"></A>
+
+<P>
+สำหรับกระบวนการเกิด-ดับ สามารถจะแสดงสถานะของกระบวนการโดยตัวเลขจำนวนเต็ม โดยที่ตัวเลขแสดงสถานะของระบบที่สถานะ <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="$n$"> และจะเปลี่ยนไปยังสถานะข้างเคียงคือ <IMG
+ WIDTH="50" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.png"
+ ALT="$n+1$"> และ <IMG
+ WIDTH="49" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img95.png"
+ ALT="$n-1$"> เท่านั้น 
+
+<P>
+ตัวอย่างเช่น จำนวนงานในระบบคิวที่มีเครื่องบริการหนึ่งเครื่อง และมีงานเข้าใช้ระบบครั้งละหนึ่งงาน สามารถแสดงได้โดยกระบวนการเกิด-ดับ  โดยที่เลขจำนวนเต็มแสดงสถานะของกระบวนการ เมื่อมีงานเข้าใช้ระบบ กระบวนการจะเพิ่มสถานะขึ้นหนึ่ง  +1 (เกิด) และเมื่องานเสร็จจากการบริการ (ออกงานระบบ หรือ ดับ) กระบวนการจะลดสถานะลงหนึ่ง -1 
+
+<P>
+</LI>
+<LI><B>กระบวนการพัวซอง (Poisson Processes):</B> ถ้าเวลาระหว่างการเข้าใช้ระบบเป็น IID และมีการกระจายแบบ Exponential จำนวนงานที่เข้าใช้ระบบ <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="$n$"> ในช่วงการทำงาน <IMG
+ WIDTH="76" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.png"
+ ALT="$(t, t+x)$"> จะมีการกระจายแบบพัวซอง ดังนั้นกระบวนการเข้าใช้ระบบจะถูกเรียกว่ากระบวนการพัวซอง หรือ กระแสการเข้าใช้งานระบบแบบพัวซอง
+<A NAME="744"></A>
+<A NAME="745"></A>
+
+<P>
+กระบวนการพัวซองใช้อย่างแพร่หลายในทฤษฎีคิว และมีคุณสมบัติดังต่อไปนี้
+
+<P>
+
+<OL>
+<LI>เมื่อรวมกระแสการเข้าใช้งานระบบแบบพัวซองที่มีค่าเฉลี่ย <IMG
+ WIDTH="22" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.png"
+ ALT="$\lambda_i$"> จำนวน <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$k$"> กระแสเข้าด้วยกัน จะได้กระแสการเข้าใช้งานระบบแบบพัวซองที่มีค่าเฉลี่ย <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$">
+โดยที่
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\lambda = \sum_{i=1}^k\lambda_i
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="319" HEIGHT="59" BORDER="0"
+ SRC="img98.png"
+ ALT="\begin{displaymath}
+\lambda = \sum_{i=1}^k\lambda_i
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P> 
+
+<P>
+แสดงในรูปที่ <A HREF="node39.html#fig:poisson1">3.6</A>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:poisson1"></A><A NAME="753"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.6:</STRONG>
+การรวมกระแสการเข้าใช้งานระบบแบบพัวซอง</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="227" HEIGHT="152" ALIGN="BOTTOM" BORDER="0"
+ SRC="img99.png"
+ ALT="\includegraphics[width=2.0in]{fig/poisson1.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+</LI>
+<LI>เมื่อแยกกระแสการเข้าใช้งานระบบแบบพัวซองออกเป็นกระแสย่อยจำนวน <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$k$"> กระแส โดยที่มีความน่าจะเป็น <IMG
+ WIDTH="21" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.png"
+ ALT="$p_i$"> ในการแตกแยกเป็นกระแสย่อย <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.png"
+ ALT="$i$"> แต่ละกระแสย่อย <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.png"
+ ALT="$i$"> จะมีค่าเฉลี่ยเท่ากับ <IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.png"
+ ALT="$p_i\lambda$">
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:poisson2"></A><A NAME="758"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.7:</STRONG>
+การแยกกระแสการเข้าใช้งานระบบแบบพัวซองออกเป็นกระแสย่อยจำนวน <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$k$"> กระแส</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="316" HEIGHT="143" ALIGN="BOTTOM" BORDER="0"
+ SRC="img103.png"
+ ALT="\includegraphics[width=2.8in]{fig/poisson2.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+</LI>
+<LI>เมื่อกระแสการเข้าใช้งานระบบคิวที่มีเครื่องบริการหนึ่งเครื่อง มีค่าเฉลี่ยเท่ากับ <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> และเครื่องบริการมีการกระจายของเวลาบริการเป็น Exponential กระแสของงานที่ออกจากระบบก็มีลักษณะเป็นพัวซองที่มีค่าเฉลี่ย <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> เท่ากัน โดยที่อัตราการเข้าใช้งานระบบ จะต้องน้อยกว่าอัตราความสามารถในการบริการแสดงในรูปที่ <A HREF="node39.html#fig:poisson3">3.8</A> 
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:poisson3"></A><A NAME="764"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.8:</STRONG>
+กระแสงาน: เมื่อกระแสการเข้าใช้งานเป็นพัวซอง กระแสของงานที่ออกจากระบบมีลักษณะเป็นพัวซอง</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="286" HEIGHT="70" ALIGN="BOTTOM" BORDER="0"
+ SRC="img104.png"
+ ALT="\includegraphics[width=2.5in]{fig/poisson3.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+</LI>
+<LI>ในกรณีที่เป็นระบบคิวที่มีเครื่องบริการ  <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$m$"> เครื่อง และกระแสการเข้าใช้งานเป็นพัวซองที่มีค่าเฉลี่ยเท่ากับ <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> กระแสของงานที่ออกจากระบบก็มีลักษณะเป็นพัวซองที่มีค่าเฉลี่ย <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> เช่นกัน โดยที่อัตราการเข้าใช้งานระบบ <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> จะต้องน้อยกว่าอัตราความสามารถในการบริการ <IMG
+ WIDTH="48" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img105.png"
+ ALT="$\sum_i\mu_i$"> และเครื่องบริการมีการกระจายของเวลาบริการเป็น Exponential แสดงในรูปที่ <A HREF="node39.html#fig:poisson4">3.9</A> 
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:poisson4"></A><A NAME="770"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.9:</STRONG>
+กระแสงาน: เมื่อกระแสการเข้าใช้งานเป็นพัวซอง กระแสของงานที่ออกจากระบบมีลักษณะเป็นพัวซอง  กรณีที่เป็นระบบคิวที่มีเครื่องบริการ  <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$m$"> เครื่อง </CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="319" HEIGHT="195" ALIGN="BOTTOM" BORDER="0"
+ SRC="img106.png"
+ ALT="\includegraphics[width=2.8in]{fig/poisson4.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+</LI>
+</OL>
+</LI>
+</OL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html983"
+  HREF="node40.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html977"
+  HREF="node30.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html971"
+  HREF="node38.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html979"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html981"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html984"
+  HREF="node40.html">กิจกรรม</A>
+<B> Up:</B> <A NAME="tex2html978"
+  HREF="node30.html">ทฤษฎีคิว</A>
+<B> Previous:</B> <A NAME="tex2html972"
+  HREF="node38.html">ตัวอย่าง:</A>
+ &nbsp <B>  <A NAME="tex2html980"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html982"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

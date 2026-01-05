@@ -1,0 +1,380 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>การคุ้มครองจากการเสียหาย</TITLE>
+<META NAME="description" CONTENT="การคุ้มครองจากการเสียหาย">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node166.html">
+<LINK REL="previous" HREF="node164.html">
+<LINK REL="up" HREF="node156.html">
+<LINK REL="next" HREF="node166.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2849"
+  HREF="node166.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2843"
+  HREF="node156.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2837"
+  HREF="node164.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2845"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2847"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2850"
+  HREF="node166.html">หัวข้อสรุป</A>
+<B> Up:</B> <A NAME="tex2html2844"
+  HREF="node156.html">ตัวอย่างการวิเคราะห์ความน่าเชื่อถือ และการคุ้มครองจากความเสียหาย</A>
+<B> Previous:</B> <A NAME="tex2html2838"
+  HREF="node164.html">ตัวอย่าง: การคำนวณค่าความน่าเชื่อถือของระบบขนาน</A>
+ &nbsp <B>  <A NAME="tex2html2846"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2848"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001460000000000000000"></A>
+<A NAME="5463"></A>
+<A NAME="5464"></A>
+<BR>
+การคุ้มครองจากการเสียหาย
+</H1>
+
+การคุ้มครองจากการเสียหาย (Fault Coverage) คือการวัดความสามารถของระบบที่จะคุ้มครองจากความล้มเหลวหรือเสียหาย ตัวอย่างเช่นระบบคอมพิวเตอร์ที่ต้องการการเปลี่ยนการทำงานของระบบ (Reconfiguration) ในการเพิ่มความน่าเชื่อถือต้องการคุณสมบัติการคุ้มครองจากความเสียหายที่ดีในการทำงาน ในระบบแบบขนานที่ประกอบด้วยสามโมดูล ถ้าเราสมมุติให้ระบบมีการคุ้มครองจากความเสียหายที่สมบูรณ์เพียงหนึ่งโมดูลเพียงพอในการทำงานของระบบ ความน่าเชื่อถือของระบบคำนวณจาก ความน่าจะเป็นที่หนึ่งโมดูลในสามโมดูลยังทำงาน
+
+อย่างไรก็ตาม สมมุติฐานที่ให้ระบบมีการคุ้มครองจากความเสียหายที่สมบูรณ์ ไม่ได้คำนึงถึงว่าระบบอาจจะไม่สามารถใช้การสำรองการทำงานของอุปกรณ์ได้ เนื่องจากเหตุผลต่างๆ อันได้แก่การที่ไม่สามารถตรวจสอบได้ว่าโมดูลเสีย, โมดูลถูกถอดออก หรือกำลังถูกแทนที่
+
+เพื่อแสดงถึงปัญหาที่กล่าวมา พิจารณาระบบในรูป <A HREF="node165.html#fig:fev9simplepa">11.7</A> ซึ่งประกอบด้วยสองโมดูลที่เหมือนกัน  สมมุติให้ โมดูลหนึ่งเป็นโมดูลหลัก และ โมดูลสองเป็นโมดูลสำรอง โมดูลสำรองจะถูกแทนที่โมดูลหลักในกรณีที่โมดูลหลักเสีย ในอีกนัยหนึ่ง ระบบดังกล่าวทำงานอยู่ในรูปแบบของระบบสำรองแสตนบาย ภายใต้สภาวะปกติ ระบบจะทำงานอย่างถูกต้อง ถ้าทั้งสองโมดูลทำงานปกติ แต่ในความเป็นจริงจะต้องสามารถตรวจจับได้ว่าโมดูลหลักเสียหาย เพื่อจัดการสลับการทำงานให้โมดูลรองอย่างถูกต้อง
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fev9simplepa"></A><A NAME="5468"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 11.7:</STRONG>
+แผนภาพกล่องความน่าเชื่อถือของระบบขนานที่ประกอบด้วยสองโมดูล 
+เพื่อแสดงผลกระทบของการคุ้มครองจากความเสียหาย</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="295" HEIGHT="175" ALIGN="BOTTOM" BORDER="0"
+ SRC="img775.png"
+ ALT="\includegraphics[width=2.6in]{fig/fev9simplepa.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ระบบแบบขนานที่ประกอบด้วนสองโมดูลจะสามารถทำงานได้ก็ต่อเมื่อ
+
+<OL>
+<LI>โมดูลหนึ่งทำงานได้อย่างถูกต้อง หรือ
+</LI>
+<LI>โมดูลสองทำงานได้อย่างถูกต้อง และโมดูลหนึ่งเสีย จากนั้นสามารถตรวจสอบได้ว่าโมดูลหนึ่งเสีย และทำการแทนโมดูลสองด้วยได้อย่างเหมาะสม
+</LI>
+</OL>
+
+ความน่าจะเป็นของเหตุการณ์ทั้งสองสามารถเขียนเป็นสมการในรูปของความน่าเชื่อถือของโมดูล และ การคุ้มครองจากความเสียหายได้ดังต่อไปนี้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{sys}(t) = R_1(t) + (1-R_1(t))C_1R_2(t)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="430" HEIGHT="39" BORDER="0"
+ SRC="img776.png"
+ ALT="\begin{displaymath}
+R_{sys}(t) = R_1(t) + (1-R_1(t))C_1R_2(t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11.11)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เมื่อ <IMG
+ WIDTH="26" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img777.png"
+ ALT="$C_1$"> เป็นการคุ้มครองจากความเสียหายของโมดูล <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img778.png"
+ ALT="$1$">, <IMG
+ WIDTH="49" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img779.png"
+ ALT="$R_1(t)$"> เป็นค่าความน่าเชื่อถือของโมดูล <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img778.png"
+ ALT="$1$">,  และ <IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img780.png"
+ ALT="$R_2(t)$"> เป็นค่าความน่าเชื่อถือของโมดูล <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img716.png"
+ ALT="$2$"> ถ้าความน่าเชื่อถือ และการคุ้มครองจากความเสียหายเท่ากันทั้งสองโมดูล ความน่าเชื่อถือจะเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{sys}(t) = R(t) + R(t)C(1-R(t))
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="416" HEIGHT="39" BORDER="0"
+ SRC="img781.png"
+ ALT="\begin{displaymath}
+R_{sys}(t) = R(t) + R(t)C(1-R(t))
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11.12)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เมื่อ <IMG
+ WIDTH="42" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$R(t)$"> เป็นค่าความน่าเชื่อถือของโมดูล  และ <IMG
+ WIDTH="21" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img694.png"
+ ALT="$C$"> เป็นการคุ้มครองจากความเสียหายของโมดูล จะสังเกตุได้ว่า ถ้าการคุ้มครองจากความเสียหายเท่ากับศูนย์ <IMG
+ WIDTH="56" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img782.png"
+ ALT="$C = 0$"> ค่าความน่าเชื่อถือของระบบจะเท่ากับความน่าเชื่อถือของโมดูลเดียว
+
+ถ้าค่าการคุ้มครองจากความเสียหายเท่ากับหนึ่ง <IMG
+ WIDTH="55" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img783.png"
+ ALT="$C = 1$"> เราสามารถยุบสมการได้เป็น
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{sys}(t) = 2R(t) - R^2(t)) = 1-(1-R(t))^2
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="453" HEIGHT="39" BORDER="0"
+ SRC="img784.png"
+ ALT="\begin{displaymath}
+R_{sys}(t) = 2R(t) - R^2(t)) = 1-(1-R(t))^2
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11.13)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ซึ่งก็คือความน่าเชื่อถือของระบบขนานนั้นเอง
+
+รูป <A HREF="node165.html#fig:fev110faultc">11.8</A> แสดงผลกระทบจากการคุ้มครองจากความเสียหายของระบบแบบขนานที่ประกอบด้วยสองโมดูล จากรูปแสดงความสัมพันธ์ระหว่างความน่าเชื่อถือของระบบเทียบกับค่าการคุ้มครองจากความเสียหาย ที่ค่าความน่าเชื่อถือของโมดูล <IMG
+ WIDTH="21" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img424.png"
+ ALT="$R$"> จะเห็นได้ว่าค่าความน่าเชื่อถือของระบบมีความสัมพันธ์แบบเชิงเส้นกับค่าการคุ้มครองจากความเสียหาย <IMG
+ WIDTH="21" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img694.png"
+ ALT="$C$"> พิจารณาที่ <IMG
+ WIDTH="55" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img783.png"
+ ALT="$C = 1$"> ค่าความน่าเชื่อถือของระบบเท่ากับ <IMG
+ WIDTH="129" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img785.png"
+ ALT="$1-(1-R(t))^2$"> ซึ่งเป็นค่าความน่าเชื่อถือของระบบขนานในอุดมคติ  และ ที่ <IMG
+ WIDTH="56" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img782.png"
+ ALT="$C = 0$"> ค่าความน่าเชื่อถือของระบบเท่ากับ <IMG
+ WIDTH="21" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img424.png"
+ ALT="$R$"> ซึ่งเป็นค่าความน่าเชื่อถือของระบบที่ประกอบด้วยหนึ่งโมดูล
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fev110faultc"></A><A NAME="5485"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 11.8:</STRONG>
+ผลกระทบจากการคุ้มครองจากความเสียหายของระบบแบบขนานที่ประกอบด้วยสองโมดูล</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="432" HEIGHT="300" ALIGN="BOTTOM" BORDER="0"
+ SRC="img786.png"
+ ALT="\includegraphics[width=3.8in]{fig/fev110faultc.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+จากการแสดงผลการคำนวณขั้นต้นจะเห็นได้ว่าการเสียหายของโมดูลที่สองไม่มีความสำคัญ  เว้นแต่ว่าโมดูลที่สองได้ทำงานแทนโมดูลหลัก นั่นคือระบบจะสามารถทำงานอย่างปกติตราบเท่าโมดูลหลักสามารถทำงานได้อย่างปกติ แม้ว่าโมดูลสำรองจะเสีย ในหลายระบบสภาวะการดังกล่าวอาจจะไม่สามารถใช้งานได้ ตัวอย่างเช่น  พิจารณาระบบที่ประกอบด้วยสองโมดูล และระบบจะทำการเปรียบเทียบเอาท์พุทที่ได้จากทั้งสองโมดูลเพื่อทำการตรวจสอบข้อผิดพลาด ถ้าสามารถตรวจจับความเสียหายได้ ทั้งสองโมดูลจะเข้าสู่ขั้นตอนการตรวจสอบความเสียหายเพื่อพิสูจน์ทราบว่าโมดูลไหนเสีย เมื่อสามารถทราบถึงโมดูลที่เสีย ระบบจะใช้โมดูลที่ปกติในการทำงานต่อไป ถ้าไม่สามารถหาได้ว่าโมดูลไหนเสีย ระบบจะหยุดทำงาน ดังนั้นจึงจำเป็นต้องรวมผลกระทบจากการที่ไม่สามารถตรวจสอบความเสียหายได้เข้าในการคำนวณความน่าเชื่อถือด้วย
+
+พิจารณาระบบในรูป <A HREF="node165.html#fig:fev9simplepa">11.7</A> ซึ่งประกอบด้วยสองโมดูลที่เหมือนกัน โดยเพิ่มการตรวจจับความเสียหายโดยการเปรียบเทียบโมดูลสองโมดูล โดยสมมุติว่าการเปรียบเทียบดังกล่าวมีความสมบูรณ์ และสามารถตรวจสอบความเสียหายที่อาจเกิดขึ้นได้ทั้งหมด
+
+ถ้ากระบวนการตรวจจับความเสียหายพบข้อผิดพลาด ระบบจะทำการหาว่าโมดูลไหนเสีย ถ้าสามารถทราบว่าโมดูลที่เสีย ระบบจะทำงานโดยใชัโมดูลที่ปกติต่อไป ระบบจะสามารถทำงานได้ตราบเท่าที่ทั้งสองโมดูลสามารถทำงานได้ หรือ สามารถหาจุดเสียและจัดการได้อย่างถูกต้อง ความน่าเชื่อถือของระบบสามารถเขียนได้ดังต่อไปนี้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{sys}(t) = R_1(t)R_2(t) + R_1(t)(1-R_2(t))C_2 + (1-R_1(t))C_1(R_2(t))
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="547" HEIGHT="39" BORDER="0"
+ SRC="img787.png"
+ ALT="\begin{displaymath}
+R_{sys}(t) = R_1(t)R_2(t) + R_1(t)(1-R_2(t))C_2 + (1-R_1(t))C_1(R_2(t))
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11.14)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+โดยที่ <IMG
+ WIDTH="49" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img779.png"
+ ALT="$R_1(t)$"> เป็นค่าความน่าเชื่อถือของโมดูล <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img778.png"
+ ALT="$1$">,  <IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img780.png"
+ ALT="$R_2(t)$"> เป็นค่าความน่าเชื่อถือของโมดูล <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img716.png"
+ ALT="$2$">, <IMG
+ WIDTH="26" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img777.png"
+ ALT="$C_1$"> เป็นการคุ้มครองจากความเสียหายของโมดูล <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img778.png"
+ ALT="$1$">, และ  <IMG
+ WIDTH="27" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img788.png"
+ ALT="$C_2$"> เป็นการคุ้มครองจากความเสียหายของโมดูล <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img716.png"
+ ALT="$2$"> และ  ค่าาความน่าเชื่อถือ และ การคุ้มครองจากความเสียหายเท่ากันทั้งสองโมดูล ความน่าเชื่อถือจะเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{sys}(t) = R^2(t) - 2RC(1-R(t))
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="414" HEIGHT="39" BORDER="0"
+ SRC="img789.png"
+ ALT="\begin{displaymath}
+R_{sys}(t) = R^2(t) - 2RC(1-R(t))
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11.15)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+พิจารณาที่ <IMG
+ WIDTH="55" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img783.png"
+ ALT="$C = 1$"> ค่าความน่าเชื่อถือของระบบเท่ากับ <IMG
+ WIDTH="129" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img785.png"
+ ALT="$1-(1-R(t))^2$"> ซึ่งเป็นค่าความน่าเชื่อถือของระบบขนานในอุดมคติ   และ ที่ <IMG
+ WIDTH="56" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img782.png"
+ ALT="$C = 0$"> ค่าความน่าเชื่อถือของระบบเท่ากับ <IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img790.png"
+ ALT="$R^2$"> ซึ่งเป็นค่าความน่าเชื่อถือที่ทั้งสองโมดูลสามารถทำงานได้อย่างถูกต้อง รูป <A HREF="node165.html#fig:fev110fcom">11.9</A> แสดงผลกระทบจากการคุ้มครองจากความเสียหายของระบบขนานที่ประกอบด้วยสองโมดูล
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fev110fcom"></A><A NAME="5498"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 11.9:</STRONG>
+ผลกระทบจากการคุ้มครองจากความเสียหายของระบบแบบขนานที่ประกอบด้วยสองโมดูล โดยที่ระบบจะทำการเปรียบเทียบเอาท์พุทที่ได้จากทั้งสองโมดูลเพื่อทำการตรวจสอบข้อผิดพลาด  และหาโมดูลที่เสีย</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="432" HEIGHT="300" ALIGN="BOTTOM" BORDER="0"
+ SRC="img791.png"
+ ALT="\includegraphics[width=3.8in]{fig/fev110fcom.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2849"
+  HREF="node166.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2843"
+  HREF="node156.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2837"
+  HREF="node164.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2845"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2847"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2850"
+  HREF="node166.html">หัวข้อสรุป</A>
+<B> Up:</B> <A NAME="tex2html2844"
+  HREF="node156.html">ตัวอย่างการวิเคราะห์ความน่าเชื่อถือ และการคุ้มครองจากความเสียหาย</A>
+<B> Previous:</B> <A NAME="tex2html2838"
+  HREF="node164.html">ตัวอย่าง: การคำนวณค่าความน่าเชื่อถือของระบบขนาน</A>
+ &nbsp <B>  <A NAME="tex2html2846"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2848"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

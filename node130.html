@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>การคงทนต่อความเสียหาย (Fault Tolerance):</TITLE>
+<META NAME="description" CONTENT="การคงทนต่อความเสียหาย (Fault Tolerance):">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="previous" HREF="node129.html">
+<LINK REL="up" HREF="node127.html">
+<LINK REL="next" HREF="node131.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2333"
+  HREF="node131.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2327"
+  HREF="node127.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2323"
+  HREF="node129.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2329"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2331"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2334"
+  HREF="node131.html">ระบบที่คงทนต่อความเสียหาย</A>
+<B> Up:</B> <A NAME="tex2html2328"
+  HREF="node127.html">แนวทางการออกแบบระบบที่ทนทานต่อการเสียหาย</A>
+<B> Previous:</B> <A NAME="tex2html2324"
+  HREF="node129.html">การซ่อนความเสียหาย (Fault Masking):</A>
+ &nbsp <B>  <A NAME="tex2html2330"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2332"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION001280030000000000000"></A>
+<A NAME="4403"></A>
+<BR>
+<FONT SIZE="+1">การคงทนต่อความเสียหาย (Fault Tolerance):</FONT>
+</H4> เป็นความสามารถของระบบที่จะทำงานต่อไปได้  ในสภาวะที่มีความเสียหายเกิดขึ้น เป้าหมายของระบบที่คงทนต่อความเสียหาย คือป้องกันการล้มเหลวของการทำงานของระบบเท่าที่สามารถทำได้ 
+ 
+ การคงทนต่อความเสียหายสามารถทำได้หลายวิธี  ซึ่งจะเป็นได้อย่างชัดเจนว่าการซ่อนความเสียหาย  เป็นเทคนิคหนึ่งของการคงทนต่อความเสียหาย วิธีการอื่นได้แก่การตรวจจับข้อผิดพลาด  และระบุตำแหน่งความเสียหาย เพื่อทำการจัดรูปการทำงานของระบบใหม่  (Reconfiguration)  และนำโมดูลที่เสียหายออกจากระบบ
+
+ การจัดรูปการทำงานของระบบเป็นขั้นตอนการนำโมดูลที่เสียหายออกจากระบบ  และนำระบบกลับมาทำงานอย่างต่อเนื่อง การทำการจัดรูปการทำงานของระบบ  ผู้ออกแบบจะต้องคำนึงถึงกระบวนการดังต่อไปนี้
+
+<OL>
+<LI>การตรวจจับความเสียหาย (Fault Detection):
+<A NAME="4405"></A> เป็นกระบวนการที่ตรวจจับว่ามีความเสียหายเกิดขึ้นหรือไม่ ซึ่งการตรวจจับความเสียหายมักเป็นความต้องการแรก ก่อนที่จะดำเนินการตามขั้นตอนอื่นต่อไป
+
+</LI>
+<LI>การระบุตำแหน่งความเสียหาย (Fault Location): <A NAME="4406"></A> เป็นกระบวนการสำหรับหาว่าระบบมีความเสียหายที่จุดไหน  เพื่อที่จะสามารถดำเนินการกู้คืนได้ถูกต้อง
+
+</LI>
+<LI>การจำกัดเขตความเสียหาย (Fault Containment):
+<A NAME="4407"></A> เป็นกระบวนการเพื่อแยกหรือกันความเสียหายออกจากการทำงานของระบบ  เพื่อไม่ให้ความเสียหายดังกล่าวส่งผลกระทบต่อส่วนอื่นของระบบ  หรือแพร่กระจายไปทั้งระบบ การจำกัดเขตความเสียหายเป็นส่วนสำคัญที่ขาดไม่ได้ของระบบที่คงทนต่อความเสียหายทุกระบบ
+
+</LI>
+<LI>การกู้คืนจากความเสียหาย (Fault Recovery): <A NAME="4408"></A> เป็นกระบวนการที่ทำให้ระบบสามารถทำงานได้ต่อเนื่อง หรือกลับมาทำงานได้ ระหว่างการจัดรูปแบบการทำงาน เมื่อเกิดความเสียหายขึ้น
+</LI>
+</OL>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

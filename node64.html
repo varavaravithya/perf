@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ตัวอย่าง: การประยุกต์ จากการเปลี่ยนแปลงระบบ</TITLE>
+<META NAME="description" CONTENT="ตัวอย่าง: การประยุกต์ จากการเปลี่ยนแปลงระบบ">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node65.html">
+<LINK REL="previous" HREF="node63.html">
+<LINK REL="up" HREF="node58.html">
+<LINK REL="next" HREF="node65.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1353"
+  HREF="node65.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1347"
+  HREF="node58.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1341"
+  HREF="node63.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1349"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1351"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1354"
+  HREF="node65.html">ตัวอย่าง: เปรียบเทียบ กับ</A>
+<B> Up:</B> <A NAME="tex2html1348"
+  HREF="node58.html">ระบบคิว และ</A>
+<B> Previous:</B> <A NAME="tex2html1342"
+  HREF="node63.html">ตัวอย่าง: การประยุกต์</A>
+ &nbsp <B>  <A NAME="tex2html1350"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1352"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00860000000000000000">
+ตัวอย่าง: การประยุกต์ <IMG
+ WIDTH="79" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$M/M/m$"> จากการเปลี่ยนแปลงระบบ</A>
+</H1>
+
+<P>
+ถ้านักศึกษาต้องการใช้เวลาในการรอโดยเฉลี่ยน้อยกว่า 2 นาที และรอน้อยกว่า 5 นาทีมากกว่า 90 % ของการเข้าใช้ห้องปฏิบัติการคอมพิวเตอร์ จงระบุจำนวนคอมพิวเตอร์ที่ต้องการในการให้คุณภาพการบริการดังกล่าว
+
+<P>
+เราเริ่มจากการคำนวณจำนวนเครื่องบริการ <IMG
+ WIDTH="104" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img247.png"
+ ALT="$m=6,7,\ldots$"> เครื่อง โดยให้อัตราการเข้าใช้งาน <!-- MATH
+ $\lambda = 0.167$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img248.png"
+ ALT="$\lambda = 0.167$"> และอัตราการบริการ <IMG
+ WIDTH="75" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img249.png"
+ ALT="$\mu = 0.05$">, ตามลำดับ
+
+<P>
+จำนวนครื่องบริการ <IMG
+ WIDTH="57" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img250.png"
+ ALT="$m=6$"> เราจะได้
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Traffic~intensity~~\rho = \frac{0.167}{6\times 0.05} = 0.556
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="449" HEIGHT="48" BORDER="0"
+ SRC="img251.png"
+ ALT="\begin{displaymath}
+Traffic~intensity~~\rho = \frac{0.167}{6\times 0.05} = 0.556
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.30)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Probability~of~all~terminals~being~idle = p_0 = 0.0346
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="503" HEIGHT="37" BORDER="0"
+ SRC="img252.png"
+ ALT="\begin{displaymath}
+Probability~of~all~terminals~being~idle = p_0 = 0.0346
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.31)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Probability~of~all~terminals~being~busy = \varrho = 0.15
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="493" HEIGHT="37" BORDER="0"
+ SRC="img253.png"
+ ALT="\begin{displaymath}
+Probability~of~all~terminals~being~busy = \varrho = 0.15
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.32)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Average~waiting~time = E[w] = 1.1~~~minutes
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="473" HEIGHT="39" BORDER="0"
+ SRC="img254.png"
+ ALT="\begin{displaymath}
+Average~waiting~time = E[w] = 1.1~~~minutes
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.33)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+90-Percentile ของเวลาที่รอรับบริการเท่ากับ 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\max\left\{0,\frac{1.1}{0.15}\ln(10\times0.15)\right \}
+= \max\{0,3.0\} = 3.0
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="478" HEIGHT="48" BORDER="0"
+ SRC="img255.png"
+ ALT="\begin{displaymath}
+\max\left\{0,\frac{1.1}{0.15}\ln(10\times0.15)\right \}
+= \max\{0,3.0\} = 3.0
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5.34)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ดังนั้นเพิ่มเครื่องบริการอีกหนึ่งเครื่องจะเพียงพอต่อความต้องการของนักศึกษา
+
+<P>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

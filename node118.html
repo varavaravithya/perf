@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>กล่าวนำ</TITLE>
+<META NAME="description" CONTENT="กล่าวนำ">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node119.html">
+<LINK REL="previous" HREF="node117.html">
+<LINK REL="up" HREF="node115.html">
+<LINK REL="next" HREF="node119.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2162"
+  HREF="node119.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2156"
+  HREF="node115.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2150"
+  HREF="node117.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2158"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2160"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2163"
+  HREF="node119.html">ตัววัดประสิทธิภาพของระบบที่คงทนต่อความเสียหาย</A>
+<B> Up:</B> <A NAME="tex2html2157"
+  HREF="node115.html">พื้นฐานระบบที่คงทนต่อความเสียหาย</A>
+<B> Previous:</B> <A NAME="tex2html2151"
+  HREF="node117.html">หัวข้อสำคัญในครั้งก่อน</A>
+ &nbsp <B>  <A NAME="tex2html2159"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2161"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001230000000000000000">
+กล่าวนำ</A>
+</H1>
+
+ในการประเมินประสิทธิภาพของระบบคอมพิวเตอร์สามารถเกิดผลลัพธ์ของการทำงานได้สามลักษณะที่สามารถแจกแจงได้ดังต่อไปนี้
+
+<UL>
+<LI>ระบบสามารถบริการได้อย่างถูกต้อง 
+</LI>
+<LI>ระบบสามารถบริการได้อย่างไม่ถูกต้อง หรือ
+</LI>
+<LI>ระบบไม่สามารถบริการได้ 
+</LI>
+</UL>
+
+ในกรณีที่ระบบสามารถตอบสนองได้อย่างถูกต้อง ตัววัดประสิทธิภาพได้แก่ เวลาตอบสนอง, อัตราการทำงาน, และ ภาระงานของเครื่องบริการ ซึ่งได้กล่าวในรายละเอียดมาในบทก่อนหน้า แสดงในรูป <A HREF="node118.html#fig:outcome1">9.1</A>
+
+ในกรณีที่ระบบทำงานผิดพลาดหรือไม่สามารถทำงานได้ ตัววัดประสิทธิภาพจะอยู่ในรูปของความน่าจะเป็นที่เกิดเหตุการณ์หนึ่งๆ ระบบคอมพิวเตอร์ที่เกี่ยวข้องกับความน่าจะเป็นลักษณะดังกล่าว คือ ระบบคอมพิวเตอร์ที่คงทนต่อความเสียหาย ในบทนี้จะกล่าวถึงพื้นฐานของระบบคอมพิวเตอร์ที่ทนต่อความเสียหาย และนิยามตัววัดประสิทธิภาพต่างๆ ก่อนที่จะกล่าวถึงวิธีการวิเคราะห์ในบทต่อไป
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:outcome1"></A><A NAME="4298"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.1:</STRONG>
+การแจกแจงบริการของระบบ</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="630" HEIGHT="524" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.png"
+ ALT="\includegraphics[width=5.5in]{fig/outcome.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<EM>ระบบที่คงทนต่อความเสียหาย</EM> (Fault-Tolerant System) คือระบบคอมพิวเตอร์ที่ยังสามารถทำงานได้อย่างถูกต้องตามฟังก์ชั่น ในขณะที่เกิดความเสียหายทางฮารด์แวร์ หรือความผิดพลาดทางซอฟต์แวร์ ตัวอย่างเช่น ระบบซอฟต์แวร์ที่คงทนต่อการเสียหาย สามารถทำงานได้อย่างถูกต้อง ในขณะที่มี Bug ในซอฟต์แวร์นั้น เช่นเดียวกัน ในขณะที่เกิดความเสียหายทางฮารด์แวร์ ระบบฮารด์แวร์ที่คงทนต่อความเสียหายยังคงทำงานให้สำเร็จตามงานได้ตามที่ออกแบบมา
+<A NAME="4302"></A>
+<A NAME="4303"></A>
+
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

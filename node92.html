@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ตัวอย่าง:</TITLE>
+<META NAME="description" CONTENT="ตัวอย่าง:">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="previous" HREF="node91.html">
+<LINK REL="up" HREF="node90.html">
+<LINK REL="next" HREF="node93.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1772"
+  HREF="node93.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1766"
+  HREF="node90.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1762"
+  HREF="node91.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1768"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1770"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1773"
+  HREF="node93.html">กฎของ Little</A>
+<B> Up:</B> <A NAME="tex2html1767"
+  HREF="node90.html">กฎการไหลต่อเนื่องของงาน (Forced Flow Law)</A>
+<B> Previous:</B> <A NAME="tex2html1763"
+  HREF="node91.html">ตัวอย่าง:</A>
+ &nbsp <B>  <A NAME="tex2html1769"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1771"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION001050020000000000000">
+<FONT SIZE="+1">ตัวอย่าง:</FONT></A>
+</H4> จากระบบคอมพิวเตอร์ในรูป <A HREF="node91.html#fig:timeqt1">7.3</A> เมื่อค่าอัตราการแวะเวียนเท่ากับ  <IMG
+ WIDTH="72" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img356.png"
+ ALT="$V_A= 80$">, <IMG
+ WIDTH="81" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img357.png"
+ ALT="$V_B= 100$">, และ <IMG
+ WIDTH="102" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img397.png"
+ ALT="$V_{CPU} = 181$">
+
+<P>
+จะเห็นได้ว่าหลังจากที่งานเสร็จการรับบริการจากตัวประมวลผลกลาง, ความน่าจะเป็นที่งานจะออกไปยังดิสก์ A, ดิสก์ B หรือเทอร์มินอล เท่ากับ <!-- MATH
+ $\frac{80}{181}$
+ -->
+<IMG
+ WIDTH="31" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img398.png"
+ ALT="$\frac{80}{181}$">, <!-- MATH
+ $\frac{100}{181}$
+ -->
+<IMG
+ WIDTH="30" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img399.png"
+ ALT="$\frac{100}{181}$">,  และ <IMG
+ WIDTH="31" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img400.png"
+ ALT="$\frac{1}{181}$"> ตามลำดับ  ดังนั้นค่าความน่าจะเป็นในการเปลี่ยนแปลงเท่ากับ 0.4420, 0.5525, และ  0.005525
+
+<P>
+จากค่าความน่าจะเป็นการเปลี่ยนแปลง  เราสามารถหากลับค่าอัตราการแวะเวียนได้ดังนี้
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+V_A &=& \frac{04420}{0.005525} = 80\\
+V_B &=& \frac{0.5525}{0.005525} = 100\\
+V_{CPU} &=& 1 + V_A + V_B = 1 + 80 + 100 = 181
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="27" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img401.png"
+ ALT="$\displaystyle V_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="125" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img402.png"
+ ALT="$\displaystyle \frac{04420}{0.005525} = 80$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.39)</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="28" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img403.png"
+ ALT="$\displaystyle V_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="134" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img404.png"
+ ALT="$\displaystyle \frac{0.5525}{0.005525} = 100$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.40)</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="49" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img405.png"
+ ALT="$\displaystyle V_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="287" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img406.png"
+ ALT="$\displaystyle 1 + V_A + V_B = 1 + 80 + 100 = 181$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.41)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

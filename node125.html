@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ความเสียหาย, ความผิดพลาด, และความล้มเหลวของระบบ</TITLE>
+<META NAME="description" CONTENT="ความเสียหาย, ความผิดพลาด, และความล้มเหลวของระบบ">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node126.html">
+<LINK REL="previous" HREF="node120.html">
+<LINK REL="up" HREF="node115.html">
+<LINK REL="next" HREF="node126.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2262"
+  HREF="node126.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2256"
+  HREF="node115.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2250"
+  HREF="node124.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2258"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2260"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2263"
+  HREF="node126.html">สาเหตุของความเสียหาย</A>
+<B> Up:</B> <A NAME="tex2html2257"
+  HREF="node115.html">พื้นฐานระบบที่คงทนต่อความเสียหาย</A>
+<B> Previous:</B> <A NAME="tex2html2251"
+  HREF="node124.html">การประยุกต์ใช้ในระบบที่มีความสามารถในการคงการบริการสูง (High Availability Applications)</A>
+ &nbsp <B>  <A NAME="tex2html2259"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2261"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001260000000000000000"></A>
+<A NAME="4365"></A><A NAME="4366"></A><A NAME="4367"></A>
+<A NAME="4368"></A><A NAME="4369"></A><A NAME="4370"></A>
+<BR>
+ความเสียหาย, ความผิดพลาด, และความล้มเหลวของระบบ
+</H1>
+
+นิยามที่สำคัญของระบบคงทนต่อความเสียหายได้แก่ <B>ความเสียหาย</B> (Fault), <B>ความผิดพลาด</B> (Error), และ <B>ความล้มเหลว</B> (Failure) เนื่องจากนิยามเหล่านี้มีความสัมพันธ์กัน กล่าวคือ ความเสียหายก่อให้เกิดความผิดพลาด และ ความผิดพลาดก่อให้เกิดความล้มเหลว ตามลำดับ
+
+<B>ความเสียหาย</B>หมายถึงความเสียหายทางกายภาพของฮาร์ดแวร์ หรือซอฟต์แวร์ ความเสียหายอาจเกิดจากความไม่สมบูรณ์ของตัวนำ ความไม่สมบูรณ์ของสารกึ่งตัวนำในการผลิต หรือในซอฟต์แวร์เป็นการทำวงรอบที่ไม่สิ้นสุด
+
+<B>ความผิดพลาด</B>เป็นการขยายผลสืบเนื่องจากความเสียหาย   ความผิดพลาดเป็นการทำงานที่แตกต่างไปจากความถูกต้อง  หรือความเที่ยงตรงในการทำงาน เช่น ความเสียหายจากความไม่สมบูรณ์ของตัวนำทำให้ค่าสัญญาณติดอยู่ที่ลอจิก 1  ซึ่งถ้าค่าจริงของระบบควรจะเป็นลอจิก 0 เมื่อมีความผิดพลาดเกิดขึ้น  เป็นได้ว่าความผิดพลาดเป็นผลมาจากความเสียหาย 
+
+<B>ความล้มเหลว</B> เป็นสภาวะที่ระบบไม่สามารถทำงานได้ตามฟังก์ชั่นพื้นฐานที่ถูกออกแบบมา สภาวะดังกล่าวอาจเรียกว่า Malfunction <A NAME="4377"></A> เมื่อเกิดความเสียหาย และต่อมาส่งผลให้เกิดความผิดพลาด  สุดท้ายจะส่งผลให้ระบบล้มเหลว  
+
+รูป <A HREF="node125.html#fig:ft4course">9.5</A> แสดงลำดับของการเกิดของความเสียหาย ความผิดพลาด, และความล้มเหลว
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:ft4course"></A><A NAME="4381"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.5:</STRONG>
+ลำดับของการเกิดของความเสียหาย, ความผิดพลาด, และความล้มเหลว</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="434" HEIGHT="56" ALIGN="BOTTOM" BORDER="0"
+ SRC="img615.png"
+ ALT="\includegraphics[width=3.8in]{fig/ft4course.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

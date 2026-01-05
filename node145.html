@@ -1,0 +1,750 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>อัตราการเสียหาย และฟังก์ชั่นความน่าเชื่อถือ</TITLE>
+<META NAME="description" CONTENT="อัตราการเสียหาย และฟังก์ชั่นความน่าเชื่อถือ">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="previous" HREF="node144.html">
+<LINK REL="up" HREF="node144.html">
+<LINK REL="next" HREF="node146.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2558"
+  HREF="node146.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2552"
+  HREF="node144.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2548"
+  HREF="node144.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2554"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2556"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2559"
+  HREF="node146.html">เวลาเฉลี่ยก่อนการเสียหาย (MTTF)</A>
+<B> Up:</B> <A NAME="tex2html2553"
+  HREF="node144.html">การประเมินเชิงปริมาณ</A>
+<B> Previous:</B> <A NAME="tex2html2549"
+  HREF="node144.html">การประเมินเชิงปริมาณ</A>
+ &nbsp <B>  <A NAME="tex2html2555"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2557"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION001341000000000000000"></A>
+<A NAME="4678"></A>
+<A NAME="4679"></A>
+<A NAME="4680"></A>
+<A NAME="4681"></A>
+<BR>
+อัตราการเสียหาย และฟังก์ชั่นความน่าเชื่อถือ
+</H2>
+
+<EM>อัตราความเสียหาย  คือจำนวนของอุปกรณ์อย่างหนึ่งที่คาดว่าจะเสียในช่วงเวลาที่กำหนด</EM> ตัวอย่างเช่น ถ้าคอมพิวเตอร์เสีย โดยเฉลี่ยหนึ่งตัวในทุก  2000 ชั่วโมง คอมพิวเตอร์ดังกล่าวจะมีอัตราความเสียหายเท่ากับ  หนึ่งความเสียหายต่อ 2000 ชั่วโมง หรือ 1/2000 ความเสียหายต่อชั่วโมง
+ 
+ อัตราความเสียหายเป็นการวัดตัวหนึ่งที่ใช้ในการเปรียบเทียบระบบคอมพิวเตอร์  เช่นในการเลือกคอมพิวเตอร์ที่มาใช้งานในธนาคาร  เราต้องการคอมพิวเตอร์ที่มีความเสียหายน้อยที่สุดเท่าที่จะเป็นไปได้  ถ้าเรานำระบบที่ออกแบบมาให้สามารถคงทนต่อความเสียหาย โดยใช้อุปกรณ์ทำงานซ้ำซ้อนกัน  ระบบในลักษณะดังกล่าวควรจะมีอัตราความเสียหาย หรือ ล้มเหลวในการทำงานต่ำกว่าระบบที่ไม่ได้ออกแบบมาให้คงทนต่อความเสียหาย 
+
+ เพื่อให้สามารถเข้าใจสมการทางคณิตศาสตร์ของอัตราความเสียหาย  จำป็นต้องกล่าวถึงนิยามของฟังก์ชั่นความน่าจะเป็น.  ความน่าเชื่อถือของระบบ <IMG
+ WIDTH="42" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$R(t)$"> ของอุปกรณ์ หรือ ของระบบ   นิยามเป็นความน่าจะเป็นแบบมีเงื่อนไขของระบบที่จะทำงานอย่างถูกต้องตลอดช่วงเวลา  <IMG
+ WIDTH="46" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img602.png"
+ ALT="$[t_0, t]$"> โดยที่ระบบทำงานอย่างถูกต้องที่เวลา <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img603.png"
+ ALT="$t_0$">. 
+ 
+ สมมุติว่ามีอุปกรณ์ทั้งหมด <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> ชุด และให้อุปกรณ์ทั้ง <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> ชุดเริ่มทำงานได้อย่างสมบูรณ์ที่เวลา <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img603.png"
+ ALT="$t_0$">.  จากนั้นทำการบันทึกค่าอุปกรณ์ที่เสีย และอุปกรณ์ที่ยังทำงานได้ที่เวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> ให้ <IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img631.png"
+ ALT="$N_f(t)$"> เป็นจำนวนอุปกรณ์ที่เสียที่เวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> และ  <IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img632.png"
+ ALT="$N_o(t)$"> เป็นจำนวนอุปกรณ์ที่ยังทำงานได้ที่เวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> โดยสมมุติให้ถ้าอุปกรณ์เสียแล้วจะไม่สามารถกลับขึ้นมาทำงานได้อีก  ค่าความน่าเชื่อถือของอุปกรณ์ที่เวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> มีค่าเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(t) = \frac{N_o(t)}{N} = \frac{N_o(t)}{N_o(t) + N_f(t)}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="403" HEIGHT="52" BORDER="0"
+ SRC="img633.png"
+ ALT="\begin{displaymath}
+R(t) = \frac{N_o(t)}{N} = \frac{N_o(t)}{N_o(t) + N_f(t)}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+นั่นคือค่าความน่าจะเป็นที่อุปกรณ์ที่ทำงานได้ในช่วงเวลา <IMG
+ WIDTH="46" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img602.png"
+ ALT="$[t_0, t]$"> ความน่าจะเป็นที่อุปกรณ์ไม่สามารถทำงานได้ เรียกว่าความไม่น่าเชื่อถือ (Unreliability) แสดงโดย
+<A NAME="4689"></A>
+<A NAME="4690"></A>
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Q(t) = \frac{N_f(t)}{N} = \frac{N_f(t)}{N_o(t) + N_f(t)}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="405" HEIGHT="52" BORDER="0"
+ SRC="img634.png"
+ ALT="\begin{displaymath}
+Q(t) = \frac{N_f(t)}{N} = \frac{N_f(t)}{N_o(t) + N_f(t)}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ที่เวลาใดๆ <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> ค่า <!-- MATH
+ $R(t) = 1 - Q(t)$
+ -->
+<IMG
+ WIDTH="135" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img635.png"
+ ALT="$R(t) = 1 - Q(t)$"> เนื่องจาก 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(t) + Q(t) =\frac{N_o(t) + N_f(t)}{N_o(t) + N_f(t)} = 1.0
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="423" HEIGHT="52" BORDER="0"
+ SRC="img636.png"
+ ALT="\begin{displaymath}
+R(t) + Q(t) =\frac{N_o(t) + N_f(t)}{N_o(t) + N_f(t)} = 1.0
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เราสามารถเขียนฟังก์ชั่นของความน่าจะเป็นได้เท่ากับ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(t) = 1.0 - \frac{N_f(t)}{N}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="357" HEIGHT="47" BORDER="0"
+ SRC="img637.png"
+ ALT="\begin{displaymath}
+R(t) = 1.0 - \frac{N_f(t)}{N}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ทำการดิฟเฟอร์เรนชิเอทเทียบกับเวลาจะได้ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{dR(t)}{dt} = -\frac{1}{N}\frac{dN_f(t)}{dt}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="364" HEIGHT="47" BORDER="0"
+ SRC="img638.png"
+ ALT="\begin{displaymath}
+\frac{dR(t)}{dt} = -\frac{1}{N}\frac{dN_f(t)}{dt}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ซึ่งสามารถเขียนได้เป็น 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{dN_f(t)}{dt} = -N\frac{dR(t)}{dt}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="361" HEIGHT="47" BORDER="0"
+ SRC="img639.png"
+ ALT="\begin{displaymath}
+\frac{dN_f(t)}{dt} = -N\frac{dR(t)}{dt}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่าสมการของ <IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img631.png"
+ ALT="$N_f(t)$"> และ <!-- MATH
+ $\frac{dN_f(t)}{dt}$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img640.png"
+ ALT="$\frac{dN_f(t)}{dt}$"> 
+เป็นค่าชั่วขณะที่อุปกรณ์จะเสียหาย.  ที่เวลาใดๆ <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> 
+ระบบจะมีอุปกรณ์จำนวน <IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img632.png"
+ ALT="$N_o(t)$"> ชุดที่ยังทำงานได้อยู่.
+ ถ้าเราหาร  <!-- MATH
+ $\frac{dN_f(t)}{dt}$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img640.png"
+ ALT="$\frac{dN_f(t)}{dt}$"> ด้วย <IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img632.png"
+ ALT="$N_o(t)$"> จะได้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+z(t) = \frac{1}{N_o(t)}\frac{dN_f(t)}{dt}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="360" HEIGHT="52" BORDER="0"
+ SRC="img641.png"
+ ALT="\begin{displaymath}
+z(t) = \frac{1}{N_o(t)}\frac{dN_f(t)}{dt}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<IMG
+ WIDTH="37" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img642.png"
+ ALT="$z(t)$"> 
+คือค่าฟังก์ชั่นของการเสียหายมีหน่วยเป็นจำนวนที่เสียหายต่อเวลา (ค่า <IMG
+ WIDTH="37" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img642.png"
+ ALT="$z(t)$"> 
+มีชื่อเรียกหลายชื่อได้แก่ Hazard Function, Hazard Rate, 
+Failure Rate Function)
+
+ค่าฟังก์ชั่นของการเสียหาย สามารถแสดงได้หลายรูปแบบ 
+เช่นสามารถแสดงอยู่ในรูปของความน่าเชื่อถือ R(t) ได้เป็น 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+z(t) = \frac{1}{N_o(t)}\frac{dN_f(t)}{dt} = 
+\frac{1}{N_o(t)}\left[ -\frac{R(t)}{dt}\right] =
+-\frac{\frac{dR(t)}{dt}}{R(t)}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="475" HEIGHT="59" BORDER="0"
+ SRC="img643.png"
+ ALT="\begin{displaymath}
+z(t) = \frac{1}{N_o(t)}\frac{dN_f(t)}{dt} =
+\frac{1}{N_o(...
+...ft[ -\frac{R(t)}{dt}\right] =
+-\frac{\frac{dR(t)}{dt}}{R(t)}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+หรือแสดงอยู่ในรูปของความไม่น่าเชื่อถือ Q(t) เท่ากับ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+z(t) = -\frac{\frac{dR(t)}{dt}}{R(t)} 
+=  \frac{\frac{dQ(t)}{dt}}{1-Q(t)}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="383" HEIGHT="58" BORDER="0"
+ SRC="img644.png"
+ ALT="\begin{displaymath}
+z(t) = -\frac{\frac{dR(t)}{dt}}{R(t)}
+= \frac{\frac{dQ(t)}{dt}}{1-Q(t)}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่าดิฟเฟอร์เรนชิเอตของความไม่น่าเชื่อถือ <!-- MATH
+ $\frac{dQ(t)}{dt}$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img645.png"
+ ALT="$\frac{dQ(t)}{dt}$"> เรียกว่าฟังก์ชั่นความหนาแน่นของความเสียหาย (Failure Density Function)
+
+ค่าฟังก์ชั่นของอัตราความเสียหายขึ้นอยู่กับเวลาเนื่องจากค่า <IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img632.png"
+ ALT="$N_o(t)$"> และค่า 
+ <!-- MATH
+ $\frac{dN_f(t)}{dt}$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img640.png"
+ ALT="$\frac{dN_f(t)}{dt}$"> เปลี่ยนแปลงเป็นฟังก์ชั่นของเวลา อย่างไรก็ตามจากประสบการณ์พบว่า  อุปกรณ์อิเล็กทรอนิกส์มีช่วงการทำงานในอายุการใช้งานที่ค่า <IMG
+ WIDTH="37" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img642.png"
+ ALT="$z(t)$"> ค่อนข้างคงที่. ความสัมพันธ์ระหว่างฟังก์ชั่นของอัตราความเสียหายกับเวลา  ของอุปกรณ์อิเล็กทรอนิกส์ มักใช้รูปเส้นโค้งที่มีรูปลักษณะ ``อ่างน้ำ'' 
+ ในการอธิบาย,  แสดงในรูป <A HREF="node145.html#fig:fev1bath">10.1</A>  เส้นโค้งอ่างน้ำสมมุติว่าในช่วงเริ่มต้น การใช้งานระบบจะมีอัตราการเสียหายสูง เนื่องจากอุปกรณ์ไม่สมบูรณ์ ช่วงดังกล่าวเรียกว่า <EM>การเสียหายช่วงเริ่มต้น</EM> (Early-Life หรือ Infant Mortality) อีกด้านหนึ่งของเส้นโค้งเป็นช่วงเสื่อมสภาพการใช้งาน  เนื่องจากอุปกรณ์ได้ถูกใช้มาเป็นระยะเวลานาน  การเสื่อมทางกายภาพเริ่มเกิดขึ้น  และระบบเริ่มเสียหายจากการเสื่อมของอุปกรณ์ต่างๆ  ช่วงขึ้นของเส้นโค้งเรียกว่า Wear-Out Phase.  ในช่วงการทำงานระหว่างกลาง  ค่าฟังก์ชั่นของอัตราความเสียหายมีค่าค่อนข้างคงที่ ช่วงดังกล่าวเรียกว่า ``ช่วงใช้งาน'' (Useful Life Phase) ของระบบ.  ค่าอัตราความเสียหายในช่วงดังกล่าวสมมุติให้มีค่าเท่ากับ <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> (<IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> เป็นค่าอัตราความเสียหายที่มักมีหน่วยเป็นจำนวนเสียหายต่อหน่วยเวลา)
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fev1bath"></A><A NAME="4758"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 10.1:</STRONG>
+ความสัมพันธ์ระหว่างฟังก์ชั่นของอัตราความเสียหายกับเวลา 
+ เป็นเส้นโค้งที่มีรูปลักษณะอ่างน้ำ</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="341" HEIGHT="259" ALIGN="BOTTOM" BORDER="0"
+ SRC="img646.png"
+ ALT="\includegraphics[width=3in]{fig/fev1bath.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ช่วงเวลาที่อัตราความเสียหายมีค่าคงที่ เป็นช่วงที่เราสามารถใช้ประโยชน์ได้จากระบบ ในช่วงดังกล่าว ผู้ใช้งานสามารถคาดประสิทธิภาพที่จะได้รับจากการบริการของระบบ ในการใช้งานจริงเราพยายามข้ามช่วงการเสียหายช่วงเริ่มต้น  โดยการใช้งานที่เรียกว่า Burn-in ที่เป็นการใช้งานอย่างเต็มที่ในช่วงเริ่มแรก โดยมีจุดประสงค์ที่จะเอาอุปกรณ์ที่ไม่สมบูรณ์  หรืออ่อนแอออกไปจากระบบ และเป็นการเร่งให้ระบบเข้าสู่ช่วงการใช้งานให้เร็วขึ้น โดยทั่วไปเราจะทำการเปลี่ยนอุปกรณ์ใหม่ก่อนช่วง Wear-Out  ดังนั้น ประสิทธิภาพที่จะได้จากระบบจะอยู่ในช่วงการใช้งาน
+
+จากที่กล่าวมาแล้ว ค่าฟังก์ชั่นอัตราความเสียหาย สามารถเขียนในความสัมพันธ์ของฟังก์ชั่นความน่าเชื่อถือเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+z(t) = \frac{1}{N_o(t)}\frac{dN_f(t)}{dt} =
+-\frac{N}{N_o(t)}\frac{dR(t)}{dt}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="428" HEIGHT="52" BORDER="0"
+ SRC="img647.png"
+ ALT="\begin{displaymath}
+z(t) = \frac{1}{N_o(t)}\frac{dN_f(t)}{dt} =
+-\frac{N}{N_o(t)}\frac{dR(t)}{dt}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.10)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่า <!-- MATH
+ $\frac{N}{N_o(t)}$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img648.png"
+ ALT="$\frac{N}{N_o(t)}$"> เป็นส่วนกลับของฟังก์ชั่นความน่าจะเป็น <IMG
+ WIDTH="42" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$R(t)$"> ดังนั้น เราสามารถเขียนเป็น
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+z(t) = -\frac{1}{R(t)}\frac{dR(t)}{dt}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="359" HEIGHT="52" BORDER="0"
+ SRC="img649.png"
+ ALT="\begin{displaymath}
+z(t) = -\frac{1}{R(t)}\frac{dR(t)}{dt}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.11)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เมื่อจัดรูปสมการใช้อยู่ในรูปของสมการดิฟเฟอร์เรนเชียลจะได้ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{dR(t)}{dt} = -z(t)R(t)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="357" HEIGHT="47" BORDER="0"
+ SRC="img650.png"
+ ALT="\begin{displaymath}
+\frac{dR(t)}{dt} = -z(t)R(t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.12)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ถ้าเราสมมุติให้ระบบทำงานอยู่ในช่วงใชังาน 
+ซึ่งค่าอัตราความเสียหายมีค่าคงที่เท่ากับ <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> 
+เราสามารถแก้สมการดิฟเฟอร์เรนเชียลได้เป็น
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(t) = e^{-\lambda t}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="327" HEIGHT="39" BORDER="0"
+ SRC="img651.png"
+ ALT="\begin{displaymath}
+R(t) = e^{-\lambda t}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.13)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เมื่อ <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> เป็นอัตราความเสียหายคงที่ ความสัมพันธ์ Exponential ระหว่างความน่าเชื่อถือกับเวลาเราเรียกว่ากฎการเสียหายแบบ Exponential ซึ่งให้ค่าอัตราความเสียหายมีค่าคงที่ และค่าความน่าเชื่อถือแปรผันแบบ Exponential กับเวลา
+
+ กฎการเสียหายแบบ Exponential  มีประโยชน์อย่างยิ่งต่อการวิเคราะห์ค่าความน่าเชื่อถือของอุปกรณ์อิเล็กทรอนิกส์ และเป็นความสัมพันธ์ Exponential ระหว่างความน่าเชื่อถือกับเวลาที่ใช้อย่างแพร่หลายมากที่สุด  อย่างไรก็ตาม เราไม่สามารถใช้กฎการเสียหายแบบ Exponential  ได้ ถ้าค่าอัตราความเสียหายไม่เป็นค่าคงที่  จำเป็นต้องใช้การจำลองแบบอื่นแทน  ตัวอย่างของอัตราการเสียหายที่เปลี่ยนแปลงตามเวลาได้แก่ระบบซอฟต์แวร์ การเสียหายในระบบซอฟต์แวร์มีผลมาจากการออกแบบที่มีจุดบกพร่อง.  หลังจากที่ซอฟต์แวร์ได้รับการใช้งาน ผู้ใช้จะพบข้อบกพร่องนั้น  และจะถูกแก้ไข จากนั้นอัตราการเสียหายจะลดลงเมื่อเวลาผ่านไป
+
+ วิธีการที่ใช้กันมากในการแสดงระบบ ที่อัตราการเสียหายที่เปลี่ยนแปลงตามเวลา ได้แก่ การกระจายแบบ  <B>Weibull</B> อัตราความเสียหายแสดงโดย
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+z(t) = \alpha\lambda(\lambda t)^{\alpha -1}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="348" HEIGHT="39" BORDER="0"
+ SRC="img652.png"
+ ALT="\begin{displaymath}
+z(t) = \alpha\lambda(\lambda t)^{\alpha -1}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.14)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เมื่อ <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img653.png"
+ ALT="$\alpha$"> และ <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> เป็นค่าคงที่ สำหรับควบคุมการเปลี่ยนแปลงของอัตราความเสียหายเทียบกับเวลา ตัวอย่างเช่น ถ้าค่าของ <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img653.png"
+ ALT="$\alpha$"> เท่ากับ 1, z(t) ก็คือค่า  <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$">. ถ้าค่า  <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img653.png"
+ ALT="$\alpha$"> มีค่ามากกว่า 1, ค่า z(t) จะมีค่าเพิ่มขึ้นเมื่อเวลาเพิ่มขึ้น เช่นเดียวกันถัา ค่า  <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img653.png"
+ ALT="$\alpha$"> มีค่าน้อยกว่า 1, ค่า z(t) จะมีค่าลดลงเมื่อเวลาผ่านไป จากตัวอย่างของระบบซอฟต์แวร์เราสามารถจำลองการทำงานของอัตราความเสียหายโดยใช้ค่า <IMG
+ WIDTH="53" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img654.png"
+ ALT="$\alpha &lt; 1$">
+
+ค่าฟังก์ชั่นความน่าจะเป็นที่ใช้การกระจายแบบ Weibull คือค่าคำตอบของสมการดิฟเฟอร์เรนเชียล
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{dR(t)}{dt} = -z(t)R(t) = -\alpha\lambda(\lambda t)^{\alpha-1}R(t)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="436" HEIGHT="47" BORDER="0"
+ SRC="img655.png"
+ ALT="\begin{displaymath}
+\frac{dR(t)}{dt} = -z(t)R(t) = -\alpha\lambda(\lambda t)^{\alpha-1}R(t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.15)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ซึ่งเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(t) = e^{-(\lambda t)^\alpha}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="334" HEIGHT="39" BORDER="0"
+ SRC="img656.png"
+ ALT="\begin{displaymath}
+R(t) = e^{-(\lambda t)^\alpha}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.16)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่า <IMG
+ WIDTH="42" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$R(t)$"> สามารถตรวจสอบโดยคำนวณค่า <!-- MATH
+ $\frac{dR(t)}{dt}$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img657.png"
+ ALT="$\frac{dR(t)}{dt}$">
+นั้นคือ 
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+\frac{dR(t)}{dt} &=& -e^{-(\lambda t)^\alpha}\alpha (\lambda t)^{\alpha -1} (\lambda) \nonumber\\
+&=& -\alpha\lambda (\lambda t)^{\alpha - 1} e^{-(\lambda t)^\alpha} \nonumber\\
+&=& -z(t)R(t)
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="56" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img658.png"
+ ALT="$\displaystyle \frac{dR(t)}{dt}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="168" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img659.png"
+ ALT="$\displaystyle -e^{-(\lambda t)^\alpha}\alpha (\lambda t)^{\alpha -1} (\lambda)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="155" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img660.png"
+ ALT="$\displaystyle -\alpha\lambda (\lambda t)^{\alpha - 1} e^{-(\lambda t)^\alpha}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="87" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img661.png"
+ ALT="$\displaystyle -z(t)R(t)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.17)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+ถ้าค่า <IMG
+ WIDTH="68" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img662.png"
+ ALT="$\alpha = - 1$"> เราจะได้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(t) = e^{-1/\lambda t}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="333" HEIGHT="39" BORDER="0"
+ SRC="img663.png"
+ ALT="\begin{displaymath}
+R(t) = e^{-1/\lambda t}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.18)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ซึ่งมีค่าเท่ากับกฎการเสียหายแบบ Exponential
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2558"
+  HREF="node146.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2552"
+  HREF="node144.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2548"
+  HREF="node144.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2554"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2556"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2559"
+  HREF="node146.html">เวลาเฉลี่ยก่อนการเสียหาย (MTTF)</A>
+<B> Up:</B> <A NAME="tex2html2553"
+  HREF="node144.html">การประเมินเชิงปริมาณ</A>
+<B> Previous:</B> <A NAME="tex2html2549"
+  HREF="node144.html">การประเมินเชิงปริมาณ</A>
+ &nbsp <B>  <A NAME="tex2html2555"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2557"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

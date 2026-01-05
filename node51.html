@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>แถวคอย </TITLE>
+<META NAME="description" CONTENT="แถวคอย ">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node52.html">
+<LINK REL="previous" HREF="node48.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node52.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1163"
+  HREF="node52.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1157"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1151"
+  HREF="node50.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1159"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1161"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1164"
+  HREF="node52.html">การวิเคราะห์ระบบคิว</A>
+<B> Up:</B> <A NAME="tex2html1158"
+  HREF="node43.html">กระบวนการเกิด-ดับ และระบบคิว</A>
+<B> Previous:</B> <A NAME="tex2html1152"
+  HREF="node50.html">พิสูจน์</A>
+ &nbsp <B>  <A NAME="tex2html1160"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1162"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00760000000000000000">
+แถวคอย  <IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$M/M/1$"></A>
+</H1>
+
+คิว <IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$M/M/1$"> เป็นระบบคิวที่มีการใช้งานแพร่หลายมากคิวหนึ่ง ที่สามารถใช้ในเป็นแบบจำลองของตัวประมวลผลเดียว หรือจำลองอุปกรณ์แต่ละตัวในระบบคอมพิวเตอร์ แบบจำลองของคิว <IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$M/M/1$"> แสดงในรูป <A HREF="node51.html#fig:mm1"
+ NAME="1414">4.2</A>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:mm1"></A><A NAME="1417"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.2:</STRONG>
+แถวคอย  <IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$M/M/1$"></CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="207" HEIGHT="72" ALIGN="BOTTOM" BORDER="0"
+ SRC="img151.png"
+ ALT="\includegraphics[width=1.8in]{fig/mm1.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+สมมุติให้การกระจายของอัตราการเข้าใช้งานระบบ และ อัตราการบริการเป็นแบบ Exponential โดยที่ระบบมีเครื่องบริการหนึ่งเครื่อง ซึ่งมีขนาดของบัฟเฟอร์และขนาดประชากรเป็นอนันต์ และรูปแบบการบริการเป็นแบบ FCFS 
+
+พารามิเตอร์ที่ต้องการจากระบบได้แก่ อัตราการเข้าใช้บริการ <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> และอัตราการบริการ <IMG
+ WIDTH="17" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\mu$">
+
+สถานะของกระบวนงานเกิด-ดับที่แสดง คิว <IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$M/M/1$"> คือจำนวนงานที่อยู่ในคิว แผนภาพแสดงการเปลี่ยนสถานะของคิว <IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$M/M/1$"> แสดงในรูป <A HREF="node51.html#fig:bdmm1">4.3</A>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:bdmm1"></A><A NAME="1423"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.3:</STRONG>
+แผนภาพแสดงการเปลี่ยนสถานะของคิว <IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$M/M/1$"></CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="633" HEIGHT="132" ALIGN="BOTTOM" BORDER="0"
+ SRC="img152.png"
+ ALT="\includegraphics[width=5.5in]{fig/bdmm1.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

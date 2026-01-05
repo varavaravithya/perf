@@ -1,0 +1,381 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>เวลาเฉลี่ยก่อนการเสียหาย (MTTF)</TITLE>
+<META NAME="description" CONTENT="เวลาเฉลี่ยก่อนการเสียหาย (MTTF)">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node147.html">
+<LINK REL="previous" HREF="node144.html">
+<LINK REL="up" HREF="node140.html">
+<LINK REL="next" HREF="node147.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2572"
+  HREF="node147.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2566"
+  HREF="node140.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2560"
+  HREF="node145.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2568"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2570"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2573"
+  HREF="node147.html">เวลาเฉลี่ยในการซ่อมแซม (MTTR)</A>
+<B> Up:</B> <A NAME="tex2html2567"
+  HREF="node140.html">การประเมินค่าความน่าเชื่อถือเชิงปริมาณ</A>
+<B> Previous:</B> <A NAME="tex2html2561"
+  HREF="node145.html">อัตราการเสียหาย และฟังก์ชั่นความน่าเชื่อถือ</A>
+ &nbsp <B>  <A NAME="tex2html2569"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2571"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001350000000000000000">
+เวลาเฉลี่ยก่อนการเสียหาย (MTTF)</A>
+</H1>
+
+นอกจากอัตราความเสียหายของระบบ ค่าเชิงปริมาณที่สำคัญอีกตัวหนึ่งคือ  <B>ค่าเวลาเฉลี่ยก่อนการเสียหาย</B>: Mean Time to Failure (MTTF) ที่สามารถใช้สะท้อนถึงคุณภาพของระบบได้ ค่า MTTF คือค่าที่คาดว่าระบบจะสามารถทำงานได้ก่อนการเสียหายครั้งแรกจะเกิดขึ้น ตัวอย่างเช่น ถ้ามีระบบที่เหมือนกันทุกประการ <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> ชุด เริ่มทำงานพร้อมกันที่เวลา <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img603.png"
+ ALT="$t_0$"> และเราทำการวัดเวลาที่อุปกรณ์ทำงานก่อนเกิดการล้มเหลวในการทำงานครั้งแรก, ค่าเฉลี่ยของเวลาดังกล่าวคือค่า  MTTF  ถ้าระบบ <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.png"
+ ALT="$i$"> สามารถทำงานเป็นเวลา <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img664.png"
+ ALT="$t_i$"> ก่อนประสบกับความเสียหายครั้งแรก ค่า MTTF จะเท่ากับ 
+ 
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MTTF = \frac{\sum^N_{i=1} t_i}{N}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="352" HEIGHT="50" BORDER="0"
+ SRC="img665.png"
+ ALT="\begin{displaymath}
+MTTF = \frac{\sum^N_{i=1} t_i}{N}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.19)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่า MTTF สามารถหาค่าได้จากค่าคาดหวังของค่าเวลาก่อนเกิดความเสียหายครั้งแรก. จากทฤษฎีความน่าจะเป็น ค่าคาดหวังมีค่าเท่ากับ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E[x] = \int^\infty_{-\infty} xf(x)dx
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="363" HEIGHT="49" BORDER="0"
+ SRC="img666.png"
+ ALT="\begin{displaymath}
+E[x] = \int^\infty_{-\infty} xf(x)dx
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.20)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เมื่อ  <IMG
+ WIDTH="42" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img667.png"
+ ALT="$f(x)$"> คือฟังก์ชั่นความหนาแน่นของความน่าจะเป็น ในการวิเคราะห์ความน่าเชื่อถือ  เราสามารถเขียนค่า MTTF ได้เท่ากับ 
+ 
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MTTF = \int^\infty_{0} tf(t)dt
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="369" HEIGHT="47" BORDER="0"
+ SRC="img668.png"
+ ALT="\begin{displaymath}
+MTTF = \int^\infty_{0} tf(t)dt
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.21)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เมื่อค่า <IMG
+ WIDTH="38" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img669.png"
+ ALT="$f(t)$"> คือฟังก์ชั่นความหนาแน่นของการเสียหาย และการตั้งช่วงการอินทิกัล อยู่ในช่วง <IMG
+ WIDTH="65" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img670.png"
+ ALT="$0\to \infty$"> เนื่องจากเรานิยามการทำงานของระบบจากเวลา <IMG
+ WIDTH="47" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img671.png"
+ ALT="$t = 0$"> ค่าฟังก์ชั่นความหนาแน่นของการเสียหายมีค่าเท่ากับ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+f(t) = \frac{dQ(t)}{dt}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="333" HEIGHT="47" BORDER="0"
+ SRC="img672.png"
+ ALT="\begin{displaymath}
+f(t) = \frac{dQ(t)}{dt}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.22)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ดังนั้นสามารถ เขียนสมการ MTTF ได้เป็น
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MTTF = \int^\infty_{0} t\frac{dQ(t)}{dt}dt
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="377" HEIGHT="47" BORDER="0"
+ SRC="img673.png"
+ ALT="\begin{displaymath}
+MTTF = \int^\infty_{0} t\frac{dQ(t)}{dt}dt
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.23)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+จาก <!-- MATH
+ $\frac{dQ(t)}{dt} = -\frac{dR(t)}{dt}$
+ -->
+<IMG
+ WIDTH="120" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img674.png"
+ ALT="$\frac{dQ(t)}{dt} = -\frac{dR(t)}{dt}$"> เราสามารถแสดงว่า
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+MTTF &=& \int^\infty_{0} t\frac{dQ(t)}{dt}dt = 
+- \int^\infty_{0} t\frac{dR(t)}{dt}dt\nonumber\\
+&=& [-tR(t) + \int R(t)dt]^\infty_0 = \int^\infty_{0} R(t)dt
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="67" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img675.png"
+ ALT="$\displaystyle MTTF$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="262" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img676.png"
+ ALT="$\displaystyle \int^\infty_{0} t\frac{dQ(t)}{dt}dt =
+- \int^\infty_{0} t\frac{dR(t)}{dt}dt$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="292" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img677.png"
+ ALT="$\displaystyle [-tR(t) + \int R(t)dt]^\infty_0 = \int^\infty_{0} R(t)dt$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.24)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+ในเทอมของ <IMG
+ WIDTH="64" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img678.png"
+ ALT="$-tR(t)$"> จะหายไปที่เวลา <IMG
+ WIDTH="47" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img671.png"
+ ALT="$t = 0$"> และที่เวลา <IMG
+ WIDTH="57" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img679.png"
+ ALT="$t=\infty$"> เนื่องจากค่า <IMG
+ WIDTH="89" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img680.png"
+ ALT="$R(\infty) = 0$"> จากการใส่ค่า Limit ดังกล่าวเราจะได้ค่า MTTF เป็นฟังก์ชั่นของความน่าเชื่อถือคือ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MTTF = \int^\infty_{0} R(t)dt
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="367" HEIGHT="47" BORDER="0"
+ SRC="img681.png"
+ ALT="\begin{displaymath}
+MTTF = \int^\infty_{0} R(t)dt
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.25)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ซึ่งสามารถใช้งานได้กับฟังก์ชั่นความน่าเชื่อถือใดๆ มีค่า <IMG
+ WIDTH="89" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img680.png"
+ ALT="$R(\infty) = 0$"> 
+
+ถ้าค่าฟังก์ชั่นความน่าเชื่อถือเป็นไปตามกฎการเสียหายแบบ Exponential
+ค่า MTTF สามารถคำนวณได้จาก 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MTTF = \int^\infty_{0} e^{-\lambda t}dt = \frac{1}{\lambda}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="384" HEIGHT="47" BORDER="0"
+ SRC="img682.png"
+ ALT="\begin{displaymath}
+MTTF = \int^\infty_{0} e^{-\lambda t}dt = \frac{1}{\lambda}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.26)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+ 
+นั้นคือค่า MTTF ของระบบมีค่าเท่ากับส่วนกลับของอัตราความเสียหาย ถ้าเวลา <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> มีค่าเท่ากับค่า MTTF ค่าความน่าเชื่อถือมีค่าเท่ากับ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(MTTF) = R\left(\frac{1}{\lambda}\right) =
+e^{-\lambda(1/\lambda)} = e^{-1} = 0.3678
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="473" HEIGHT="48" BORDER="0"
+ SRC="img683.png"
+ ALT="\begin{displaymath}
+R(MTTF) = R\left(\frac{1}{\lambda}\right) =
+e^{-\lambda(1/\lambda)} = e^{-1} = 0.3678
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.27)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+หมายความว่าระบบจะมีความน่าจะเป็นเท่ากับ 0.3678 ที่จะสามารถทำงานได้อย่างต่อเนื่อง โดยไม่ล้มเหลว  ก่อนเวลาเท่ากับค่า MTTF ถ้าระบบทำงานอย่างถูกต้องเมื่อเริ่มใช้งาน หรืออีกนัยหนึ่งระบบที่เป็นไปตามกฎการเสียหายแบบ Exponential จะมีความน่าจะเป็นเท่ากับ 0.6322 ที่จะเสียหายที่เวลาเท่ากับค่า MTTF  ถ้าระบบทำงานอย่างถูกต้องเมื่อเริ่มใช้งาน
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2572"
+  HREF="node147.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2566"
+  HREF="node140.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2560"
+  HREF="node145.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2568"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2570"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2573"
+  HREF="node147.html">เวลาเฉลี่ยในการซ่อมแซม (MTTR)</A>
+<B> Up:</B> <A NAME="tex2html2567"
+  HREF="node140.html">การประเมินค่าความน่าเชื่อถือเชิงปริมาณ</A>
+<B> Previous:</B> <A NAME="tex2html2561"
+  HREF="node145.html">อัตราการเสียหาย และฟังก์ชั่นความน่าเชื่อถือ</A>
+ &nbsp <B>  <A NAME="tex2html2569"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2571"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

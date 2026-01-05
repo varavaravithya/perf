@@ -1,0 +1,334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>กฎของ Little</TITLE>
+<META NAME="description" CONTENT="กฎของ Little">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="previous" HREF="node52.html">
+<LINK REL="up" HREF="node52.html">
+<LINK REL="next" HREF="node54.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1190"
+  HREF="node54.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1184"
+  HREF="node52.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1180"
+  HREF="node52.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1186"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1188"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1191"
+  HREF="node54.html">ตัวอย่าง คิว</A>
+<B> Up:</B> <A NAME="tex2html1185"
+  HREF="node52.html">การวิเคราะห์ระบบคิว</A>
+<B> Previous:</B> <A NAME="tex2html1181"
+  HREF="node52.html">การวิเคราะห์ระบบคิว</A>
+ &nbsp <B>  <A NAME="tex2html1187"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1189"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00770010000000000000">
+กฎของ Little</A>
+</H4>
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Mean~number~in~system = arrival~rate \times mean~response~time
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="545" HEIGHT="37" BORDER="0"
+ SRC="img167.png"
+ ALT="\begin{displaymath}
+Mean~number~in~system = arrival~rate \times mean~response~time
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.22)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+นั้นคือ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E[n] = \lambda E[r]
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="333" HEIGHT="39" BORDER="0"
+ SRC="img168.png"
+ ALT="\begin{displaymath}
+E[n] = \lambda E[r]
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.23)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+หรือ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E[r] = \frac{E[n]}{\lambda} = \left( \frac{\rho}{1-\rho}\right)
+\frac{1}{\lambda} = \frac{1/\mu}{1-\rho}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="422" HEIGHT="55" BORDER="0"
+ SRC="img169.png"
+ ALT="\begin{displaymath}
+E[r] = \frac{E[n]}{\lambda} = \left( \frac{\rho}{1-\rho}\right)
+\frac{1}{\lambda} = \frac{1/\mu}{1-\rho}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.24)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่าการกระจายสะสม (Cumulative Distribution Function: CDF) 
+ของเวลาตอบสนองสามารถแสดงได้โดย
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F(r) = 1 - e^{-r\mu(1-\rho)}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="361" HEIGHT="39" BORDER="0"
+ SRC="img170.png"
+ ALT="\begin{displaymath}
+F(r) = 1 - e^{-r\mu(1-\rho)}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.25)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เนื่องจากเวลาตอบสนองมีการกระจายแบบ Exponential เราสามารถหาค่า Percentiles
+ตัวอย่างเช่น q-Percentile ของเวลาตอบสนองสามารถคำนวณได้จาก
+<A NAME="1479"></A>
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+1 - e^{-r_q\mu(1-\rho)} = \frac{q}{100}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="361" HEIGHT="47" BORDER="0"
+ SRC="img171.png"
+ ALT="\begin{displaymath}
+1 - e^{-r_q\mu(1-\rho)} = \frac{q}{100}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.26)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+หรือ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+r_q = \frac{1}{\mu(1-\rho)} ln\left(\frac{100}{100-q}\right)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="388" HEIGHT="55" BORDER="0"
+ SRC="img172.png"
+ ALT="\begin{displaymath}
+r_q = \frac{1}{\mu(1-\rho)} ln\left(\frac{100}{100-q}\right)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.27)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เช่นเดียวกัน ค่า CDF ของเวลารอรับบริการสามารถแสดงได้โดย
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F(w) = 1 - \rho e^{-w\mu(1-\rho)}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="370" HEIGHT="39" BORDER="0"
+ SRC="img173.png"
+ ALT="\begin{displaymath}
+F(w) = 1 - \rho e^{-w\mu(1-\rho)}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.28)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่า q-Percentile ของเวลารอรับบริการสามารถคำนวณได้จาก
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+w_q = \frac{1}{\mu (1-\rho)} \ln \left( \frac{100\rho}{1-q}\right)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="382" HEIGHT="55" BORDER="0"
+ SRC="img174.png"
+ ALT="\begin{displaymath}
+w_q = \frac{1}{\mu (1-\rho)} \ln \left( \frac{100\rho}{1-q}\right)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.29)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+w_q = \max \left\{ 0, \frac{E[w]}{\rho} \ln
+\left( \frac{100\rho}{100-q} \right) \right\}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="419" HEIGHT="55" BORDER="0"
+ SRC="img175.png"
+ ALT="\begin{displaymath}
+w_q = \max \left\{ 0, \frac{E[w]}{\rho} \ln
+\left( \frac{100\rho}{100-q} \right) \right\}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.30)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่าจำนวนงานที่รอการบริการอยู่ในคิวสามารถหาได้โดยสมการ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E[n_q] = \sum_{n=1}^{\infty} (n-1)p_n =
+\sum_{n=1}^{\infty}(n-1)(1-\rho)\rho^n = \frac{\rho^2}{1-\rho}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="493" HEIGHT="56" BORDER="0"
+ SRC="img176.png"
+ ALT="\begin{displaymath}
+E[n_q] = \sum_{n=1}^{\infty} (n-1)p_n =
+\sum_{n=1}^{\infty}(n-1)(1-\rho)\rho^n = \frac{\rho^2}{1-\rho}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.31)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เมื่อไม่มีงานในระบบคิว ระบบจะว่างจากงาน เครื่องบริการจะอยู่ในสถานะ Idle ช่วงเวลาระหว่างช่วงการ Idle เรียกว่าช่วงเวลา Busy 
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1190"
+  HREF="node54.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1184"
+  HREF="node52.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1180"
+  HREF="node52.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1186"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1188"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1191"
+  HREF="node54.html">ตัวอย่าง คิว</A>
+<B> Up:</B> <A NAME="tex2html1185"
+  HREF="node52.html">การวิเคราะห์ระบบคิว</A>
+<B> Previous:</B> <A NAME="tex2html1181"
+  HREF="node52.html">การวิเคราะห์ระบบคิว</A>
+ &nbsp <B>  <A NAME="tex2html1187"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1189"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ตัวอย่าง:</TITLE>
+<META NAME="description" CONTENT="ตัวอย่าง:">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="previous" HREF="node54.html">
+<LINK REL="up" HREF="node54.html">
+<LINK REL="next" HREF="node56.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1217"
+  HREF="node56.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1211"
+  HREF="node54.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1207"
+  HREF="node54.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1213"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1215"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1218"
+  HREF="node56.html">หัวข้อสรุป</A>
+<B> Up:</B> <A NAME="tex2html1212"
+  HREF="node54.html">ตัวอย่าง คิว</A>
+<B> Previous:</B> <A NAME="tex2html1208"
+  HREF="node54.html">ตัวอย่าง คิว</A>
+ &nbsp <B>  <A NAME="tex2html1214"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1216"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00780010000000000000">
+<FONT SIZE="+1">ตัวอย่าง:</FONT></A>
+</H4> ใน Network Gateway ทำหน้าที่ส่งผ่านแพ็คเกตในระบบเครือข่าย อัตราการขอเข้าใชับริการ Gateway ของแพ็คเกตมีค่าเท่ากับ 125 แพตเกตต่อวินาที (pps) ค่าดังกล่าวได้จากการวัด Gateway ใช้เวลา 2 ms ในการส่งผ่านข้อมูล ใช้แบบจำลอง <IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$M/M/1$">
+
+<UL>
+<LI>จงวิเคราะห์ Gateway 
+</LI>
+<LI>หาความน่าจะเป็นที่จะเกิดบัฟเฟอร์ล้น ถ้า Gateway มีเพียง 13 บัฟเฟอร์ 
+</LI>
+<LI>ระบบต้องการจำนวนบัฟเฟอร์เท่าไร ถ้าต้องการจำกัดจำนวนแพ็คเกตสูญหายต่ำกว่าหนึ่งแพ็คเกตในล้านแพ็คเกต
+</LI>
+</UL>
+
+อัตราการเข้ารับบริการ (Arrival Rate) <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> = 125 pps
+<BR>
+
+อัตราการบริการ (Service Rate) <IMG
+ WIDTH="17" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\mu$"> = 1/0.002 = 500 pps
+<BR>
+
+ค่าภาระงาน (Utilization) ของ Gateway <IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img159.png"
+ ALT="$\rho$"> = <IMG
+ WIDTH="38" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img158.png"
+ ALT="$\lambda/\mu$"> = 0.25
+<BR>
+
+ค่าความน่าจะเป็นที่มี <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="$n$"> แพ็คเกตใน Gateway = <!-- MATH
+ $(1-\rho)\rho^n$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img177.png"
+ ALT="$(1-\rho)\rho^n$"> = <IMG
+ WIDTH="97" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img178.png"
+ ALT="$0.75(0.25)^n$">
+<BR>
+
+ค่าเฉลี่ยของจำนวนแพ็คเกตใน Gateway = <!-- MATH
+ $\frac{\rho}{1-\rho}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img179.png"
+ ALT="$\frac{\rho}{1-\rho}$"> = <!-- MATH
+ $\frac{0.25}{0.75} = 0.33$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img180.png"
+ ALT="$\frac{0.25}{0.75} = 0.33$">
+<BR>
+
+ค่าเฉลี่ยของเวลาที่แพ็คเกตใช้ใน Gateway = <!-- MATH
+ $\frac{1/\mu}{1-\rho} = \frac{1/500}{1-0.25} = 2.66$
+ -->
+<IMG
+ WIDTH="162" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img181.png"
+ ALT="$\frac{1/\mu}{1-\rho} = \frac{1/500}{1-0.25} = 2.66$"> ms
+<BR>
+
+<TABLE CELLPADDING=3>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT">ค่าความน่าจะเป็นที่จะเกิดบัฟเฟอร์ล้น</TD>
+<TD ALIGN="CENTER">=</TD>
+<TD ALIGN="LEFT">P(มีมากกว่า 13 แพ็คเกตใน Gateway)</TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="CENTER">=</TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="33" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img182.png"
+ ALT="$\rho^13$"> = <IMG
+ WIDTH="56" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img183.png"
+ ALT="$0.25^13$"> = <!-- MATH
+ $1.49\times 10^{-8}$
+ -->
+<IMG
+ WIDTH="100" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img184.png"
+ ALT="$1.49\times 10^{-8}$"></TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img185.png"
+ ALT="$\approx$"></TD>
+<TD ALIGN="LEFT">15 แพ็คเกตในล้านแพ็คเกต</TD>
+</TR>
+</TABLE>
+<BR>
+
+เพื่อจำกัดจำนวนแพ็คเกตสูญหายต่ำกว่า <IMG
+ WIDTH="43" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img186.png"
+ ALT="$10^{-6}$">: <!-- MATH
+ $\rho \leq 10^{-6}$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img187.png"
+ ALT="$\rho \leq 10^{-6}$">
+<BR>
+                             
+หรือ 
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $m>\log (10^{-6})/\log (0.25) = 9.96$
+ -->
+<IMG
+ WIDTH="266" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img188.png"
+ ALT="$m&gt;\log (10^{-6})/\log (0.25) = 9.96$">
+</DIV>
+
+เพราะฉะนั้น เราต้องการบัฟเฟอร์ทั้งสิ้น 10 บัฟเฟอร์เพื่อจำกัดจำนวนแพ็คเกตสูญหายต่ำกว่า <IMG
+ WIDTH="43" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img186.png"
+ ALT="$10^{-6}$">
+<BR>
+
+การคำนวณเกี่ยวกับจำนวนบัฟเฟอร๎ในสองข้อย่อยสุดท้ายเป็นการประมาณค่าอย่างหยาบ 
+การคำนวณที่ถูกต้องระบบคิวจะต้องใช้แบบจำลอง <IMG
+ WIDTH="95" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img189.png"
+ ALT="$M/M/1/B$"> 
+
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

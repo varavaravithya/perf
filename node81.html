@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ระบบเครือข่ายคิวสำหรับจำลองระบบคอมพิวเตอร์</TITLE>
+<META NAME="description" CONTENT="ระบบเครือข่ายคิวสำหรับจำลองระบบคอมพิวเตอร์">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node82.html">
+<LINK REL="previous" HREF="node79.html">
+<LINK REL="up" HREF="node71.html">
+<LINK REL="next" HREF="node82.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1601"
+  HREF="node82.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1595"
+  HREF="node71.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1589"
+  HREF="node80.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1597"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1599"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1602"
+  HREF="node82.html">หัวข้อสรุป</A>
+<B> Up:</B> <A NAME="tex2html1596"
+  HREF="node71.html">เครือข่ายคิว</A>
+<B> Previous:</B> <A NAME="tex2html1590"
+  HREF="node80.html">ตัวอย่าง:</A>
+ &nbsp <B>  <A NAME="tex2html1598"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1600"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00960000000000000000"></A>
+<A NAME="2828"></A>
+<A NAME="2829"></A>
+<A NAME="2830"></A>
+<A NAME="2831"></A>
+<BR>
+ระบบเครือข่ายคิวสำหรับจำลองระบบคอมพิวเตอร์
+</H1>
+
+ การจำลองระบบคอมพิวเตอร์โดยใช้เครือข่ายคิวแบบเริ่มแรกได้แก่   แบบจำลองการซ่อมบำรุง (Machine Repairman Model)  และแบบจำลองเครื่องบริการกลาง (Central Server Model)  ดังแสดงในรูป <A HREF="node81.html#fig:repairqt">6.6</A> และ <A HREF="node81.html#fig:timeqt">6.7</A>, ตามลำดับ 
+
+ ในแบบจำลองการซ่อมบำรุง มาจากการจำลองร้านซ่อมเครื่องที่ประกอบด้วยเครื่องจักรที่ทำงานอยู่จำนวนมาก  และจุดซ่อมเครื่องที่มีเครื่องบริการซ่อมหนึ่งเครื่องหรือมากกว่า เมื่อเครื่องจักรเสียหาย จะนำเครื่องจักรนั้นเข้าซ่อมในระบบ เมื่อเครื่องบริการการซ่อมว่าง ระบบดังกล่าวสามารถนำมาจำลองระบบ  Time Sharing ที่ประกอบด้วย <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> เทอร์มินอล  เมื่อผู้ใช้นั่งอยู่ที่เทอร์มินอลและเริ่มสร้างงาน  (การขอรับบริการจากระบบในรูปของคำสั่ง)  งานดังกล่าวจะได้รับบริการจากเครื่องบริการซ่อม (เครื่องบริการ)  หลังจากงานเสร็จ ก็จะกลับมารอที่เทอร์มินอลเพื่อรอการทำตามคำสั่งต่อไป เวลาที่รอที่เทอร์มินอล เรียกว่าเวลาคิด (Thinking Time)  ซึ่งเป็นระยะเวลาที่ผู้ใช้งานระบบพิจารณาผลตอบสนองที่ได้ เพื่อที่จะส่งคำสั่งต่อไป
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:repairqt"></A><A NAME="2836"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.6:</STRONG>
+แบบจำลองการซ่อมบำรุง</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="228" HEIGHT="205" ALIGN="BOTTOM" BORDER="0"
+ SRC="img322.png"
+ ALT="\includegraphics[width=2.in]{fig/repairqt.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ในแบบจำลองเครื่องบริการกลาง (Central Server Model), แสดงในรูป <A HREF="node81.html#fig:repairqt">6.6</A> ตัวประมวลผลกลาง  (CPU) ถูกจำลองเป็น Central Server  ที่ทำการจัดลำดับของงานที่จะไปใช้เครื่องบริการตัวอื่น (เช่น Disk A) หลังจากที่ได้รับบริการที่อุปกรณ์รับข้อมูลเข้า/ออก   งานจะกลับมาที่ตัวประมวลผลกลางเพื่อทำการประมวลผลต่อ  หรือรอการเรียกใช้งานอุปกรณ์รับข้อมูลเข้า/ออกครั้งต่อไป  หรือออกจากระบบกลางกลับไปที่เทอร์มินอล เนื่องจากงานเสร็จสมบูรณ์
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:timeqt"></A><A NAME="2842"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.7:</STRONG>
+แบบจำลองเครื่องบริการกลาง</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="343" HEIGHT="290" ALIGN="BOTTOM" BORDER="0"
+ SRC="img323.png"
+ ALT="\includegraphics[width=3in]{fig/timeqt.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ในแบบจำลองระบบคอมพิวเตอร์ ประกอบด้วยอุปกรณ์สามลักษณะได้แก่ 1. อุปกรณ์ที่ประกอบด้วยเครื่องบริการเพียงเครื่องเดียวที่เวลาในการให้บริการไม่ขึ้นอยู่กับความยาวของคิวหรือจำนวนงานในระบบ อุปกรณ์ลักษณะดังกล่าวเรียกว่า  Fixed Capacity Service Centers  ตัวอย่างเช่น ตัวประมวลผลกลางอาจถูกจำลองโดยใช้  Fixed Capacity Service Center 2. อุปกรณ์ที่ไม่มีการเข้าคิว  งานที่เข้ามาใช้บริการใช้เวลาเท่ากันหมดไม่ว่าจะมีจำนวนงานเท่าใดในระบบ อุปกรณ์ในลักษณะดังกล่าวเรียกว่า ศูนย์หน่วงเวลา (Delay Center หรือ Infinite Server), IS
+<A NAME="2845"></A>
+<A NAME="2846"></A>
+<A NAME="2847"></A>
+<A NAME="2848"></A>
+เช่นเราสามารถจำลองกลุ่มของเทอร์มินอลโดยใชั IS 
+
+<A NAME="2849"></A>
+3. อุปกรณ์ที่ค่าอัตราการบริการแปรผันกับค่าภาระงานหรือจำนวนงานในระบบ อุปกรณ์ในลักษณะดังกล่าวเรียกว่า Load-Dependent Service Centers. ตัวอย่างของ Load-Dependent Service Centers ได้แก่  <IMG
+ WIDTH="79" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$M/M/m$"> คิว (เมื่อ <IMG
+ WIDTH="57" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img324.png"
+ ALT="$m &gt; 2$">) เนื่องจากค่าอัตราการบริการเพิ่มขึ้น จำนวนเครื่องบริการถูกใช้งานมากขึ้น หรือตัวกลางในการส่งผ่านข้อมูลของการเชื่อมต่อเครือข่าย
+
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

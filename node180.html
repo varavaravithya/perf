@@ -1,0 +1,415 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>การเปรียบเทียบค่าความน่าเชื่อถือระหว่างระบบเดี่ยว กับระบบ TMR</TITLE>
+<META NAME="description" CONTENT="การเปรียบเทียบค่าความน่าเชื่อถือระหว่างระบบเดี่ยว กับระบบ TMR">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node181.html">
+<LINK REL="previous" HREF="node179.html">
+<LINK REL="up" HREF="node177.html">
+<LINK REL="next" HREF="node181.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html3072"
+  HREF="node181.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html3066"
+  HREF="node177.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html3060"
+  HREF="node179.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html3068"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html3070"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html3073"
+  HREF="node181.html">แบบจำลองความสามารถในการคงการบริการ</A>
+<B> Up:</B> <A NAME="tex2html3067"
+  HREF="node177.html">แบบจำลองมาร์คอฟ (ต่อ)</A>
+<B> Previous:</B> <A NAME="tex2html3061"
+  HREF="node179.html">หัวข้อสำคัญในครั้งก่อน</A>
+ &nbsp <B>  <A NAME="tex2html3069"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html3071"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001630000000000000000">
+การเปรียบเทียบค่าความน่าเชื่อถือระหว่างระบบเดี่ยว กับระบบ TMR</A>
+</H1>
+
+ในการประเมินประสิทธิภาพส่วนใหญ่ เราต้องการเปรียบเทียบประสิทธิภาพของทางเลือกต่างๆ  ในบทนี้เราจะเปรียบเทียบความน่าเชื่อถือระหว่างระบบคอมพิวเตอร์เดี่ยว และ ระบบ TMR โดยสมมุติให้ตัวหยั่งเสียงส่วนใหญ่ (Voter) มีความน่าเชื่อถือเป็นอุดมคติ ระบบที่ทำการเปรียบเทียบทั้งสองระบบแสดงในรูป <A HREF="node180.html#fig:compare">13.1</A>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:compare"></A><A NAME="6049"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 13.1:</STRONG>
+เปรียบเทียบระบบคอมพิวเตอร์เดี่ยว และระบบ TMR</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="567" HEIGHT="269" ALIGN="BOTTOM" BORDER="0"
+ SRC="img964.png"
+ ALT="\includegraphics[width=5in]{fig/compare.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ค่าเฉลี่ยก่อนการเสียหาย MTTF ของระบบนิยามเท่ากับ 
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MTTF = \int^\infty_0 R(t)dt
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="367" HEIGHT="47" BORDER="0"
+ SRC="img965.png"
+ ALT="\begin{displaymath}
+MTTF = \int^\infty_0 R(t)dt
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เมื่อ R(t) เป็นค่าความน่าเชื่อถือของระบบ 
+โดยความน่าเชื่อถือของระบบคอมพิวเตอร์เดียวมีค่าเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{simplex}(t) = e^{-\lambda t}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="351" HEIGHT="39" BORDER="0"
+ SRC="img966.png"
+ ALT="\begin{displaymath}
+R_{simplex}(t) = e^{-\lambda t}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ในขณะที่ความน่าเชื่อถือของระบบ TMR มีค่าเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{TMR}(t) = 3e^{-2\lambda t} - 2e^{-3\lambda t}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="388" HEIGHT="39" BORDER="0"
+ SRC="img967.png"
+ ALT="\begin{displaymath}
+R_{TMR}(t) = 3e^{-2\lambda t} - 2e^{-3\lambda t}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ทำการอินทิเกรท <!-- MATH
+ $R_{simplex}(t)$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img968.png"
+ ALT="$R_{simplex}(t)$"> และ <!-- MATH
+ $R_{simplex}(t)$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img968.png"
+ ALT="$R_{simplex}(t)$"> เราจะได้ค่า MTTF ของระบบเป็น
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MTTF_{simplex} = \int^\infty_0e^{-\lambda t}dt = \frac{1}{\lambda}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="406" HEIGHT="47" BORDER="0"
+ SRC="img969.png"
+ ALT="\begin{displaymath}
+MTTF_{simplex} = \int^\infty_0e^{-\lambda t}dt = \frac{1}{\lambda}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MTTF_{TMR}(t) = \int^\infty_0 (3e^{-2\lambda t} - 2e^{-3\lambda t})dt = \frac{5}{6\lambda}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="466" HEIGHT="47" BORDER="0"
+ SRC="img970.png"
+ ALT="\begin{displaymath}
+MTTF_{TMR}(t) = \int^\infty_0 (3e^{-2\lambda t} - 2e^{-3\lambda t})dt = \frac{5}{6\lambda}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+จะพบว่า MTTF ของ ระบบ Simplex จะมีค่ามากกว่า MTTF ของ ระบบ TMR
+
+จากค่าขั้นต้น เราอาจสรุปได้ว่าระบบ TMR อาจไม่มีคุณสมบัติไม่ดีเท่าระบบ Simplex  การสรุปดังกล่าวอาจไม่ถูกต้องขึ้นอยู่กับระยะเวลาที่ใช้งาน และการประยุกต์เฉพาะ
+
+ในรูป <A HREF="node180.html#fig:simplextmr1">13.2</A> แสดงอย่างชัดแจ้งว่า MTTF ของ ระบบ TMR จะมีค่าน้อยกว่าระบบ Simplex ซึ่งแสดงอยู่ในรูปของค่าความน่าเชื่อถือเทียบกับ <IMG
+ WIDTH="24" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$\lambda t$"> จากรูปจะสังเกตุเห็นได้ว่าหลังจากค่าเวลาหนึ่งระบบ TMR  จะมีค่าน้อยกว่าค่าความน่าเชื่อถือของระบบคอมพิวเตอร์เดียว 
+ 
+ ค่า MTTF คือค่าพื้นที่ภายใต้กราฟ จะเห็นว่าในช่วงเวลาหนึ่ง ก่อนถึงจุดตัดของกราฟ ค่าความน่าเชื่อถือของระบบ TMR  สูงกว่าค่าความน่าเชื่อถือของระบบ Simplex อยู่
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:simplextmr1"></A><A NAME="6081"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 13.2:</STRONG>
+ค่าความน่าเชื่อถือเทียบกับ <IMG
+ WIDTH="24" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$\lambda t$"></CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="399" HEIGHT="429" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="\includegraphics[width=3.5in]{fig/simplextmr1.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ในการเปรียบเทียบ เราอาจใช้เวลาในการปฏิบัติการ (Mission Time)  มาพิจารณาคู่กับ MTTF. เวลาในการปฏิบัติการ <IMG
+ WIDTH="59" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img972.png"
+ ALT="$MT[r]$"> คือระยะเวลาที่ระบบมีความน่าเชื่อถือต่ำกว่าระดับ <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.png"
+ ALT="$r$"> ตัวอย่างเช่น ระบบ Simplex ที่เป็นไปตามกฎของความเสียหายมีค่าความน่าเชื่อถือ <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.png"
+ ALT="$r$"> เมื่อ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+r = e^{-\lambda t}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="313" HEIGHT="34" BORDER="0"
+ SRC="img973.png"
+ ALT="\begin{displaymath}
+r = e^{-\lambda t}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เวลามีความน่าจะเป็นดังกล่าวสามารถหาได้โดยการทำล็อกการึทึ่มทั้งสองด้านของสมการ และทำการจัดรูปสมการให้เหมาะสม จะได้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MT[r] = \frac{-ln(r)}{\lambda}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="348" HEIGHT="47" BORDER="0"
+ SRC="img974.png"
+ ALT="\begin{displaymath}
+MT[r] = \frac{-ln(r)}{\lambda}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<A NAME="6091"></A>
+<A NAME="6092"></A>
+
+ การปรับปรุงช่วงเวลาปฏิบัติการสามารถคำนวณได้จากอัตราส่วนของเวลาปฏิบัติการของทั้งสองระบบ ตัวอย่างเช่น ต้องการเปรียบเทียบระบบสองคอมพิวเตอร์ระบบได้แก่  (1) ระบบ Simplex ที่มีคอมพิวเตอร์หนึ่งตัวและมีอัตราความเสียหาย  เท่ากับ 0.01 ความเสียหายต่อชั่วโมง (2) ระบบ TMR  ที่ใช้คอมพิวเตอร์ชนิดเดียวกันสามชุด  โดยสมมุติให้เป็นไปตามกฎความเสียหายแบบ Exponential  เราต้องการหาการปรับปรุงของช่วงเวลาการปฏิบัติการของระบบ TMR  เมื่อเทียบกับระบบ Simplex ที่ค่าความน่าเชื่อถือ 0.86
+
+ ค่า <!-- MATH
+ $MT_{simplex}[0.86]$
+ -->
+<IMG
+ WIDTH="129" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img975.png"
+ ALT="$MT_{simplex}[0.86]$"> สามารถคำนวณได้จากฟังก์ชั่นความเสียหายและ Exponential ดังต่อไปนี้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MT_{simplex}[0.86] = \frac{-ln(r)}{\lambda} 
+= \frac{-ln(0.86)}{0.01} = 15.08~hours
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="500" HEIGHT="47" BORDER="0"
+ SRC="img976.png"
+ ALT="\begin{displaymath}
+MT_{simplex}[0.86] = \frac{-ln(r)}{\lambda}
+= \frac{-ln(0.86)}{0.01} = 15.08~hours
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ ค่า <!-- MATH
+ $MT_{TMR}[0.86]$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img977.png"
+ ALT="$MT_{TMR}[0.86]$"> สามารถคำนวณได้สมการดังต่อไปนี้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+MT_{TMR}(t) = 3e^{-2\times 0.01t} - 2e^{-3\times 0.01t} = 0.86
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="453" HEIGHT="39" BORDER="0"
+ SRC="img978.png"
+ ALT="\begin{displaymath}
+MT_{TMR}(t) = 3e^{-2\times 0.01t} - 2e^{-3\times 0.01t} = 0.86
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+จากการแก้สมการข้างบนเราจะได้ค่า <!-- MATH
+ $MT_{TMR}[0.86]  = 27$
+ -->
+<IMG
+ WIDTH="159" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img979.png"
+ ALT="$MT_{TMR}[0.86] = 27$"> ชั่วโมง ค่าการปรับปรุงค่าเวลาปฏิบัติงานมีค่าประมาณ 1.8 หรืออีกนัยหนึ่ง ระบบ TMR สามารถทำงานได้นานกว่าระบบ Simplex 1.8 เท่า  ในขณะที่สามารถรักษาค่าความน่าเชื่อถือได้มากกว่า 0.86 ในรูป  <A HREF="node180.html#fig:simplextmr">13.3</A> แสดงแนวคิดของเวลาปฏิบัติงาน และการปรับปรุงเวลาปฏิบัติงาน สำหรับการเปรียบเทียบระบบ Simplex  และ ระบบ TMR ที่อัตราความเสียหายเท่ากับ 0.01  ความเสียหายต่อชั่วโมง
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:simplextmr"></A><A NAME="6111"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 13.3:</STRONG>
+แนวคิดของเวลาปฏิบัติงาน และ การปรับปรุงเวลาปฏิบัติงาน สำหรับการเปรียบเทียบระบบ Simplex  และ ระบบ TMR ที่อัตราความเสียหายเท่ากับ 0.01  ความเสียหายต่อชั่วโมง</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="400" HEIGHT="421" ALIGN="BOTTOM" BORDER="0"
+ SRC="img980.png"
+ ALT="\includegraphics[width=3.5in]{fig/simplextmr.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html3072"
+  HREF="node181.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html3066"
+  HREF="node177.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html3060"
+  HREF="node179.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html3068"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html3070"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html3073"
+  HREF="node181.html">แบบจำลองความสามารถในการคงการบริการ</A>
+<B> Up:</B> <A NAME="tex2html3067"
+  HREF="node177.html">แบบจำลองมาร์คอฟ (ต่อ)</A>
+<B> Previous:</B> <A NAME="tex2html3061"
+  HREF="node179.html">หัวข้อสำคัญในครั้งก่อน</A>
+ &nbsp <B>  <A NAME="tex2html3069"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html3071"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

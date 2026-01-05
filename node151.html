@@ -1,0 +1,274 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ระบบอนุกรม</TITLE>
+<META NAME="description" CONTENT="ระบบอนุกรม">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node152.html">
+<LINK REL="previous" HREF="node150.html">
+<LINK REL="up" HREF="node150.html">
+<LINK REL="next" HREF="node152.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2645"
+  HREF="node152.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2639"
+  HREF="node150.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2633"
+  HREF="node150.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2641"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2643"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2646"
+  HREF="node152.html">ระบบขนาน</A>
+<B> Up:</B> <A NAME="tex2html2640"
+  HREF="node150.html">การหาค่าความน่าเชื่อถือโดยการจำลองแบบแจกแจงการทำงาน</A>
+<B> Previous:</B> <A NAME="tex2html2634"
+  HREF="node150.html">การหาค่าความน่าเชื่อถือโดยการจำลองแบบแจกแจงการทำงาน</A>
+ &nbsp <B>  <A NAME="tex2html2642"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2644"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION001391000000000000000"></A>
+<A NAME="4914"></A>
+<A NAME="4915"></A>
+<BR>
+ระบบอนุกรม
+</H2>
+
+ระบบอนุกรมเป็นระบบที่ไม่มีการสำรอง หรือทำงานพร้อมกันหรือซ้อนกัน  นั่นคือทุกโมดูลจะต้องทำงานได้ปกติ ระบบจึงจะสามารถทำงานได้ การนำเสนอระบบแบบอนุกรมสามารถทำโดยใช้แผนภาพกล่อง แสดงในรูป <A HREF="node151.html#fig:fev3series">10.3</A>  ที่แสดงกระแสของการทำงานของระบบจากอินพุทไปยังเอาท์พุทของระบบ ในระบบแบบอนุกรม ถ้าโมดูลหนึ่งโมดูลใดเสียหาย  กระแสการทำงานระหว่างอินพุทไปยังเอาท์พุทของระบบจะขาดจากกัน ทำให้ระบบไม่สามารถทำงานได้
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fev3series"></A><A NAME="4919"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 10.3:</STRONG>
+แผนภาพกล่องของระบบอนุกรม</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="570" HEIGHT="57" ALIGN="BOTTOM" BORDER="0"
+ SRC="img696.png"
+ ALT="\includegraphics[width=5in]{fig/fev3series.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ ในรูป <A HREF="node151.html#fig:fev3series">10.3</A> เป็นแผนภาพกล่องของระบบอนุกรมที่ประกอบด้วย  <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> โมดูล ทุกๆโมดูลใน <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> โมดูลจะต้องทำงานอย่างถูกต้อง  ความน่าเชื่อถือของระบบคือความน่าจะเป็นที่โมดูลไม่มีการเสียหาย ให้  <IMG
+ WIDTH="34" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img697.png"
+ ALT="$C_{iw}$"> เป็นเหตุการณ์ที่โมดูล <IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img698.png"
+ ALT="$C_{i}$"> สามารถทำงานได้อย่างถูกต้องที่เวลา  <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> และ <IMG
+ WIDTH="46" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img699.png"
+ ALT="$R_i(t)$"> เป็นค่าความน่าเชื่อถือของโมดูล <IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img698.png"
+ ALT="$C_{i}$"> ที่เวลา  <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> ค่าความน่าเชื่อถือของระบบ คือค่าความน่าจะเป็นที่ทุกโมดูลสามารถทำงานได้ปกติ  สามารถเขียนได้เป็น
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{series} (t) = P(C_{1w}(t) \cap C_{2w}(t) \cap \ldots 
+\cap   C_{Nw}(t))
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="467" HEIGHT="39" BORDER="0"
+ SRC="img700.png"
+ ALT="\begin{displaymath}
+R_{series} (t) = P(C_{1w}(t) \cap C_{2w}(t) \cap \ldots
+\cap C_{Nw}(t))
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.35)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+สมมุติให้ทุกเหตุการณ์ <IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img698.png"
+ ALT="$C_{i}$"> ไม่มีความสัมพันธ์กันจะได้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{series} (t) = R_1(t)R_2(t)\ldots R_N(t)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="409" HEIGHT="39" BORDER="0"
+ SRC="img701.png"
+ ALT="\begin{displaymath}
+R_{series} (t) = R_1(t)R_2(t)\ldots R_N(t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.36)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+หรือ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{series} (t) = \prod^N_{i=1}R_i(t)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="361" HEIGHT="59" BORDER="0"
+ SRC="img702.png"
+ ALT="\begin{displaymath}
+R_{series} (t) = \prod^N_{i=1}R_i(t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.37)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ถ้าทุกโมดูลมีอัตราการเสียหายเป็นไปตามกฎการเสียหาย Exponential  ระบบประกอบด้วย <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> โมดูล และแต่ละโมดูล <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.png"
+ ALT="$i$"> มีอัตราความเสียหายเท่ากับ <IMG
+ WIDTH="22" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.png"
+ ALT="$\lambda_i$"> และ <!-- MATH
+ $R_i(t) = e^{-\lambda_i t}$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img703.png"
+ ALT="$R_i(t) = e^{-\lambda_i t}$"> จะได้ค่าความน่าเชื่อถือของระบบเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{series} (t) = e^{-\lambda_1t}e^{-\lambda_2t}
+\ldots e^{-\lambda_Nt}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="404" HEIGHT="39" BORDER="0"
+ SRC="img704.png"
+ ALT="\begin{displaymath}
+R_{series} (t) = e^{-\lambda_1t}e^{-\lambda_2t}
+\ldots e^{-\lambda_Nt}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.38)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+หรือ 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_{series} (t) = e^{-\sum^N_{i=1} \lambda_i t}
+= e^{-\lambda_{system}t}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="416" HEIGHT="39" BORDER="0"
+ SRC="img705.png"
+ ALT="\begin{displaymath}
+R_{series} (t) = e^{-\sum^N_{i=1} \lambda_i t}
+= e^{-\lambda_{system}t}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.39)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ โดยที่
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\lambda_{system}=\sum^N_{i=1} \lambda_i
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="340" HEIGHT="59" BORDER="0"
+ SRC="img706.png"
+ ALT="\begin{displaymath}
+\lambda_{system}=\sum^N_{i=1} \lambda_i
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10.40)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

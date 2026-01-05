@@ -1,0 +1,561 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>กฎของคิว</TITLE>
+<META NAME="description" CONTENT="กฎของคิว">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node36.html">
+<LINK REL="previous" HREF="node34.html">
+<LINK REL="up" HREF="node30.html">
+<LINK REL="next" HREF="node36.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html927"
+  HREF="node36.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html921"
+  HREF="node30.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html915"
+  HREF="node34.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html923"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html925"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html928"
+  HREF="node36.html">กฎของ Little</A>
+<B> Up:</B> <A NAME="tex2html922"
+  HREF="node30.html">ทฤษฎีคิว</A>
+<B> Previous:</B> <A NAME="tex2html916"
+  HREF="node34.html">สัญลักษณ์ของคิว</A>
+ &nbsp <B>  <A NAME="tex2html924"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html926"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00650000000000000000"></A>
+<A NAME="631"></A>
+<BR>
+กฎของคิว
+</H1>
+
+<P>
+ในบทนี้จะกล่าวถึงตัวแปรที่สำคัญในการวิเคราะห์ระบบคิวเดี่ยว และอธิบายถึงความสัมพันธ์ระหว่างตัวแปรต่างๆ ในรูป <A HREF="node35.html#fig:randomvar">3.2</A> แสดงตัวแปรหลักๆ ในระบบคิว
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:randomvar"></A><A NAME="635"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.2:</STRONG>
+ตัวแปรสุ่มที่สำคัญในการวิเคราะห์ระบบคิว</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="458" HEIGHT="326" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="\includegraphics[width=4in]{fig/randomvar.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<TABLE CELLPADDING=3>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT"><IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"></TD>
+<TD ALIGN="CENTER">=</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=403>ค่าเฉลี่ยของเวลาการเข้าใช้ระบบ (Mean Arrival Time) ซึ่งอาจขึ้นอยู่กับสถานะของระบบ เช่นจำนวนงานในระบบ</TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT"><IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img50.png"
+ ALT="$s$"></TD>
+<TD ALIGN="CENTER">=</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=403>เวลาที่ใช้ในการบริการงานหนึ่งงาน</TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT"><IMG
+ WIDTH="17" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\mu$"></TD>
+<TD ALIGN="CENTER">=</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=403>ค่าเฉลี่ยอัตราการบริการต่อหนึ่งเครื่องการบริการ (Mean Service Rate per Server) <IMG
+ WIDTH="96" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$\mu = 1/E[s]$"> 
+ค่าอัตราการบริการของ <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$m$"> เครื่องมีค่าเท่ากับ <IMG
+ WIDTH="33" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$m\mu$"></TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT"><IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="$n$"></TD>
+<TD ALIGN="CENTER">=</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=403>จำนวนงานทั้งหมดในระบบ เรียกว่า ``ความยาวของคิว'' (Queue Length) ความยาวของคิวรวมถึงงานที่กำลังรับบริการอยู่ และงานที่กำลังรอรับบริการอยู่</TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT"><IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$n_q$"></TD>
+<TD ALIGN="CENTER">=</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=403>จำนวนงานที่กำลัง ``<B>รอ</B>'' รับบริการอยู่ ซึ่งจะต้องน้อยกว่า <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="$n$"> ที่รวมถึงงานที่กำลังรับบริการอยู่</TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT"><IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$n_s$"></TD>
+<TD ALIGN="CENTER">=</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=403>งานที่กำลัง ``<B>รับบริการ</B>'' อยู่</TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.png"
+ ALT="$r$"></TD>
+<TD ALIGN="CENTER">=</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=403>เวลาตอบสนอง (Response Time) หรือ เวลาที่ใช้ในระบบ ซึ่งรวมถึง เวลาที่ใช้ในการรอรับบริการ และเวลาที่รับบริการ</TD>
+</TR>
+<TR VALIGN="BASELINE"><TD ALIGN="LEFT"><IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img58.png"
+ ALT="$w$"></TD>
+<TD ALIGN="CENTER">=</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=403>เวลารอ (Waiting Time) คือเวลาที่รอรับบริการอยู่ในคิว นับจากเริ่มเข้าใช้ระบบถึงเวลาที่เริ่มได้รับบริการ</TD>
+</TR>
+</TABLE>
+
+<P>
+<B>ข้อที่มักเข้าใจผิด</B>
+
+<P>
+<BLOCKQUOTE>
+<B><EM>``ความยาวของคิว'' (Queue Length) คือ ความยาวของคิวรวมถึง-งานที่กำลังรับบริการอยู่ และงานที่กำลังรอรับบริการอยู่
+</EM></B></BLOCKQUOTE>
+<P>
+<BLOCKQUOTE><B><EM>ไม่ใช่เพียงจำนวนงานที่รอรับบริการอยู่เท่านั้น! รวมถึงงานที่กำลังรอรับบริการอยู่ด้วย</EM></B>
+
+</BLOCKQUOTE>
+<A NAME="647"></A>
+<A NAME="648"></A>
+
+<P>
+ตัวแปรขั้นต้นทุกตัวนอกจาก <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> และ <IMG
+ WIDTH="17" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\mu$"> เป็นตัวแปรสุ่ม มีความสัมพันธ์หลายตัวที่สามารถใช้งานได้กับคิว <IMG
+ WIDTH="70" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$G/G/m$"> อีกทั้งระบบคิวที่เราจะวิเคราะห์ต่อไปก็เป็นกรณีเฉพาะของ  <IMG
+ WIDTH="70" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$G/G/m$"> ซึ่งสามารถใช้งานกับระบบคิวส่วนใหญ่ได้
+
+<P>
+
+<OL>
+<LI>สภาวะเสถียร (Stability Condition): 
+<A NAME="650"></A>
+<A NAME="651"></A>
+
+<P>
+ระบบที่ไม่เสถียร คือระบบที่มีโอกาสที่จำนวนงานในระบบเพิ่มขยายขึ้นเป็นอนันต์ สภาวะของระบบคิวที่เสถียร คือระบบที่อัตราการเข้าใช้ระบบ น้อยกว่าอัตราการให้บริการของระบบ  
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\lambda = m\mu \\
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="312" HEIGHT="37" BORDER="0"
+ SRC="img60.png"
+ ALT="\begin{displaymath}
+\lambda = m\mu \nonumber\\
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ในที่นี้มีจำนวนเครื่องบริการเท่ากับ  <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$m$"> สภาวะเสถียรไม่ครอบคลุมระบบที่มีประชากรจำกัด เนื่องจากระบบที่มีประชากรจำกัด จะมีความเสถียรอยู่แล้วจากตัวของระบบคิวเอง ระบบจะไม่สามารถเข้าสู่สภาวะไร้เสถียรภาพได้ เนื่องจากเมื่อบัฟเฟอร์เต็ม งานที่เข้ามาใหม่จะหายไป ไม่สามารถเข้าใช้บริการได้ 
+
+<P>
+</LI>
+<LI>จำนวนในระบบเทียบกับจำนวนในคิว: 
+
+<P>
+จำนวนงานในระบบคิว เท่ากับผลรวมของจำนวนงานในคิวที่รอรับบริการ รวมกับจำนวนงานที่กำลังรับบริการ 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+n = n_q + n_s
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="327" HEIGHT="39" BORDER="0"
+ SRC="img61.png"
+ ALT="\begin{displaymath}
+n = n_q + n_s \nonumber
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ค่า <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="$n$">, <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$n_q$">, และ  <IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$n_s$"> เป็นตัวแปรสุ่ม จากความสัมพันธ์ดังกล่าว ความสัมพันธ์ของค่าเฉลี่ยจะเท่ากับ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E[n] = E[n_q] + E[n_s]
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="366" HEIGHT="39" BORDER="0"
+ SRC="img62.png"
+ ALT="\begin{displaymath}
+E[n] = E[n_q] + E[n_s] \nonumber
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ค่าเฉลี่ยของจำนวนงานทั้งหมดในระบบ เท่ากับผลรวมของค่าเฉลี่ยของจำนวนงานที่รอรับบริการ และค่าเฉลี่ยของจำนวนงานที่กำลังรับบริการ 
+
+<P>
+ถ้าอัตราการให้บริการของเครื่องบริการไม่ขึ้นอยู่กับจำนวนงานที่รออยู่ในคิว เราจะได้
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Cov(n_q, n_s) = 0
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="344" HEIGHT="39" BORDER="0"
+ SRC="img63.png"
+ ALT="\begin{displaymath}
+Cov(n_q, n_s) = 0\nonumber
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+และ 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Var[n] = Var[n_q] +  Var[n_s]
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="394" HEIGHT="39" BORDER="0"
+ SRC="img64.png"
+ ALT="\begin{displaymath}
+Var[n] = Var[n_q] + Var[n_s] \nonumber
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+คือความแปรปรวนของจำนวนงานทั้งหมดในระบบ เท่ากับผลรวมของความแปรปรวนของจำนวนงานที่รอรับบริการ และความแปรปรวนของจำนวนงานที่กำลังรับบริการ  
+
+<P>
+</LI>
+<LI>จำนวนงานในระบบเทียบกับเวลา:
+
+<P>
+ถ้างาน ``<B>ไม่มี</B>''การสูญหายไปจากระบบ เนื่องจากจำนวนบัฟเฟอร์ไม่พอเพียง-จำนวนงานในระบบมีความสัมพันธ์กับค่าเฉลี่ยของเวลาตอบสนองดังต่อไปนี้
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Mean~number~of~jobs~in~system = arrival~rate \times
+mean~response~time
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:littleres2"></A><IMG
+ WIDTH="570" HEIGHT="37" BORDER="0"
+ SRC="img65.png"
+ ALT="\begin{displaymath}
+Mean~number~of~jobs~in~system = arrival~rate \times
+mean~response~time
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Mean~number~of~jobs~in~queue = arrival~rate \times
+mean~waiting~time
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:littlewait"></A><IMG
+ WIDTH="558" HEIGHT="37" BORDER="0"
+ SRC="img66.png"
+ ALT="\begin{displaymath}
+Mean~number~of~jobs~in~queue = arrival~rate \times
+mean~waiting~time
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+สมการ <A HREF="node35.html#eq:littleres2">3.6</A> และ <A HREF="node35.html#eq:littlewait">3.7</A> คือสมการกฎของ Little 
+<A NAME="671"></A>
+
+<P>
+</LI>
+<LI>เวลาที่ใช้ในระบบเทียบกับเวลาที่รออยู่ในคิว
+
+<P>
+เวลาที่งานอยู่ในระบบคิว แสดงในรูป <A HREF="node35.html#fig:randomvar">3.2</A> เท่ากับผลรวมของเวลาที่งานรอการบริการ และ เวลาที่งานกำลังรับการบริการ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+r = w + s
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="320" HEIGHT="35" BORDER="0"
+ SRC="img67.png"
+ ALT="\begin{displaymath}
+r = w + s \nonumber
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ค่า <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.png"
+ ALT="$r$">, <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img58.png"
+ ALT="$w$">, และ  <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img50.png"
+ ALT="$s$"> เป็นตัวแปรสุ่ม จากความสัมพันธ์ดังกล่าว ความสัมพันธ์ของค่าเฉลี่ยจะเท่ากับ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E[r] = E[w] + E[s]
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="358" HEIGHT="39" BORDER="0"
+ SRC="img68.png"
+ ALT="\begin{displaymath}
+E[r] = E[w] + E[s] \nonumber
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ค่าเฉลี่ยของเวลาตอบสนองของระบบ เท่ากับผลรวมของค่าเฉลี่ยของจำนวนเวลาที่รอรับบริการ และค่าเฉลี่ยของเวลาที่รับบริการ 
+
+<P>
+ถ้าอัตราการให้บริการของเครื่องบริการไม่ขึ้นอยู่กับจำนวนงานที่รออยู่ในคิว เราจะได้
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Cov(w, s) = 0
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="337" HEIGHT="39" BORDER="0"
+ SRC="img69.png"
+ ALT="\begin{displaymath}
+Cov(w, s) = 0\nonumber
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+และ 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Var[r] = Var[w] +  Var[s]
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="386" HEIGHT="39" BORDER="0"
+ SRC="img70.png"
+ ALT="\begin{displaymath}
+Var[r] = Var[w] + Var[s] \nonumber
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+คือความแปรปรวนของเวลาที่ใช้ในระบบ เท่ากับผลรวมของความแปรปรวนของเวลาที่รอรับบริการ และความแปรปรวนของเวลาที่รับบริการ  
+
+<P>
+</LI>
+</OL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html927"
+  HREF="node36.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html921"
+  HREF="node30.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html915"
+  HREF="node34.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html923"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html925"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html928"
+  HREF="node36.html">กฎของ Little</A>
+<B> Up:</B> <A NAME="tex2html922"
+  HREF="node30.html">ทฤษฎีคิว</A>
+<B> Previous:</B> <A NAME="tex2html916"
+  HREF="node34.html">สัญลักษณ์ของคิว</A>
+ &nbsp <B>  <A NAME="tex2html924"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html926"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

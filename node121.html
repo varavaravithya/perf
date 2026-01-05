@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>การประยุกต์ใช้ในระบบที่มีอายุการใช้งานยาว (Long-Life Applications)</TITLE>
+<META NAME="description" CONTENT="การประยุกต์ใช้ในระบบที่มีอายุการใช้งานยาว (Long-Life Applications)">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node122.html">
+<LINK REL="previous" HREF="node120.html">
+<LINK REL="up" HREF="node120.html">
+<LINK REL="next" HREF="node122.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2208"
+  HREF="node122.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2202"
+  HREF="node120.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2196"
+  HREF="node120.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2204"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2206"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2209"
+  HREF="node122.html">การประยุกต์ใชัในระบบคำนวณที่มีความสำคัญ (Critical-Computation Applications)</A>
+<B> Up:</B> <A NAME="tex2html2203"
+  HREF="node120.html">งานประยุกต์ของระบบที่คงทนต่อความเสียหาย</A>
+<B> Previous:</B> <A NAME="tex2html2197"
+  HREF="node120.html">งานประยุกต์ของระบบที่คงทนต่อความเสียหาย</A>
+ &nbsp <B>  <A NAME="tex2html2205"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2207"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION001251000000000000000">
+การประยุกต์ใช้ในระบบที่มีอายุการใช้งานยาว (Long-Life Applications)</A>
+</H2>
+
+ตัวอย่างที่เห็นง่ายที่สุดของระบบที่มีอายุการใช้งานยาว ได้แก่การใช้งานทางอวกาศเช่น  ยานอวกาศตรวจสอบระบบสุริยะ และดาวเทียม ตัวอย่างเช่น ยานไพโอเนียร์ 10 เริ่มออกเดินทางเมื่อปี ค.ศ. 1972 และ เริ่มส่งภาพของดาวพฤหัสกลับมาใน ค.ศ. 1983, 11 ปีให้หลัง ซึ่งความสำเร็จของภาระกิจของยานขึ้นอยู่กับ ความสามารถของระบบที่จะทำงานตลอดช่วงการเดินทาง เช่นเดียวกันในการใช้งานดาวเทียมซึ่งต้องการให้มีอายุการใช้งานยาวนาน  เนื่องจากค่าใช้จ่ายในการออกแบบ การสร้าง และการส่งดาวเทียมขึ้นไปโคจรสูงมาก  จึงยอมให้ความเสียหายของอุปกรณ์อิเล็กทรอนิกส์มาขัดขวางการทำงานของดาวเทียมไม่ได้
+
+โดยทั่วไประบบที่มีอายุการใช้งานยาว มีความต้องการความน่าจะเป็นที่ระบบสามารถทำงานได้ที่ระดับ 0.95 ณ. เวลาการทำงาน 10 ปี อย่างไรก็ตาม ระบบสามารถหยุดการทำงานได้ชั่วคราว ตราบเท่าที่ระบบจะสามารถกลับมาทำงานได้อีก ตัวอย่างเช่น ถ้าดาวเทียมหยุดการทำงานเพียวหนึ่งอาทิตย์ในช่วงการทำงานห้าหรือสิบปี  ถือว่าน้อยมาก 
+
+ตัวอย่างการใช้งานระบบที่มีอายุการใช้งานยาว ได้แก่ ระบบควบคุมยานอวกาศวอยเยเจอร์  แสดงในรูป <A HREF="node121.html#fig:ft1voyager">9.2</A> ระบบประกอบด้วยส่วนทำงานหลักแปดส่วน ได้แก่  ระบบข้อมูลการบิน, ระบบควบคุมความสูง, ระบบสั่งงานและควบคุม, ระบบวิทยุ,  ระบบมอดูเลททางไกล, ระบบตรวจจับคำสั่ง, ตัวรับ, และเทปบันทึก.  ทุกส่วนประกอบมีสองโมดูลที่เหมือนกันทุกประการ  โมดูลหนึ่งเรียกว่าโมดูลหลัก  (Primary) อีกโมดูลหนึ่งเป็นโมดูลสำรอง (Backup) ถ้าโมดูลหลักเกิดเสียหาย โมดูลสำรองจะเข้ามาทำงานแทน
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:ft1voyager"></A><A NAME="4342"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.2:</STRONG>
+ระบบควบคุมยานอวกาศวอยเยเจอร์ เป็นตัวอย่างของการประยุกต์ของระบบที่มีอายุการใช้งานยาว</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="517" HEIGHT="330" ALIGN="BOTTOM" BORDER="0"
+ SRC="img611.png"
+ ALT="\includegraphics[width=4.5in]{fig/ft1voyager.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

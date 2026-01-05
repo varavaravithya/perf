@@ -1,0 +1,583 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ตัวอย่าง:</TITLE>
+<META NAME="description" CONTENT="ตัวอย่าง:">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="previous" HREF="node111.html">
+<LINK REL="up" HREF="node111.html">
+<LINK REL="next" HREF="node113.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2056"
+  HREF="node113.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2050"
+  HREF="node111.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2046"
+  HREF="node111.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2052"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2054"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2057"
+  HREF="node113.html">หัวข้อสรุป</A>
+<B> Up:</B> <A NAME="tex2html2051"
+  HREF="node111.html">การวิเคราะห์ค่าเฉลี่ย</A>
+<B> Previous:</B> <A NAME="tex2html2047"
+  HREF="node111.html">การวิเคราะห์ค่าเฉลี่ย</A>
+ &nbsp <B>  <A NAME="tex2html2053"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2055"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION001160010000000000000">
+<FONT SIZE="+1">ตัวอย่าง:</FONT></A>
+</H4> จากระบบ Time Sharing ในรูป <A HREF="node112.html#fig:timeqt3">8.3</A> แต่ละงานมีการขอบริการดิสก์  A 10 ครั้ง และดิสก์ B 5 ครั้ง. ค่าเวลาการบริการต่อครั้งที่ดิสก์ A และ ดิสก์ B เท่ากับ 300 ms และ 200 ms, ตามลำดับ  แต่ละงานใช้เวลาของตัวประมวลผลกลางทั้งสิ้น 2 วินาที และเวลาคิดเท่ากับ 4 วินาที
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:timeqt3"></A><A NAME="4076"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.3:</STRONG>
+ระบบ Time Sharing</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="343" HEIGHT="290" ALIGN="BOTTOM" BORDER="0"
+ SRC="img323.png"
+ ALT="\includegraphics[width=3in]{fig/timeqt.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ค่าพารามิเตอร์ของระบบเท่ากับ
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+S_A &=& 0.3,~~~~V_A = 10 \Rightarrow D_A = 3 \nonumber\\
+S_B &=& 0.2,~~~~ V_B = 5 \Rightarrow D_B = 1\nonumber\\
+D_{CPU} &=& 2,~~~~~~ V_{CPU} = V_A + V_B + 1 = 16 \Rightarrow S_{CPU} = 0.125 \nonumber\\
+Z &=& 4,~~~~~~ N =20
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="28" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img573.png"
+ ALT="$\displaystyle S_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="222" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img574.png"
+ ALT="$\displaystyle 0.3,~~~~V_A = 10 \Rightarrow D_A = 3$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="30" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img538.png"
+ ALT="$\displaystyle S_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="213" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img575.png"
+ ALT="$\displaystyle 0.2,~~~~ V_B = 5 \Rightarrow D_B = 1$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img363.png"
+ ALT="$\displaystyle D_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="417" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img576.png"
+ ALT="$\displaystyle 2,~~~~~~ V_{CPU} = V_A + V_B + 1 = 16 \Rightarrow S_{CPU} = 0.125$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="20" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img577.png"
+ ALT="$\displaystyle Z$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="125" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img578.png"
+ ALT="$\displaystyle 4,~~~~~~ N =20$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.39)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+เริ่มการคำนวณ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Number~of~users:~~N = 0
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="395" HEIGHT="37" BORDER="0"
+ SRC="img579.png"
+ ALT="\begin{displaymath}
+Number~of~users:~~N = 0
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.40)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Device~queue~length:~~Q_{CPU} = 0,~~~Q_A = 0,~~~Q_B = 0
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="511" HEIGHT="37" BORDER="0"
+ SRC="img580.png"
+ ALT="\begin{displaymath}
+Device~queue~length:~~Q_{CPU} = 0,~~~Q_A = 0,~~~Q_B = 0
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.41)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<B>การคำนวณรอบที่หนึ่ง</B>
+
+จำนวนงานในระบบ <IMG
+ WIDTH="57" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img581.png"
+ ALT="$N=1$">
+
+เวลาตอบสนองของแต่ละอุปกรณ์เท่ากับ
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+R_{CPU}&=& S_{CPU}(1+Q_{CPU}) = 0.125(1+0) = 0.125\nonumber\\
+R_A&=& S_A(1+Q_A) = 0.3(1+0) = 0.3 \nonumber\\
+R_B &=& S_B(1+Q_B) = 0.2(1+0) = 0.2
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img416.png"
+ ALT="$\displaystyle R_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="336" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img582.png"
+ ALT="$\displaystyle S_{CPU}(1+Q_{CPU}) = 0.125(1+0) = 0.125$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img418.png"
+ ALT="$\displaystyle R_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="255" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img583.png"
+ ALT="$\displaystyle S_A(1+Q_A) = 0.3(1+0) = 0.3$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img420.png"
+ ALT="$\displaystyle R_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="257" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img584.png"
+ ALT="$\displaystyle S_B(1+Q_B) = 0.2(1+0) = 0.2$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.42)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+เวลาตอบสนองของระบบเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R = R_{CPU}V_{CPU} + R_AV_A + R_BV_B = 0.125 \times 16 + 0.3\times 10 + 0.2\times 5 = 6
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="558" HEIGHT="37" BORDER="0"
+ SRC="img585.png"
+ ALT="\begin{displaymath}
+R = R_{CPU}V_{CPU} + R_AV_A + R_BV_B = 0.125 \times 16 + 0.3\times 10 + 0.2\times 5 = 6
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.43)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่าอัตราความสำเร็จของระบบเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+X = N/(R+Z) = 1/(6+4) = 0.1
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="421" HEIGHT="39" BORDER="0"
+ SRC="img586.png"
+ ALT="\begin{displaymath}
+X = N/(R+Z) = 1/(6+4) = 0.1
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.44)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่าความยาวคิวของอุปกรณ์เท่ากับ
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+Q_{CPU} &=& XR_{CPU}V_{CPU}  = 0.1\times 
+0.125 \times 16 = 0.2\nonumber\\
+Q_A &=& XR_AV_A = 0.1\times 0.3 \times 10 = 0.3 \nonumber\\
+Q_B&=& XR_BV_B = 0.1\times 0.2\times 0.5 = 0.1
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img587.png"
+ ALT="$\displaystyle Q_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="319" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img588.png"
+ ALT="$\displaystyle XR_{CPU}V_{CPU} = 0.1\times
+0.125 \times 16 = 0.2$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="31" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img589.png"
+ ALT="$\displaystyle Q_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="258" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img590.png"
+ ALT="$\displaystyle XR_AV_A = 0.1\times 0.3 \times 10 = 0.3$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img591.png"
+ ALT="$\displaystyle Q_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="265" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img592.png"
+ ALT="$\displaystyle XR_BV_B = 0.1\times 0.2\times 0.5 = 0.1$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.45)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<B>การคำนวณรอบที่สอง</B>
+
+จำนวนงานในระบบ <IMG
+ WIDTH="57" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img593.png"
+ ALT="$N=2$">
+
+เวลาตอบสนองของแต่ละอุปกรณ์เท่ากับ
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+R_{CPU}&=& S_{CPU}(1+Q_{CPU}) = 0.125(1+0.2) = 0.15\nonumber\\
+R_A &=& S_A(1+Q_A) = 0.3(1+0.3) = 0.39\nonumber\\
+R_B &=& S_B(1+Q_B) = 0.2(1+0.1) = 0.22
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img416.png"
+ ALT="$\displaystyle R_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="341" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img594.png"
+ ALT="$\displaystyle S_{CPU}(1+Q_{CPU}) = 0.125(1+0.2) = 0.15$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img418.png"
+ ALT="$\displaystyle R_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="279" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img595.png"
+ ALT="$\displaystyle S_A(1+Q_A) = 0.3(1+0.3) = 0.39$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img420.png"
+ ALT="$\displaystyle R_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="281" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img596.png"
+ ALT="$\displaystyle S_B(1+Q_B) = 0.2(1+0.1) = 0.22$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.46)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+เวลาตอบสนองของระบบเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R = R_{CPU}V_{CPU} + R_AV_A + R_BV_B = 0.15 \times 16 + 0.39\times 10 + 0.22\times 5 = 7.4
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="558" HEIGHT="37" BORDER="0"
+ SRC="img597.png"
+ ALT="\begin{displaymath}
+R = R_{CPU}V_{CPU} + R_AV_A + R_BV_B = 0.15 \times 16 + 0.39\times 10 + 0.22\times 5 = 7.4
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.47)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่าอัตราความสำเร็จของระบบเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+X = N/(R+Z) = 2/(7.4+4) = 0.175
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="438" HEIGHT="39" BORDER="0"
+ SRC="img598.png"
+ ALT="\begin{displaymath}
+X = N/(R+Z) = 2/(7.4+4) = 0.175
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.48)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่าความยาวคิวของอุปกรณ์เท่ากับ
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+Q_{CPU} &=& XR_{CPU}V_{CPU}  = 0.175\times 
+0.15 \times 16 = 0.421\nonumber\\
+Q_A &=& XR_AV_A = 0.175\times 0.39 \times 10 = 0.684 \nonumber\\
+Q_B&=& XR_BV_B = 0.175\times 0.22\times 0.5 = 0.193
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img587.png"
+ ALT="$\displaystyle Q_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="346" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img599.png"
+ ALT="$\displaystyle XR_{CPU}V_{CPU} = 0.175\times
+0.15 \times 16 = 0.421$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="31" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img589.png"
+ ALT="$\displaystyle Q_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="305" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$\displaystyle XR_AV_A = 0.175\times 0.39 \times 10 = 0.684$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img591.png"
+ ALT="$\displaystyle Q_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="310" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img601.png"
+ ALT="$\displaystyle XR_BV_B = 0.175\times 0.22\times 0.5 = 0.193$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.49)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+จากนี้เราสามารถหาค่าตัววัดต่างๆ ของระบบในค่า <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$">
+ ที่สูงขึ้น ซึ่งการคำนวณ MVA 
+ สามารถทำได้โดยใช้โปรแกรมจัดการตารางทั่วไป (โปรแกรม Spread Sheet)
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2056"
+  HREF="node113.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2050"
+  HREF="node111.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2046"
+  HREF="node111.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2052"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2054"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2057"
+  HREF="node113.html">หัวข้อสรุป</A>
+<B> Up:</B> <A NAME="tex2html2051"
+  HREF="node111.html">การวิเคราะห์ค่าเฉลี่ย</A>
+<B> Previous:</B> <A NAME="tex2html2047"
+  HREF="node111.html">การวิเคราะห์ค่าเฉลี่ย</A>
+ &nbsp <B>  <A NAME="tex2html2053"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2055"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,414 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>กฎการไหลต่อเนื่องของงาน (Forced Flow Law)</TITLE>
+<META NAME="description" CONTENT="กฎการไหลต่อเนื่องของงาน (Forced Flow Law)">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node93.html">
+<LINK REL="previous" HREF="node88.html">
+<LINK REL="up" HREF="node84.html">
+<LINK REL="next" HREF="node91.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1744"
+  HREF="node91.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1738"
+  HREF="node84.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1732"
+  HREF="node89.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1740"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1742"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1745"
+  HREF="node91.html">ตัวอย่าง:</A>
+<B> Up:</B> <A NAME="tex2html1739"
+  HREF="node84.html">กฎของการใชังาน</A>
+<B> Previous:</B> <A NAME="tex2html1733"
+  HREF="node89.html">ตัวอย่าง:</A>
+ &nbsp <B>  <A NAME="tex2html1741"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1743"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001050000000000000000">
+กฎการไหลต่อเนื่องของงาน (Forced Flow Law)</A>
+</H1>
+
+<P>
+กฎการไหลต่อเนื่องของงาน เกี่ยวข้องกับอัตราความสำเร็จของระบบ (System Throughput) กับอัตราความสำเร็จของอุปกรณ์แต่ละตัว (Device Throughput) ในระบบเครือข่ายคิวแบบเปิด จำนวนงานที่ออกจากระบบ  คืออัตราความสำเร็จของระบบ ในระบบเครือข่ายคิวแบบปิด  เมื่องานออกจากจุด ``Out'' และย้อนกลับเข้ามาที่จุด ``In'' ก็เสมือนกับงานออกจากระบบ และย้อนกลับเข้าระบบทันที ดังนั้นอัตราความสำเร็จของระบบวัดเป็นจำนวนงานที่ผ่านการต่อเชื่อม ``Out'' และ ``In'' ต่อหน่วยเวลา
+
+<P>
+จากช่วงเวลาเฝ้าสังเกตุ <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.png"
+ ALT="$T$">, ถ้าช่วงเวลาเฝ้าสังเกตนานพอ, จำนวนงานที่เข้าใช้ระบบ <IMG
+ WIDTH="26" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img326.png"
+ ALT="$A_i$"> จะใกล้เคียงกับจำนวนงานที่เสร็จออกจากระบบ <IMG
+ WIDTH="24" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img327.png"
+ ALT="$C_i$">, นั้นคือ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+A_i = C_i
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="311" HEIGHT="37" BORDER="0"
+ SRC="img339.png"
+ ALT="\begin{displaymath}
+A_i = C_i
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.12)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+จากคุณสมบัติดังกล่าว เราเรียกว่าระบบเป็นไปตามความสมดุลการไหลของงาน (Job Flow Balance) ถ้าเวลา <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.png"
+ ALT="$T$"> นานพอ ค่าความแตกต่างระหว่าง <IMG
+ WIDTH="83" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img340.png"
+ ALT="$A_i--C_i$"> จะมีค่าน้อยเมื่อเปรียบเทียบกับค่า <IMG
+ WIDTH="24" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img327.png"
+ ALT="$C_i$"> 
+
+<P>
+สมมุติว่าแต่ละงานขอรับการบริการ <IMG
+ WIDTH="22" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img341.png"
+ ALT="$V_i$"> ครั้งสำหรับอุปกรณ์ <IMG
+ WIDTH="26" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img342.png"
+ ALT="$i^{th}$"> ในระบบ รูป <A HREF="node90.html#fig:lawinter1">7.2</A> แสดงรูปแบบภายในของระบบ  ถ้าระบบเป็นไปตามสมมุติฐานความสมดุลการไหลของงาน จำนวนงานที่สำเร็จจากระบบ กับจำนวนงานที่สำเร็จจากอุปกรณ์ <IMG
+ WIDTH="26" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img342.png"
+ ALT="$i^{th}$"> มีความสัมพันธ์กันโดย
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:lawinter1"></A><A NAME="3011"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7.2:</STRONG>
+รูปแบบภายในของระบบ</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="344" HEIGHT="258" ALIGN="BOTTOM" BORDER="0"
+ SRC="img343.png"
+ ALT="\includegraphics[width=3in]{fig/lawinter1.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+C_i = C_0V_i
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="320" HEIGHT="37" BORDER="0"
+ SRC="img344.png"
+ ALT="\begin{displaymath}
+C_i = C_0V_i
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.13)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+หรือ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+V_i = \frac{C_i}{C_0}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="312" HEIGHT="50" BORDER="0"
+ SRC="img345.png"
+ ALT="\begin{displaymath}
+V_i = \frac{C_i}{C_0}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.14)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ค่า <IMG
+ WIDTH="22" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img341.png"
+ ALT="$V_i$"> คือค่าอัตราส่วนการเข้าใช้อุปกรณ์ <IMG
+ WIDTH="26" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img342.png"
+ ALT="$i^{th}$"> ต่อการเข้าใช้ระบบของงาน อัตราส่วนดังกล่าวเรียกว่า  <EM>อัตราส่วนแวะเวียน</EM> (Visit Ratio)
+<A NAME="3022"></A>
+<A NAME="3023"></A>
+ค่าอัตราความสำเร็จของงานในช่วงเวลาเฝ้าสังเกตจะเท่ากับ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+System~throughput~~X = \frac{jobs~completed}{total~time} = \frac{C_0}{T}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="477" HEIGHT="47" BORDER="0"
+ SRC="img346.png"
+ ALT="\begin{displaymath}
+System~throughput~~X = \frac{jobs~completed}{total~time} = \frac{C_0}{T}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.15)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ค่าอัตราความสำเร็จของอุปกรณ์ <IMG
+ WIDTH="26" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img342.png"
+ ALT="$i^{th}$"> และ ค่าอัตราความสำเร็จของระบบ จะมีความสัมพันธ์ดังนี้
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Device~throughput~~X_i = \frac{C_t}{T} =
+\frac{C_i}{C_0} \times \frac{C_0}{T}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="447" HEIGHT="50" BORDER="0"
+ SRC="img347.png"
+ ALT="\begin{displaymath}
+Device~throughput~~X_i = \frac{C_t}{T} =
+\frac{C_i}{C_0} \times \frac{C_0}{T}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.16)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+หรืออีกนัยหนึ่งเท่ากับ 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+X_i = XV_i
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="319" HEIGHT="37" BORDER="0"
+ SRC="img348.png"
+ ALT="\begin{displaymath}
+X_i = XV_i
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.17)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+สมการขั้นต้นเรียกว่า <B>กฎการไหลต่อเนื่องของงาน</B> (Forced Flow Law)
+เมื่อสมมุติฐานความสมดุลการไหลของงานเป็นจริง 
+
+<P>
+ถ้าเรารวมกฎการไหลต่อเนื่องของงาน และกฎภาระงานเราจะได้
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+Utilization~of~the~i^{th}~device~U_i &=& X_iS_i\\
+ &=& XV_iS_i
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="267" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img349.png"
+ ALT="$\displaystyle Utilization~of~the~i^{th}~device~U_i$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img350.png"
+ ALT="$\displaystyle X_iS_i$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.18)</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="56" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img351.png"
+ ALT="$\displaystyle XV_iS_i$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.19)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+หรือ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+U_i = XD_i
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="320" HEIGHT="37" BORDER="0"
+ SRC="img352.png"
+ ALT="\begin{displaymath}
+U_i = XD_i
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.20)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ในที่นี้ <IMG
+ WIDTH="85" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img353.png"
+ ALT="$D_i = V_iS_i$"> คือค่าความต้องการการบริการจากอุปกรณ์ <IMG
+ WIDTH="26" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img342.png"
+ ALT="$i^{th}$"> ในแต่ละครั้งของการเข้าใช้ระบบ  ซึ่งรวมเวลาการแวะเข้าใช้บริการทุกครั้งเข้าด้วยกัน จากสมการขั้นต้น  ค่าภาระงานของอุปกรณ์แปนผันตรงกับค่าความต้องการการบริการ  <IMG
+ WIDTH="27" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img354.png"
+ ALT="$D_i$"> ของงานบนอุปกรณ์นั้น  ดังนั้นอุปกรณ์ใดที่มีค่าความต้องการการบริการสูงสุดจะเป็นคอขวดในระบบ (Bottleneck Device)
+<A NAME="3048"></A>
+<A NAME="3049"></A>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><UL>
+<LI><UL>
+<LI><A NAME="tex2html1746"
+  HREF="node91.html"><FONT SIZE="+1">ตัวอย่าง:</FONT></A>
+<LI><A NAME="tex2html1747"
+  HREF="node92.html"><FONT SIZE="+1">ตัวอย่าง:</FONT></A>
+</UL></UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1744"
+  HREF="node91.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1738"
+  HREF="node84.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1732"
+  HREF="node89.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1740"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1742"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1745"
+  HREF="node91.html">ตัวอย่าง:</A>
+<B> Up:</B> <A NAME="tex2html1739"
+  HREF="node84.html">กฎของการใชังาน</A>
+<B> Previous:</B> <A NAME="tex2html1733"
+  HREF="node89.html">ตัวอย่าง:</A>
+ &nbsp <B>  <A NAME="tex2html1741"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1743"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

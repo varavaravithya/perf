@@ -1,0 +1,365 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>การวิเคราะห์ค่าเฉลี่ย</TITLE>
+<META NAME="description" CONTENT="การวิเคราะห์ค่าเฉลี่ย">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node113.html">
+<LINK REL="previous" HREF="node110.html">
+<LINK REL="up" HREF="node105.html">
+<LINK REL="next" HREF="node112.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2043"
+  HREF="node112.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2037"
+  HREF="node105.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2031"
+  HREF="node110.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2039"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2041"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2044"
+  HREF="node112.html">ตัวอย่าง:</A>
+<B> Up:</B> <A NAME="tex2html2038"
+  HREF="node105.html">การวิเคราะห์ค่าเฉลี่ย (Mean Value Analysis)</A>
+<B> Previous:</B> <A NAME="tex2html2032"
+  HREF="node110.html">ตัวอย่าง</A>
+ &nbsp <B>  <A NAME="tex2html2040"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2042"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001160000000000000000">
+การวิเคราะห์ค่าเฉลี่ย</A>
+</H1>
+
+การวิเคราะห์ค่าเฉลี่ย (Mean Value Analysis)
+<A NAME="4017"></A>
+<A NAME="4018"></A>
+เป็นเทคนิคในการใช้วิเคราะห์เครือข่ายคิวแบบปิด  โดยวิธีการที่คล้ายกับการวิเคราะห์เครือข่ายคิวแบบเปิดในบทที่ผ่านมา ซึ่งเทคนิคดังกล่าวเป็นการหาค่าเฉลี่ยต่างๆ เท่านั้น  ซึ่งไม่สามารถทราบค่าความแปรปรวนได้  วิธีการวิเคราะห์ค่าเฉลี่ยสามารถใช้กับการบริการหลายรูปแบบ และ การกระจายของเวลาบริการหลายลักษณะ  อย่างไรก็ตามในบทนี้จะจำกัดหัวข้อสำหรับระบบที่ประกอบด้วย Fixed-Capacity Service Center และ Delay Center เท่านั้น
+
+  สำหรับเครือข่ายคิวแบบปิดที่มีจำนวนงานในระบบเท่ากับ <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> ค่าเวลาตอบสนองที่อุปกรณ์ <IMG
+ WIDTH="26" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img342.png"
+ ALT="$i^{th}$"> มีค่าเท่ากับ 
+  
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_i(N) = S_i[1+Q_i(N-1)]
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="390" HEIGHT="39" BORDER="0"
+ SRC="img559.png"
+ ALT="\begin{displaymath}
+R_i(N) = S_i[1+Q_i(N-1)]
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.32)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ในที่นี้ค่า <IMG
+ WIDTH="91" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img560.png"
+ ALT="$Q_i(N-1)$"> คือค่าเฉลี่ยของความยาวคิวของอุปกรณ์ <IMG
+ WIDTH="26" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img342.png"
+ ALT="$i^{th}$"> ที่มีจำนวนงานในระบบเท่ากับ <IMG
+ WIDTH="55" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img561.png"
+ ALT="$N-1$"> งาน  ซึ่งมีลักษณะของสมการคล้ายกับสมการ <A HREF="node109.html#eq:openmva">8.1</A>  ของระบบเครือขายคิวแบบเปิด พิจารณาระบบที่ <IMG
+ WIDTH="37" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$N^{th}$"> เข้ามาใช้งานระบบเครือข่ายคิวที่มีงานอยู่จำนวนทั้งสิ้น  <IMG
+ WIDTH="55" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img561.png"
+ ALT="$N-1$"> งาน  เมื่องานที่  <IMG
+ WIDTH="37" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$N^{th}$"> เข้ามาที่อุปกรณ์ <IMG
+ WIDTH="26" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img342.png"
+ ALT="$i^{th}$"> งานที่ <IMG
+ WIDTH="37" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$N^{th}$"> จะพบงานจำนวนเท่ากับ  <IMG
+ WIDTH="91" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img560.png"
+ ALT="$Q_i(N-1)$"> รออยู่ก่อนหน้า และจะต้องรออยู่ในคิวเป็นเวลาเท่ากับ <IMG
+ WIDTH="107" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img563.png"
+ ALT="$S_iQ_i(N-1)$"> ก่อนที่จะได้รับบริการ และเมื่อรวมเวลารับบริการของงาน <IMG
+ WIDTH="37" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$N^{th}$"> แล้ว เวลาตอบสนองทั้งหมดจะเท่ากับ  <!-- MATH
+ $S_i[1+Q_i(N-1)]$
+ -->
+<IMG
+ WIDTH="150" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img564.png"
+ ALT="$S_i[1+Q_i(N-1)]$">
+
+ การคำนวณค่าประสิทธิภาพของระบบที่จำนวน <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> ต้องการค่าประสิทธิภาพของระบบที่ภาระงานจำนวน <IMG
+ WIDTH="55" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img561.png"
+ ALT="$N-1$"> งาน  เราสามารถวิเคราะห์ระบบได้โดยการคำนวณซ้ำ โดยเริ่มจาก  <IMG
+ WIDTH="57" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img565.png"
+ ALT="$N = 0$"> และเพิ่มขึ้นจนถึง  <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> 
+
+ จากกฎเวลาตอบสนองทั่วไป ค่าเวลาตอบสนองของระบบเท่ากับ
+ 
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(N) = \sum^M_{i=1} V_iR_i(N)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="362" HEIGHT="59" BORDER="0"
+ SRC="img566.png"
+ ALT="\begin{displaymath}
+R(N) = \sum^M_{i=1} V_iR_i(N)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.33)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่าอัตราความสำเร็จของระบบสามารถหาได้จาก กฎเวลาตอบสนองที่มีการปฏิสัมพันธ์กับผู้ใช้งาน 
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+X(N) = \frac{N}{R(N) +Z}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="359" HEIGHT="52" BORDER="0"
+ SRC="img567.png"
+ ALT="\begin{displaymath}
+X(N) = \frac{N}{R(N) +Z}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.34)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+และค่าอัตราความสำเร็จของแต่ละอุปกรณ์จะเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+X_i(N) = X(N)V_i
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="351" HEIGHT="39" BORDER="0"
+ SRC="img568.png"
+ ALT="\begin{displaymath}
+X_i(N) = X(N)V_i
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.35)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+โดยใช้กฎของ Little ค่าความยาวคิวของอุปกรณ์ที่มีจำนวนงานเท่ากับ <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$N$"> ในเครือข่ายจะเท่ากับ
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Q_i(N) = X_i(N)R_i(N) = X(N)V_iR_i(N)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="440" HEIGHT="39" BORDER="0"
+ SRC="img569.png"
+ ALT="\begin{displaymath}
+Q_i(N) = X_i(N)R_i(N) = X(N)V_iR_i(N)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.36)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+สำหรับ Delay Center ค่าเวลาตอบสนองจะมีค่าเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_i(N) = S_i
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="326" HEIGHT="39" BORDER="0"
+ SRC="img570.png"
+ ALT="\begin{displaymath}
+R_i(N) = S_i
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.37)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+การเริ่มการคำนวณทำโดยเริ่มจากค่า <IMG
+ WIDTH="57" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img565.png"
+ ALT="$N = 0$"> และค่าความยาวคิวของแต่ละอุปกรณ์เท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Q_i(0) = 0
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="319" HEIGHT="39" BORDER="0"
+ SRC="img571.png"
+ ALT="\begin{displaymath}
+Q_i(0) = 0
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.38)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+อัลกอริทึ่มในการวิเคราะห์ค่าเฉลี่ยของเครือข่ายคิวแบบปิดแสดงในรูป 
+<A HREF="node111.html#fig:MVA">8.2</A>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:MVA"></A><A NAME="4069"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.2:</STRONG>
+อัลกอริทึ่มวิเคราะห์ค่าเฉลี่ยของเครือข่ายคิวแบบปิด</CAPTION>
+<TR><TD><IMG
+ WIDTH="526" HEIGHT="798" BORDER="0"
+ SRC="img572.png"
+ ALT="\begin{figure}
+\noindent
+Inputs:\\
+$N$\ = number of users\\
+$Z$\ = think ...
+...roughput: $X_i = XV_i$\\
+Device Utilization: $U_i = XS_iV_i$\
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><UL>
+<LI><UL>
+<LI><A NAME="tex2html2045"
+  HREF="node112.html"><FONT SIZE="+1">ตัวอย่าง:</FONT></A>
+</UL></UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2043"
+  HREF="node112.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2037"
+  HREF="node105.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2031"
+  HREF="node110.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2039"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2041"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2044"
+  HREF="node112.html">ตัวอย่าง:</A>
+<B> Up:</B> <A NAME="tex2html2038"
+  HREF="node105.html">การวิเคราะห์ค่าเฉลี่ย (Mean Value Analysis)</A>
+<B> Previous:</B> <A NAME="tex2html2032"
+  HREF="node110.html">ตัวอย่าง</A>
+ &nbsp <B>  <A NAME="tex2html2040"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2042"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

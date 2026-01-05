@@ -1,0 +1,320 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ตัวอย่าง: การคำนวณค่าความน่าเชื่อถือของระบบขนาน</TITLE>
+<META NAME="description" CONTENT="ตัวอย่าง: การคำนวณค่าความน่าเชื่อถือของระบบขนาน">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node165.html">
+<LINK REL="previous" HREF="node163.html">
+<LINK REL="up" HREF="node156.html">
+<LINK REL="next" HREF="node165.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2835"
+  HREF="node165.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2829"
+  HREF="node156.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2823"
+  HREF="node163.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2831"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2833"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2836"
+  HREF="node165.html">การคุ้มครองจากการเสียหาย</A>
+<B> Up:</B> <A NAME="tex2html2830"
+  HREF="node156.html">ตัวอย่างการวิเคราะห์ความน่าเชื่อถือ และการคุ้มครองจากความเสียหาย</A>
+<B> Previous:</B> <A NAME="tex2html2824"
+  HREF="node163.html">ตัวอย่าง: การคำนวณค่าความน่าเชื่อถือของระบบอนุกรม</A>
+ &nbsp <B>  <A NAME="tex2html2832"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2834"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001450000000000000000">
+ตัวอย่าง: การคำนวณค่าความน่าเชื่อถือของระบบขนาน</A>
+</H1>
+
+ระบบคอมพิวเตอร์ในการประยุกต์ใช้งานอวกาศ มักใช้สถาปัตยกรรมพื้นฐานแสดงในรูป <A HREF="node164.html#fig:fev6separa1">11.3</A> ระบบประกอบด้วยชุดอุปกรณ์ดังต่อไปนี้
+
+<OL>
+<LI>คอมพิวเตอร์ที่เหมือนกันทุกประการสองชุด
+</LI>
+<LI>ชุดอินเตอร์เฟสที่เหมือนกันทุกประการสองชุด
+</LI>
+<LI>ชุดแสดงผลที่เหมือนกันทุกประการสองชุด
+</LI>
+</OL>
+
+ระบบต้องการอย่างน้อยหนึ่งโมดูล ในชุดอุปกรณ์ให้ทำงานได้  เพื่อที่ระบบจะสามารถทำงานได้ ถ้าโมดูลใดโมดูลหนึ่งเสีย  โมดูลที่เหลือจะเข้าทำงานแทน
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fev6separa1"></A><A NAME="5429"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 11.3:</STRONG>
+สถาปัตยกรรมพื้นฐานของระบบคอมพิวเตอร์ในการประยุกต์ใช้งานอวกาศ</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="454" HEIGHT="213" ALIGN="BOTTOM" BORDER="0"
+ SRC="img758.png"
+ ALT="\includegraphics[width=4.in]{fig/fev6sepa.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ระบบที่แสดงในรูป <A HREF="node164.html#fig:fev6separa1">11.3</A> เป็นระบบที่ประกอบกันทั้งระบบแบบขนาน และระบบอนุกรม  ระบบขนานอยู่ในส่วนของชุดประกอบของระบบ ซึ่งชุดประกอบนั้นมีลักษณะอนุกรมกันอยู่ เนื่องจากอย่างน้อย หนึ่งคอมพิวเตอร์, หนึ่งอินเตอร์เฟส, และ  หนึ่งชุดแสดงผล จะต้องทำงานได้ ระบบจึงจะทำงานได้  แผนภาพกล่องความน่าเชื่อถือของระบบแสดงในรูป <A HREF="node164.html#fig:fev6separa2">11.4</A>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fev6separa2"></A><A NAME="5436"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 11.4:</STRONG>
+แผนภาพกล่องความน่าเชื่อถือของระบบคอมพิวเตอร์ในการประยุกต์ใช้งานอวกาศ</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="596" HEIGHT="182" ALIGN="BOTTOM" BORDER="0"
+ SRC="img759.png"
+ ALT="\includegraphics[width=5.2in]{fig/fev6separa.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+แผนภาพกล่องความน่าเชื่อถือที่ประกอบด้วยระบบอนุกรม และระบบขนานสามารถคำนวณหาค่าความน่าเชื่อถือได้ โดยการยุบระบบแบบขนานให้เหมือนกับเป็นโมดูลเดียวในแผนภาพกล่องความน่าเชื่อถือ ตัวอย่างเช่น เราสามารถหาค่าความน่าเชื่อถือของระบบคอมพิวเตอร์ที่ขนานกันสองชุด ได้จากสมการ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+1-(1-R_c(t))^2
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="344" HEIGHT="39" BORDER="0"
+ SRC="img760.png"
+ ALT="\begin{displaymath}
+1-(1-R_c(t))^2
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11.8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เมื่อ <IMG
+ WIDTH="48" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img761.png"
+ ALT="$R_c(t)$"> คือค่าความน่าเชื่อถือของคอมพิวเตอร์ ดังนั้น เราสามารถแทนระบบคอมพิวเตอร์ที่ทำงานเหมือนกันสองชุด  ด้วยความน่าเชื่อถือ <!-- MATH
+ $1-(1-R_c(t))^2$
+ -->
+<IMG
+ WIDTH="136" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img762.png"
+ ALT="$1-(1-R_c(t))^2$"> ดังแสดงในรูป 
+<A HREF="node164.html#fig:fev7pa">11.5</A>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fev7pa"></A><A NAME="5444"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 11.5:</STRONG>
+การยุบระบบแบบขนานให้เหมือนกับเป็นโมดูลเดียว</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="594" HEIGHT="139" ALIGN="BOTTOM" BORDER="0"
+ SRC="img763.png"
+ ALT="\includegraphics[width=5.2in]{fig/fev7pa.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ในระบบคอมพิวเตอร์ที่พิจารณา เราสามารถยุบแผนภาพกล่องความน่าเชื่อถือ จากการยุบ ระบบย่อยแบบขนานเป็นหนึ่งโมดูลแสดงในรูป <A HREF="node164.html#fig:fev8reduce">11.6</A> <IMG
+ WIDTH="48" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img761.png"
+ ALT="$R_c(t)$"> คือค่าความน่าเชื่อถือของคอมพิวเตอร์, <IMG
+ WIDTH="55" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img764.png"
+ ALT="$R_{if}(t)$"> คือค่าความน่าเชื่อถือชุดอินเตอร์เฟส, <IMG
+ WIDTH="48" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img765.png"
+ ALT="$R_b(t)$"> คือค่าความน่าเชื่อถือบัส, <IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img766.png"
+ ALT="$R_d(t)$"> คือค่าความน่าเชื่อถือชุดแสดงผล
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fev8reduce"></A><A NAME="5451"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 11.6:</STRONG>
+แผนภาพกล่องความน่าเชื่อถือที่ลดทอนแล้วของระบบคอมพิวเตอร์ ในการประยุกต์ใช้งานอวกาศ</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="594" HEIGHT="88" ALIGN="BOTTOM" BORDER="0"
+ SRC="img767.png"
+ ALT="\includegraphics[width=5.2in]{fig/fev8reduce.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+ค่าความน่าเชื่อถือของระบบสามารถคำนวณได้เท่ากับ
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+R_{system}(t)&=& [1-(1-R_c(t))^2][1-(1-R_{if}(t))^2][1-(1-R_d(t))^2]\nonumber\\
+&&[1-(1-R_b(t))^2]
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="85" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img768.png"
+ ALT="$\displaystyle R_{system}(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="433" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img769.png"
+ ALT="$\displaystyle [1-(1-R_c(t))^2][1-(1-R_{if}(t))^2][1-(1-R_d(t))^2]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="146" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img770.png"
+ ALT="$\displaystyle [1-(1-R_b(t))^2]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11.9)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+ให้ค่าความน่าเชื่อถือหลังจากหนึ่งชั่วโมงของอุปกรณ์ เท่ากับ <!-- MATH
+ $R_c(1) = R_{if}(1) = R_d(1) = R_b(1) = 0.9$
+ -->
+<IMG
+ WIDTH="317" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img771.png"
+ ALT="$R_c(1) = R_{if}(1) = R_d(1) = R_b(1) = 0.9$"> ค่าความน่าเชื่อถือของระบบจะเท่ากับ 
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+R_{system}(1~hour) &=& [1-(1-0.9)^2][1-(1-0.9)^2][1-(1-0.9)^2][1-(1-0.9)^2]\nonumber\\
+&=& 0.96
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="134" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img772.png"
+ ALT="$\displaystyle R_{system}(1~hour)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="493" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img773.png"
+ ALT="$\displaystyle [1-(1-0.9)^2][1-(1-0.9)^2][1-(1-0.9)^2][1-(1-0.9)^2]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="40" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img774.png"
+ ALT="$\displaystyle 0.96$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11.10)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+ถ้าเป็นระบบที่ไม่มีโมดูลสำรอง คือประกอบด้วยระบบอนุกรมพื้นฐาน  ค่าความน่าเชื่อถือหลังจากหนึ่งชั่วโมงของระบบจะเท่ากับ 0.6561 จะเห็นได้ว่าการใช้ระบบสำรองสามารถเพิ่มความน่าเชื่อถือได้มาก
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2835"
+  HREF="node165.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2829"
+  HREF="node156.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2823"
+  HREF="node163.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2831"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2833"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2836"
+  HREF="node165.html">การคุ้มครองจากการเสียหาย</A>
+<B> Up:</B> <A NAME="tex2html2830"
+  HREF="node156.html">ตัวอย่างการวิเคราะห์ความน่าเชื่อถือ และการคุ้มครองจากความเสียหาย</A>
+<B> Previous:</B> <A NAME="tex2html2824"
+  HREF="node163.html">ตัวอย่าง: การคำนวณค่าความน่าเชื่อถือของระบบอนุกรม</A>
+ &nbsp <B>  <A NAME="tex2html2832"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2834"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

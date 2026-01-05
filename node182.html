@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ตัวอย่าง:</TITLE>
+<META NAME="description" CONTENT="ตัวอย่าง:">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="previous" HREF="node181.html">
+<LINK REL="up" HREF="node181.html">
+<LINK REL="next" HREF="node183.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html3099"
+  HREF="node183.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html3093"
+  HREF="node181.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html3089"
+  HREF="node181.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html3095"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html3097"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html3100"
+  HREF="node183.html">แบบจำลองความสามารถในการบำรุงรักษา</A>
+<B> Up:</B> <A NAME="tex2html3094"
+  HREF="node181.html">แบบจำลองความสามารถในการคงการบริการ</A>
+<B> Previous:</B> <A NAME="tex2html3090"
+  HREF="node181.html">แบบจำลองความสามารถในการคงการบริการ</A>
+ &nbsp <B>  <A NAME="tex2html3096"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html3098"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION001640010000000000000">
+<FONT SIZE="+1">ตัวอย่าง:</FONT></A>
+</H4> พิจารณาระบบคอมพิวเตอร์ที่เกิดหนึ่งความเสียหายในทุก 100 ชั่วโมง และอัตราการซ่อมบำรุงเท่ากับ หนึ่งการซ่อมต่อสิบชั่วโมง  ให้คำนวณค่าความสามารถในการคงการบริการของระบบ
+
+ค่าอัตราการเสียหาย <!-- MATH
+ $\lambda = 0.01$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$\lambda = 0.01$"> การเสียหายต่อชั่วโมง 
+
+และอัตราการซ่อมบำรุงเท่ากับ <IMG
+ WIDTH="67" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$\mu = 0.1$"> การซ่อมต่อชั่วโมง  
+
+ค่าความสามารถในการคงการบริการจะเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+A_{ss} = \frac{1}{1+\frac{0.01}{0.1}} = 0.90909
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="382" HEIGHT="54" BORDER="0"
+ SRC="img995.png"
+ ALT="\begin{displaymath}
+A_{ss} = \frac{1}{1+\frac{0.01}{0.1}} = 0.90909
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.14)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+หมายถึงว่าระบบจะสามารถใช้ได้มากกว่า 90% ของเวลาเล็กน้อย
+
+เราสามารถหาค่าความสามารถในการคงการบริการของระบบได้  โดยวิธีการมาร์คอฟ  แผนภาพมาร์คอฟของระบบที่มีการซ่อมแสดงในรูป <A HREF="node182.html#fig:repair1">13.5</A> แผนภาพประกอบด้วยสองสถานะที่มีค่าอัตราเฉลี่ยของการซ่อมเท่ากับ  <IMG
+ WIDTH="17" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\mu$"> และ ค่าอัตราความเสียหาย <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> สถานะ <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$O$"> แสดงสถานะของระบบที่ทำงานปกติ และสถานะ  <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img831.png"
+ ALT="$F$"> เป็นสถานะของระบบที่อยู่ในสภาวะล้มเหลวและอยู่ในระหว่างซ่อม
+
+ความน่าจะเป็นที่ระบบจะเกิดความเสียหายในช่วงเวลา <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\triangle t$"> เท่ากับ <!-- MATH
+ $\lambda \triangle t$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img813.png"
+ ALT="$\lambda\triangle t$"> และความน่าจะเป็นที่ระบบจะซ่อมเสร็จในช่วงเวลา <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\triangle t$"> เท่ากับ <!-- MATH
+ $\mu \triangle t$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img899.png"
+ ALT="$\mu \triangle t$">
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:repair1"></A><A NAME="6174"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 13.5:</STRONG>
+แบบจำลองมาร์คอฟของระบบที่มีการซ่อม</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="455" HEIGHT="221" ALIGN="BOTTOM" BORDER="0"
+ SRC="img996.png"
+ ALT="\includegraphics[width=4.0in]{fig/repair.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+สมการของแบบจำลองมาร์คอฟสามารถเขียนได้เท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left[
+\begin{array}{l}
+p_O(t+\triangle t)\\
+p_F(t+\triangle t)\\
+\end{array}
+\right] =
+\left[
+\begin{array}{cc}
+1-\lambda\triangle t & \mu\triangle t\\
+\lambda\triangle tC & 1-\mu\triangle t
+\end{array}
+\right]
+\left[
+\begin{array}{l}
+p_O(t)\\
+p_F(t)
+\end{array}
+\right]
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="487" HEIGHT="65" BORDER="0"
+ SRC="img901.png"
+ ALT="\begin{displaymath}
+\left[
+\begin{array}{l}
+p_O(t+\triangle t)\\
+p_F(t+\tri...
+...t[
+\begin{array}{l}
+p_O(t)\\
+p_F(t)
+\end{array}
+\right]
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13.15)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เมื่อ <IMG
+ WIDTH="49" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img928.png"
+ ALT="$p_O(t)$"> เป็นความน่าจะเป็นที่ระบบจะสามารถทำงานได้ที่เวลา  <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$t$"> เพราะฉะนั้นค่า <IMG
+ WIDTH="49" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img928.png"
+ ALT="$p_O(t)$"> จึงเป็นค่าความสามารถในการคงการบริการของระบบ
+
+ถ้าเราหาคำตอบของแผนภาพมาร์คอฟในรูป <A HREF="node182.html#fig:repair1">13.5</A> โดยใช้ค่าอัตราความเสียหาย <!-- MATH
+ $\lambda = 0.01$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$\lambda = 0.01$"> การเสียหายต่อชั่วโมง และอัตราการซ่อมเท่ากับ <IMG
+ WIDTH="67" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$\mu = 0.1$"> การซ่อมต่อชั่วโมง เมื่อเขียนกราฟจะได้ตามรูป  <A HREF="node182.html#fig:simplexavai">13.6</A>  ซึ่งค่าความสามารถในการคงการบริการ ในสภาวะเวลาคงตัวจะเท่ากับ  0.90909 ตามการคำนวณที่ผ่านมาจากการใช้ <IMG
+ WIDTH="67" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.png"
+ ALT="$MTTF$"> และ <IMG
+ WIDTH="68" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$MTTR$">
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:simplexavai"></A><A NAME="6192"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 13.6:</STRONG>
+ค่าความสามารถในการคงการบริการ: ค่าอัตราความเสียหาย <!-- MATH
+ $\lambda = 0.01$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$\lambda = 0.01$"> และอัตราการซ่อมเท่ากับ <IMG
+ WIDTH="67" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$\mu = 0.1$"></CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<IMG
+ WIDTH="456" HEIGHT="473" ALIGN="BOTTOM" BORDER="0"
+ SRC="img997.png"
+ ALT="\includegraphics[width=4.in]{fig/simplexavai.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR><HR>
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>การวิเคราะห์ระบบคิวแบบเปิด</TITLE>
+<META NAME="description" CONTENT="การวิเคราะห์ระบบคิวแบบเปิด">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node110.html">
+<LINK REL="previous" HREF="node108.html">
+<LINK REL="up" HREF="node105.html">
+<LINK REL="next" HREF="node110.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html2015"
+  HREF="node110.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2009"
+  HREF="node105.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2003"
+  HREF="node108.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2011"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2013"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2016"
+  HREF="node110.html">ตัวอย่าง</A>
+<B> Up:</B> <A NAME="tex2html2010"
+  HREF="node105.html">การวิเคราะห์ค่าเฉลี่ย (Mean Value Analysis)</A>
+<B> Previous:</B> <A NAME="tex2html2004"
+  HREF="node108.html">กล่าวนำ</A>
+ &nbsp <B>  <A NAME="tex2html2012"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2014"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001140000000000000000">
+การวิเคราะห์ระบบคิวแบบเปิด</A>
+</H1>
+
+ระบบเครือข่ายคิวแบบเปิด ใช้ในการจำลองระบบประมวลรายการบริการ (Transaction Processing)  เช่น การสำรองที่นั่ง และระบบธนาคาร ในระบบลักษณะดังกล่าวอัตราการเข้าใช้ระบบ ไม่ขึ้นอยู่กับภาระงานของระบบในขณะนั้น  งานเข้ามาใช้ระบบตามกระบวนการพัวซองด้วยค่าเฉลี่ยการเข้าใช้บริการ  <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$\lambda$"> 
+
+ ในบทนี้ เราจะศึกษาวิธีการวิเคราะห์ระบบลักษณะดังกล่าว โดยสมมุติว่า ระบบที่พิจารณาประกอบด้วย Fixed Capacity Service Center หรือ Delay Center
+
+ สำหรับ Fixed Capacity Service Centers ในระบบเครือข่ายคิวแบบเปิด, ค่าเวลาตอบสนองมีค่าเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_i = S_i(1+Q_i)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:openmva"></A><IMG
+ WIDTH="344" HEIGHT="39" BORDER="0"
+ SRC="img485.png"
+ ALT="\begin{displaymath}
+R_i = S_i(1+Q_i)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+เมื่องานเข้าใช้ระบบที่อุปกรณ์ <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.png"
+ ALT="$i$">, งานที่เข้ามาจะพบกับงานอื่นจำนวน <IMG
+ WIDTH="26" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img407.png"
+ ALT="$Q_i$"> งานรออยู่ก่อนหน้า (รวมงานที่กำลังรับบริการอยู่ด้วย)  จากนั้นงานที่เพิ่งมาถึงต้องรอเป็นเวลา <IMG
+ WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img486.png"
+ ALT="$Q_iS_i$"> วินาที  เมื่อรวมกับเวลารับบริการของตัวเอง ค่าเวลาตอบสนองรวมจะเท่ากับ <IMG
+ WIDTH="89" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img487.png"
+ ALT="$S_i(1+Q_i)$"> สมการ <A HREF="node109.html#eq:openmva">8.1</A> ไม่ใช้กฎการปฏิบัติงาน เนื่องจากไม่สามารถวัดได้โดยตรงจากระบบ
+
+จากสมมุติฐานความสมดุลการไหลของงาน (Job Flow Balance Assumption) ค่าอัตราความสำเร็จของระบบเท่ากับอัตราการเข้าใช้ระบบนั้นคือ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+X = \lambda
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="306" HEIGHT="34" BORDER="0"
+ SRC="img488.png"
+ ALT="\begin{displaymath}
+X = \lambda
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่าอัตราความสำเร็จของอุปกรณ์ <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.png"
+ ALT="$i$"> โดยใช้กฎการไหลต่อเนื่องของงาน (Forced Flow Law) เราจะได้
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+X_i = XV_i
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="319" HEIGHT="37" BORDER="0"
+ SRC="img348.png"
+ ALT="\begin{displaymath}
+X_i = XV_i
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ค่าภาระงานของอุปกรณ์ <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.png"
+ ALT="$i$"> หาได้จากกฎภาระงาน (Utilization Law) เท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+U_i = X_iS_i = XV_iS_i = \lambda D_i
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="386" HEIGHT="37" BORDER="0"
+ SRC="img489.png"
+ ALT="\begin{displaymath}
+U_i = X_iS_i = XV_iS_i = \lambda D_i
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+ความยาวคิวของอุปกรณ์ <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.png"
+ ALT="$i$"> เราสามารถหาได้จากกฎของ Little
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Q_i = X_iR_i = X_iS_i(1+Q_i) = U_i(1+Q_i)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="443" HEIGHT="39" BORDER="0"
+ SRC="img490.png"
+ ALT="\begin{displaymath}
+Q_i = X_iR_i = X_iS_i(1+Q_i) = U_i(1+Q_i)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+หรือ
+ 
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Q_i = \frac{U_i}{1-U_i}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="329" HEIGHT="50" BORDER="0"
+ SRC="img491.png"
+ ALT="\begin{displaymath}
+Q_i = \frac{U_i}{1-U_i}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+แทนความยาวคิว <IMG
+ WIDTH="26" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img407.png"
+ ALT="$Q_i$"> ลงในสมการ <A HREF="node109.html#eq:openmva">8.1</A> ค่าเวลาตอบสนองจะเท่ากับ
+
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R_i = \frac{U_i}{1-U_i}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="329" HEIGHT="50" BORDER="0"
+ SRC="img492.png"
+ ALT="\begin{displaymath}
+R_i = \frac{U_i}{1-U_i}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+สำหรับ Delay Center มีจำนวนเครื่องบริการเป็นอนันต์ ทำให้ค่าเวลาตอบสนอง และความยามคิวของ Delay Center เท่ากับ
+
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+R_i &=& S_i \nonumber\\
+Q_i &=& R_iX_i = S_iXV_i =XD_i =U_i
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img493.png"
+ ALT="$\displaystyle R_i$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="23" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img494.png"
+ ALT="$\displaystyle S_i$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="26" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img411.png"
+ ALT="$\displaystyle Q_i$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="228" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img495.png"
+ ALT="$\displaystyle R_iX_i = S_iXV_i =XD_i =U_i$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.8)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2015"
+  HREF="node110.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2009"
+  HREF="node105.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2003"
+  HREF="node108.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2011"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html2013"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2016"
+  HREF="node110.html">ตัวอย่าง</A>
+<B> Up:</B> <A NAME="tex2html2010"
+  HREF="node105.html">การวิเคราะห์ค่าเฉลี่ย (Mean Value Analysis)</A>
+<B> Previous:</B> <A NAME="tex2html2004"
+  HREF="node108.html">กล่าวนำ</A>
+ &nbsp <B>  <A NAME="tex2html2012"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html2014"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,562 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.50)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ตัวอย่าง:</TITLE>
+<META NAME="description" CONTENT="ตัวอย่าง:">
+<META NAME="keywords" CONTENT="perf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=tis-620">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="perf.css">
+
+<LINK REL="next" HREF="node92.html">
+<LINK REL="previous" HREF="node90.html">
+<LINK REL="up" HREF="node90.html">
+<LINK REL="next" HREF="node92.html">
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+<!--Navigation Panel-->
+<A NAME="tex2html1760"
+  HREF="node92.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1754"
+  HREF="node90.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1748"
+  HREF="node90.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1756"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1758"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1761"
+  HREF="node92.html">ตัวอย่าง:</A>
+<B> Up:</B> <A NAME="tex2html1755"
+  HREF="node90.html">กฎการไหลต่อเนื่องของงาน (Forced Flow Law)</A>
+<B> Previous:</B> <A NAME="tex2html1749"
+  HREF="node90.html">กฎการไหลต่อเนื่องของงาน (Forced Flow Law)</A>
+ &nbsp <B>  <A NAME="tex2html1757"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1759"
+  HREF="node187.html">Index</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION001050010000000000000">
+<FONT SIZE="+1">ตัวอย่าง:</FONT></A>
+</H4> ในระบบ Time Sharing ระบบทำการบันทึกการใช้งานของผู้ใช้ดังต่อไปนี้ แต่ละโปรแกรมต้องการการประมวลผลจากตัวประมวลผลกลาง 5 นาที และขอบริการจากดิสก์ A เป็นจำนวน 80 ครั้ง และ ขอบริการจากดิสก์ B เป็นจำนวน 100 ครั้ง  ค่าเฉลี่ยของเวลาคิดของผู้ใช้เท่ากับ 18 วินาที
+
+<P>
+จากข้อกำหนดของอุปกรณ์, ดิสก์ A ใช้เวลา 50 ms ในการบริการแต่ละครั้ง  และ ดิสก์ B ใช้เวลา 30 ms ในการบริการ จำนวนเทอร์มินอลมีทั้งสิ้น 17 เทอร์มินอล ค่าอัตราความสำเร็จที่ดิสก์ A วัดได้เท่ากับ 15.70  การบริการต่อวินาที จงหาค่าอัตราความสำเร็จของระบบ  และค่าภาระงานของอุปกรณ์ต่างๆ
+
+<P>
+ระบบสามารถแสดงโดยรูป <A HREF="node91.html#fig:timeqt1">7.3</A> จากโจทย์ ค่า  <IMG
+ WIDTH="88" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img355.png"
+ ALT="$D_{CPU} = 5$"> วินาที <IMG
+ WIDTH="72" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img356.png"
+ ALT="$V_A= 80$">, <IMG
+ WIDTH="81" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img357.png"
+ ALT="$V_B= 100$">, <IMG
+ WIDTH="65" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img358.png"
+ ALT="$Z= 18$"> วินาที และค่า <IMG
+ WIDTH="96" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img359.png"
+ ALT="$S_B = 0.030$"> วินาที, <IMG
+ WIDTH="67" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img360.png"
+ ALT="$N = 17$">, <IMG
+ WIDTH="100" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img361.png"
+ ALT="$X_A = 15.70$"> งานต่อวินาที
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:timeqt1"></A><A NAME="3055"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7.3:</STRONG>
+แบบจำลองเครื่องบริการกลาง (Time Sharing System)</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="343" HEIGHT="290" ALIGN="BOTTOM" BORDER="0"
+ SRC="img323.png"
+ ALT="\includegraphics[width=3in]{fig/timeqt.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+เนื่องจากงานต่อแวะมาที่ตัวประมวลผลกลางก่อนออกจากระบบ ค่าแวะเวียนที่ตัวประมวลผลกลางจะเท่ากับ
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+V_{CPU} = V_A + V_B + 1 = 181
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="390" HEIGHT="37" BORDER="0"
+ SRC="img362.png"
+ ALT="\begin{displaymath}
+V_{CPU} = V_A + V_B + 1 = 181
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.21)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+เราสามารถหาค่าความต้องการการบริการได้ดังต่อไปนี้
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+D_{CPU} &=& 5~~~seconds\\
+D_A &=& S_AV_A = 0.050 \times 80 = 4~~~seconds\\
+D_B &=& S_BV_B = 0.030 \times 100 = 3~~~seconds \\
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img363.png"
+ ALT="$\displaystyle D_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="100" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img364.png"
+ ALT="$\displaystyle 5~~~seconds$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.22)</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img365.png"
+ ALT="$\displaystyle D_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="279" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img366.png"
+ ALT="$\displaystyle S_AV_A = 0.050 \times 80 = 4~~~seconds$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.23)</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="33" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img367.png"
+ ALT="$\displaystyle D_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="290" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img368.png"
+ ALT="$\displaystyle S_BV_B = 0.030 \times 100 = 3~~~seconds$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.24)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+จากกฎการไหลต่อเนื่องของงาน จะสามารถหาอัตราความสำเร็จของงานเท่ากับ
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+X &=& \frac{X_A}{V_A} = \frac{15.70}{80} = 0.1963~~~jobs/second\\
+ X_{CPU} &=& XV_{CPU} = 1.963 \times 181 = 
+35.48~~~requests/second\\
+ X_B &=& XV_B = 0.1963 \times 100 = 19.6~~~requests/second\\
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="23" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img369.png"
+ ALT="$\displaystyle X$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="305" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img370.png"
+ ALT="$\displaystyle \frac{X_A}{V_A} = \frac{15.70}{80} = 0.1963~~~jobs/second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.25)</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img371.png"
+ ALT="$\displaystyle X_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="409" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img372.png"
+ ALT="$\displaystyle XV_{CPU} = 1.963 \times 181 =
+35.48~~~requests/second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.26)</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="33" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img373.png"
+ ALT="$\displaystyle X_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="388" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img374.png"
+ ALT="$\displaystyle XV_B = 0.1963 \times 100 = 19.6~~~requests/second$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.27)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+โดยใช้กฎภาระงาน ค่าภาระงานของแต่ละอุปกรณ์จะเท่ากับ
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+U_{CPU} &=& XD_{CPU} = 0.1963 \times 5 = 98\%  \\
+U_A &=&  XD_{A} = 0.1963 \times 4 = 78.4\% \\
+U_B &=&  XD_{B} = 0.1963 \times 3 = 58.8\% \\
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img375.png"
+ ALT="$\displaystyle U_{CPU}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="241" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img376.png"
+ ALT="$\displaystyle XD_{CPU} = 0.1963 \times 5 = 98\%$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.28)</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img377.png"
+ ALT="$\displaystyle U_A$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="234" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img378.png"
+ ALT="$\displaystyle XD_{A} = 0.1963 \times 4 = 78.4\%$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.29)</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="30" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img379.png"
+ ALT="$\displaystyle U_B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="234" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img380.png"
+ ALT="$\displaystyle XD_{B} = 0.1963 \times 3 = 58.8\%$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.30)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+ค่าการแวะเวียนเป็นการระบุการไหลของงานในระบบ ซึ่งสามารถแสดงในอีกลักษณะหนึ่งคือความน่าจะเป็นของการเปลี่ยนแปลง  (Transition Probability) <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img381.png"
+ ALT="$p_{ij}$"> เป็นความน่าจะเป็นที่งานจะออกจากคิว <IMG
+ WIDTH="26" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img342.png"
+ ALT="$i^{th}$"> และเข้าใช้งานคิว  <IMG
+ WIDTH="29" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img142.png"
+ ALT="$j^{th}$"> ค่าอัตราการแวะเวียน และค่าความน่าจะเป็นของการเปลี่ยนแปลง เป็นค่าที่ให้ความหมายเหมือนกัน และสามารถคำนวณหาเพื่อค่าซึ่งกันและกันได้ ในระบบที่เป็นไปตามกฎการไหลต่อเนื่องของงาน 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+C_j = \sum_{i=0}^{M} C_ip_{ij}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="336" HEIGHT="59" BORDER="0"
+ SRC="img382.png"
+ ALT="\begin{displaymath}
+C_j = \sum_{i=0}^{M} C_ip_{ij}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.31)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+ในที่นี้ <IMG
+ WIDTH="26" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img383.png"
+ ALT="$C_0$"> หมายถึงจำนวนงานที่เสร็จออกจากระบบที่ผ่านออกไปภายนอก ดังนั้น <IMG
+ WIDTH="28" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img384.png"
+ ALT="$p_{i0}$"> จึงเป็นความน่าจะเป็นที่งานจะออกจากระบบ เมื่อเสร็จการรับบริการจากอุปกรณ์ <IMG
+ WIDTH="26" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img342.png"
+ ALT="$i^{th}$"> เมื่อหารทั้งสองด้านของสมการโดย  <IMG
+ WIDTH="26" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img383.png"
+ ALT="$C_0$"> เราจะได้
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+V_j = \sum_{i=0}^{M} V_ip_{ij}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:visit"></A><IMG
+ WIDTH="333" HEIGHT="59" BORDER="0"
+ SRC="img385.png"
+ ALT="\begin{displaymath}
+V_j = \sum_{i=0}^{M} V_ip_{ij}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.32)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+เนื่องจากการที่งานออกจากระบบ หรือออกไปที่จุด ``Out'' เราถือว่าเป็นการที่งานเสร็จการรับบริการจากระบบ เพราะฉะนั้น
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+V_0 = 1
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:visit1"></A><IMG
+ WIDTH="306" HEIGHT="37" BORDER="0"
+ SRC="img386.png"
+ ALT="\begin{displaymath}
+V_0 = 1
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.33)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+สมการ <A HREF="node91.html#eq:visit">7.35</A> และ <A HREF="node91.html#eq:visit1">7.36</A> เรียกว่าสมการอัตราการแวะเวียน (Visit Ratio Equation) ซึ่งสามารถใช้คำนวณความน่าจะเป็นการเปลี่ยนแปลงได้ 
+
+<P>
+สำหรับระบบบริการกลาง เมื่องานได้รับการบริการจากทุกคิว  งานจะกลับเข้ามาที่ตัวประมวลผลกลาง 
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+p_{i1} &=& 1,~~~~~\forall i \neq 1\\
+p_{ij} &=& 0,~~~~~\forall i, j \neq 1\\
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img387.png"
+ ALT="$\displaystyle p_{i1}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="109" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img388.png"
+ ALT="$\displaystyle 1,~~~~~\forall i \neq 1$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.34)</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img389.png"
+ ALT="$\displaystyle p_{ij}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="126" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img390.png"
+ ALT="$\displaystyle 0,~~~~~\forall i, j \neq 1$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.35)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+ดังนั้นเราจะได้ค่าสมการการแวะเวียนเท่ากับ
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+1 &=& V_1p_{10}\\
+V_1 &=& 1 + V_2 + V_3 + \ldots + V_M\\
+V_j &=& V_1p_{1j} = \frac{p_{1j}}{p_{10}}, 
+~~~~j = 2, 3,\ldots M
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img391.png"
+ ALT="$\displaystyle 1$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="49" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img392.png"
+ ALT="$\displaystyle V_1p_{10}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.36)</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="24" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img393.png"
+ ALT="$\displaystyle V_1$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="193" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img394.png"
+ ALT="$\displaystyle 1 + V_2 + V_3 + \ldots + V_M$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.37)</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="23" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img395.png"
+ ALT="$\displaystyle V_j$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="251" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img396.png"
+ ALT="$\displaystyle V_1p_{1j} = \frac{p_{1j}}{p_{10}},
+~~~~j = 2, 3,\ldots M$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.38)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1760"
+  HREF="node92.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1754"
+  HREF="node90.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1748"
+  HREF="node90.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1756"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A> 
+<A NAME="tex2html1758"
+  HREF="node187.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="file:/usr/lib/latex2html/icons/index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1761"
+  HREF="node92.html">ตัวอย่าง:</A>
+<B> Up:</B> <A NAME="tex2html1755"
+  HREF="node90.html">กฎการไหลต่อเนื่องของงาน (Forced Flow Law)</A>
+<B> Previous:</B> <A NAME="tex2html1749"
+  HREF="node90.html">กฎการไหลต่อเนื่องของงาน (Forced Flow Law)</A>
+ &nbsp <B>  <A NAME="tex2html1757"
+  HREF="node2.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html1759"
+  HREF="node187.html">Index</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Vara Varavithya
+2002-03-09
+</ADDRESS>
+</BODY>
+</HTML>
